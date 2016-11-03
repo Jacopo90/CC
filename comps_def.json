@@ -1,0 +1,2169 @@
+{
+  "components": [
+    {
+      "name": "mia.value",
+      "signals": [
+        {
+          "name": "value.value"
+        }
+      ],
+      "receptors": [
+        {
+          "name": "value.set"
+        },
+        {
+          "name": "value.emit"
+        },
+        {
+          "name": "value.clear"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.mcommerce_address_manager",
+      "signals": [
+        {
+          "name": "error"
+        },
+        {
+          "name": "ok"
+        }
+      ],
+      "receptors": [
+        {
+          "name": "addresses_list"
+        },
+        {
+          "name": "register_address"
+        },
+        {
+          "name": "delete_address"
+        },
+        {
+          "name": "user_id"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.service_list_filter",
+      "signals": [
+        {
+          "name": "out"
+        }
+      ],
+      "receptors": [
+        {
+          "name": "in"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.listview_static_datasource",
+      "signals": [
+        {
+          "name": "out"
+        }
+      ],
+      "receptors": [
+        {
+          "name": "in"
+        },
+        {
+          "name": "emit"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.offline_image_viewer",
+      "signals": [
+        {
+          "name": "error"
+        }
+      ],
+      "receptors": [
+        {
+          "name": "show"
+        }
+      ],
+      "args": [
+        {
+          "name": "imageid_key",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "caption_key",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "offline_cache_channel",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "offline_cache_channel",
+          "type": "string",
+          "default": "",
+          "values": [
+            "modal"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "mia.api_client",
+      "signals": [
+        {
+          "name": "raw_response"
+        },
+        {
+          "name": "json_response"
+        },
+        {
+          "name": "error"
+        },
+        {
+          "name": "progress"
+        },
+        {
+          "name": "will_begin_request"
+        },
+        {
+          "name": "did_end_request"
+        }
+      ],
+      "receptors": [
+        {
+          "name": "launch_request"
+        },
+        {
+          "name": "parameters"
+        }
+      ],
+      "args": [
+        {
+          "name": "endpoint_path",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "parameters",
+          "type": "id",
+          "default": "",
+          "values": []
+        }
+      ]
+    },
+    {
+      "name": "mia.ui.label",
+      "signals": [
+        {
+          "name": "text"
+        }
+      ],
+      "receptors": [
+        {
+          "name": "read_text"
+        },
+        {
+          "name": "set_text"
+        }
+      ],
+      "args": [
+        {
+          "name": "text",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "format",
+          "type": "string",
+          "default": "",
+          "values": []
+        }
+      ]
+    },
+    {
+      "name": "mia.phone_call",
+      "signals": [
+        {
+          "name": "will_present_alert"
+        },
+        {
+          "name": "did_confirm_alert"
+        },
+        {
+          "name": "did_cancel_alert"
+        },
+        {
+          "name": "will_call"
+        }
+      ],
+      "receptors": [
+        {
+          "name": "set_alert_message"
+        },
+        {
+          "name": "set_confirm_button_title"
+        },
+        {
+          "name": "set_cancel_button_title"
+        },
+        {
+          "name": "do_call"
+        }
+      ],
+      "args": [
+        {
+          "name": "alert_message_title",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "confirm_message_title",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "cancel_message_title",
+          "type": "string",
+          "default": "",
+          "values": []
+        }
+      ]
+    },
+    {
+      "name": "mia.segue_to_container",
+      "signals": [],
+      "receptors": [
+        {
+          "name": "set_container"
+        },
+        {
+          "name": "present"
+        }
+      ],
+      "args": [
+        {
+          "name": "transition",
+          "type": "dictionary",
+          "default": "",
+          "values": [
+            {
+              "type": "push"
+            },
+            {
+              "type": "modal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "mia.api_request",
+      "signals": [
+        {
+          "name": "progress"
+        },
+        {
+          "name": "response_data"
+        },
+        {
+          "name": "response_error"
+        }
+      ],
+      "receptors": [
+        {
+          "name": "path"
+        },
+        {
+          "name": "headers"
+        },
+        {
+          "name": "query_params"
+        },
+        {
+          "name": "body_params"
+        },
+        {
+          "name": "start_request"
+        }
+      ],
+      "args": [
+        {
+          "name": "path",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "headers",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "query_params",
+          "type": "id",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "body_params",
+          "type": "id",
+          "default": "",
+          "values": []
+        }
+      ]
+    },
+    {
+      "name": "mia.email_validator",
+      "signals": [
+        {
+          "name": "valid"
+        },
+        {
+          "name": "not_valid"
+        }
+      ],
+      "receptors": [
+        {
+          "name": "eval"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.location_services",
+      "signals": [
+        {
+          "name": "authorization_changed"
+        }
+      ],
+      "receptors": [
+        {
+          "name": "ask_always_status"
+        },
+        {
+          "name": "ask_when_in_use_status"
+        },
+        {
+          "name": "activate_location_service"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.dialog_view",
+      "signals": [],
+      "receptors": [],
+      "args": [
+        {
+          "name": "image",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "head_message",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "body_message",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "buttons",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "type",
+          "type": "string",
+          "default": "",
+          "values": [
+            "bottom-dialog",
+            "center-dialog"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "mia.form_debugger",
+      "signals": [],
+      "receptors": [
+        {
+          "name": "debug"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.step_control",
+      "signals": [
+        {
+          "name": "item_selected"
+        },
+        {
+          "name": "title_of_item"
+        }
+      ],
+      "receptors": [
+        {
+          "name": "select_at"
+        },
+        {
+          "name": "enable_at"
+        },
+        {
+          "name": "disable_at"
+        },
+        {
+          "name": "add_titles"
+        }
+      ],
+      "args": [
+        {
+          "name": "titles",
+          "type": "array",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "separator",
+          "type": "array",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "styles",
+          "type": "dictionary",
+          "default": "",
+          "values": [
+            {
+              "items": {
+                "normal":{}
+              }
+            },
+            {
+              "items": {
+                "highlighted":{}
+              }
+            },
+            {
+              "items": {
+                "selected":{}
+              }
+            },
+            {
+              "items": {
+                "disabled":{}
+              }
+            }
+          ]
+        },
+         {
+          "name": "items-size",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        },
+          {
+          "name": "item-spacing",
+          "type": "number",
+          "default": "",
+          "values": []
+        },
+          {
+          "name": "show-separators",
+          "type": "boolean",
+          "default": "",
+          "values": []
+        },
+          {
+          "name": "center-single-item",
+          "type": "boolean",
+          "default": "",
+          "values": []
+        }
+        
+      ]
+    },
+    {
+      "name": "mia.pass_once",
+      "signals": [
+        {
+          "name": "value"
+        }
+      ],
+      "receptors": [
+        {
+          "name": "set"
+        },
+        {
+          "name": "emit"
+        }
+      ],
+      "args": [
+        
+        ]
+    },
+    {
+      "name": "mia.demux",
+      "signals": [
+        {
+          "name": "value"
+        }
+      ],
+      "receptors": [
+        {
+          "name": "structure"
+        },
+         {
+          "name": "key"
+        },
+         {
+          "name": "emit"
+        },
+         {
+          "name": "structure_emit"
+        }
+      ],
+      "args": [
+          {
+          "name": "key",
+          "type": "string",
+          "default": "",
+          "values": []
+        }
+        ]
+    },
+    {
+      "name": "mia.container_events",
+      "signals": [
+        {
+          "name": "on_ending"
+        },
+         {
+          "name": "data"
+        }, {
+          "name": "output_data"
+        }
+      ],
+      "receptors": [
+        {
+          "name": "send_data"
+        },
+        {
+          "name": "container"
+        },
+        {
+          "name": "on_will_appear"
+        },
+        {
+          "name": "unwind"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.controller_seq",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.persistent_storage",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.arithmetic",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.list",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.switch",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.bang",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.controller_host",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.container_loader",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.value",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.if",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.logic",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.error_decoder",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.alert_view",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.form_serializer",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.authentication",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.segue_to_definition",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.map_annotations_adapter",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.category_filter_adapter",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.data_source.filter",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.uiview",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.uicontrol",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.list_sorter",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.map_annotations_manager",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.split_view",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.no_data_director",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.form_data_sender",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "data_source",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "controller_categories",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "map_view",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "list_view",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "list_pull_refresh",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "list_continuous_load",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "detail_segue",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "data_source_arg",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "dismiss_segue",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "loading_view",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "list_no_data",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "error_view",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "std_navbar_styler",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "category_segue",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "list_header",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "profile_view",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "segue_router",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "loyalty_data_component",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "detail_product",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "disclaimer",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "confirm_button",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "web_view",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "code_view",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "form_component",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "controller_pager_component",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "segmented_pager_navigator",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "summary_view",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "category_cursor",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "component_container_builder",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "segue_to_instance",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "view_model",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "listview_item_configurator",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "search",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "form_director",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "simple_image",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "simple_label",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "favourites",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "fgallery_segue",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "layout_manager",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "web_action_component",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "tracker",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "nav_listener",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.mux",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "faves_list",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "date_picker",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.context",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.context_adapter",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.http_request",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.info_view",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.number_validator",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.image_view",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "code_reader",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "http_status",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.string_validator",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.squid",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.string_conversion",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.signup_adapter",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.social",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.login_adapter",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.is_null",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.struct",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.dyn_label",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.desc_view",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.text_button",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.header_contest",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.sender_data_tmpl1",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.three_buttons",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.code_creator",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.events_plist",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.code_scanner",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.offline_cache",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.activity",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.action_creator",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.doc_interaction",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "banner_ad",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.image_loader",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "product_cart",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "room_booking_try_book",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "nav_cart",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.log",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.lc_history",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.lc_card",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.toolbar",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.animate_toolbar",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.url_scheme",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.string_manager",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mia.dictionary_manager",
+      "signals": [
+        {
+          "name": ""
+        }
+      ],
+      "receptors": [
+        {
+          "name": ""
+        }
+      ],
+      "args": []
+    }
+  ]
+}
