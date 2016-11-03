@@ -18,7 +18,12 @@
           "name": "value.clear"
         }
       ],
-      "args": []
+      "args": [{
+          "name": "value",
+          "type": "id",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "mia.mcommerce_address_manager",
@@ -585,14 +590,13 @@
     },
     {
       "name": "mia.controller_seq",
-      "signals": [
-        {
-          "name": ""
-        }
-      ],
+      "signals": [],
       "receptors": [
         {
-          "name": ""
+          "name": "navigate_to"
+        },
+        {
+          "name": "navigation_direction"
         }
       ],
       "args": []
@@ -601,69 +605,239 @@
       "name": "mia.persistent_storage",
       "signals": [
         {
-          "name": ""
+          "name": "will_write"
+        },
+          {
+          "name": "did_write"
+        },
+          {
+          "name": "write_error"
+        },
+          {
+          "name": "will_read"
+        },
+          {
+          "name": "did_read"
+        },
+        {
+          "name": "read_error"
+        },
+          {
+          "name": "will_clear"
+        },
+          {
+          "name": "did_clear"
+        },  {
+          "name": "clear_error"
         }
+        
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "destination"
+        },
+        {
+          "name": "dest_options"
+        },
+        {
+          "name": "write"
+        },
+        {
+          "name": "read"
+        },
+        {
+          "name": "clear"
         }
       ],
-      "args": []
+      "args": [
+            {
+          "name": "destination",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "options",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        }
+        ]
     },
     {
       "name": "mia.arithmetic",
       "signals": [
         {
-          "name": ""
+          "name": "value"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "operation"
+        },
+        {
+          "name": "rhs"
+        },
+        {
+          "name": "lhs"
+        },
+        {
+          "name": "eval"
         }
       ],
-      "args": []
+      "args": [
+        {
+          "name": "lhs",
+          "type": "number",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "rhs",
+          "type": "number",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "operation",
+          "type": "string",
+          "default": "",
+          "values": []
+        }
+        ]
     },
     {
       "name": "mia.list",
       "signals": [
         {
-          "name": ""
+          "name": "items"
+        },
+        {
+          "name": "exists"
+        },
+        {
+          "name": "not_exists"
+        },
+        {
+          "name": "item"
+        },
+        {
+          "name": "did_update"
+        },
+        {
+          "name": "did_push_item"
+        },
+        {
+          "name": "did_pop_item"
+        },{
+          "name": "did_remove_item"
+        },
+        {
+          "name": "item_count"
+        },
+        {
+          "name": "enumerated_item"
+        },
+        {
+          "name": "enumerated_index"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "push"
+        },
+         {
+          "name": "pop"
+        },
+         {
+          "name": "item_at"
+        },
+         {
+          "name": "count"
+        },
+         {
+          "name": "set_index"
+        },
+         {
+          "name": "replace"
+        },
+         {
+          "name": "erase"
+        },
+         {
+          "name": "set_items"
+        },
+         {
+          "name": "enumerate"
+        },
+         {
+          "name": "check"
+        },
+         {
+          "name": "remove"
+        },
+         {
+          "name": "ask_items"
+        }, {
+          "name": "clean"
         }
       ],
-      "args": []
+      "args": [
+         {
+          "name": "items",
+          "type": "array",
+          "default": "",
+          "values": []
+        }
+        ]
     },
     {
       "name": "mia.switch",
       "signals": [
         {
-          "name": ""
+          "name": "default"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "eval"
         }
       ],
-      "args": []
+      "args": [
+         {
+          "name": "cases",
+          "type": "array",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "mia.bang",
       "signals": [
         {
-          "name": ""
+          "name": "bang.loadbang"
+        },
+        {
+          "name": "bang.willappear_bang_once"
+        },
+        {
+          "name": "bang.willappear_bang"
+        },
+        {
+          "name": "bang.didappear_bang"
+        },
+        {
+          "name": "bang.did_become_active"
+        },
+        {
+          "name": "bang.willdisapper_bang"
+        },
+        {
+          "name": "bang.diddisapper_bang"
         }
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+       
       ],
       "args": []
     },
@@ -671,12 +845,21 @@
       "name": "mia.controller_host",
       "signals": [
         {
-          "name": ""
+          "name": "controller_host.did_present"
+        },
+          {
+          "name": "controller_host.did_dismiss"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "controller_host.present"
+        },
+         {
+          "name": "controller_host.set_context"
+        },
+         {
+          "name": "controller_host.send_data"
         }
       ],
       "args": []
@@ -685,96 +868,216 @@
       "name": "mia.container_loader",
       "signals": [
         {
-          "name": ""
+          "name": "container_loader.did_load"
+        },
+        {
+          "name": "container_loader.container"
         }
       ],
       "receptors": [
         {
-          "name": ""
-        }
-      ],
-      "args": []
-    },
-    {
-      "name": "mia.value",
-      "signals": [
+          "name": "container_loader.instance"
+        },
+          {
+          "name": "container_loader.context"
+        },
         {
-          "name": ""
-        }
-      ],
-      "receptors": [
+          "name": "container_loader.load"
+        },
         {
-          "name": ""
+          "name": "container_loader.emit"
         }
       ],
-      "args": []
+      "args": [
+        {
+          "name": "controller_class",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "build_args",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "instance_id",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "context",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        }
+        ]
     },
     {
       "name": "mia.if",
       "signals": [
         {
-          "name": ""
+          "name": "if.then"
+        },
+        {
+          "name": "if.else"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "if.lhs"
+        },
+         {
+          "name": "if.rhs"
+        },
+         {
+          "name": "if.eval"
         }
       ],
-      "args": []
+      "args": [
+        {
+          "name": "lhs",
+          "type": "number",
+          "default": "",
+          "values": []
+        },
+          {
+          "name": "rhs",
+          "type": "number",
+          "default": "",
+          "values": []
+        },
+         {
+          "name": "condition",
+          "type": "string",
+          "default": "",
+          "values": ["equal","nequal","great","gequal","less","lequal"]
+        }
+      ]
     },
     {
       "name": "mia.logic",
       "signals": [
         {
-          "name": ""
+          "name": "logic.result"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "logic.lhs"
+        },
+        {
+          "name": "logic.rhs"
+        },{
+          "name": "logic.eval"
         }
       ],
-      "args": []
+      "args": [
+        {
+          "name": "lhs",
+          "type": "number",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "rhs",
+          "type": "number",
+          "default": "",
+          "values": []
+        },
+         {
+          "name": "operation",
+          "type": "string",
+          "default": "",
+          "values": ["and","or","xor","not","nand","nor","nxor"]
+        }
+      ]
     },
     {
       "name": "mia.error_decoder",
       "signals": [
         {
-          "name": ""
+          "name": "error.did_decode"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "error.decode"
         }
       ],
-      "args": []
+      "args": [{
+          "name": "decoding_map",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "mia.alert_view",
       "signals": [
         {
-          "name": ""
+          "name": "canceled"
+        },
+        {
+          "name": "dismiss_index"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "ui.alert.cancel_button_title"
+        },
+         {
+          "name": "ui.alert_view.title"
+        },
+         {
+          "name": "ui.alert_view.message"
+        },
+         {
+          "name": "ui.alert_view.show"
         }
       ],
-      "args": []
+      "args": [
+        {
+          "name": "style",
+          "type": "string",
+          "default": "",
+          "values": ["alert","action_sheet"]
+        },
+         {
+          "name": "message",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "cancel_button_title",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "default": "",
+          "values": []
+        }
+        ]
     },
     {
       "name": "mia.form_serializer",
       "signals": [
         {
-          "name": ""
+          "name": "form.serializer.serialization_did_end"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "form.serializer.begin_serialization"
+        },
+        {
+          "name": "form.serializer.error_string"
         }
       ],
       "args": []
@@ -783,29 +1086,89 @@
       "name": "mia.authentication",
       "signals": [
         {
-          "name": ""
+          "name": "login_data"
+        },
+        {
+          "name": "auth.status"
+        },
+        {
+          "name": "auth.will_login"
+        },
+        {
+          "name": "auth.did_login"
+        },
+        {
+          "name": "auth.login_error"
+        },
+        {
+          "name": "auth.login_did_end"
+        },
+        {
+          "name": "auth.did_login_payload"
+        },
+        {
+          "name": "auth.login_status_change"
+        },
+        {
+          "name": "auth.will_logout"
+        },{
+          "name": "auth.did_logout"
+        },
+        {
+          "name": "auth.logout_error"
+        },
+        {
+          "name": "auth.logout_did_end"
+        },{
+          "name": "auth.did_signup"
+        },
+        {
+          "name": "auth.signup_error"
+        },
+        {
+          "name": "auth.will_signup"
+        },
+        {
+          "name": "auth.signup_did_end"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "req_login_data"
+        },
+        {
+          "name": "auth.signup"
+        },
+        {
+          "name": "auth.login"
+        },
+        {
+          "name": "auth.logout"
+        },{
+          "name": "auth.request_status"
         }
       ],
-      "args": []
+      "args": [{
+          "name": "authentication_channel",
+          "type": "string",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "mia.segue_to_definition",
       "signals": [
-        {
-          "name": ""
-        }
+        
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+        
       ],
-      "args": []
+      "args": [{
+          "name": "container",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "mia.map_annotations_adapter",
