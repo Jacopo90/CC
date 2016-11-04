@@ -74,15 +74,15 @@ static NSDictionary * listMap;
     self.tmp_addings = [[NSMutableDictionary alloc]init];
     self.validTextfield.stringValue = @"valid";
     self.validTextfield.textColor = [Utils colorWithHexColorString:@"277455" alpha:1];
-//    self.scrollerJson.hasVerticalRuler = YES;
-//    self.scrollerJson.rulersVisible = YES;
-//    
-//    NoodleLineNumberView *lineView = [[NoodleLineNumberView alloc] initWithScrollView:self.scrollerJson];
-//    lineView.backgroundColor = [Utils colorWithHexColorString:@"ffffff" alpha:1];
-//    lineView.textColor = [Utils colorWithHexColorString:@"666666" alpha:1];
-//    lineView.alternateTextColor  = [Utils colorWithHexColorString:@"ffffff" alpha:1];
-//    self.scrollerJson.verticalRulerView = lineView;
-//    self.scrollerJson.hasHorizontalRuler = NO;
+    self.scrollerJson.hasVerticalRuler = YES;
+    self.scrollerJson.rulersVisible = YES;
+    
+    NoodleLineNumberView *lineView = [[NoodleLineNumberView alloc] initWithScrollView:self.scrollerJson];
+    lineView.backgroundColor = [Utils colorWithHexColorString:@"ffffff" alpha:1];
+    lineView.textColor = [Utils colorWithHexColorString:@"666666" alpha:1];
+    lineView.alternateTextColor  = [Utils colorWithHexColorString:@"ffffff" alpha:1];
+    self.scrollerJson.verticalRulerView = lineView;
+    self.scrollerJson.hasHorizontalRuler = NO;
     self.jsonView.delegate = self;
     self.jsonView.font = [NSFont fontWithName:@"Menlo-Regular" size:13];
     self.jsonView.automaticQuoteSubstitutionEnabled = NO;
