@@ -1174,12 +1174,23 @@
       "name": "mia.map_annotations_adapter",
       "signals": [
         {
-          "name": ""
+          "name": "adapter.did_reload"
+        },
+        {
+          "name": "adapter.did_update"
+        },
+        {
+          "name": "adapter.error_out"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "adapter.reload"
+        },{
+          "name": "adapter.update"
+        },
+        {
+          "name": "adapter.error_in"
         }
       ],
       "args": []
@@ -1188,57 +1199,167 @@
       "name": "mia.category_filter_adapter",
       "signals": [
         {
-          "name": ""
+          "name": "adapter.did_perform"
+        },
+        {
+          "name": "adapter.did_perform_adaptions"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "adapter.perform"
         }
       ],
-      "args": []
+      "args": [
+        {
+          "name": "see_all_param",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "category_param",
+          "type": "string",
+          "default": "",
+          "values": []
+        }
+        ]
     },
     {
       "name": "mia.data_source.filter",
       "signals": [
         {
-          "name": ""
+          "name": "filter.emitData"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "filter.perform"
+        },
+        {
+          "name": "filter.perform_filters"
+        },
+          {
+          "name": "filter.perform_from_event"
         }
       ],
-      "args": []
+      "args": [
+        {
+          "name": "datasource_uid",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "output_filter_name",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "default_filters",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        }
+        ]
     },
     {
       "name": "mia.uiview",
       "signals": [
-        {
-          "name": ""
-        }
+       
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+        
       ],
-      "args": []
+      "args": [{
+          "name": "ui_view_identifier",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "ui_view_name",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "ui_view_properties",
+          "type": "string",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "mia.uicontrol",
       "signals": [
         {
-          "name": ""
+          "name": "control.touch_down"
+        },
+        {
+          "name": "control.touch_down_repeat"
+        },
+        {
+          "name": "control.touch_drag_inside"
+        },
+        {
+          "name": "control.touch_drag_outside"
+        },
+        {
+          "name": "control.touch_drag_enter"
+        },
+        {
+          "name": "control.touch_drag_exit"
+        },
+        {
+          "name": "control.touchup_inside"
+        },
+        {
+          "name": "control.touch_cancel"
+        },
+        {
+          "name": "control.value_changed"
+        },
+        {
+          "name": "control.editing_did_begin"
+        },
+        {
+          "name": "control.editing_changed"
+        },
+        {
+          "name": "control.editing_did_end"
+        },
+        {
+          "name": "control.editing_did_end_on_exit"
+        },
+        {
+          "name": "control.all_touch_events"
+        },
+        {
+          "name": "control.all_editing_events"
+        },
+        {
+          "name": "control.all_events"
+        },
+         {
+          "name": "event_description_value"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "control.input_data"
+        },
+        {
+          "name": "event_description_emit"
         }
       ],
-      "args": []
+      "args": [{
+          "name": "control_args",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "mia.list_sorter",
