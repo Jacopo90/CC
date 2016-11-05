@@ -12,5 +12,6 @@
 
 @interface MIAUIJunction : MIAUIObject
 
+-(void)setBgColorForLinkedJunctionStyle:(NSColor *)color;
 
 @end

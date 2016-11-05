@@ -33,7 +33,7 @@
 @property (weak) IBOutlet NSTextField *receiverTextField;
 @property (weak) IBOutlet NSTextField *receptorTextField;
 @property (weak) IBOutlet NSLine *line;
-
+@property (nonatomic,strong) NSColor *junctionBgColor;
 @end
 
 @implementation MIAUIJunction
@@ -43,7 +43,7 @@
     [[Utils colorWithHexColorString:@"C9AE82" alpha:1] set];
 
 }
--(void)deselectStyle{
+-(void)defaultStyle{
     [[Utils colorWithHexColorString:@"596C84" alpha:1] set];
     self.senderTextField.textColor = [Utils colorWithHexColorString:@"283D58"alpha:1];
     self.receiverTextField.textColor = [Utils colorWithHexColorString:@"283D58" alpha:1];
@@ -51,11 +51,11 @@
     self.receptorTextField.textColor = [Utils colorWithHexColorString:@"efefef" alpha:1];
 
 }
-
-- (void)drawRect:(NSRect)dirtyRect {
-
-    [super drawRect:dirtyRect];
+-(void)customStyle{
+    [self.junctionBgColor set];
 }
+
+
 -(void)bindData:(NSDictionary *)data{
     if ([data objectForKey:@"sender"]) {
         self.senderTextField.stringValue = [data objectForKey:@"sender"];
@@ -72,5 +72,7 @@
     [self.upButton upArrow:YES];
     [self.downButton upArrow:NO];
 }
-
+-(void)setBgColorForLinkedJunctionStyle:(NSColor *)color{ // to do: think a better way to do
+    self.junctionBgColor = color;
+}
 @end

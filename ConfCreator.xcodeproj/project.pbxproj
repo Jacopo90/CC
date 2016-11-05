@@ -44,6 +44,7 @@
 		EAD405FF1DCD499300AEA504 /* ArrowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD405FA1DCD499300AEA504 /* ArrowButton.m */; };
 		EAD406001DCD499300AEA504 /* CancelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD405FC1DCD499300AEA504 /* CancelButton.m */; };
 		EAD406011DCD499300AEA504 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD405FE1DCD499300AEA504 /* CustomButton.m */; };
+		EAD406041DCD4AA000AEA504 /* JunctionsLinker.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD406031DCD4AA000AEA504 /* JunctionsLinker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +134,8 @@
 		EAD405FC1DCD499300AEA504 /* CancelButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CancelButton.m; sourceTree = "<group>"; };
 		EAD405FD1DCD499300AEA504 /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
 		EAD405FE1DCD499300AEA504 /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
+		EAD406021DCD4AA000AEA504 /* JunctionsLinker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JunctionsLinker.h; sourceTree = "<group>"; };
+		EAD406031DCD4AA000AEA504 /* JunctionsLinker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JunctionsLinker.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +266,8 @@
 				EA5DFDDC1DC613EA0016F562 /* ComponentsView.m */,
 				EA5DFDDD1DC613EA0016F562 /* JunctionsView.h */,
 				EA5DFDDE1DC613EA0016F562 /* JunctionsView.m */,
+				EAD406021DCD4AA000AEA504 /* JunctionsLinker.h */,
+				EAD406031DCD4AA000AEA504 /* JunctionsLinker.m */,
 				EA5DFDDF1DC613EA0016F562 /* StackView.h */,
 				EA5DFDE01DC613EA0016F562 /* StackView.m */,
 			);
@@ -480,6 +485,7 @@
 				EACBB44F1DC3FE8E00C10644 /* MIAConfiguration.m in Sources */,
 				EACBB4641DC404BA00C10644 /* MIAUIJunction.m in Sources */,
 				EA5DFDE31DC613EA0016F562 /* StackView.m in Sources */,
+				EAD406041DCD4AA000AEA504 /* JunctionsLinker.m in Sources */,
 				EACBB44B1DC3FE7800C10644 /* MIAJunction.m in Sources */,
 				EA5DFDE11DC613EA0016F562 /* ComponentsView.m in Sources */,
 				EA5DFDED1DC614400016F562 /* ConfirmJunctionWindow.m in Sources */,

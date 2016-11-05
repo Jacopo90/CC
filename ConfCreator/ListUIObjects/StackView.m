@@ -112,7 +112,18 @@
     }
     [self updateScroller];
 }
+#pragma mark - selection -
+-(void)applySelectionFromId:(NSString *)uidObject{
+    [self cycleObjects:^(MIAUIObject *object) {
+        [object select:[object.uuid isEqualToString:uidObject]];
+    }];
+}
 
+-(void)applySelectStyle:(MIAUIObject *)uiobject{
+    [self cycleObjects:^(MIAUIObject *object) {
+        [object select:[object isEqual:uiobject]];
+    }];
+}
 #pragma mark - uiobject delegate -
 -(void)uiObject:(MIAUIObject *)uiobject up:(BOOL)up{}
 -(void)uiObject:(MIAUIObject *)uiobject tapped:(BOOL)tapped{}

@@ -65,7 +65,12 @@
     }
     return nil;
 }
-
++(NSColor *)randomColor{
+    float hue =  arc4random() % 255/255.0f;
+    float saturation = arc4random() % 50/100.0f;  //  0.5 to 1.0, away from white
+    float brightness = arc4random() % 100/100.0f;  //  0.5 to 1.0, away from black
+    return [NSColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1];
+}
 + (void)openFileInWindow:(NSWindow*)window
           completionHandler:(void (^)(NSString* path))completion {
     NSOpenPanel* openPanel = [NSOpenPanel openPanel];

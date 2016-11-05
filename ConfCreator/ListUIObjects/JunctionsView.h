@@ -8,6 +8,8 @@
 
 #import "StackView.h"
 #import "MIAJunction.h"
+#import "JunctionsLinker.h"
+
 @class JunctionsView;
 
 @protocol JunctionsViewProtocol <StackViewProtocol>
@@ -21,5 +23,5 @@
 @property(nonatomic,weak) id <JunctionsViewProtocol> delegate;
 -(void)forceRemoveJunctionWithId:(NSString *)junctionID;
 -(void)addJunction:(MIAJunction *)uijunction;
-
+-(void)applyStyleToJunctionChains:(NSArray <JunctionsChain *>*)chains;
 @end

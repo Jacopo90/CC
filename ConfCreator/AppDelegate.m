@@ -18,8 +18,9 @@
 #import "MIAConfigurationPrinter.h"
 
 #import "CustomButton.h"
+#import "JunctionsLinker.h"
 
-@interface AppDelegate ()<NSTextViewDelegate,ComponentWindowProtocol,ComponentsViewProtocol,JunctionWindowProtocol,JunctionsViewProtocol>
+@interface AppDelegate ()<NSTextViewDelegate,ComponentWindowProtocol,ComponentsViewProtocol,JunctionWindowProtocol,JunctionsViewProtocol,JunctionsLinkerProtocol>
 @property (unsafe_unretained) IBOutlet NSTextView *jsonView;
 @property (weak) IBOutlet NSScrollView *scrollerJson;
 @property (weak) IBOutlet ComponentsView *componentsView;
@@ -32,7 +33,7 @@
 @property (strong) ConfirmJunctionWindow *confirmJunctionWin;
 
 @property (strong) MIAConfiguration *mainConfiguration;
-
+@property (strong) JunctionsLinker *junctionsLinker;
 @property (weak) MIAObject *selectedObject;
 @property (weak) IBOutlet CustomButton *addComponentButton;
 @property (weak) IBOutlet CustomButton *addJunctionButton;
@@ -64,10 +65,12 @@ static NSDictionary * listMap;
 }
 - (void)load {
     [self mainStyle];
+    
     listMap = @{NSStringFromClass([MIAJunction class]):self.junctionsView,
                 NSStringFromClass([MIAComponent class]):self.componentsView,
                 };
-        self.window.appearance = [NSAppearance
+    
+    self.window.appearance = [NSAppearance
        appearanceNamed:NSAppearanceNameVibrantLight];
     self.window.titlebarAppearsTransparent = YES;
     
@@ -93,6 +96,9 @@ static NSDictionary * listMap;
     [self.jsonView setVerticallyResizable:YES];
     [self.scrollerJson setAutohidesScrollers:NO];
     [self.scrollerJson setHasVerticalScroller:YES];
+    
+    
+    self.junctionsLinker = [[JunctionsLinker alloc]initWithDelegate:self];
 }
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application
@@ -129,7 +135,8 @@ static NSDictionary * listMap;
             [self.mainConfiguration addJunction:junc];
             [self.junctionsView addJunction:junc];
         }
-        
+        [self.junctionsLinker buildChains];
+        [self.junctionsView applyStyleToJunctionChains:(NSArray *)[self.junctionsLinker chains]];
         
         // this is for the addings ... remove!!
         for (id key in json) {
@@ -154,8 +161,13 @@ static NSDictionary * listMap;
     self.confirmJunctionWin.delegate = self;
     [self.confirmJunctionWin showWindow:self];
 }
-
-
+#pragma mark - junction linker protocol
+-(NSArray<MIAJunction *> *)junctionsLinker:(JunctionsLinker *)linker askJunctions:(BOOL)ask{
+    if (!ask) {
+        return nil;
+    }
+    return [self.mainConfiguration junctions];
+}
 #pragma mark - stack view delegate -
 -(void)stackView:(StackView *)stackView wantsToUp:(BOOL)up object:(MIAUIObject *)uiobject completion:(void (^)(NSArray<MIAObject *> *))compBlock{
 
@@ -170,6 +182,10 @@ static NSDictionary * listMap;
     }
     if([object isKindOfClass:[MIAJunction class]]){
         arrayOfObjects = [self.mainConfiguration junctions];
+        
+        // the junctions linker changes the style only of you change the order of the junctions
+        [self.junctionsLinker buildChains];
+        [self.junctionsView applyStyleToJunctionChains:(NSArray *)[self.junctionsLinker chains]];
     }
     compBlock(arrayOfObjects);
 }
@@ -205,10 +221,22 @@ static NSDictionary * listMap;
     [self printJson:@{}];
 }
 -(void)componentsView:(ComponentsView *)view tappedComponentWithId:(NSString *)uuid{
+    
+    if ([self.selectedObject.uuid isEqualToString:uuid]) {
+        [view applySelectionFromId:nil];
+        self.selectedObject = nil;
+        [self printJson:@{}];
+        return;
+    }
+
     self.selectedObject = nil;
     MIAObject *obj = [self.mainConfiguration objectFromID:uuid];
+    [view applySelectionFromId:uuid];
     [self printJson:[obj dataDict]];
     self.selectedObject = obj;
+    
+    
+    
 }
 
 #pragma marl - confirm junction delegate
@@ -218,6 +246,9 @@ static NSDictionary * listMap;
         return;
     }
     [self.junctionsView addJunction:junction];
+    
+    [self.junctionsLinker buildChains];
+    [self.junctionsView applyStyleToJunctionChains:(NSArray *)[self.junctionsLinker chains]];
 }
 #pragma mark - junctions view delegate -
 -(void)junctionsView:(JunctionsView *)view wantsRemoveJunctionWithId:(NSString *)uuid completion:(void (^)(void))compBlock{
@@ -229,8 +260,17 @@ static NSDictionary * listMap;
     [self printJson:@{}];
 }
 -(void)junctionsView:(JunctionsView *)view tappedJunctionWithId:(NSString *)uuid{
+    
+    if ([self.selectedObject.uuid isEqualToString:uuid]) {
+        [view applySelectionFromId:nil];
+        self.selectedObject = nil;
+        [self printJson:@{}];
+        return;
+    }
+    
     self.selectedObject = nil;
     MIAObject *obj = [self.mainConfiguration objectFromID:uuid];
+    [view applySelectionFromId:uuid];
     [self printJson:[obj dataDict]];
     self.selectedObject = obj;
 

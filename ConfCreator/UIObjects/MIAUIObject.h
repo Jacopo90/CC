@@ -23,5 +23,6 @@
 - (void)bindData:(NSDictionary *)data;
 - (void)select:(BOOL)select;
 - (void)selectStyle;
-- (void)deselectStyle;
+- (void)defaultStyle;
+- (void)customStyle;
 @end
