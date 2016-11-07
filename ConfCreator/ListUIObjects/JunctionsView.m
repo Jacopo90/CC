@@ -57,7 +57,6 @@
 }
 -(void)uiObject:(MIAUIObject *)uiobject tapped:(BOOL)tapped{
     [self.delegate junctionsView:self tappedJunctionWithId:uiobject.uuid];
-    [self applySelectStyle:uiobject];
 }
 -(void)uiObject:(MIAUIObject *)uiobject up:(BOOL)up{
     [self.delegate stackView:self wantsToUp:up object:uiobject completion:^(NSArray<MIAObject *> *objects) {
@@ -66,6 +65,20 @@
 }
 
 #pragma mark - styles -
+-(void)applyStyleToJunctionChains:(NSArray <JunctionsChain *>*)chains{
+    for (JunctionsChain *chain in chains) {
+        [chain cycleList:^(MIAJunction *junction) {
+            [self cycleObjects:^(MIAUIObject *object) {
+                MIAUIJunction *uijunction = (MIAUIJunction *)object;
+                if ([uijunction.uuid isEqualToString:junction.uuid]) {
+                    [uijunction setBgColorForLinkedJunctionStyle:[chain chainColor]];
+                    [uijunction setNeedsDisplay:YES];
+                }
+            }];
+        }];
+    }
+}
+
 -(void)applySelectStyle:(MIAUIObject *)uiobject{
     [self cycleObjects:^(MIAUIObject *object) {
         [object select:[object isEqual:uiobject]];

@@ -13,25 +13,10 @@
 		EA0228D41DC15EF4009EC56E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA0228D21DC15EF4009EC56E /* MainMenu.xib */; };
 		EA0228DF1DC15EF4009EC56E /* ConfCreatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0228DE1DC15EF4009EC56E /* ConfCreatorTests.m */; };
 		EA0228EA1DC15EF4009EC56E /* ConfCreatorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0228E91DC15EF4009EC56E /* ConfCreatorUITests.m */; };
-		EA0229181DC1749E009EC56E /* NoodleCustomImageRep.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0228FF1DC1749E009EC56E /* NoodleCustomImageRep.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		EA0229191DC1749E009EC56E /* NoodleGlue.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0229011DC1749E009EC56E /* NoodleGlue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		EA02291A1DC1749E009EC56E /* NoodleIPhoneTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0229031DC1749E009EC56E /* NoodleIPhoneTableView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		EA02291B1DC1749E009EC56E /* NoodleLineNumberMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0229051DC1749E009EC56E /* NoodleLineNumberMarker.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		EA02291C1DC1749E009EC56E /* NoodleLineNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0229071DC1749E009EC56E /* NoodleLineNumberView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		EA02291D1DC1749E009EC56E /* NoodleTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0229091DC1749E009EC56E /* NoodleTableView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		EA02291E1DC1749E009EC56E /* NSImage-NoodleExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = EA02290B1DC1749E009EC56E /* NSImage-NoodleExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		EA02291F1DC1749E009EC56E /* NSIndexSet-NoodleExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = EA02290D1DC1749E009EC56E /* NSIndexSet-NoodleExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		EA0229201DC1749E009EC56E /* NSObject-NoodlePerformWhenIdle.m in Sources */ = {isa = PBXBuildFile; fileRef = EA02290F1DC1749E009EC56E /* NSObject-NoodlePerformWhenIdle.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		EA0229211DC1749E009EC56E /* NSResponder-NoodleModalExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0229111DC1749E009EC56E /* NSResponder-NoodleModalExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		EA0229221DC1749E009EC56E /* NSTableView-NoodleExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0229131DC1749E009EC56E /* NSTableView-NoodleExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		EA0229231DC1749E009EC56E /* NSTimer-NoodleExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0229151DC1749E009EC56E /* NSTimer-NoodleExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		EA0229241DC1749E009EC56E /* NSWindow-NoodleEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0229171DC1749E009EC56E /* NSWindow-NoodleEffects.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		EA0229271DC17579009EC56E /* MarkerLineNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0229261DC17579009EC56E /* MarkerLineNumberView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		EA2C0E331DC521410082EE70 /* MIAUIComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2C0E321DC521410082EE70 /* MIAUIComponent.xib */; };
-		EA4B29821DC8C89000A08E02 /* ArrowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4B29811DC8C89000A08E02 /* ArrowButton.m */; };
 		EA4B298A1DC8CE4600A08E02 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA4B29891DC8CE4600A08E02 /* fontawesome-webfont.ttf */; };
 		EA4B298C1DC8CED900A08E02 /* Surabanglus.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA4B298B1DC8CED900A08E02 /* Surabanglus.ttf */; };
-		EA4B298F1DC8D54F00A08E02 /* CompsReader.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4B298E1DC8D54F00A08E02 /* CompsReader.m */; };
 		EA4B29921DC8D75600A08E02 /* SignalDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4B29911DC8D75600A08E02 /* SignalDataSource.m */; };
 		EA4B29951DC8D91000A08E02 /* ReceptorDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4B29941DC8D91000A08E02 /* ReceptorDataSource.m */; };
 		EA5DFDD91DC601920016F562 /* MIAObject.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5DFDD81DC601920016F562 /* MIAObject.m */; };
@@ -45,8 +30,6 @@
 		EA5DFDF01DC6275A0016F562 /* MIAUIJunction.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5DFDEF1DC6275A0016F562 /* MIAUIJunction.xib */; };
 		EA5DFDF31DC662810016F562 /* MIAObjectsDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5DFDF21DC662810016F562 /* MIAObjectsDecoder.m */; };
 		EA5DFDF61DC6689C0016F562 /* MIAConfigurationPrinter.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5DFDF51DC6689C0016F562 /* MIAConfigurationPrinter.m */; };
-		EA5DFDF91DC66E500016F562 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5DFDF81DC66E500016F562 /* CustomButton.m */; };
-		EA5DFDFC1DC67A290016F562 /* CancelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5DFDFB1DC67A290016F562 /* CancelButton.m */; };
 		EACBB4361DC3F3F400C10644 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EACBB4351DC3F3F400C10644 /* Utils.m */; };
 		EACBB44A1DC3FE7800C10644 /* MIAComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = EACBB4451DC3FE7800C10644 /* MIAComponent.m */; };
 		EACBB44B1DC3FE7800C10644 /* MIAJunction.m in Sources */ = {isa = PBXBuildFile; fileRef = EACBB4471DC3FE7800C10644 /* MIAJunction.m */; };
@@ -56,6 +39,12 @@
 		EACBB4641DC404BA00C10644 /* MIAUIJunction.m in Sources */ = {isa = PBXBuildFile; fileRef = EACBB4601DC404BA00C10644 /* MIAUIJunction.m */; };
 		EACBB4651DC404BA00C10644 /* MIAUIStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = EACBB4621DC404BA00C10644 /* MIAUIStyle.m */; };
 		EACBB4681DC4055500C10644 /* MIAUIObject.m in Sources */ = {isa = PBXBuildFile; fileRef = EACBB4671DC4055500C10644 /* MIAUIObject.m */; };
+		EAD405F41DCD47CE00AEA504 /* NoodleLineNumberMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD405F31DCD47CE00AEA504 /* NoodleLineNumberMarker.m */; };
+		EAD405F71DCD492A00AEA504 /* CompsReader.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD405F61DCD492A00AEA504 /* CompsReader.m */; };
+		EAD405FF1DCD499300AEA504 /* ArrowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD405FA1DCD499300AEA504 /* ArrowButton.m */; };
+		EAD406001DCD499300AEA504 /* CancelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD405FC1DCD499300AEA504 /* CancelButton.m */; };
+		EAD406011DCD499300AEA504 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD405FE1DCD499300AEA504 /* CustomButton.m */; };
+		EAD406041DCD4AA000AEA504 /* JunctionsLinker.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD406031DCD4AA000AEA504 /* JunctionsLinker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,41 +78,11 @@
 		EA0228E51DC15EF4009EC56E /* ConfCreatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConfCreatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA0228E91DC15EF4009EC56E /* ConfCreatorUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfCreatorUITests.m; sourceTree = "<group>"; };
 		EA0228EB1DC15EF4009EC56E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EA0228FE1DC1749E009EC56E /* NoodleCustomImageRep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoodleCustomImageRep.h; sourceTree = "<group>"; };
-		EA0228FF1DC1749E009EC56E /* NoodleCustomImageRep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoodleCustomImageRep.m; sourceTree = "<group>"; };
-		EA0229001DC1749E009EC56E /* NoodleGlue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoodleGlue.h; sourceTree = "<group>"; };
-		EA0229011DC1749E009EC56E /* NoodleGlue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoodleGlue.m; sourceTree = "<group>"; };
-		EA0229021DC1749E009EC56E /* NoodleIPhoneTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoodleIPhoneTableView.h; sourceTree = "<group>"; };
-		EA0229031DC1749E009EC56E /* NoodleIPhoneTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoodleIPhoneTableView.m; sourceTree = "<group>"; };
-		EA0229041DC1749E009EC56E /* NoodleLineNumberMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoodleLineNumberMarker.h; sourceTree = "<group>"; };
-		EA0229051DC1749E009EC56E /* NoodleLineNumberMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoodleLineNumberMarker.m; sourceTree = "<group>"; };
 		EA0229061DC1749E009EC56E /* NoodleLineNumberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoodleLineNumberView.h; sourceTree = "<group>"; };
 		EA0229071DC1749E009EC56E /* NoodleLineNumberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoodleLineNumberView.m; sourceTree = "<group>"; };
-		EA0229081DC1749E009EC56E /* NoodleTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoodleTableView.h; sourceTree = "<group>"; };
-		EA0229091DC1749E009EC56E /* NoodleTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoodleTableView.m; sourceTree = "<group>"; };
-		EA02290A1DC1749E009EC56E /* NSImage-NoodleExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage-NoodleExtensions.h"; sourceTree = "<group>"; };
-		EA02290B1DC1749E009EC56E /* NSImage-NoodleExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage-NoodleExtensions.m"; sourceTree = "<group>"; };
-		EA02290C1DC1749E009EC56E /* NSIndexSet-NoodleExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexSet-NoodleExtensions.h"; sourceTree = "<group>"; };
-		EA02290D1DC1749E009EC56E /* NSIndexSet-NoodleExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexSet-NoodleExtensions.m"; sourceTree = "<group>"; };
-		EA02290E1DC1749E009EC56E /* NSObject-NoodlePerformWhenIdle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject-NoodlePerformWhenIdle.h"; sourceTree = "<group>"; };
-		EA02290F1DC1749E009EC56E /* NSObject-NoodlePerformWhenIdle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject-NoodlePerformWhenIdle.m"; sourceTree = "<group>"; };
-		EA0229101DC1749E009EC56E /* NSResponder-NoodleModalExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSResponder-NoodleModalExtensions.h"; sourceTree = "<group>"; };
-		EA0229111DC1749E009EC56E /* NSResponder-NoodleModalExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSResponder-NoodleModalExtensions.m"; sourceTree = "<group>"; };
-		EA0229121DC1749E009EC56E /* NSTableView-NoodleExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTableView-NoodleExtensions.h"; sourceTree = "<group>"; };
-		EA0229131DC1749E009EC56E /* NSTableView-NoodleExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTableView-NoodleExtensions.m"; sourceTree = "<group>"; };
-		EA0229141DC1749E009EC56E /* NSTimer-NoodleExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer-NoodleExtensions.h"; sourceTree = "<group>"; };
-		EA0229151DC1749E009EC56E /* NSTimer-NoodleExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer-NoodleExtensions.m"; sourceTree = "<group>"; };
-		EA0229161DC1749E009EC56E /* NSWindow-NoodleEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSWindow-NoodleEffects.h"; sourceTree = "<group>"; };
-		EA0229171DC1749E009EC56E /* NSWindow-NoodleEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSWindow-NoodleEffects.m"; sourceTree = "<group>"; };
-		EA0229251DC17579009EC56E /* MarkerLineNumberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkerLineNumberView.h; sourceTree = "<group>"; };
-		EA0229261DC17579009EC56E /* MarkerLineNumberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkerLineNumberView.m; sourceTree = "<group>"; };
 		EA2C0E321DC521410082EE70 /* MIAUIComponent.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MIAUIComponent.xib; sourceTree = "<group>"; };
-		EA4B29801DC8C89000A08E02 /* ArrowButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrowButton.h; sourceTree = "<group>"; };
-		EA4B29811DC8C89000A08E02 /* ArrowButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrowButton.m; sourceTree = "<group>"; };
 		EA4B29891DC8CE4600A08E02 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
 		EA4B298B1DC8CED900A08E02 /* Surabanglus.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Surabanglus.ttf; sourceTree = "<group>"; };
-		EA4B298D1DC8D54F00A08E02 /* CompsReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompsReader.h; sourceTree = "<group>"; };
-		EA4B298E1DC8D54F00A08E02 /* CompsReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompsReader.m; sourceTree = "<group>"; };
 		EA4B29901DC8D75600A08E02 /* SignalDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignalDataSource.h; sourceTree = "<group>"; };
 		EA4B29911DC8D75600A08E02 /* SignalDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignalDataSource.m; sourceTree = "<group>"; };
 		EA4B29931DC8D91000A08E02 /* ReceptorDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceptorDataSource.h; sourceTree = "<group>"; };
@@ -147,10 +106,6 @@
 		EA5DFDF21DC662810016F562 /* MIAObjectsDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIAObjectsDecoder.m; sourceTree = "<group>"; };
 		EA5DFDF41DC6689C0016F562 /* MIAConfigurationPrinter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIAConfigurationPrinter.h; sourceTree = "<group>"; };
 		EA5DFDF51DC6689C0016F562 /* MIAConfigurationPrinter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIAConfigurationPrinter.m; sourceTree = "<group>"; };
-		EA5DFDF71DC66E500016F562 /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
-		EA5DFDF81DC66E500016F562 /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
-		EA5DFDFA1DC67A290016F562 /* CancelButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CancelButton.h; sourceTree = "<group>"; };
-		EA5DFDFB1DC67A290016F562 /* CancelButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CancelButton.m; sourceTree = "<group>"; };
 		EACBB4341DC3F3F400C10644 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		EACBB4351DC3F3F400C10644 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		EACBB4441DC3FE7800C10644 /* MIAComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIAComponent.h; sourceTree = "<group>"; };
@@ -169,6 +124,18 @@
 		EACBB4621DC404BA00C10644 /* MIAUIStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIAUIStyle.m; sourceTree = "<group>"; };
 		EACBB4661DC4055500C10644 /* MIAUIObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIAUIObject.h; sourceTree = "<group>"; };
 		EACBB4671DC4055500C10644 /* MIAUIObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIAUIObject.m; sourceTree = "<group>"; };
+		EAD405F21DCD47CE00AEA504 /* NoodleLineNumberMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoodleLineNumberMarker.h; sourceTree = "<group>"; };
+		EAD405F31DCD47CE00AEA504 /* NoodleLineNumberMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoodleLineNumberMarker.m; sourceTree = "<group>"; };
+		EAD405F51DCD492A00AEA504 /* CompsReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompsReader.h; sourceTree = "<group>"; };
+		EAD405F61DCD492A00AEA504 /* CompsReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompsReader.m; sourceTree = "<group>"; };
+		EAD405F91DCD499300AEA504 /* ArrowButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrowButton.h; sourceTree = "<group>"; };
+		EAD405FA1DCD499300AEA504 /* ArrowButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrowButton.m; sourceTree = "<group>"; };
+		EAD405FB1DCD499300AEA504 /* CancelButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CancelButton.h; sourceTree = "<group>"; };
+		EAD405FC1DCD499300AEA504 /* CancelButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CancelButton.m; sourceTree = "<group>"; };
+		EAD405FD1DCD499300AEA504 /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
+		EAD405FE1DCD499300AEA504 /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
+		EAD406021DCD4AA000AEA504 /* JunctionsLinker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JunctionsLinker.h; sourceTree = "<group>"; };
+		EAD406031DCD4AA000AEA504 /* JunctionsLinker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JunctionsLinker.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,29 +188,26 @@
 			children = (
 				EACBB45C1DC404BA00C10644 /* UIObjects */,
 				EACBB4431DC3FE7800C10644 /* ConfObjects */,
+				EA5DFDDA1DC613EA0016F562 /* ListUIObjects */,
+				EA5DFDE41DC6141B0016F562 /* Confirms */,
+				EA0228FD1DC1749E009EC56E /* Noodles */,
+				EAD405F81DCD499300AEA504 /* UIButtons */,
+				EA0228CA1DC15EF3009EC56E /* AppDelegate.h */,
+				EA0228CB1DC15EF4009EC56E /* AppDelegate.m */,
 				EACBB4341DC3F3F400C10644 /* Utils.h */,
 				EACBB4351DC3F3F400C10644 /* Utils.m */,
-				EA5DFDDA1DC613EA0016F562 /* ListUIObjects */,
 				EACBB44D1DC3FE8E00C10644 /* MIAConfiguration.h */,
 				EACBB44E1DC3FE8E00C10644 /* MIAConfiguration.m */,
 				EA5DFDF41DC6689C0016F562 /* MIAConfigurationPrinter.h */,
 				EA5DFDF51DC6689C0016F562 /* MIAConfigurationPrinter.m */,
-				EA5DFDE41DC6141B0016F562 /* Confirms */,
-				EA0228FD1DC1749E009EC56E /* Noodles */,
-				EA0228CA1DC15EF3009EC56E /* AppDelegate.h */,
-				EA0228CB1DC15EF4009EC56E /* AppDelegate.m */,
+				EAD405F51DCD492A00AEA504 /* CompsReader.h */,
+				EAD405F61DCD492A00AEA504 /* CompsReader.m */,
 				EA5DFDF11DC662810016F562 /* MIAObjectsDecoder.h */,
 				EA5DFDF21DC662810016F562 /* MIAObjectsDecoder.m */,
 				EA0228D01DC15EF4009EC56E /* Assets.xcassets */,
 				EA0228D21DC15EF4009EC56E /* MainMenu.xib */,
 				EA0228D51DC15EF4009EC56E /* Info.plist */,
 				EA0228CD1DC15EF4009EC56E /* Supporting Files */,
-				EA5DFDF71DC66E500016F562 /* CustomButton.h */,
-				EA5DFDF81DC66E500016F562 /* CustomButton.m */,
-				EA5DFDFA1DC67A290016F562 /* CancelButton.h */,
-				EA5DFDFB1DC67A290016F562 /* CancelButton.m */,
-				EA4B29801DC8C89000A08E02 /* ArrowButton.h */,
-				EA4B29811DC8C89000A08E02 /* ArrowButton.m */,
 				EA4B29861DC8CA2800A08E02 /* Resources */,
 			);
 			path = ConfCreator;
@@ -278,34 +242,10 @@
 		EA0228FD1DC1749E009EC56E /* Noodles */ = {
 			isa = PBXGroup;
 			children = (
-				EA0229251DC17579009EC56E /* MarkerLineNumberView.h */,
-				EA0229261DC17579009EC56E /* MarkerLineNumberView.m */,
-				EA0228FE1DC1749E009EC56E /* NoodleCustomImageRep.h */,
-				EA0228FF1DC1749E009EC56E /* NoodleCustomImageRep.m */,
-				EA0229001DC1749E009EC56E /* NoodleGlue.h */,
-				EA0229011DC1749E009EC56E /* NoodleGlue.m */,
-				EA0229021DC1749E009EC56E /* NoodleIPhoneTableView.h */,
-				EA0229031DC1749E009EC56E /* NoodleIPhoneTableView.m */,
-				EA0229041DC1749E009EC56E /* NoodleLineNumberMarker.h */,
-				EA0229051DC1749E009EC56E /* NoodleLineNumberMarker.m */,
+				EAD405F21DCD47CE00AEA504 /* NoodleLineNumberMarker.h */,
+				EAD405F31DCD47CE00AEA504 /* NoodleLineNumberMarker.m */,
 				EA0229061DC1749E009EC56E /* NoodleLineNumberView.h */,
 				EA0229071DC1749E009EC56E /* NoodleLineNumberView.m */,
-				EA0229081DC1749E009EC56E /* NoodleTableView.h */,
-				EA0229091DC1749E009EC56E /* NoodleTableView.m */,
-				EA02290A1DC1749E009EC56E /* NSImage-NoodleExtensions.h */,
-				EA02290B1DC1749E009EC56E /* NSImage-NoodleExtensions.m */,
-				EA02290C1DC1749E009EC56E /* NSIndexSet-NoodleExtensions.h */,
-				EA02290D1DC1749E009EC56E /* NSIndexSet-NoodleExtensions.m */,
-				EA02290E1DC1749E009EC56E /* NSObject-NoodlePerformWhenIdle.h */,
-				EA02290F1DC1749E009EC56E /* NSObject-NoodlePerformWhenIdle.m */,
-				EA0229101DC1749E009EC56E /* NSResponder-NoodleModalExtensions.h */,
-				EA0229111DC1749E009EC56E /* NSResponder-NoodleModalExtensions.m */,
-				EA0229121DC1749E009EC56E /* NSTableView-NoodleExtensions.h */,
-				EA0229131DC1749E009EC56E /* NSTableView-NoodleExtensions.m */,
-				EA0229141DC1749E009EC56E /* NSTimer-NoodleExtensions.h */,
-				EA0229151DC1749E009EC56E /* NSTimer-NoodleExtensions.m */,
-				EA0229161DC1749E009EC56E /* NSWindow-NoodleEffects.h */,
-				EA0229171DC1749E009EC56E /* NSWindow-NoodleEffects.m */,
 			);
 			path = Noodles;
 			sourceTree = "<group>";
@@ -326,6 +266,8 @@
 				EA5DFDDC1DC613EA0016F562 /* ComponentsView.m */,
 				EA5DFDDD1DC613EA0016F562 /* JunctionsView.h */,
 				EA5DFDDE1DC613EA0016F562 /* JunctionsView.m */,
+				EAD406021DCD4AA000AEA504 /* JunctionsLinker.h */,
+				EAD406031DCD4AA000AEA504 /* JunctionsLinker.m */,
 				EA5DFDDF1DC613EA0016F562 /* StackView.h */,
 				EA5DFDE01DC613EA0016F562 /* StackView.m */,
 			);
@@ -345,8 +287,6 @@
 				EA4B29931DC8D91000A08E02 /* ReceptorDataSource.h */,
 				EA4B29941DC8D91000A08E02 /* ReceptorDataSource.m */,
 				EA5DFDEC1DC614400016F562 /* ConfirmJunctionWindow.xib */,
-				EA4B298D1DC8D54F00A08E02 /* CompsReader.h */,
-				EA4B298E1DC8D54F00A08E02 /* CompsReader.m */,
 			);
 			path = Confirms;
 			sourceTree = "<group>";
@@ -381,6 +321,19 @@
 				EACBB4671DC4055500C10644 /* MIAUIObject.m */,
 			);
 			path = UIObjects;
+			sourceTree = "<group>";
+		};
+		EAD405F81DCD499300AEA504 /* UIButtons */ = {
+			isa = PBXGroup;
+			children = (
+				EAD405F91DCD499300AEA504 /* ArrowButton.h */,
+				EAD405FA1DCD499300AEA504 /* ArrowButton.m */,
+				EAD405FB1DCD499300AEA504 /* CancelButton.h */,
+				EAD405FC1DCD499300AEA504 /* CancelButton.m */,
+				EAD405FD1DCD499300AEA504 /* CustomButton.h */,
+				EAD405FE1DCD499300AEA504 /* CustomButton.m */,
+			);
+			path = UIButtons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -518,45 +471,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAD405FF1DCD499300AEA504 /* ArrowButton.m in Sources */,
 				EA5DFDF61DC6689C0016F562 /* MIAConfigurationPrinter.m in Sources */,
-				EA02291F1DC1749E009EC56E /* NSIndexSet-NoodleExtensions.m in Sources */,
-				EA02291B1DC1749E009EC56E /* NoodleLineNumberMarker.m in Sources */,
 				EA0228CF1DC15EF4009EC56E /* main.m in Sources */,
+				EAD406011DCD499300AEA504 /* CustomButton.m in Sources */,
 				EACBB4651DC404BA00C10644 /* MIAUIStyle.m in Sources */,
 				EA5DFDE21DC613EA0016F562 /* JunctionsView.m in Sources */,
 				EA4B29921DC8D75600A08E02 /* SignalDataSource.m in Sources */,
 				EA5DFDF31DC662810016F562 /* MIAObjectsDecoder.m in Sources */,
-				EA0229221DC1749E009EC56E /* NSTableView-NoodleExtensions.m in Sources */,
 				EACBB4631DC404BA00C10644 /* MIAUIComponent.m in Sources */,
 				EACBB44C1DC3FE7800C10644 /* MIAStyle.m in Sources */,
 				EACBB44A1DC3FE7800C10644 /* MIAComponent.m in Sources */,
 				EACBB44F1DC3FE8E00C10644 /* MIAConfiguration.m in Sources */,
 				EACBB4641DC404BA00C10644 /* MIAUIJunction.m in Sources */,
-				EA0229191DC1749E009EC56E /* NoodleGlue.m in Sources */,
-				EA0229201DC1749E009EC56E /* NSObject-NoodlePerformWhenIdle.m in Sources */,
 				EA5DFDE31DC613EA0016F562 /* StackView.m in Sources */,
+				EAD406041DCD4AA000AEA504 /* JunctionsLinker.m in Sources */,
 				EACBB44B1DC3FE7800C10644 /* MIAJunction.m in Sources */,
-				EA0229271DC17579009EC56E /* MarkerLineNumberView.m in Sources */,
-				EA02291E1DC1749E009EC56E /* NSImage-NoodleExtensions.m in Sources */,
-				EA02291A1DC1749E009EC56E /* NoodleIPhoneTableView.m in Sources */,
 				EA5DFDE11DC613EA0016F562 /* ComponentsView.m in Sources */,
 				EA5DFDED1DC614400016F562 /* ConfirmJunctionWindow.m in Sources */,
 				EA0228CC1DC15EF4009EC56E /* AppDelegate.m in Sources */,
-				EA0229241DC1749E009EC56E /* NSWindow-NoodleEffects.m in Sources */,
 				EA02291C1DC1749E009EC56E /* NoodleLineNumberView.m in Sources */,
-				EA4B298F1DC8D54F00A08E02 /* CompsReader.m in Sources */,
+				EAD405F41DCD47CE00AEA504 /* NoodleLineNumberMarker.m in Sources */,
+				EAD406001DCD499300AEA504 /* CancelButton.m in Sources */,
 				EACBB4681DC4055500C10644 /* MIAUIObject.m in Sources */,
-				EA0229211DC1749E009EC56E /* NSResponder-NoodleModalExtensions.m in Sources */,
 				EA5DFDD91DC601920016F562 /* MIAObject.m in Sources */,
-				EA02291D1DC1749E009EC56E /* NoodleTableView.m in Sources */,
 				EA5DFDE81DC6141B0016F562 /* ConfirmComponentWindow.m in Sources */,
 				EA4B29951DC8D91000A08E02 /* ReceptorDataSource.m in Sources */,
-				EA5DFDFC1DC67A290016F562 /* CancelButton.m in Sources */,
-				EA5DFDF91DC66E500016F562 /* CustomButton.m in Sources */,
-				EA0229231DC1749E009EC56E /* NSTimer-NoodleExtensions.m in Sources */,
-				EA0229181DC1749E009EC56E /* NoodleCustomImageRep.m in Sources */,
+				EAD405F71DCD492A00AEA504 /* CompsReader.m in Sources */,
 				EACBB4361DC3F3F400C10644 /* Utils.m in Sources */,
-				EA4B29821DC8C89000A08E02 /* ArrowButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

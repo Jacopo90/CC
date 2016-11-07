@@ -28,7 +28,7 @@
     self.nameTextfield.textColor = [Utils colorWithHexColorString:@"ffffff" alpha:1];
 
 }
--(void)deselectStyle{
+-(void)defaultStyle{
     [[Utils colorWithHexColorString:@"68A268" alpha:1] set];
     self.nameTextfield.textColor = [Utils colorWithHexColorString:@"4b734d" alpha:1];
     self.uidTextfield.textColor = [Utils colorWithHexColorString:@"ffffff" alpha:1];

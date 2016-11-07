@@ -51,12 +51,17 @@
 }
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
+    [self defaultStyle];
+    [self customStyle];
+    NSRectFill(dirtyRect);
+    
+    
     if (self->_is_selected) {
         [self selectStyle];
-    }else{
-        [self deselectStyle];
+        NSRectFill(dirtyRect);
+        return;
     }
-    NSRectFill(dirtyRect);
+    
 }
 - (IBAction)up:(id)sender {
     [self.delegate uiObject:self up:YES];
@@ -66,5 +71,7 @@
 }
 
 -(void)selectStyle{}
--(void)deselectStyle{}
+-(void)defaultStyle{}
+-(void)customStyle{}
+
 @end

@@ -25,4 +25,7 @@
 -(void)updateObjectWithId:(NSString *)uid withData:(NSDictionary *)data;
 -(void)reorder:(NSArray <MIAObject *> *)objects;
 
+
+-(void)applySelectionFromId:(NSString *)uidObject;
+-(void)applySelectStyle:(MIAUIObject *)uiobject;
 @end

@@ -50,7 +50,6 @@
 }
 -(void)uiObject:(MIAUIObject *)uiobject tapped:(BOOL)tapped{
     [self.delegate componentsView:self tappedComponentWithId:uiobject.uuid];
-    [self applySelectStyle:uiobject];
 
 }
 -(void)uiObject:(MIAUIObject *)uiobject up:(BOOL)up{
@@ -60,9 +59,5 @@
 }
 
 #pragma mark - styles -
--(void)applySelectStyle:(MIAUIObject *)uiobject{
-    [self cycleObjects:^(MIAUIObject *object) {
-        [object select:[object isEqual:uiobject]];
-    }];
-}
+
 @end
