@@ -19,6 +19,7 @@
 
 #import "CustomButton.h"
 #import "JunctionsLinker.h"
+#import <UIKit/UIKit.h>
 
 @interface AppDelegate ()<NSTextViewDelegate,ComponentWindowProtocol,ComponentsViewProtocol,JunctionWindowProtocol,JunctionsViewProtocol,JunctionsLinkerProtocol>
 @property (unsafe_unretained) IBOutlet NSTextView *jsonView;
@@ -61,7 +62,7 @@ static NSDictionary * listMap;
     [self.addJunctionButton setNeedsDisplay:YES];
     [self.addComponentButton setNeedsDisplay:YES];
     [self.printAllButton setNeedsDisplay:YES];
-
+    
 }
 - (void)load {
     [self mainStyle];
