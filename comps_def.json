@@ -4,49 +4,61 @@
       "name": "mia.value",
       "signals": [
         {
-          "name": "value.value"
+          "name": "value.value",
+          "description": ""
         }
       ],
       "receptors": [
         {
-          "name": "value.set"
+          "name": "value.set",
+          "description": ""
         },
         {
-          "name": "value.emit"
+          "name": "value.emit",
+          "description": ""
         },
         {
-          "name": "value.clear"
+          "name": "value.clear",
+          "description": ""
         }
       ],
-      "args": [{
+      "args": [
+        {
           "name": "value",
           "type": "id",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "mia.mcommerce_address_manager",
       "signals": [
         {
-          "name": "error"
+          "name": "error",
+          "description": ""
         },
         {
-          "name": "ok"
+          "name": "ok",
+          "description": ""
         }
       ],
       "receptors": [
         {
-          "name": "addresses_list"
+          "name": "addresses_list",
+          "description": ""
         },
         {
-          "name": "register_address"
+          "name": "register_address",
+          "description": ""
         },
         {
-          "name": "delete_address"
+          "name": "delete_address",
+          "description": ""
         },
         {
-          "name": "user_id"
+          "name": "user_id",
+          "description": ""
         }
       ],
       "args": []
@@ -55,12 +67,14 @@
       "name": "mia.service_list_filter",
       "signals": [
         {
-          "name": "out"
+          "name": "out",
+          "description": ""
         }
       ],
       "receptors": [
         {
-          "name": "in"
+          "name": "in",
+          "description": ""
         }
       ],
       "args": []
@@ -69,15 +83,18 @@
       "name": "mia.listview_static_datasource",
       "signals": [
         {
-          "name": "out"
+          "name": "out",
+          "description": ""
         }
       ],
       "receptors": [
         {
-          "name": "in"
+          "name": "in",
+          "description": ""
         },
         {
-          "name": "emit"
+          "name": "emit",
+          "description": ""
         }
       ],
       "args": []
@@ -86,12 +103,14 @@
       "name": "mia.offline_image_viewer",
       "signals": [
         {
-          "name": "error"
+          "name": "error",
+          "description": ""
         }
       ],
       "receptors": [
         {
-          "name": "show"
+          "name": "show",
+          "description": ""
         }
       ],
       "args": [
@@ -127,30 +146,38 @@
       "name": "mia.api_client",
       "signals": [
         {
-          "name": "raw_response"
+          "name": "raw_response",
+          "description": ""
         },
         {
-          "name": "json_response"
+          "name": "json_response",
+          "description": ""
         },
         {
-          "name": "error"
+          "name": "error",
+          "description": ""
         },
         {
-          "name": "progress"
+          "name": "progress",
+          "description": ""
         },
         {
-          "name": "will_begin_request"
+          "name": "will_begin_request",
+          "description": ""
         },
         {
-          "name": "did_end_request"
+          "name": "did_end_request",
+          "description": ""
         }
       ],
       "receptors": [
         {
-          "name": "launch_request"
+          "name": "launch_request",
+          "description": ""
         },
         {
-          "name": "parameters"
+          "name": "parameters",
+          "description": ""
         }
       ],
       "args": [
@@ -172,15 +199,18 @@
       "name": "mia.ui.label",
       "signals": [
         {
-          "name": "text"
+          "name": "text",
+          "description": ""
         }
       ],
       "receptors": [
         {
-          "name": "read_text"
+          "name": "read_text",
+          "description": ""
         },
         {
-          "name": "set_text"
+          "name": "set_text",
+          "description": ""
         }
       ],
       "args": [
@@ -202,30 +232,38 @@
       "name": "mia.phone_call",
       "signals": [
         {
-          "name": "will_present_alert"
+          "name": "will_present_alert",
+          "description": ""
         },
         {
-          "name": "did_confirm_alert"
+          "name": "did_confirm_alert",
+          "description": ""
         },
         {
-          "name": "did_cancel_alert"
+          "name": "did_cancel_alert",
+          "description": ""
         },
         {
-          "name": "will_call"
+          "name": "will_call",
+          "description": ""
         }
       ],
       "receptors": [
         {
-          "name": "set_alert_message"
+          "name": "set_alert_message",
+          "description": ""
         },
         {
-          "name": "set_confirm_button_title"
+          "name": "set_confirm_button_title",
+          "description": ""
         },
         {
-          "name": "set_cancel_button_title"
+          "name": "set_cancel_button_title",
+          "description": ""
         },
         {
-          "name": "do_call"
+          "name": "do_call",
+          "description": ""
         }
       ],
       "args": [
@@ -254,10 +292,12 @@
       "signals": [],
       "receptors": [
         {
-          "name": "set_container"
+          "name": "set_container",
+          "description": ""
         },
         {
-          "name": "present"
+          "name": "present",
+          "description": ""
         }
       ],
       "args": [
@@ -267,10 +307,12 @@
           "default": "",
           "values": [
             {
-              "type": "push"
+              "type": "push",
+              "description": ""
             },
             {
-              "type": "modal"
+              "type": "modal",
+              "description": ""
             }
           ]
         }
@@ -280,30 +322,38 @@
       "name": "mia.api_request",
       "signals": [
         {
-          "name": "progress"
+          "name": "progress",
+          "description": ""
         },
         {
-          "name": "response_data"
+          "name": "response_data",
+          "description": ""
         },
         {
-          "name": "response_error"
+          "name": "response_error",
+          "description": ""
         }
       ],
       "receptors": [
         {
-          "name": "path"
+          "name": "path",
+          "description": ""
         },
         {
-          "name": "headers"
+          "name": "headers",
+          "description": ""
         },
         {
-          "name": "query_params"
+          "name": "query_params",
+          "description": ""
         },
         {
-          "name": "body_params"
+          "name": "body_params",
+          "description": ""
         },
         {
-          "name": "start_request"
+          "name": "start_request",
+          "description": ""
         }
       ],
       "args": [
@@ -337,10 +387,12 @@
       "name": "mia.email_validator",
       "signals": [
         {
-          "name": "valid"
+          "name": "valid",
+          "description": ""
         },
         {
-          "name": "not_valid"
+          "name": "not_valid",
+          "description": ""
         }
       ],
       "receptors": [
@@ -354,18 +406,22 @@
       "name": "mia.location_services",
       "signals": [
         {
-          "name": "authorization_changed"
+          "name": "authorization_changed",
+          "description": ""
         }
       ],
       "receptors": [
         {
-          "name": "ask_always_status"
+          "name": "ask_always_status",
+          "description": ""
         },
         {
-          "name": "ask_when_in_use_status"
+          "name": "ask_when_in_use_status",
+          "description": ""
         },
         {
-          "name": "activate_location_service"
+          "name": "activate_location_service",
+          "description": ""
         }
       ],
       "args": []
@@ -415,7 +471,8 @@
       "signals": [],
       "receptors": [
         {
-          "name": "debug"
+          "name": "debug",
+          "description": ""
         }
       ],
       "args": []
@@ -424,24 +481,30 @@
       "name": "mia.step_control",
       "signals": [
         {
-          "name": "item_selected"
+          "name": "item_selected",
+          "description": ""
         },
         {
-          "name": "title_of_item"
+          "name": "title_of_item",
+          "description": ""
         }
       ],
       "receptors": [
         {
-          "name": "select_at"
+          "name": "select_at",
+          "description": ""
         },
         {
-          "name": "enable_at"
+          "name": "enable_at",
+          "description": ""
         },
         {
-          "name": "disable_at"
+          "name": "disable_at",
+          "description": ""
         },
         {
-          "name": "add_titles"
+          "name": "add_titles",
+          "description": ""
         }
       ],
       "args": [
@@ -464,126 +527,139 @@
           "values": [
             {
               "items": {
-                "normal":{}
+                "normal": {}
               }
             },
             {
               "items": {
-                "highlighted":{}
+                "highlighted": {}
               }
             },
             {
               "items": {
-                "selected":{}
+                "selected": {}
               }
             },
             {
               "items": {
-                "disabled":{}
+                "disabled": {}
               }
             }
           ]
         },
-         {
+        {
           "name": "items-size",
           "type": "dictionary",
           "default": "",
           "values": []
         },
-          {
+        {
           "name": "item-spacing",
           "type": "number",
           "default": "",
           "values": []
         },
-          {
+        {
           "name": "show-separators",
           "type": "boolean",
           "default": "",
           "values": []
         },
-          {
+        {
           "name": "center-single-item",
           "type": "boolean",
           "default": "",
           "values": []
         }
-        
       ]
     },
     {
       "name": "mia.pass_once",
       "signals": [
         {
-          "name": "value"
+          "name": "value",
+          "description": ""
         }
       ],
       "receptors": [
         {
-          "name": "set"
+          "name": "set",
+          "description": ""
         },
         {
-          "name": "emit"
+          "name": "emit",
+          "description": ""
         }
       ],
-      "args": [
-        
-        ]
+      "args": []
     },
     {
       "name": "mia.demux",
       "signals": [
         {
-          "name": "value"
+          "name": "value",
+          "description": ""
         }
       ],
       "receptors": [
         {
-          "name": "structure"
+          "name": "structure",
+          "description": ""
         },
-         {
-          "name": "key"
+        {
+          "name": "key",
+          "description": ""
         },
-         {
-          "name": "emit"
+        {
+          "name": "emit",
+          "description": ""
         },
-         {
-          "name": "structure_emit"
+        {
+          "name": "structure_emit",
+          "description": ""
         }
       ],
       "args": [
-          {
+        {
           "name": "key",
           "type": "string",
           "default": "",
           "values": []
         }
-        ]
+      ]
     },
     {
       "name": "mia.container_events",
       "signals": [
         {
-          "name": "on_ending"
+          "name": "on_ending",
+          "description": ""
         },
-         {
-          "name": "data"
-        }, {
-          "name": "output_data"
+        {
+          "name": "data",
+          "description": ""
+        },
+        {
+          "name": "output_data",
+          "description": ""
         }
       ],
       "receptors": [
         {
-          "name": "send_data"
+          "name": "send_data",
+          "description": ""
         },
         {
-          "name": "container"
+          "name": "container",
+          "description": ""
         },
         {
-          "name": "on_will_appear"
+          "name": "on_will_appear",
+          "description": ""
         },
         {
-          "name": "unwind"
+          "name": "unwind",
+          "description": ""
         }
       ],
       "args": []
@@ -593,10 +669,12 @@
       "signals": [],
       "receptors": [
         {
-          "name": "navigate_to"
+          "name": "navigate_to",
+          "description": ""
         },
         {
-          "name": "navigation_direction"
+          "name": "navigation_direction",
+          "description": ""
         }
       ],
       "args": []
@@ -605,52 +683,66 @@
       "name": "mia.persistent_storage",
       "signals": [
         {
-          "name": "will_write"
-        },
-          {
-          "name": "did_write"
-        },
-          {
-          "name": "write_error"
-        },
-          {
-          "name": "will_read"
-        },
-          {
-          "name": "did_read"
+          "name": "will_write",
+          "description": ""
         },
         {
-          "name": "read_error"
+          "name": "did_write",
+          "description": ""
         },
-          {
-          "name": "will_clear"
+        {
+          "name": "write_error",
+          "description": ""
         },
-          {
-          "name": "did_clear"
-        },  {
-          "name": "clear_error"
+        {
+          "name": "will_read",
+          "description": ""
+        },
+        {
+          "name": "did_read",
+          "description": ""
+        },
+        {
+          "name": "read_error",
+          "description": ""
+        },
+        {
+          "name": "will_clear",
+          "description": ""
+        },
+        {
+          "name": "did_clear",
+          "description": ""
+        },
+        {
+          "name": "clear_error",
+          "description": ""
         }
-        
       ],
       "receptors": [
         {
-          "name": "destination"
+          "name": "destination",
+          "description": ""
         },
         {
-          "name": "dest_options"
+          "name": "dest_options",
+          "description": ""
         },
         {
-          "name": "write"
+          "name": "write",
+          "description": ""
         },
         {
-          "name": "read"
+          "name": "read",
+          "description": ""
         },
         {
-          "name": "clear"
+          "name": "clear",
+          "description": ""
         }
       ],
       "args": [
-            {
+        {
           "name": "destination",
           "type": "string",
           "default": "",
@@ -662,27 +754,32 @@
           "default": "",
           "values": []
         }
-        ]
+      ]
     },
     {
       "name": "mia.arithmetic",
       "signals": [
         {
-          "name": "value"
+          "name": "value",
+          "description": ""
         }
       ],
       "receptors": [
         {
-          "name": "operation"
+          "name": "operation",
+          "description": ""
         },
         {
-          "name": "rhs"
+          "name": "rhs",
+          "description": ""
         },
         {
-          "name": "lhs"
+          "name": "lhs",
+          "description": ""
         },
         {
-          "name": "eval"
+          "name": "eval",
+          "description": ""
         }
       ],
       "args": [
@@ -704,162 +801,201 @@
           "default": "",
           "values": []
         }
-        ]
+      ]
     },
     {
       "name": "mia.list",
       "signals": [
         {
-          "name": "items"
+          "name": "items",
+          "description": ""
         },
         {
-          "name": "exists"
+          "name": "exists",
+          "description": ""
         },
         {
-          "name": "not_exists"
+          "name": "not_exists",
+          "description": ""
         },
         {
-          "name": "item"
+          "name": "item",
+          "description": ""
         },
         {
-          "name": "did_update"
+          "name": "did_update",
+          "description": ""
         },
         {
-          "name": "did_push_item"
+          "name": "did_push_item",
+          "description": ""
         },
         {
-          "name": "did_pop_item"
-        },{
-          "name": "did_remove_item"
+          "name": "did_pop_item",
+          "description": ""
         },
         {
-          "name": "item_count"
+          "name": "did_remove_item",
+          "description": ""
         },
         {
-          "name": "enumerated_item"
+          "name": "item_count",
+          "description": ""
         },
         {
-          "name": "enumerated_index"
+          "name": "enumerated_item",
+          "description": ""
+        },
+        {
+          "name": "enumerated_index",
+          "description": ""
         }
       ],
       "receptors": [
         {
-          "name": "push"
+          "name": "push",
+          "description": ""
         },
-         {
-          "name": "pop"
+        {
+          "name": "pop",
+          "description": ""
         },
-         {
-          "name": "item_at"
+        {
+          "name": "item_at",
+          "description": ""
         },
-         {
-          "name": "count"
+        {
+          "name": "count",
+          "description": ""
         },
-         {
-          "name": "set_index"
+        {
+          "name": "set_index",
+          "description": ""
         },
-         {
-          "name": "replace"
+        {
+          "name": "replace",
+          "description": ""
         },
-         {
-          "name": "erase"
+        {
+          "name": "erase",
+          "description": ""
         },
-         {
-          "name": "set_items"
+        {
+          "name": "set_items",
+          "description": ""
         },
-         {
-          "name": "enumerate"
+        {
+          "name": "enumerate",
+          "description": ""
         },
-         {
-          "name": "check"
+        {
+          "name": "check",
+          "description": ""
         },
-         {
-          "name": "remove"
+        {
+          "name": "remove",
+          "description": ""
         },
-         {
-          "name": "ask_items"
-        }, {
-          "name": "clean"
+        {
+          "name": "ask_items",
+          "description": ""
+        },
+        {
+          "name": "clean",
+          "description": ""
         }
       ],
       "args": [
-         {
+        {
           "name": "items",
           "type": "array",
           "default": "",
           "values": []
         }
-        ]
+      ]
     },
     {
       "name": "mia.switch",
       "signals": [
         {
-          "name": "default"
+          "name": "default",
+          "description": ""
         }
       ],
       "receptors": [
         {
-          "name": "eval"
+          "name": "eval",
+          "description": ""
         }
       ],
       "args": [
-         {
+        {
           "name": "cases",
           "type": "array",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "mia.bang",
       "signals": [
         {
-          "name": "bang.loadbang"
+          "name": "bang.loadbang",
+          "description": ""
         },
         {
-          "name": "bang.willappear_bang_once"
+          "name": "bang.willappear_bang_once",
+          "description": ""
         },
         {
-          "name": "bang.willappear_bang"
+          "name": "bang.willappear_bang",
+          "description": ""
         },
         {
-          "name": "bang.didappear_bang"
+          "name": "bang.didappear_bang",
+          "description": ""
         },
         {
-          "name": "bang.did_become_active"
+          "name": "bang.did_become_active",
+          "description": ""
         },
         {
-          "name": "bang.willdisapper_bang"
+          "name": "bang.willdisapper_bang",
+          "description": ""
         },
         {
-          "name": "bang.diddisapper_bang"
+          "name": "bang.diddisapper_bang",
+          "description": ""
         }
       ],
-      "receptors": [
-       
-      ],
+      "receptors": [],
       "args": []
     },
     {
       "name": "mia.controller_host",
       "signals": [
         {
-          "name": "controller_host.did_present"
+          "name": "controller_host.did_present",
+          "description": ""
         },
-          {
-          "name": "controller_host.did_dismiss"
+        {
+          "name": "controller_host.did_dismiss",
+          "description": ""
         }
       ],
       "receptors": [
         {
-          "name": "controller_host.present"
+          "name": "controller_host.present",
+          "description": ""
         },
-         {
-          "name": "controller_host.set_context"
+        {
+          "name": "controller_host.set_context",
+          "description": ""
         },
-         {
-          "name": "controller_host.send_data"
+        {
+          "name": "controller_host.send_data",
+          "description": ""
         }
       ],
       "args": []
@@ -868,24 +1004,30 @@
       "name": "mia.container_loader",
       "signals": [
         {
-          "name": "container_loader.did_load"
+          "name": "container_loader.did_load",
+          "description": ""
         },
         {
-          "name": "container_loader.container"
+          "name": "container_loader.container",
+          "description": ""
         }
       ],
       "receptors": [
         {
-          "name": "container_loader.instance"
-        },
-          {
-          "name": "container_loader.context"
+          "name": "container_loader.instance",
+          "description": ""
         },
         {
-          "name": "container_loader.load"
+          "name": "container_loader.context",
+          "description": ""
         },
         {
-          "name": "container_loader.emit"
+          "name": "container_loader.load",
+          "description": ""
+        },
+        {
+          "name": "container_loader.emit",
+          "description": ""
         }
       ],
       "args": [
@@ -913,27 +1055,32 @@
           "default": "",
           "values": []
         }
-        ]
+      ]
     },
     {
       "name": "mia.if",
       "signals": [
         {
-          "name": "if.then"
+          "name": "if.then",
+          "description": ""
         },
         {
-          "name": "if.else"
+          "name": "if.else",
+          "description": ""
         }
       ],
       "receptors": [
         {
-          "name": "if.lhs"
+          "name": "if.lhs",
+          "description": ""
         },
-         {
-          "name": "if.rhs"
+        {
+          "name": "if.rhs",
+          "description": ""
         },
-         {
-          "name": "if.eval"
+        {
+          "name": "if.eval",
+          "description": ""
         }
       ],
       "args": [
@@ -943,17 +1090,24 @@
           "default": "",
           "values": []
         },
-          {
+        {
           "name": "rhs",
           "type": "number",
           "default": "",
           "values": []
         },
-         {
+        {
           "name": "condition",
           "type": "string",
           "default": "",
-          "values": ["equal","nequal","great","gequal","less","lequal"]
+          "values": [
+            "equal",
+            "nequal",
+            "great",
+            "gequal",
+            "less",
+            "lequal"
+          ]
         }
       ]
     },
@@ -961,17 +1115,22 @@
       "name": "mia.logic",
       "signals": [
         {
-          "name": "logic.result"
+          "name": "logic.result",
+          "description": ""
         }
       ],
       "receptors": [
         {
-          "name": "logic.lhs"
+          "name": "logic.lhs",
+          "description": ""
         },
         {
-          "name": "logic.rhs"
-        },{
-          "name": "logic.eval"
+          "name": "logic.rhs",
+          "description": ""
+        },
+        {
+          "name": "logic.eval",
+          "description": ""
         }
       ],
       "args": [
@@ -987,11 +1146,19 @@
           "default": "",
           "values": []
         },
-         {
+        {
           "name": "operation",
           "type": "string",
           "default": "",
-          "values": ["and","or","xor","not","nand","nor","nxor"]
+          "values": [
+            "and",
+            "or",
+            "xor",
+            "not",
+            "nand",
+            "nor",
+            "nxor"
+          ]
         }
       ]
     },
@@ -999,43 +1166,53 @@
       "name": "mia.error_decoder",
       "signals": [
         {
-          "name": "error.did_decode"
+          "name": "error.did_decode",
+          "description": ""
         }
       ],
       "receptors": [
         {
-          "name": "error.decode"
+          "name": "error.decode",
+          "description": ""
         }
       ],
-      "args": [{
+      "args": [
+        {
           "name": "decoding_map",
           "type": "dictionary",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "mia.alert_view",
       "signals": [
         {
-          "name": "canceled"
+          "name": "canceled",
+          "description": ""
         },
         {
-          "name": "dismiss_index"
+          "name": "dismiss_index",
+          "description": ""
         }
       ],
       "receptors": [
         {
-          "name": "ui.alert.cancel_button_title"
+          "name": "ui.alert.cancel_button_title",
+          "description": ""
         },
-         {
-          "name": "ui.alert_view.title"
+        {
+          "name": "ui.alert_view.title",
+          "description": ""
         },
-         {
-          "name": "ui.alert_view.message"
+        {
+          "name": "ui.alert_view.message",
+          "description": ""
         },
-         {
-          "name": "ui.alert_view.show"
+        {
+          "name": "ui.alert_view.show",
+          "description": ""
         }
       ],
       "args": [
@@ -1043,9 +1220,12 @@
           "name": "style",
           "type": "string",
           "default": "",
-          "values": ["alert","action_sheet"]
+          "values": [
+            "alert",
+            "action_sheet"
+          ]
         },
-         {
+        {
           "name": "message",
           "type": "string",
           "default": "",
@@ -1063,21 +1243,24 @@
           "default": "",
           "values": []
         }
-        ]
+      ]
     },
     {
       "name": "mia.form_serializer",
       "signals": [
         {
-          "name": "form.serializer.serialization_did_end"
+          "name": "form.serializer.serialization_did_end",
+          "description": ""
         }
       ],
       "receptors": [
         {
-          "name": "form.serializer.begin_serialization"
+          "name": "form.serializer.begin_serialization",
+          "description": ""
         },
         {
-          "name": "form.serializer.error_string"
+          "name": "form.serializer.error_string",
+          "description": ""
         }
       ],
       "args": []
@@ -1086,50 +1269,68 @@
       "name": "mia.authentication",
       "signals": [
         {
-          "name": "login_data"
+          "name": "login_data",
+          "description": ""
         },
         {
-          "name": "auth.status"
+          "name": "auth.status",
+          "description": ""
         },
         {
-          "name": "auth.will_login"
+          "name": "auth.will_login",
+          "description": ""
         },
         {
-          "name": "auth.did_login"
+          "name": "auth.did_login",
+          "description": ""
         },
         {
-          "name": "auth.login_error"
+          "name": "auth.login_error",
+          "description": ""
         },
         {
-          "name": "auth.login_did_end"
+          "name": "auth.login_did_end",
+          "description": ""
         },
         {
-          "name": "auth.did_login_payload"
+          "name": "auth.did_login_payload",
+          "description": ""
         },
         {
-          "name": "auth.login_status_change"
+          "name": "auth.login_status_change",
+          "description": ""
         },
         {
-          "name": "auth.will_logout"
-        },{
-          "name": "auth.did_logout"
+          "name": "auth.will_logout",
+          "description": ""
         },
         {
-          "name": "auth.logout_error"
+          "name": "auth.did_logout",
+          "description": ""
         },
         {
-          "name": "auth.logout_did_end"
-        },{
-          "name": "auth.did_signup"
+          "name": "auth.logout_error",
+          "description": ""
         },
         {
-          "name": "auth.signup_error"
+          "name": "auth.logout_did_end",
+          "description": ""
         },
         {
-          "name": "auth.will_signup"
+          "name": "auth.did_signup",
+          "description": ""
         },
         {
-          "name": "auth.signup_did_end"
+          "name": "auth.signup_error",
+          "description": ""
+        },
+        {
+          "name": "auth.will_signup",
+          "description": ""
+        },
+        {
+          "name": "auth.signup_did_end",
+          "description": ""
         }
       ],
       "receptors": [
@@ -1144,31 +1345,32 @@
         },
         {
           "name": "auth.logout"
-        },{
+        },
+        {
           "name": "auth.request_status"
         }
       ],
-      "args": [{
+      "args": [
+        {
           "name": "authentication_channel",
           "type": "string",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "mia.segue_to_definition",
-      "signals": [
-        
-      ],
-      "receptors": [
-        
-      ],
-      "args": [{
+      "signals": [],
+      "receptors": [],
+      "args": [
+        {
           "name": "container",
           "type": "dictionary",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "mia.map_annotations_adapter",
@@ -1186,7 +1388,8 @@
       "receptors": [
         {
           "name": "adapter.reload"
-        },{
+        },
+        {
           "name": "adapter.update"
         },
         {
@@ -1223,7 +1426,7 @@
           "default": "",
           "values": []
         }
-        ]
+      ]
     },
     {
       "name": "mia.data_source.filter",
@@ -1239,7 +1442,7 @@
         {
           "name": "filter.perform_filters"
         },
-          {
+        {
           "name": "filter.perform_from_event"
         }
       ],
@@ -1262,17 +1465,14 @@
           "default": "",
           "values": []
         }
-        ]
+      ]
     },
     {
       "name": "mia.uiview",
-      "signals": [
-       
-      ],
-      "receptors": [
-        
-      ],
-      "args": [{
+      "signals": [],
+      "receptors": [],
+      "args": [
+        {
           "name": "ui_view_identifier",
           "type": "string",
           "default": "",
@@ -1289,7 +1489,8 @@
           "type": "string",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "mia.uicontrol",
@@ -1342,7 +1543,7 @@
         {
           "name": "control.all_events"
         },
-         {
+        {
           "name": "event_description_value"
         }
       ],
@@ -1354,12 +1555,14 @@
           "name": "event_description_emit"
         }
       ],
-      "args": [{
+      "args": [
+        {
           "name": "control_args",
           "type": "dictionary",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "mia.list_sorter",
