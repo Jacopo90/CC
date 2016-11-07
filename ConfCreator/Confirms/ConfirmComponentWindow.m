@@ -10,7 +10,8 @@
 #import "Utils.h"
 #import "CompsReader.h"
 
-@interface ConfirmComponentWindow ()<NSTextFieldDelegate,NSTextViewDelegate>
+@interface ConfirmComponentWindow ()<NSTextFieldDelegate,NSTextViewDelegate,NSComboBoxDataSource>
+@property (weak) IBOutlet NSComboBox *nameBox;
 
 @property (weak) IBOutlet NSTextField *nameTextfield;
 @property (weak) IBOutlet NSTextField *uidTexfield;
@@ -20,6 +21,8 @@
 @property (weak) IBOutlet NSTextField *validLabel;
 
 @property (nonatomic,strong) NSDictionary *tmpDefinition;
+
+@property (nonatomic, strong) NSArray *all_components;
 
 @end
 
@@ -36,9 +39,14 @@
     self.searchPathTextfield.stringValue =[NSString stringWithFormat:@"%@/comps_def.json",desktopPath];
     self.foundLabel.stringValue = @"not found";
     self.foundLabel.textColor = [Utils colorWithHexColorString:@"333333" alpha:1];
+    self.nameBox.dataSource = self;
+    NSString *path = self.searchPathTextfield.stringValue;
+
+    self.all_components = [CompsReader loadCompsFromPath:path];
 }
 - (IBAction)confirmComponent:(id)sender {
-    NSString *nameComponent = self.nameTextfield.stringValue;
+    NSString *nameComponent = self.nameBox.stringValue;
+    
     NSString *uidComponent = self.uidTexfield.stringValue;
     
     if (!nameComponent.length || !uidComponent.length) {
@@ -94,5 +102,22 @@
     }
     
 }
+#pragma mark -  component box -
+-(void)comboBoxWillPopUp:(NSNotification *)notification{
+    
+}
+- (void)comboBoxSelectionIsChanging:(NSNotification*)notification {
+//    NSComboBox* box = (NSComboBox*)[notification object];
+ 
+    
+}
+- (NSInteger)numberOfItemsInComboBox:(NSComboBox*)aComboBox {
+    return self->_all_components.count;
+}
 
+- (id)comboBox:(NSComboBox*)aComboBox
+objectValueForItemAtIndex:(NSInteger)index {
+    return [[self->_all_components objectAtIndex:index] objectForKey:@"name"];
+    
+}
 @end

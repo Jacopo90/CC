@@ -10,5 +10,6 @@
 
 @interface CompsReader : NSObject
 +(NSDictionary *)componentWithName:(NSString *)name inPath:(NSString *)path;
++(NSArray *)loadCompsFromPath:(NSString *)path;
 
 @end

@@ -1568,15 +1568,48 @@
       "name": "mia.list_sorter",
       "signals": [
         {
-          "name": ""
+          "name": "list_sorter.send",
+          "description":""
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "list_sorter.show",
+          "description":""
         }
       ],
-      "args": []
+      "args": [
+         {
+          "name": "navbar_component_id",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+         {
+          "name": "navbar_button_id",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+         {
+          "name": "datasource_component_id",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+         {
+          "name": "sorting_options",
+          "type": "array",
+          "default": "",
+          "values": []
+        },
+         {
+          "name": "default_sort_index",
+          "type": "number",
+          "default": "",
+          "values": []
+        }
+        ]
     },
     {
       "name": "mia.map_annotations_manager",
