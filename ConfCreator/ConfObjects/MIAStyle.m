@@ -61,7 +61,7 @@
             NSString *key = [element objectForKey:@"key"];
             NSString *type = [element objectForKey:@"type"];
             NSDictionary *values = [element objectForKey:@"values"];
-            if (key == nil || values == nil) {
+            if (key == nil || values == nil || values.count == 0) {
                 continue;
             }
             MIAStyleUIElement *styleElement = [[MIAStyleUIElement alloc]initWithKey:key type:type values:values];
@@ -80,9 +80,8 @@
     }
     NSMutableDictionary *mainDict = [[NSMutableDictionary alloc]init];
     [mainDict setObject:[[self->_privateComponent dataDict] objectForKey:@"uid"] forKey:@"id"];
-    if (rules.count > 0) {
         [mainDict setObject:rules forKey:@"rules"];
-    }
+    
     return mainDict;
 }
 -(void)update:(NSDictionary *)newJson completion:(void (^)(NSDictionary *))compBlock{

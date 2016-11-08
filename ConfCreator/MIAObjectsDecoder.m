@@ -88,7 +88,7 @@
     if (item == nil){
         return nil;
     }
-    NSString *name = [item objectForKey:@"name"]; // maybe a day will be usefull
+//    NSString *name = [item objectForKey:@"name"]; // maybe a day will be usefull
     NSArray *items = [item objectForKey:@"items"];
     
     [self cycleObjects:^(NSDictionary *dict) {

@@ -30,7 +30,10 @@
     NSMutableDictionary *json = [[NSMutableDictionary alloc]init];
     [json setObject:comps forKey:@"components"];
     [json setObject:juncs forKey:@"junctions"];
-    [json setObject:styles forKey:@"styles"];
+    
+    
+    NSArray *arrStyles = @[@{@"name":@"containerStyle",@"items":styles}];
+    [json setObject:arrStyles forKey:@"styles"];
     
     if (adds) {
         [json addEntriesFromDictionary:adds];

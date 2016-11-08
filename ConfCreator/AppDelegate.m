@@ -149,14 +149,6 @@ static NSDictionary * listMap;
             [self.mainConfiguration addStyle:style];
             [self.stylerView addStyle:style];
         }
-        /*
-        //            NSString *key = [element objectForKey:@"key"];
-        //            NSString *type = [element objectForKey:@"type"];
-        //            if (key == nil || type == nil){
-        //                continue;
-        //            }
-        */
-        
         
         // this is for the addings ... remove!!
         for (id key in json) {

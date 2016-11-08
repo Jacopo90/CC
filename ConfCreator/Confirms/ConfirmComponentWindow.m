@@ -68,7 +68,19 @@
 
     MIAStyle *style = nil;
     if (self.uiCheckBox.state == 1){
-        style = [[MIAStyle alloc]initWithComponent:comp uiElements:nil];
+        NSString *path = self.searchPathTextfield.stringValue;
+
+       NSDictionary *componentDefinition = [CompsReader componentWithName:nameComponent inPath:path];
+        NSMutableArray *uiValues = [[NSMutableArray alloc]init];
+        
+        for (NSDictionary *dict in [componentDefinition objectForKey:@"UI"]) {
+            NSMutableDictionary *uielem = [[NSMutableDictionary alloc]init];
+            [uielem setObject:[dict objectForKey:@"key"] forKey:@"key"];
+            [uielem setObject:[dict objectForKey:@"type"] forKey:@"type"];
+            [uiValues addObject:uielem];
+        }
+        
+        style = [[MIAStyle alloc]initWithComponent:comp uiElements:uiValues];
     }
     
     [self.delegate confirmComponentWindow:self didConfirmComponent:comp withAssociatedStyle:style];
