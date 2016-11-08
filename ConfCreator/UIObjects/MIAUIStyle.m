@@ -7,6 +7,7 @@
 //
 
 #import "MIAUIStyle.h"
+#import "Utils.h"
 
 @implementation MIAUIStyle
 
@@ -15,5 +16,12 @@
     
     // Drawing code here.
 }
-
+-(void)selectStyle{
+    [[Utils colorWithHexColorString:@"93C95D" alpha:1] set];
+    
+}
+-(void)defaultStyle{
+    [[Utils colorWithHexColorString:@"C95D5D" alpha:1] set];
+  
+}
 @end

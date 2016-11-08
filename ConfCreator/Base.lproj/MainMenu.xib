@@ -16,11 +16,12 @@
             <connections>
                 <outlet property="addComponentButton" destination="p3V-yU-2O5" id="HLZ-sF-QgK"/>
                 <outlet property="addJunctionButton" destination="zwF-c0-ZIG" id="Ke6-Ie-ybF"/>
-                <outlet property="componentsView" destination="dOP-Da-A5k" id="6b9-rf-MQT"/>
+                <outlet property="componentsView" destination="3gf-fc-wov" id="zKj-Wn-0dG"/>
                 <outlet property="jsonView" destination="uFT-dM-Roc" id="igR-R6-nAs"/>
                 <outlet property="junctionsView" destination="sKT-gm-gUI" id="md0-uD-aSh"/>
                 <outlet property="printAllButton" destination="0CU-Aa-dmP" id="E5F-dN-bLA"/>
                 <outlet property="scrollerJson" destination="Wca-EZ-Vds" id="EG1-Mc-5oD"/>
+                <outlet property="stylerView" destination="dOP-Da-A5k" id="UdO-di-Kx3"/>
                 <outlet property="validTextfield" destination="ZVt-Al-x9A" id="1fx-oQ-SqO"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
@@ -683,14 +684,14 @@
         <window title="ConfCreator" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="0.0" y="0.0" width="1276" height="900"/>
+            <rect key="contentRect" x="0.0" y="0.0" width="1610" height="900"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <view key="contentView" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="1276" height="900"/>
+                <rect key="frame" x="0.0" y="0.0" width="1610" height="900"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" id="Wca-EZ-Vds">
-                        <rect key="frame" x="847" y="47" width="409" height="808"/>
+                        <rect key="frame" x="1189" y="47" width="409" height="808"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" heightSizable="YES"/>
                         <clipView key="contentView" copiesOnScroll="NO" id="1mA-eg-rQw">
                             <rect key="frame" x="0.0" y="0.0" width="409" height="808"/>
@@ -720,7 +721,7 @@
                         </scroller>
                     </scrollView>
                     <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" scrollerKnobStyle="dark" id="sKT-gm-gUI" customClass="JunctionsView">
-                        <rect key="frame" x="529" y="20" width="310" height="835"/>
+                        <rect key="frame" x="871" y="20" width="310" height="835"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <clipView key="contentView" copiesOnScroll="NO" id="2mN-3K-jSa">
                             <rect key="frame" x="0.0" y="0.0" width="310" height="835"/>
@@ -755,16 +756,16 @@
                         </connections>
                     </button>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="5RV-Im-Cp4">
-                        <rect key="frame" x="209" y="863" width="80" height="17"/>
+                        <rect key="frame" x="551" y="863" width="40" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="components" id="ojI-iK-syO">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="styles" id="ojI-iK-syO">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="scrollBarColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="wwd-sT-F6Y">
-                        <rect key="frame" x="527" y="863" width="60" height="17"/>
+                        <rect key="frame" x="869" y="863" width="60" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="junctions" id="lWr-4i-eQV">
                             <font key="font" metaFont="system"/>
@@ -773,7 +774,7 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="QQf-Zf-bpv">
-                        <rect key="frame" x="845" y="863" width="29" height="17"/>
+                        <rect key="frame" x="1187" y="863" width="29" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="json" id="XcF-ay-hqC">
                             <font key="font" metaFont="system"/>
@@ -782,7 +783,7 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="ZVt-Al-x9A">
-                        <rect key="frame" x="1221" y="20" width="37" height="17"/>
+                        <rect key="frame" x="1563" y="22" width="37" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="Qp5-u1-cec">
                             <font key="font" metaFont="system"/>
@@ -821,8 +822,40 @@
                             <action selector="addJunction:" target="Voe-Tx-rLC" id="3pf-2Q-t6h"/>
                         </connections>
                     </button>
-                    <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" scrollerKnobStyle="dark" id="dOP-Da-A5k" customClass="ComponentsView">
-                        <rect key="frame" x="211" y="20" width="310" height="835"/>
+                    <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" scrollerKnobStyle="dark" id="3gf-fc-wov" customClass="ComponentsView">
+                        <rect key="frame" x="235" y="20" width="310" height="835"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                        <clipView key="contentView" copiesOnScroll="NO" id="rZ2-IM-6aT">
+                            <rect key="frame" x="0.0" y="0.0" width="310" height="835"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <view id="Ktb-oI-fZW">
+                                    <rect key="frame" x="0.0" y="320" width="308" height="515"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </clipView>
+                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="STc-Dm-rfg">
+                            <rect key="frame" x="-100" y="-100" width="298" height="15"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="cE7-bh-O2g">
+                            <rect key="frame" x="-100" y="-100" width="15" height="431"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                    </scrollView>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="JRD-qU-kJ8">
+                        <rect key="frame" x="233" y="863" width="80" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="components" id="N7X-f1-eaD">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="scrollBarColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" scrollerKnobStyle="dark" id="dOP-Da-A5k" customClass="StylerView">
+                        <rect key="frame" x="553" y="20" width="310" height="835"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                         <clipView key="contentView" copiesOnScroll="NO" id="oRs-0O-X3Z">
                             <rect key="frame" x="0.0" y="0.0" width="310" height="835"/>
@@ -846,7 +879,7 @@
                     </scrollView>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-297" y="713"/>
+            <point key="canvasLocation" x="-130" y="713"/>
         </window>
     </objects>
 </document>

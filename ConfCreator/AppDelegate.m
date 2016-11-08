@@ -7,8 +7,11 @@
 //
 
 #import "AppDelegate.h"
+
 #import "ComponentsView.h"
 #import "JunctionsView.h"
+#import "StylerView.h"
+
 #import "MIAConfiguration.h"
 #import "Utils.h"
 #import "NoodleLineNumberView.h"
@@ -19,13 +22,13 @@
 
 #import "CustomButton.h"
 #import "JunctionsLinker.h"
-#import <UIKit/UIKit.h>
 
-@interface AppDelegate ()<NSTextViewDelegate,ComponentWindowProtocol,ComponentsViewProtocol,JunctionWindowProtocol,JunctionsViewProtocol,JunctionsLinkerProtocol>
+@interface AppDelegate ()<NSTextViewDelegate,ComponentWindowProtocol,ComponentsViewProtocol,JunctionWindowProtocol,JunctionsViewProtocol,JunctionsLinkerProtocol,StylerViewProtocol>
 @property (unsafe_unretained) IBOutlet NSTextView *jsonView;
 @property (weak) IBOutlet NSScrollView *scrollerJson;
 @property (weak) IBOutlet ComponentsView *componentsView;
 @property (weak) IBOutlet JunctionsView *junctionsView;
+@property (weak) IBOutlet StylerView *stylerView;
 @property (weak) IBOutlet NSTextField *validTextfield;
 
 @property (weak) IBOutlet NSWindow *window;
@@ -45,8 +48,6 @@
 @end
 static NSDictionary * listMap;
 @implementation AppDelegate
-
-
 
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
@@ -69,6 +70,7 @@ static NSDictionary * listMap;
     
     listMap = @{NSStringFromClass([MIAJunction class]):self.junctionsView,
                 NSStringFromClass([MIAComponent class]):self.componentsView,
+                NSStringFromClass([MIAStyle class]):self.stylerView
                 };
     
     self.window.appearance = [NSAppearance
@@ -93,6 +95,8 @@ static NSDictionary * listMap;
 
     self.componentsView.delegate = self;
     self.junctionsView.delegate = self;
+    self.stylerView.delegate = self;
+    
     self.mainConfiguration = [[MIAConfiguration alloc]init];
     [self.jsonView setVerticallyResizable:YES];
     [self.scrollerJson setAutohidesScrollers:NO];
@@ -141,7 +145,7 @@ static NSDictionary * listMap;
         
         // this is for the addings ... remove!!
         for (id key in json) {
-            if ([key isEqualToString:@"components"] || [key isEqualToString:@"junctions"]) {
+            if ([key isEqualToString:@"components"] || [key isEqualToString:@"junctions"] || [key isEqualToString:@"styles"]) {
                 continue;
             }
             [self.tmp_addings setObject:[json objectForKey:key] forKey:key];
@@ -198,6 +202,17 @@ static NSDictionary * listMap;
         return;
     }
     [self.componentsView addComponent:component];
+    
+    // to do : add also the style
+    // creating a style
+    // to do : implement a check if the component is a UI component
+    
+    MIAStyle *style = [[MIAStyle alloc]initWithUid:[[component dataDict] objectForKey:@"uid"]];
+    BOOL stylerIsAdded = [self.mainConfiguration addStyle:style];
+    if (!stylerIsAdded) {
+        return;
+    }
+    [self.stylerView addStyle:style];
 }
 #pragma mark - components view delegate -
 -(void)componentsView:(ComponentsView *)view wantsRemoveComponentWithId:(NSString *)uuid completion:(void (^)(void))compBlock{
@@ -275,6 +290,26 @@ static NSDictionary * listMap;
     [self printJson:[obj dataDict]];
     self.selectedObject = obj;
 
+}
+
+#pragma mark - styler view -
+-(void)stylerView:(StylerView *)view tappedStyleWithId:(NSString *)uuid{
+    if ([self.selectedObject.uuid isEqualToString:uuid]) {
+        [view applySelectionFromId:nil];
+        self.selectedObject = nil;
+        [self printJson:@{}];
+        return;
+    }
+    
+    self.selectedObject = nil;
+    MIAObject *obj = [self.mainConfiguration objectFromID:uuid];
+    [view applySelectionFromId:uuid];
+    [self printJson:[obj dataDict]];
+    self.selectedObject = obj;
+    
+}
+-(void)stylerView:(StylerView *)view wantsRemoveStyleWithId:(NSString *)uuid completion:(void (^)(void))compBlock{
+    // to do : implement
 }
 #pragma mark - json view
 -(void)textViewDidChangeSelection:(NSNotification *)notification{

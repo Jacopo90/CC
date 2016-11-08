@@ -28,6 +28,7 @@
 - (id)objectFromID:(NSString *)uid;
 - (NSArray <MIAComponent *> *)components;
 - (NSArray <MIAJunction *> *)junctions;
+- (NSArray <MIAStyle *> *)styles;
 
 - (void)cycleObjects:(void(^)(MIAObject *object))cycle;
 

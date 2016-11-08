@@ -37,14 +37,14 @@
     return [self->junctions containsObject:junction];
 }
 - (BOOL)addStyle:(MIAStyle *)style{
+    [self->styles addObject:style];
+
     return [self->styles containsObject:style];
 }
 
 #pragma mark - removing -
 - (BOOL)removeFromID:(NSString *)uid{
-    // start to cycle components
-    // but after you have to cycle also the junctions
-    // and the styles
+    
     for (MIAComponent *component in self->components) {
         if ([component.uuid isEqualToString:uid]) {
             [self removeComponent:component];
@@ -60,7 +60,14 @@
             break;
         }
     }
-    
+    for (MIAStyle *style in self->styles) {
+        if ([style.uuid isEqualToString:uid]) {
+            [self removeStyle:style];
+            return YES;
+            break;
+        }
+    }
+
     return NO;
 }
 - (BOOL)removeComponent:(MIAComponent *)component{
@@ -79,15 +86,15 @@
 
     [self->components removeAllObjects];
     [self->junctions removeAllObjects];
-    if (self->components.count == 0 && self.junctions.count == 0) {
+    [self->styles removeAllObjects];
+    
+    if (self->components.count == 0 && self->junctions.count == 0 && self->styles.count == 0) {
         completion(YES);
     }
 }
 #pragma mark - getting -
 -(id)objectFromID:(NSString *)uid{
-    // start to cycle components
-    // but after you have to cycle also the junctions
-    // and the styles
+    
     for (MIAComponent *component in self->components) {
         if ([component.uuid isEqualToString:uid]) {
             return component;
@@ -100,6 +107,12 @@
             break;
         }
     }
+    for (MIAStyle *style in self->styles) {
+        if ([style.uuid isEqualToString:uid]) {
+            return style;
+            break;
+        }
+    }
     return nil;
 }
 -(NSArray <MIAComponent *> *)components{
@@ -108,11 +121,17 @@
 -(NSArray <MIAJunction *> *)junctions{
     return self->junctions;
 }
+-(NSArray <MIAStyle *> *)styles{
+    return self->styles;
+}
+
 -(void)cycleObjects:(void(^)(MIAObject *object))cycle{
     
     NSMutableArray *all = [[NSMutableArray alloc]init];
     [all addObjectsFromArray:self->components];
     [all addObjectsFromArray:self->junctions];
+    [all addObjectsFromArray:self->styles];
+
     for (MIAObject *obj in all) {
         cycle(obj);
     }

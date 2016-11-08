@@ -9,6 +9,7 @@
 #import "MIAConfigurationPrinter.h"
 #import "MIAComponent.h"
 #import "MIAJunction.h"
+#import "MIAStyle.h"
 
 @implementation MIAConfigurationPrinter
 +(NSDictionary *)printConfiguration:(MIAConfiguration *)configuration adds:(NSDictionary *)adds{
@@ -21,10 +22,16 @@
         [juncs addObject:[junction dataDict]];
     }
     
+    NSMutableArray *styles = [[NSMutableArray alloc]init];
+    for (MIAStyle *style in [configuration styles]) {
+        [styles addObject:[style dataDict]];
+    }
     
     NSMutableDictionary *json = [[NSMutableDictionary alloc]init];
     [json setObject:comps forKey:@"components"];
     [json setObject:juncs forKey:@"junctions"];
+    [json setObject:styles forKey:@"styles"];
+    
     if (adds) {
         [json addEntriesFromDictionary:adds];
     }

@@ -10,5 +10,6 @@
 #import "MIAObject.h"
 
 @interface MIAStyle : MIAObject
+- (instancetype)initWithUid:(NSString *)uid;
 
 @end

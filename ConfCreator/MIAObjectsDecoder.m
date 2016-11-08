@@ -78,7 +78,12 @@
     }
     return objects;
 }
-
++(NSArray <MIAStyle *> *)stylesFromJson:(NSDictionary *)jsonDict withComponents:(NSArray <MIAComponent *> *)components{
+    
+    // to do : implement a decoder
+    
+    return nil;
+}
 +(void)cycleObjects:(void(^)(NSDictionary *dict))cycle inArray:(NSArray *)array{
     for (id obj in array) {
         cycle(obj);

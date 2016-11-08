@@ -18,7 +18,7 @@
                         <constraint firstAttribute="height" constant="25" id="S1K-Dk-F6u"/>
                         <constraint firstAttribute="width" constant="25" id="VDw-gV-xzG"/>
                     </constraints>
-                    <buttonCell key="cell" type="bevel" title="X" bezelStyle="regularSquare" image="710596A3-72CA-4DFF-8F7C-4B40A5C97CDE" imagePosition="overlaps" alignment="center" borderStyle="border" inset="2" id="RMI-VW-DMZ">
+                    <buttonCell key="cell" type="bevel" title="X" bezelStyle="regularSquare" image="4293480F-3C59-4D15-9B08-A72FA3ECF955" imagePosition="overlaps" alignment="center" borderStyle="border" inset="2" id="RMI-VW-DMZ">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="systemMedium" size="13"/>
                     </buttonCell>
@@ -115,7 +115,7 @@
         </customView>
     </objects>
     <resources>
-        <image name="710596A3-72CA-4DFF-8F7C-4B40A5C97CDE" width="1" height="1">
+        <image name="4293480F-3C59-4D15-9B08-A72FA3ECF955" width="1" height="1">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

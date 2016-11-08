@@ -14,6 +14,8 @@
 		EA0228DF1DC15EF4009EC56E /* ConfCreatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0228DE1DC15EF4009EC56E /* ConfCreatorTests.m */; };
 		EA0228EA1DC15EF4009EC56E /* ConfCreatorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0228E91DC15EF4009EC56E /* ConfCreatorUITests.m */; };
 		EA02291C1DC1749E009EC56E /* NoodleLineNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0229071DC1749E009EC56E /* NoodleLineNumberView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EA192B6F1DD1432800B54034 /* StylerView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA192B6E1DD1432800B54034 /* StylerView.m */; };
+		EA192B721DD143D900B54034 /* MIAUIStyle.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA192B711DD143D900B54034 /* MIAUIStyle.xib */; };
 		EA2C0E331DC521410082EE70 /* MIAUIComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2C0E321DC521410082EE70 /* MIAUIComponent.xib */; };
 		EA4B298A1DC8CE4600A08E02 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA4B29891DC8CE4600A08E02 /* fontawesome-webfont.ttf */; };
 		EA4B298C1DC8CED900A08E02 /* Surabanglus.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA4B298B1DC8CED900A08E02 /* Surabanglus.ttf */; };
@@ -101,6 +103,9 @@
 		EA0228EB1DC15EF4009EC56E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA0229061DC1749E009EC56E /* NoodleLineNumberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoodleLineNumberView.h; sourceTree = "<group>"; };
 		EA0229071DC1749E009EC56E /* NoodleLineNumberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoodleLineNumberView.m; sourceTree = "<group>"; };
+		EA192B6D1DD1432800B54034 /* StylerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StylerView.h; sourceTree = "<group>"; };
+		EA192B6E1DD1432800B54034 /* StylerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StylerView.m; sourceTree = "<group>"; };
+		EA192B711DD143D900B54034 /* MIAUIStyle.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MIAUIStyle.xib; sourceTree = "<group>"; };
 		EA2C0E321DC521410082EE70 /* MIAUIComponent.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MIAUIComponent.xib; sourceTree = "<group>"; };
 		EA4B29891DC8CE4600A08E02 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
 		EA4B298B1DC8CED900A08E02 /* Surabanglus.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Surabanglus.ttf; sourceTree = "<group>"; };
@@ -306,6 +311,8 @@
 				EA5DFDDE1DC613EA0016F562 /* JunctionsView.m */,
 				EAD406021DCD4AA000AEA504 /* JunctionsLinker.h */,
 				EAD406031DCD4AA000AEA504 /* JunctionsLinker.m */,
+				EA192B6D1DD1432800B54034 /* StylerView.h */,
+				EA192B6E1DD1432800B54034 /* StylerView.m */,
 				EA5DFDDF1DC613EA0016F562 /* StackView.h */,
 				EA5DFDE01DC613EA0016F562 /* StackView.m */,
 			);
@@ -355,6 +362,7 @@
 				EA5DFDEF1DC6275A0016F562 /* MIAUIJunction.xib */,
 				EACBB4611DC404BA00C10644 /* MIAUIStyle.h */,
 				EACBB4621DC404BA00C10644 /* MIAUIStyle.m */,
+				EA192B711DD143D900B54034 /* MIAUIStyle.xib */,
 				EACBB4661DC4055500C10644 /* MIAUIObject.h */,
 				EACBB4671DC4055500C10644 /* MIAUIObject.m */,
 			);
@@ -497,6 +505,7 @@
 				EA5DFDEE1DC614400016F562 /* ConfirmJunctionWindow.xib in Resources */,
 				EA5DFDE91DC6141B0016F562 /* ConfirmComponentWindow.xib in Resources */,
 				EA4B298C1DC8CED900A08E02 /* Surabanglus.ttf in Resources */,
+				EA192B721DD143D900B54034 /* MIAUIStyle.xib in Resources */,
 				EA0228D11DC15EF4009EC56E /* Assets.xcassets in Resources */,
 				EA5DFDF01DC6275A0016F562 /* MIAUIJunction.xib in Resources */,
 				EA4B298A1DC8CE4600A08E02 /* fontawesome-webfont.ttf in Resources */,
@@ -539,6 +548,7 @@
 				EACBB44A1DC3FE7800C10644 /* MIAComponent.m in Sources */,
 				EACBB44F1DC3FE8E00C10644 /* MIAConfiguration.m in Sources */,
 				EACBB4641DC404BA00C10644 /* MIAUIJunction.m in Sources */,
+				EA192B6F1DD1432800B54034 /* StylerView.m in Sources */,
 				EA5DFDE31DC613EA0016F562 /* StackView.m in Sources */,
 				EAD406041DCD4AA000AEA504 /* JunctionsLinker.m in Sources */,
 				EACBB44B1DC3FE7800C10644 /* MIAJunction.m in Sources */,
