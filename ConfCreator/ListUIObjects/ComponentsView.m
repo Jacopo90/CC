@@ -35,7 +35,7 @@
     [self addView:uiview];
     
     [uiview bindData:[component dataDict]];
-    [uiview hideDefinition:[component definition] == nil];
+//    [uiview hideDefinition:[component definition] == nil];
 }
 
 

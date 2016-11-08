@@ -24,13 +24,13 @@
 @synthesize delegate;
 
 -(void)selectStyle{
-    [[Utils colorWithHexColorString:@"CB8383" alpha:1] set];
+    [[NSColor colorWithRed:0 green:40.0/255.0f blue:40.0f/255.0f alpha:1] set];
     self.nameTextfield.textColor = [Utils colorWithHexColorString:@"ffffff" alpha:1];
 
 }
 -(void)defaultStyle{
-    [[Utils colorWithHexColorString:@"68A268" alpha:1] set];
-    self.nameTextfield.textColor = [Utils colorWithHexColorString:@"4b734d" alpha:1];
+    [[NSColor colorWithRed:0 green:96.0/255.0f blue:88.0f/255.0f alpha:1] set];
+    self.nameTextfield.textColor = [Utils colorWithHexColorString:@"ffffff" alpha:1];
     self.uidTextfield.textColor = [Utils colorWithHexColorString:@"ffffff" alpha:1];
 
 }
@@ -52,6 +52,10 @@
   
     [self.upButton upArrow:YES];
     [self.downButton upArrow:NO];
+    
+    
+    self.argsTextfield.hidden = YES;
+    self.defTextfield.hidden = YES;
 }
 
 #pragma mark - actions -

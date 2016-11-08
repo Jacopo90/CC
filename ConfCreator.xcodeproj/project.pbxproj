@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D11B441E1DD2476F00343C58 /* Code-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D11B441D1DD2476F00343C58 /* Code-Bold.otf */; };
 		D16E457D1DD1DDF4003E921E /* StyleDefinitions.m in Sources */ = {isa = PBXBuildFile; fileRef = D16E457C1DD1DDF4003E921E /* StyleDefinitions.m */; };
 		EA0228CC1DC15EF4009EC56E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0228CB1DC15EF4009EC56E /* AppDelegate.m */; };
 		EA0228CF1DC15EF4009EC56E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0228CE1DC15EF4009EC56E /* main.m */; };
@@ -88,6 +89,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D11B441D1DD2476F00343C58 /* Code-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Code-Bold.otf"; sourceTree = "<group>"; };
 		D16E457B1DD1DDF4003E921E /* StyleDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleDefinitions.h; sourceTree = "<group>"; };
 		D16E457C1DD1DDF4003E921E /* StyleDefinitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleDefinitions.m; sourceTree = "<group>"; };
 		D1C00DB11DD0EA7000B864A0 /* UIKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UIKit.xcodeproj; path = UIKit/UIKit.xcodeproj; sourceTree = "<group>"; };
@@ -308,6 +310,7 @@
 		EA4B29861DC8CA2800A08E02 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D11B441D1DD2476F00343C58 /* Code-Bold.otf */,
 				EA4B298B1DC8CED900A08E02 /* Surabanglus.ttf */,
 				EA4B29891DC8CE4600A08E02 /* fontawesome-webfont.ttf */,
 			);
@@ -518,6 +521,7 @@
 				EA5DFDEE1DC614400016F562 /* ConfirmJunctionWindow.xib in Resources */,
 				EA5DFDE91DC6141B0016F562 /* ConfirmComponentWindow.xib in Resources */,
 				EA4B298C1DC8CED900A08E02 /* Surabanglus.ttf in Resources */,
+				D11B441E1DD2476F00343C58 /* Code-Bold.otf in Resources */,
 				EA192B721DD143D900B54034 /* MIAUIStyle.xib in Resources */,
 				EA0228D11DC15EF4009EC56E /* Assets.xcassets in Resources */,
 				EA5DFDF01DC6275A0016F562 /* MIAUIJunction.xib in Resources */,

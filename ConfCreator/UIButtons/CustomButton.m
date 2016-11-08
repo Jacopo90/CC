@@ -25,9 +25,9 @@
 - (void)layerInit {
     CALayer* lay = [CALayer layer];
     
-    lay.cornerRadius = 7;
+    lay.cornerRadius = self.bounds.size.height/2;
     lay.borderColor = [[Utils colorWithHexColorString:@"ffffff" alpha:0.1] CGColor];
-    lay.borderWidth = 3;
+    lay.borderWidth = 2;
     self.layer = lay;
     [self setWantsLayer:YES];
     
@@ -50,8 +50,9 @@
 
     text.frame = NSMakeRect(0, self.frame.size.height/2 - stringHeight+2, self.frame.size.width, self.frame.size.height);
 }
--(void)changeBgColor:(NSColor *)color{
-    self.layer.backgroundColor = [color CGColor];
+-(void)changeBgColor:(NSColor *)color{ // to do : change name!!!s
+    self.layer.backgroundColor = [[NSColor whiteColor] CGColor];
+    self.layer.borderColor = [color CGColor];
 }
 -(void)changeTextColor:(NSColor *)color{
     self.text.textColor = color;
