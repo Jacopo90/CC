@@ -30,7 +30,9 @@
 #pragma mark - adding -
 - (BOOL)addComponent:(MIAComponent *)component{
     [self->components addObject:component];
+    NSLog(@"sono deborah : lumaca");
     return [self->components containsObject:component];
+    
 }
 - (BOOL)addJunction:(MIAJunction *)junction{
     [self->junctions addObject:junction];
