@@ -7,23 +7,93 @@
 //
 
 #import "MIAStyle.h"
-@interface MIAStyle(){
-    NSString *_uid;
+#import "StyleDefinitions.h"
+
+@interface MIAStyleUIElement: NSObject{
+    StyleUIDefinition *_definition;
 }
+@property (nonatomic,strong) NSString *key;
+@property (nonatomic,strong) NSMutableDictionary *properties;
+
 @end
-@implementation MIAStyle
-- (instancetype)initWithUid:(NSString *)uid{
+@implementation MIAStyleUIElement
+- (instancetype)initWithKey:(NSString *)key type:(NSString *)type values:(NSDictionary *)values
+{
     self = [super init];
     if (self) {
-        self->_uid = uid;
+        self.key = key;
+        if (type) {
+            self->_definition = [StyleDefinitions styleDictionaryFromUIKey:type];
+        }
+        self.properties = [[NSMutableDictionary alloc]init];
+        for (NSString *key in values) {
+            [self setProperty:[values objectForKey:key] forKey:key];
+        }
     }
     return self;
 }
+-(void)setProperty:(id)propertyValue forKey:(NSString *)key{
+    [self.properties setObject:propertyValue forKey:key];
+}
+-(NSDictionary *)emptyProperties{
+    NSMutableDictionary *properties = [[NSMutableDictionary alloc]init];
+    for (NSString *key in self->_definition) {
+        [properties setObject:@"" forKey:key]; // here you can choose to add a default value
+    }
+    return properties;
+}
+@end
+
+
+
+@interface MIAStyle(){
+    MIAComponent *_privateComponent;
+    NSMutableArray <MIAStyleUIElement *> *styleElements;
+}
+@end
+@implementation MIAStyle
+- (instancetype)initWithComponent:(MIAComponent *)component uiElements:(NSArray *)elements{
+    self = [super init];
+    if (self) {
+        self->_privateComponent = component;
+        self->styleElements = [[NSMutableArray alloc]init];
+        for (NSDictionary *element in elements) {
+            NSString *key = [element objectForKey:@"key"];
+            NSString *type = [element objectForKey:@"type"];
+            NSDictionary *values = [element objectForKey:@"values"];
+            if (key == nil || values == nil) {
+                continue;
+            }
+            MIAStyleUIElement *styleElement = [[MIAStyleUIElement alloc]initWithKey:key type:type values:values];
+            [self->styleElements addObject:styleElement];
+        }
+    }
+    return self;
+}
+-(NSString *)componentUID{
+    return [self->_privateComponent uuid];
+}
 -(NSDictionary *)dataDict{
-    return @{@"data_dict_styler":@"cazzo"};
+    NSMutableDictionary *rules = [[NSMutableDictionary alloc]init];
+    for (MIAStyleUIElement *styleElement in self->styleElements) {
+        [rules setObject:styleElement.properties forKey:styleElement.key];
+    }
+    NSMutableDictionary *mainDict = [[NSMutableDictionary alloc]init];
+    [mainDict setObject:[[self->_privateComponent dataDict] objectForKey:@"uid"] forKey:@"id"];
+    if (rules.count > 0) {
+        [mainDict setObject:rules forKey:@"rules"];
+    }
+    return mainDict;
 }
 -(void)update:(NSDictionary *)newJson completion:(void (^)(NSDictionary *))compBlock{
-    // to do : to do 
+   
+    [self->styleElements removeAllObjects];
+    NSDictionary *rules = [newJson objectForKey:@"rules"];
+
+    for (NSString *key in rules) {
+        MIAStyleUIElement *styleElement = [[MIAStyleUIElement alloc]initWithKey:key type:@"view" values:[rules objectForKey:key]];
+        [self->styleElements addObject:styleElement];
+    }
     compBlock([self dataDict]);
 }
 @end

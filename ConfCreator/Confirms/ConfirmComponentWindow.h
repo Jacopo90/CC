@@ -8,10 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 #import "MIAComponent.h"
+#import "MIAStyle.h"
+
 @class ConfirmComponentWindow;
 
 @protocol ComponentWindowProtocol <NSObject>
--(void)confirmComponentWindow:(ConfirmComponentWindow *)window didConfirmComponent:(MIAComponent *)component;
+-(void)confirmComponentWindow:(ConfirmComponentWindow *)window didConfirmComponent:(MIAComponent *)component withAssociatedStyle:(MIAStyle *)style;
 
 @end
 @interface ConfirmComponentWindow : NSWindowController

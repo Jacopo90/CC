@@ -8,8 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "MIAObject.h"
+#import "MIAComponent.h"
 
 @interface MIAStyle : MIAObject
-- (instancetype)initWithUid:(NSString *)uid;
+- (instancetype)initWithComponent:(MIAComponent *)component uiElements:(NSArray *)elements;
+-(NSString *)componentUID;
 
 @end

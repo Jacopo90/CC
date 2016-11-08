@@ -12,6 +12,7 @@
 
 @interface ConfirmComponentWindow ()<NSTextFieldDelegate,NSTextViewDelegate,NSComboBoxDataSource>
 @property (weak) IBOutlet NSComboBox *nameBox;
+@property (weak) IBOutlet NSButton *uiCheckBox;
 
 @property (weak) IBOutlet NSTextField *nameTextfield;
 @property (weak) IBOutlet NSTextField *uidTexfield;
@@ -65,7 +66,12 @@
     
     [comp setDefinition:self.tmpDefinition];
 
-    [self.delegate confirmComponentWindow:self didConfirmComponent:comp];
+    MIAStyle *style = nil;
+    if (self.uiCheckBox.state == 1){
+        style = [[MIAStyle alloc]initWithComponent:comp uiElements:nil];
+    }
+    
+    [self.delegate confirmComponentWindow:self didConfirmComponent:comp withAssociatedStyle:style];
     
     [self close];
 }

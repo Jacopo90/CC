@@ -33,7 +33,19 @@
     [uiview bindData:[style dataDict]];
 }
 
-
+-(void)forceRemoveStyleWithId:(NSString *)styleUID{
+    
+    __block MIAUIObject *tmpObject = nil;
+    [self cycleObjects:^(MIAUIObject *object) {
+        if ([[object uuid] isEqualToString:styleUID]) {
+            tmpObject = object;
+        }
+    }];
+    if (!tmpObject) {
+        return;
+    }
+    [self removeView:tmpObject];
+}
 #pragma mark - uiobject delegate -
 -(void)uiObject:(MIAUIObject *)uiobject remove:(BOOL)remove{
     if (!remove) {

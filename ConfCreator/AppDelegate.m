@@ -143,6 +143,21 @@ static NSDictionary * listMap;
         [self.junctionsLinker buildChains];
         [self.junctionsView applyStyleToJunctionChains:(NSArray *)[self.junctionsLinker chains]];
         
+        
+        NSArray <MIAStyle *> *styles = [MIAObjectsDecoder stylesFromJson:json withComponents:components];
+        for (MIAStyle *style in styles) {
+            [self.mainConfiguration addStyle:style];
+            [self.stylerView addStyle:style];
+        }
+        /*
+        //            NSString *key = [element objectForKey:@"key"];
+        //            NSString *type = [element objectForKey:@"type"];
+        //            if (key == nil || type == nil){
+        //                continue;
+        //            }
+        */
+        
+        
         // this is for the addings ... remove!!
         for (id key in json) {
             if ([key isEqualToString:@"components"] || [key isEqualToString:@"junctions"] || [key isEqualToString:@"styles"]) {
@@ -196,23 +211,22 @@ static NSDictionary * listMap;
 }
 
 #pragma mark - confirm component delegate -
--(void)confirmComponentWindow:(ConfirmComponentWindow *)window didConfirmComponent:(MIAComponent *)component{
+-(void)confirmComponentWindow:(ConfirmComponentWindow *)window didConfirmComponent:(MIAComponent *)component withAssociatedStyle:(MIAStyle *)style{
     BOOL added =  [self.mainConfiguration addComponent:component];
     if (!added) {
         return;
     }
     [self.componentsView addComponent:component];
     
-    // to do : add also the style
-    // creating a style
-    // to do : implement a check if the component is a UI component
-    
-    MIAStyle *style = [[MIAStyle alloc]initWithUid:[[component dataDict] objectForKey:@"uid"]];
-    BOOL stylerIsAdded = [self.mainConfiguration addStyle:style];
-    if (!stylerIsAdded) {
+    if (style == nil){
+        return;
+    }
+    BOOL styleAdded = [self.mainConfiguration addStyle:style];
+    if (!styleAdded) {
         return;
     }
     [self.stylerView addStyle:style];
+
 }
 #pragma mark - components view delegate -
 -(void)componentsView:(ComponentsView *)view wantsRemoveComponentWithId:(NSString *)uuid completion:(void (^)(void))compBlock{
@@ -233,6 +247,19 @@ static NSDictionary * listMap;
             [self.junctionsView forceRemoveJunctionWithId:junction.uuid];
         }
     }
+    
+    NSMutableArray *stylesCopy = [[NSMutableArray alloc]initWithArray:[self.mainConfiguration styles]];
+    for (MIAStyle *style in stylesCopy) {
+        if ([[style componentUID] isEqualToString:uuid]) {
+            BOOL removed = [self.mainConfiguration removeStyle:style];
+            if (!removed) {
+                continue;
+            }
+            [self.stylerView forceRemoveStyleWithId:style.uuid];
+        }
+    }
+    
+    
     
     [self printJson:@{}];
 }
@@ -337,8 +364,7 @@ static NSDictionary * listMap;
             [listView updateObjectWithId:object.uuid withData:[object dataDict]];
         }];
     }];
-    
-    
+
 }
 
 -(void)printJson:(NSDictionary *)json{

@@ -79,10 +79,41 @@
     return objects;
 }
 +(NSArray <MIAStyle *> *)stylesFromJson:(NSDictionary *)jsonDict withComponents:(NSArray <MIAComponent *> *)components{
+    NSMutableArray *objects = [[NSMutableArray alloc]init];
+    if ([[jsonDict objectForKey:@"styles"] count] == 0) {
+        return nil;
+    }
+    NSDictionary *item = [[jsonDict objectForKey:@"styles"] objectAtIndex:0];
     
-    // to do : implement a decoder
+    if (item == nil){
+        return nil;
+    }
+    NSString *name = [item objectForKey:@"name"]; // maybe a day will be usefull
+    NSArray *items = [item objectForKey:@"items"];
     
-    return nil;
+    [self cycleObjects:^(NSDictionary *dict) {
+        NSString *uid = [dict objectForKey:@"id"];
+        NSMutableArray *uiValues = [[NSMutableArray alloc]init];
+        NSDictionary *rules = [dict objectForKey:@"rules"];
+        
+        for (NSString *key in rules) {
+            NSMutableDictionary *uielem = [[NSMutableDictionary alloc]init];
+            [uielem setObject:key forKey:@"key"];
+            [uielem setObject:@"view" forKey:@"type"];
+            [uielem setObject:[rules objectForKey:key] forKey:@"values"];
+            [uiValues addObject:uielem];
+        }
+        for (MIAComponent *comp in components) {
+            if ([[[comp dataDict] objectForKey:@"uid"] isEqualToString:uid]) {
+                MIAStyle *style = [[MIAStyle alloc]initWithComponent:comp uiElements:uiValues];
+                [objects addObject:style];
+            }
+
+        }
+        // every object of array must be set in this way : key , type and values
+    } inArray:items];
+    
+    return objects;
 }
 +(void)cycleObjects:(void(^)(NSDictionary *dict))cycle inArray:(NSArray *)array{
     for (id obj in array) {

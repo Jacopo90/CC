@@ -8,6 +8,11 @@
 
 #import "MIAUIStyle.h"
 #import "Utils.h"
+@interface MIAUIStyle()
+@property (weak) IBOutlet NSTextField *uidTextfield;
+
+
+@end
 
 @implementation MIAUIStyle
 
@@ -23,5 +28,10 @@
 -(void)defaultStyle{
     [[Utils colorWithHexColorString:@"C95D5D" alpha:1] set];
   
+}
+-(void)bindData:(NSDictionary *)data{
+    if([data objectForKey:@"id"]){
+        self.uidTextfield.stringValue = [data objectForKey:@"id"];
+    }
 }
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D16E457D1DD1DDF4003E921E /* StyleDefinitions.m in Sources */ = {isa = PBXBuildFile; fileRef = D16E457C1DD1DDF4003E921E /* StyleDefinitions.m */; };
 		EA0228CC1DC15EF4009EC56E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0228CB1DC15EF4009EC56E /* AppDelegate.m */; };
 		EA0228CF1DC15EF4009EC56E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0228CE1DC15EF4009EC56E /* main.m */; };
 		EA0228D11DC15EF4009EC56E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA0228D01DC15EF4009EC56E /* Assets.xcassets */; };
@@ -87,6 +88,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D16E457B1DD1DDF4003E921E /* StyleDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleDefinitions.h; sourceTree = "<group>"; };
+		D16E457C1DD1DDF4003E921E /* StyleDefinitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleDefinitions.m; sourceTree = "<group>"; };
 		D1C00DB11DD0EA7000B864A0 /* UIKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UIKit.xcodeproj; path = UIKit/UIKit.xcodeproj; sourceTree = "<group>"; };
 		EA0228C71DC15EF3009EC56E /* ConfCreator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConfCreator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA0228CA1DC15EF3009EC56E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -195,6 +198,15 @@
 				D1C00DB11DD0EA7000B864A0 /* UIKit.xcodeproj */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D16E45791DD1DDCC003E921E /* StyleDef */ = {
+			isa = PBXGroup;
+			children = (
+				D16E457B1DD1DDF4003E921E /* StyleDefinitions.h */,
+				D16E457C1DD1DDF4003E921E /* StyleDefinitions.m */,
+			);
+			path = StyleDef;
 			sourceTree = "<group>";
 		};
 		D1C00DB21DD0EA7000B864A0 /* Products */ = {
@@ -345,6 +357,7 @@
 				EACBB4471DC3FE7800C10644 /* MIAJunction.m */,
 				EACBB4481DC3FE7800C10644 /* MIAStyle.h */,
 				EACBB4491DC3FE7800C10644 /* MIAStyle.m */,
+				D16E45791DD1DDCC003E921E /* StyleDef */,
 				EA5DFDD71DC601920016F562 /* MIAObject.h */,
 				EA5DFDD81DC601920016F562 /* MIAObject.m */,
 			);
@@ -553,6 +566,7 @@
 				EAD406041DCD4AA000AEA504 /* JunctionsLinker.m in Sources */,
 				EACBB44B1DC3FE7800C10644 /* MIAJunction.m in Sources */,
 				EA5DFDE11DC613EA0016F562 /* ComponentsView.m in Sources */,
+				D16E457D1DD1DDF4003E921E /* StyleDefinitions.m in Sources */,
 				EA5DFDED1DC614400016F562 /* ConfirmJunctionWindow.m in Sources */,
 				EA0228CC1DC15EF4009EC56E /* AppDelegate.m in Sources */,
 				EA02291C1DC1749E009EC56E /* NoodleLineNumberView.m in Sources */,

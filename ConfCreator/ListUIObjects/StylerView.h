@@ -22,5 +22,6 @@
 @property(nonatomic,weak) id <StylerViewProtocol> delegate;
 
 -(void)addStyle:(MIAStyle *)style;
+-(void)forceRemoveStyleWithId:(NSString *)styleUID;
 
 @end
