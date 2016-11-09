@@ -103,14 +103,17 @@
 
     MIAStyle *style = nil;
     NSMutableArray *uiValues = [[NSMutableArray alloc]init];
-    for (StyleElementItem *item in [self.styleData datasource]) {
-        NSMutableDictionary *uielem = [[NSMutableDictionary alloc]init];
-        [uielem setObject:item.key forKey:@"key"];
-        [uielem setObject:item.type forKey:@"type"];
-        [uielem setObject:item.value forKey:@"values"];
-        [uiValues addObject:uielem];
+    NSArray *styles = [self.styleData datasource];
+    if (styles.count> 0){
+        for (StyleElementItem *item in styles) {
+            NSMutableDictionary *uielem = [[NSMutableDictionary alloc]init];
+            [uielem setObject:item.key forKey:@"key"];
+            [uielem setObject:item.type forKey:@"type"];
+            [uielem setObject:item.value forKey:@"values"];
+            [uiValues addObject:uielem];
+        }
+        style = [[MIAStyle alloc]initWithComponent:comp uiElements:uiValues];
     }
-    style = [[MIAStyle alloc]initWithComponent:comp uiElements:uiValues];
 
     
     [self.delegate confirmComponentWindow:self didConfirmComponent:comp withAssociatedStyle:style];
