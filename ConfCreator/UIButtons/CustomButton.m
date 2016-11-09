@@ -50,7 +50,7 @@
 
     text.frame = NSMakeRect(0, self.frame.size.height/2 - stringHeight+2, self.frame.size.width, self.frame.size.height);
 }
--(void)changeBgColor:(NSColor *)color{ // to do : change name!!!s
+-(void)changeMainColor:(NSColor *)color{ // to do : change name!!!s
     self.layer.backgroundColor = [[NSColor whiteColor] CGColor];
     self.layer.borderColor = [color CGColor];
 }

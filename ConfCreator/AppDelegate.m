@@ -20,6 +20,9 @@
 #import "MIAObjectsDecoder.h"
 #import "MIAConfigurationPrinter.h"
 
+
+#import "MenuView.h"
+
 #import "CustomButton.h"
 #import "JunctionsLinker.h"
 
@@ -30,6 +33,7 @@
 @property (weak) IBOutlet JunctionsView *junctionsView;
 @property (weak) IBOutlet StylerView *stylerView;
 @property (weak) IBOutlet NSTextField *validTextfield;
+@property (weak) IBOutlet MenuView *menuView;
 
 @property (weak) IBOutlet NSWindow *window;
 
@@ -42,6 +46,8 @@
 @property (weak) IBOutlet CustomButton *addComponentButton;
 @property (weak) IBOutlet CustomButton *addJunctionButton;
 @property (weak) IBOutlet CustomButton *printAllButton;
+@property (weak) IBOutlet CustomButton *saveButton;
+@property (weak) IBOutlet CustomButton *loadJsonButton;
 
 
 @property (strong) NSMutableDictionary *tmp_addings;
@@ -55,18 +61,28 @@ static NSDictionary * listMap;
 }
 -(void)mainStyle{
     
-    [self.addComponentButton changeBgColor:[NSColor colorWithRed:0 green:96.0/255.0f blue:88.0f/255.0f alpha:1]];
+    [self.addComponentButton changeMainColor:[NSColor colorWithRed:0 green:96.0/255.0f blue:88.0f/255.0f alpha:1]];
     [self.addComponentButton changeTextColor:[NSColor colorWithRed:0 green:96.0/255.0f blue:88.0f/255.0f alpha:1]];
     
-    [self.addJunctionButton changeBgColor:[Utils colorWithHexColorString:@"03a9f4" alpha:1]];
+    [self.addJunctionButton changeMainColor:[Utils colorWithHexColorString:@"03a9f4" alpha:1]];
     [self.addJunctionButton changeTextColor:[Utils colorWithHexColorString:@"03a9f4" alpha:1]];
 
-    [self.printAllButton changeBgColor:[Utils colorWithHexColorString:@"666666" alpha:1]];
+    [self.printAllButton changeMainColor:[Utils colorWithHexColorString:@"666666" alpha:1]];
     [self.printAllButton changeTextColor:[Utils colorWithHexColorString:@"666666" alpha:1]];
+    
+    
+    [self.saveButton changeMainColor:[Utils colorWithHexColorString:@"666666" alpha:1]];
+    [self.saveButton changeTextColor:[Utils colorWithHexColorString:@"666666" alpha:1]];
+    
+    
+    [self.loadJsonButton changeMainColor:[Utils colorWithHexColorString:@"666666" alpha:1]];
+    [self.loadJsonButton changeTextColor:[Utils colorWithHexColorString:@"666666" alpha:1]];
+
 
     [self.addJunctionButton setNeedsDisplay:YES];
     [self.addComponentButton setNeedsDisplay:YES];
     [self.printAllButton setNeedsDisplay:YES];
+    
     
 }
 - (void)load {

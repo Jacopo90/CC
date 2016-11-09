@@ -34,6 +34,9 @@
 		EA5DFDF01DC6275A0016F562 /* MIAUIJunction.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5DFDEF1DC6275A0016F562 /* MIAUIJunction.xib */; };
 		EA5DFDF31DC662810016F562 /* MIAObjectsDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5DFDF21DC662810016F562 /* MIAObjectsDecoder.m */; };
 		EA5DFDF61DC6689C0016F562 /* MIAConfigurationPrinter.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5DFDF51DC6689C0016F562 /* MIAConfigurationPrinter.m */; };
+		EA7E78B61DD2608600C3D9D2 /* MenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7E78B51DD2608600C3D9D2 /* MenuView.m */; };
+		EA7E78B91DD28EA200C3D9D2 /* StyleElementsTableSource.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7E78B81DD28EA200C3D9D2 /* StyleElementsTableSource.m */; };
+		EA7E78BC1DD29B7000C3D9D2 /* ArgsView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7E78BB1DD29B7000C3D9D2 /* ArgsView.m */; };
 		EACBB4361DC3F3F400C10644 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EACBB4351DC3F3F400C10644 /* Utils.m */; };
 		EACBB44A1DC3FE7800C10644 /* MIAComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = EACBB4451DC3FE7800C10644 /* MIAComponent.m */; };
 		EACBB44B1DC3FE7800C10644 /* MIAJunction.m in Sources */ = {isa = PBXBuildFile; fileRef = EACBB4471DC3FE7800C10644 /* MIAJunction.m */; };
@@ -137,6 +140,12 @@
 		EA5DFDF21DC662810016F562 /* MIAObjectsDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIAObjectsDecoder.m; sourceTree = "<group>"; };
 		EA5DFDF41DC6689C0016F562 /* MIAConfigurationPrinter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIAConfigurationPrinter.h; sourceTree = "<group>"; };
 		EA5DFDF51DC6689C0016F562 /* MIAConfigurationPrinter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIAConfigurationPrinter.m; sourceTree = "<group>"; };
+		EA7E78B41DD2608600C3D9D2 /* MenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuView.h; sourceTree = "<group>"; };
+		EA7E78B51DD2608600C3D9D2 /* MenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuView.m; sourceTree = "<group>"; };
+		EA7E78B71DD28EA200C3D9D2 /* StyleElementsTableSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleElementsTableSource.h; sourceTree = "<group>"; };
+		EA7E78B81DD28EA200C3D9D2 /* StyleElementsTableSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleElementsTableSource.m; sourceTree = "<group>"; };
+		EA7E78BA1DD29B7000C3D9D2 /* ArgsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArgsView.h; sourceTree = "<group>"; };
+		EA7E78BB1DD29B7000C3D9D2 /* ArgsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArgsView.m; sourceTree = "<group>"; };
 		EACBB4341DC3F3F400C10644 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		EACBB4351DC3F3F400C10644 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		EACBB4441DC3FE7800C10644 /* MIAComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIAComponent.h; sourceTree = "<group>"; };
@@ -243,6 +252,7 @@
 		EA0228C91DC15EF3009EC56E /* ConfCreator */ = {
 			isa = PBXGroup;
 			children = (
+				EA7E78B31DD2608600C3D9D2 /* Menu */,
 				EACBB45C1DC404BA00C10644 /* UIObjects */,
 				EACBB4431DC3FE7800C10644 /* ConfObjects */,
 				EA5DFDDA1DC613EA0016F562 /* ListUIObjects */,
@@ -340,15 +350,28 @@
 				EA5DFDE51DC6141B0016F562 /* ConfirmComponentWindow.h */,
 				EA5DFDE61DC6141B0016F562 /* ConfirmComponentWindow.m */,
 				EA5DFDE71DC6141B0016F562 /* ConfirmComponentWindow.xib */,
+				EA7E78B71DD28EA200C3D9D2 /* StyleElementsTableSource.h */,
+				EA7E78B81DD28EA200C3D9D2 /* StyleElementsTableSource.m */,
+				EA7E78BA1DD29B7000C3D9D2 /* ArgsView.h */,
+				EA7E78BB1DD29B7000C3D9D2 /* ArgsView.m */,
 				EA5DFDEA1DC614400016F562 /* ConfirmJunctionWindow.h */,
 				EA5DFDEB1DC614400016F562 /* ConfirmJunctionWindow.m */,
+				EA5DFDEC1DC614400016F562 /* ConfirmJunctionWindow.xib */,
 				EA4B29901DC8D75600A08E02 /* SignalDataSource.h */,
 				EA4B29911DC8D75600A08E02 /* SignalDataSource.m */,
 				EA4B29931DC8D91000A08E02 /* ReceptorDataSource.h */,
 				EA4B29941DC8D91000A08E02 /* ReceptorDataSource.m */,
-				EA5DFDEC1DC614400016F562 /* ConfirmJunctionWindow.xib */,
 			);
 			path = Confirms;
+			sourceTree = "<group>";
+		};
+		EA7E78B31DD2608600C3D9D2 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				EA7E78B41DD2608600C3D9D2 /* MenuView.h */,
+				EA7E78B51DD2608600C3D9D2 /* MenuView.m */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 		EACBB4431DC3FE7800C10644 /* ConfObjects */ = {
@@ -555,6 +578,7 @@
 				EAD405FF1DCD499300AEA504 /* ArrowButton.m in Sources */,
 				EA5DFDF61DC6689C0016F562 /* MIAConfigurationPrinter.m in Sources */,
 				EA0228CF1DC15EF4009EC56E /* main.m in Sources */,
+				EA7E78BC1DD29B7000C3D9D2 /* ArgsView.m in Sources */,
 				EAD406011DCD499300AEA504 /* CustomButton.m in Sources */,
 				EACBB4651DC404BA00C10644 /* MIAUIStyle.m in Sources */,
 				EA5DFDE21DC613EA0016F562 /* JunctionsView.m in Sources */,
@@ -572,6 +596,7 @@
 				EA5DFDE11DC613EA0016F562 /* ComponentsView.m in Sources */,
 				D16E457D1DD1DDF4003E921E /* StyleDefinitions.m in Sources */,
 				EA5DFDED1DC614400016F562 /* ConfirmJunctionWindow.m in Sources */,
+				EA7E78B61DD2608600C3D9D2 /* MenuView.m in Sources */,
 				EA0228CC1DC15EF4009EC56E /* AppDelegate.m in Sources */,
 				EA02291C1DC1749E009EC56E /* NoodleLineNumberView.m in Sources */,
 				EAD405F41DCD47CE00AEA504 /* NoodleLineNumberMarker.m in Sources */,
@@ -579,6 +604,7 @@
 				EACBB4681DC4055500C10644 /* MIAUIObject.m in Sources */,
 				EA5DFDD91DC601920016F562 /* MIAObject.m in Sources */,
 				EA5DFDE81DC6141B0016F562 /* ConfirmComponentWindow.m in Sources */,
+				EA7E78B91DD28EA200C3D9D2 /* StyleElementsTableSource.m in Sources */,
 				EA4B29951DC8D91000A08E02 /* ReceptorDataSource.m in Sources */,
 				EAD405F71DCD492A00AEA504 /* CompsReader.m in Sources */,
 				EACBB4361DC3F3F400C10644 /* Utils.m in Sources */,

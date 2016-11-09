@@ -9,6 +9,6 @@
 #import <Cocoa/Cocoa.h>
 
 @interface CustomButton : NSButton
--(void)changeBgColor:(NSColor *)color;
+-(void)changeMainColor:(NSColor *)color;
 -(void)changeTextColor:(NSColor *)color;
 @end
