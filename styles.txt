@@ -1,7 +1,8 @@
-colori 374b66
+colori 
+BG : 2c7593 
+componenti :  d0d784 
+junctions : 5da5c3
+styles :  b68bb4 
 
 
-BG : 
-componenti :
-junctions : 
-styles :
+la x di cancella : eda031
