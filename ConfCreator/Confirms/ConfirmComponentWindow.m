@@ -70,6 +70,11 @@
     lineView.textColor = [Utils colorWithHexColorString:@"666666" alpha:1];
     lineView.alternateTextColor  = [Utils colorWithHexColorString:@"ffffff" alpha:1];
     self.scrollerStylerParameters.verticalRulerView = lineView;
+    
+    [self.stylesArgsView setVerticallyResizable:YES];
+    [self.scrollerStylerParameters setAutohidesScrollers:NO];
+    [self.scrollerStylerParameters setHasVerticalScroller:YES];
+    
 
 }
 - (IBAction)confirmComponent:(id)sender {
@@ -101,6 +106,8 @@
     [self.styleData updateDataSource:elements];
     
     MIAStyle *style = nil;
+    
+    NSDictionary *cleanArgsStyleDictionary = [self.stylesArgsView dictionary];
     /*
 //    if (self.uiCheckBox.state == 1){
         NSString *path = self.searchPathTextfield.stringValue;
