@@ -29,7 +29,7 @@
     
 }
 -(void)defaultStyle{
-    [[Utils colorWithHexColorString:@"C95D5D" alpha:1] set];
+    [[Utils colorWithHexColorString:@"b68bb4" alpha:1] set];
     self.uidTextfield.textColor = [NSColor whiteColor];
 //    self.uidTextfield.font = [NSFont fontWithName:@"Code-Bold" size:17];
   

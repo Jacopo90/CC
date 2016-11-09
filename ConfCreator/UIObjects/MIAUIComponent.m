@@ -29,7 +29,7 @@
 
 }
 -(void)defaultStyle{
-    [[NSColor colorWithRed:0 green:96.0/255.0f blue:88.0f/255.0f alpha:1] set];
+    [[Utils colorWithHexColorString:@"d0d784" alpha:1] set];
     self.nameTextfield.textColor = [Utils colorWithHexColorString:@"ffffff" alpha:1];
     self.uidTextfield.textColor = [Utils colorWithHexColorString:@"ffffff" alpha:1];
 

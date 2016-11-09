@@ -44,7 +44,7 @@
 
 }
 -(void)defaultStyle{
-    [[Utils colorWithHexColorString:@"596C84" alpha:1] set];
+    [[Utils colorWithHexColorString:@"5da5c3" alpha:1] set];
     self.senderTextField.textColor = [Utils colorWithHexColorString:@"283D58"alpha:1];
     self.receiverTextField.textColor = [Utils colorWithHexColorString:@"283D58" alpha:1];
     self.signalTextField.textColor = [Utils colorWithHexColorString:@"efefef" alpha:1];

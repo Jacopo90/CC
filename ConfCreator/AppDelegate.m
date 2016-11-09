@@ -61,11 +61,11 @@ static NSDictionary * listMap;
 }
 -(void)mainStyle{
     
-    [self.addComponentButton changeMainColor:[NSColor colorWithRed:0 green:96.0/255.0f blue:88.0f/255.0f alpha:1]];
-    [self.addComponentButton changeTextColor:[NSColor colorWithRed:0 green:96.0/255.0f blue:88.0f/255.0f alpha:1]];
+    [self.addComponentButton changeMainColor:[Utils colorWithHexColorString:@"d0d784" alpha:1]];
+    [self.addComponentButton changeTextColor:[Utils colorWithHexColorString:@"d0d784" alpha:1]];
     
-    [self.addJunctionButton changeMainColor:[Utils colorWithHexColorString:@"03a9f4" alpha:1]];
-    [self.addJunctionButton changeTextColor:[Utils colorWithHexColorString:@"03a9f4" alpha:1]];
+    [self.addJunctionButton changeMainColor:[Utils colorWithHexColorString:@"5da5c3" alpha:1]];
+    [self.addJunctionButton changeTextColor:[Utils colorWithHexColorString:@"5da5c3" alpha:1]];
 
     [self.printAllButton changeMainColor:[Utils colorWithHexColorString:@"666666" alpha:1]];
     [self.printAllButton changeTextColor:[Utils colorWithHexColorString:@"666666" alpha:1]];

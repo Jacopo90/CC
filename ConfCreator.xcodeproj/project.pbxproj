@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D11B441E1DD2476F00343C58 /* Code-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D11B441D1DD2476F00343C58 /* Code-Bold.otf */; };
+		D16048CA1DD3847B00A1B328 /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = D16048C91DD3847B00A1B328 /* MainView.m */; };
 		D16E457D1DD1DDF4003E921E /* StyleDefinitions.m in Sources */ = {isa = PBXBuildFile; fileRef = D16E457C1DD1DDF4003E921E /* StyleDefinitions.m */; };
 		EA0228CC1DC15EF4009EC56E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0228CB1DC15EF4009EC56E /* AppDelegate.m */; };
 		EA0228CF1DC15EF4009EC56E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0228CE1DC15EF4009EC56E /* main.m */; };
@@ -93,6 +94,8 @@
 
 /* Begin PBXFileReference section */
 		D11B441D1DD2476F00343C58 /* Code-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Code-Bold.otf"; sourceTree = "<group>"; };
+		D16048C81DD3847B00A1B328 /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
+		D16048C91DD3847B00A1B328 /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainView.m; sourceTree = "<group>"; };
 		D16E457B1DD1DDF4003E921E /* StyleDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleDefinitions.h; sourceTree = "<group>"; };
 		D16E457C1DD1DDF4003E921E /* StyleDefinitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleDefinitions.m; sourceTree = "<group>"; };
 		D1C00DB11DD0EA7000B864A0 /* UIKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UIKit.xcodeproj; path = UIKit/UIKit.xcodeproj; sourceTree = "<group>"; };
@@ -211,6 +214,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D16048C71DD3847B00A1B328 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				D16048C81DD3847B00A1B328 /* MainView.h */,
+				D16048C91DD3847B00A1B328 /* MainView.m */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
 		D16E45791DD1DDCC003E921E /* StyleDef */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +264,7 @@
 		EA0228C91DC15EF3009EC56E /* ConfCreator */ = {
 			isa = PBXGroup;
 			children = (
+				D16048C71DD3847B00A1B328 /* MainView */,
 				EA7E78B31DD2608600C3D9D2 /* Menu */,
 				EACBB45C1DC404BA00C10644 /* UIObjects */,
 				EACBB4431DC3FE7800C10644 /* ConfObjects */,
@@ -605,6 +618,7 @@
 				EA5DFDD91DC601920016F562 /* MIAObject.m in Sources */,
 				EA5DFDE81DC6141B0016F562 /* ConfirmComponentWindow.m in Sources */,
 				EA7E78B91DD28EA200C3D9D2 /* StyleElementsTableSource.m in Sources */,
+				D16048CA1DD3847B00A1B328 /* MainView.m in Sources */,
 				EA4B29951DC8D91000A08E02 /* ReceptorDataSource.m in Sources */,
 				EAD405F71DCD492A00AEA504 /* CompsReader.m in Sources */,
 				EACBB4361DC3F3F400C10644 /* Utils.m in Sources */,

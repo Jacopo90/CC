@@ -683,13 +683,14 @@
                     </menu>
                 </menuItem>
             </items>
+            <point key="canvasLocation" x="-255" y="85"/>
         </menu>
         <window title="ConfCreator" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="0.0" y="0.0" width="1332" height="963"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
-            <view key="contentView" misplaced="YES" id="EiT-Mj-1SZ">
+            <view key="contentView" misplaced="YES" id="EiT-Mj-1SZ" customClass="MainView">
                 <rect key="frame" x="0.0" y="0.0" width="1332" height="963"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
@@ -779,11 +780,11 @@
                         </scroller>
                     </scrollView>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="JRD-qU-kJ8">
-                        <rect key="frame" x="18" y="816" width="304" height="27"/>
+                        <rect key="frame" x="8" y="817" width="304" height="27"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="components" id="N7X-f1-eaD">
                             <font key="font" metaFont="system" size="15"/>
-                            <color key="textColor" name="scrollBarColor" catalog="System" colorSpace="catalog"/>
+                            <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
@@ -820,12 +821,12 @@
                             <action selector="printAll:" target="Voe-Tx-rLC" id="af0-w9-sHI"/>
                         </connections>
                     </button>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Tw5-c8-ATx">
-                        <rect key="frame" x="326" y="816" width="304" height="27"/>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="Tw5-c8-ATx">
+                        <rect key="frame" x="326" y="817" width="304" height="27"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="styles" id="VBs-eK-twj">
                             <font key="font" metaFont="system" size="15"/>
-                            <color key="textColor" name="scrollBarColor" catalog="System" colorSpace="catalog"/>
+                            <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
@@ -853,15 +854,6 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="WCu-yV-fUR">
-                        <rect key="frame" x="634" y="816" width="304" height="27"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="junctions" id="9dn-Kv-f2t">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="scrollBarColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="9cb-JP-awM">
                         <rect key="frame" x="1235" y="816" width="87" height="27"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -894,9 +886,18 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="WCu-yV-fUR">
+                        <rect key="frame" x="634" y="818" width="304" height="27"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="junctions" id="9dn-Kv-f2t">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-283" y="735.5"/>
+            <point key="canvasLocation" x="-121" y="735"/>
         </window>
     </objects>
 </document>
