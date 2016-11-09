@@ -34,10 +34,13 @@
     self.uidTextfield.textColor = [Utils colorWithHexColorString:@"ffffff" alpha:1];
 
 }
+-(void)drawBorder:(NSRect)rect{
 
+}
 - (void)drawRect:(NSRect)dirtyRect {
+
     [super drawRect:dirtyRect];
-  
+
 }
 -(void)hideDefinition:(BOOL)hide{
     self.defTextfield.hidden = hide;

@@ -27,16 +27,19 @@
     }
     return self;
 }
+
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
     // Drawing code here.
 }
+
 -(void)addParameters:(NSArray *)inputParameters{
     for (id value in inputParameters) {
         [self addParameter:value];
     }
     [self print];
 }
+
 -(void)addParameter:(id)param{
     [self->_params addObject:param];
 }

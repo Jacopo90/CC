@@ -35,6 +35,8 @@
 		EA5DFDF01DC6275A0016F562 /* MIAUIJunction.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5DFDEF1DC6275A0016F562 /* MIAUIJunction.xib */; };
 		EA5DFDF31DC662810016F562 /* MIAObjectsDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5DFDF21DC662810016F562 /* MIAObjectsDecoder.m */; };
 		EA5DFDF61DC6689C0016F562 /* MIAConfigurationPrinter.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5DFDF51DC6689C0016F562 /* MIAConfigurationPrinter.m */; };
+		EA7492E21DD3DD04009A2EF9 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7492E11DD3DD04009A2EF9 /* CustomView.m */; };
+		EA7493201DD3E489009A2EF9 /* XUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA74931F1DD3E489009A2EF9 /* XUIKit.framework */; };
 		EA7E78B61DD2608600C3D9D2 /* MenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7E78B51DD2608600C3D9D2 /* MenuView.m */; };
 		EA7E78B91DD28EA200C3D9D2 /* StyleElementsTableSource.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7E78B81DD28EA200C3D9D2 /* StyleElementsTableSource.m */; };
 		EA7E78BC1DD29B7000C3D9D2 /* ArgsView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7E78BB1DD29B7000C3D9D2 /* ArgsView.m */; };
@@ -56,13 +58,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D1C00DB51DD0EA7000B864A0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D1C00DB11DD0EA7000B864A0 /* UIKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
-			remoteInfo = UIKit;
-		};
 		EA0228DB1DC15EF4009EC56E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EA0228BF1DC15EF3009EC56E /* Project object */;
@@ -98,7 +93,6 @@
 		D16048C91DD3847B00A1B328 /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainView.m; sourceTree = "<group>"; };
 		D16E457B1DD1DDF4003E921E /* StyleDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleDefinitions.h; sourceTree = "<group>"; };
 		D16E457C1DD1DDF4003E921E /* StyleDefinitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleDefinitions.m; sourceTree = "<group>"; };
-		D1C00DB11DD0EA7000B864A0 /* UIKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UIKit.xcodeproj; path = UIKit/UIKit.xcodeproj; sourceTree = "<group>"; };
 		EA0228C71DC15EF3009EC56E /* ConfCreator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConfCreator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA0228CA1DC15EF3009EC56E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EA0228CB1DC15EF4009EC56E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -143,6 +137,9 @@
 		EA5DFDF21DC662810016F562 /* MIAObjectsDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIAObjectsDecoder.m; sourceTree = "<group>"; };
 		EA5DFDF41DC6689C0016F562 /* MIAConfigurationPrinter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIAConfigurationPrinter.h; sourceTree = "<group>"; };
 		EA5DFDF51DC6689C0016F562 /* MIAConfigurationPrinter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIAConfigurationPrinter.m; sourceTree = "<group>"; };
+		EA7492E01DD3DD04009A2EF9 /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
+		EA7492E11DD3DD04009A2EF9 /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
+		EA74931F1DD3E489009A2EF9 /* XUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XUIKit.framework; sourceTree = "<group>"; };
 		EA7E78B41DD2608600C3D9D2 /* MenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuView.h; sourceTree = "<group>"; };
 		EA7E78B51DD2608600C3D9D2 /* MenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuView.m; sourceTree = "<group>"; };
 		EA7E78B71DD28EA200C3D9D2 /* StyleElementsTableSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleElementsTableSource.h; sourceTree = "<group>"; };
@@ -186,6 +183,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA7493201DD3E489009A2EF9 /* XUIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,7 +207,7 @@
 		D124E06B1DD0DE7600F4BFB2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D1C00DB11DD0EA7000B864A0 /* UIKit.xcodeproj */,
+				EA74931F1DD3E489009A2EF9 /* XUIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -230,14 +228,6 @@
 				D16E457C1DD1DDF4003E921E /* StyleDefinitions.m */,
 			);
 			path = StyleDef;
-			sourceTree = "<group>";
-		};
-		D1C00DB21DD0EA7000B864A0 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D1C00DB61DD0EA7000B864A0 /* UIKit.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		EA0228BE1DC15EF3009EC56E = {
@@ -264,13 +254,14 @@
 		EA0228C91DC15EF3009EC56E /* ConfCreator */ = {
 			isa = PBXGroup;
 			children = (
+				EA7492DF1DD3DD04009A2EF9 /* UIViews */,
+				EA0228FD1DC1749E009EC56E /* Noodles */,
 				D16048C71DD3847B00A1B328 /* MainView */,
 				EA7E78B31DD2608600C3D9D2 /* Menu */,
 				EACBB45C1DC404BA00C10644 /* UIObjects */,
-				EACBB4431DC3FE7800C10644 /* ConfObjects */,
 				EA5DFDDA1DC613EA0016F562 /* ListUIObjects */,
 				EA5DFDE41DC6141B0016F562 /* Confirms */,
-				EA0228FD1DC1749E009EC56E /* Noodles */,
+				EACBB4431DC3FE7800C10644 /* ConfObjects */,
 				EAD405F81DCD499300AEA504 /* UIButtons */,
 				EA0228CA1DC15EF3009EC56E /* AppDelegate.h */,
 				EA0228CB1DC15EF4009EC56E /* AppDelegate.m */,
@@ -376,6 +367,15 @@
 				EA4B29941DC8D91000A08E02 /* ReceptorDataSource.m */,
 			);
 			path = Confirms;
+			sourceTree = "<group>";
+		};
+		EA7492DF1DD3DD04009A2EF9 /* UIViews */ = {
+			isa = PBXGroup;
+			children = (
+				EA7492E01DD3DD04009A2EF9 /* CustomView.h */,
+				EA7492E11DD3DD04009A2EF9 /* CustomView.m */,
+			);
+			path = UIViews;
 			sourceTree = "<group>";
 		};
 		EA7E78B31DD2608600C3D9D2 /* Menu */ = {
@@ -524,12 +524,6 @@
 			mainGroup = EA0228BE1DC15EF3009EC56E;
 			productRefGroup = EA0228C81DC15EF3009EC56E /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = D1C00DB21DD0EA7000B864A0 /* Products */;
-					ProjectRef = D1C00DB11DD0EA7000B864A0 /* UIKit.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				EA0228C61DC15EF3009EC56E /* ConfCreator */,
@@ -538,16 +532,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		D1C00DB61DD0EA7000B864A0 /* UIKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = UIKit.framework;
-			remoteRef = D1C00DB51DD0EA7000B864A0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		EA0228C51DC15EF3009EC56E /* Resources */ = {
@@ -593,6 +577,7 @@
 				EA0228CF1DC15EF4009EC56E /* main.m in Sources */,
 				EA7E78BC1DD29B7000C3D9D2 /* ArgsView.m in Sources */,
 				EAD406011DCD499300AEA504 /* CustomButton.m in Sources */,
+				EA7492E21DD3DD04009A2EF9 /* CustomView.m in Sources */,
 				EACBB4651DC404BA00C10644 /* MIAUIStyle.m in Sources */,
 				EA5DFDE21DC613EA0016F562 /* JunctionsView.m in Sources */,
 				EA4B29921DC8D75600A08E02 /* SignalDataSource.m in Sources */,
@@ -761,6 +746,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Build/Products/Debug",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = ConfCreator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -777,6 +763,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Build/Products/Debug",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = ConfCreator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";

@@ -71,7 +71,7 @@
             [self cycleObjects:^(MIAUIObject *object) {
                 MIAUIJunction *uijunction = (MIAUIJunction *)object;
                 if ([uijunction.uuid isEqualToString:junction.uuid]) {
-                    [uijunction setBgColorForLinkedJunctionStyle:[chain chainColor]];
+                    [uijunction setColorForLinkedJunctionStyle:[chain chainColor]];
                     [uijunction setNeedsDisplay:YES];
                 }
             }];

@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
-        <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="MIAUIComponent"/>
@@ -29,7 +28,7 @@
                         <constraint firstAttribute="width" constant="25" id="00A-ke-11P"/>
                         <constraint firstAttribute="height" constant="25" id="zGi-vK-h0t"/>
                     </constraints>
-                    <buttonCell key="cell" type="bevel" title="X" bezelStyle="regularSquare" image="38E334A0-D9AC-4EB9-B4B7-426B195E1634" imagePosition="overlaps" alignment="center" borderStyle="border" inset="2" id="Ba5-hD-bfP">
+                    <buttonCell key="cell" type="bevel" title="X" bezelStyle="regularSquare" image="BC1995C3-8C5B-47D4-A0B0-0B0FDFA9EB13" imagePosition="overlaps" alignment="center" borderStyle="border" inset="2" id="Ba5-hD-bfP">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="systemMedium" size="13"/>
                     </buttonCell>
@@ -125,7 +124,7 @@
         </customView>
     </objects>
     <resources>
-        <image name="38E334A0-D9AC-4EB9-B4B7-426B195E1634" width="1" height="1">
+        <image name="BC1995C3-8C5B-47D4-A0B0-0B0FDFA9EB13" width="1" height="1">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

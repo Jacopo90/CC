@@ -27,7 +27,7 @@
     
     lay.cornerRadius = self.bounds.size.height/2;
     lay.borderColor = [[Utils colorWithHexColorString:@"ffffff" alpha:0.1] CGColor];
-    lay.borderWidth = 2;
+    lay.borderWidth = 5;
     self.layer = lay;
     [self setWantsLayer:YES];
     
@@ -36,7 +36,7 @@
     text.editable = NO;
     text.backgroundColor = [NSColor clearColor];
     text.textColor = [NSColor whiteColor];
-    text.font = [NSFont fontWithName:@"HelveticaNeue-Bold" size:14];
+    text.font = [NSFont fontWithName:@"HelveticaNeue-Bold" size:16];
     [text setAcceptsTouchEvents:NO];
     text.alignment = NSTextAlignmentCenter;
     text.drawsBackground = NO;

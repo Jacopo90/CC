@@ -9,7 +9,7 @@
 #import "MIAUIJunction.h"
 #import "Utils.h"
 #import "ArrowButton.h"
-
+#import "CustomView.h"
 
 @interface NSLine: NSView
 
@@ -26,6 +26,7 @@
 @interface MIAUIJunction(){
 
 }
+@property (weak) IBOutlet CustomView *linkerView;
 @property (weak) IBOutlet ArrowButton *downButton;
 @property (weak) IBOutlet ArrowButton *upButton;
 @property (weak) IBOutlet NSTextField *senderTextField;
@@ -52,7 +53,7 @@
 
 }
 -(void)customStyle{
-    [self.junctionBgColor set];
+//    [self.junctionBgColor set];
 }
 
 
@@ -72,7 +73,11 @@
     [self.upButton upArrow:YES];
     [self.downButton upArrow:NO];
 }
--(void)setBgColorForLinkedJunctionStyle:(NSColor *)color{ // to do: think a better way to do
+-(void)setColorForLinkedJunctionStyle:(NSColor *)color{ // to do: think a better way to do
     self.junctionBgColor = color;
+    
+    [self.linkerView setBgColor:self.junctionBgColor];
+    
+    
 }
 @end

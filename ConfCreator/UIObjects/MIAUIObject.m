@@ -15,7 +15,10 @@
 @end
 
 @implementation MIAUIObject
+-(BOOL)wantsDefaultClipping{
 
+    return YES;
+}
 -(void)mouseDown:(NSEvent *)theEvent{
     [self.delegate uiObject:self tapped:YES];
 }
@@ -34,6 +37,7 @@
     }
     customView->_uuid = uuid;
     customView.frame = frame;
+    customView.layer.masksToBounds = YES;
     return customView;
 }
 
@@ -51,6 +55,11 @@
 }
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
+    
+    NSRect rect = [self bounds];
+    NSBezierPath *path = [NSBezierPath bezierPathWithRoundedRect:rect xRadius:10 yRadius:10];
+    [path addClip];    
+    
     [self defaultStyle];
     [self customStyle];
     NSRectFill(dirtyRect);
@@ -61,7 +70,6 @@
         NSRectFill(dirtyRect);
         return;
     }
-    
 }
 - (IBAction)up:(id)sender {
     [self.delegate uiObject:self up:YES];

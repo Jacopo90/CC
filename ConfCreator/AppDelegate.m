@@ -67,16 +67,16 @@ static NSDictionary * listMap;
     [self.addJunctionButton changeMainColor:[Utils colorWithHexColorString:@"5da5c3" alpha:1]];
     [self.addJunctionButton changeTextColor:[Utils colorWithHexColorString:@"5da5c3" alpha:1]];
 
-    [self.printAllButton changeMainColor:[Utils colorWithHexColorString:@"666666" alpha:1]];
-    [self.printAllButton changeTextColor:[Utils colorWithHexColorString:@"666666" alpha:1]];
+    [self.printAllButton changeMainColor:[Utils colorWithHexColorString:@"888888" alpha:1]];
+    [self.printAllButton changeTextColor:[Utils colorWithHexColorString:@"888888" alpha:1]];
     
     
-    [self.saveButton changeMainColor:[Utils colorWithHexColorString:@"666666" alpha:1]];
-    [self.saveButton changeTextColor:[Utils colorWithHexColorString:@"666666" alpha:1]];
+    [self.saveButton changeMainColor:[Utils colorWithHexColorString:@"888888" alpha:1]];
+    [self.saveButton changeTextColor:[Utils colorWithHexColorString:@"888888" alpha:1]];
     
     
-    [self.loadJsonButton changeMainColor:[Utils colorWithHexColorString:@"666666" alpha:1]];
-    [self.loadJsonButton changeTextColor:[Utils colorWithHexColorString:@"666666" alpha:1]];
+    [self.loadJsonButton changeMainColor:[Utils colorWithHexColorString:@"888888" alpha:1]];
+    [self.loadJsonButton changeTextColor:[Utils colorWithHexColorString:@"888888" alpha:1]];
 
 
     [self.addJunctionButton setNeedsDisplay:YES];
