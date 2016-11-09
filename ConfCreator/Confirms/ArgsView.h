@@ -7,8 +7,16 @@
 //
 
 #import <Cocoa/Cocoa.h>
+@class ArgsView;
+@protocol ArgsViewProtocol <NSObject>
+- (void)argsView:(ArgsView *)argsview validDictionary:(NSDictionary *)dictionary;
+
+@end
 
 @interface ArgsView : NSTextView
+@property (nonatomic,weak) id <ArgsViewProtocol> argsViewdelegate;
+@property (nonatomic,strong) NSString *argsViewIdentifier;
+
 -(NSDictionary *)dictionary;
 -(void)addParameters:(NSArray *)inputParameters;
 @end

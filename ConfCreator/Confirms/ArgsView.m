@@ -64,10 +64,19 @@
 
 -(NSDictionary *)dictionary{
     NSDictionary *jsonDict = [self validate];
-    if(jsonDict == nil){
+    NSMutableDictionary *filledDictionary = [[NSMutableDictionary alloc]init];
+    
+    for (NSString *key in jsonDict) {
+        id value = [jsonDict objectForKey:key];
+        if ( value == nil || [value length] == 0) {
+            continue;
+        }
+        [filledDictionary setObject:[jsonDict objectForKey:key] forKey:key];
+    }
+    if(filledDictionary == nil || filledDictionary.count == 0){
         return nil;
     }
-    return jsonDict;
+    return filledDictionary;
 }
 -(NSDictionary *)validate{
     NSError *error;
@@ -79,9 +88,14 @@
 }
 -(void)textViewDidChangeSelection:(NSNotification *)notification{
 
-    NSDictionary *json = [self validate];
+    NSDictionary *json = [self dictionary];
     if (json == nil) {
         // to do change label validation
+        return;
+    }
+    
+    if ([self.argsViewdelegate respondsToSelector:@selector(argsView:validDictionary:)]) {
+        [self.argsViewdelegate argsView:self validDictionary:json];
     }
 }
 

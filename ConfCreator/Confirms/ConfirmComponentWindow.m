@@ -14,7 +14,7 @@
 #import "ArgsView.h"
 #import "NoodleLineNumberView.h"
 
-@interface ConfirmComponentWindow ()<NSTextFieldDelegate,NSTextViewDelegate,NSComboBoxDataSource,NSComboBoxDelegate,StyleElementTableDataSourceProtocol>
+@interface ConfirmComponentWindow ()<NSTextFieldDelegate,NSTextViewDelegate,NSComboBoxDataSource,NSComboBoxDelegate,StyleElementTableDataSourceProtocol,ArgsViewProtocol>
 @property (weak) IBOutlet NSComboBox *nameBox;
 
 @property (weak) IBOutlet NSTextField *nameTextfield;
@@ -33,7 +33,7 @@
 @property (weak) IBOutlet NSTableView *styleElementsTable;
 @property (unsafe_unretained) IBOutlet ArgsView *stylesArgsView;
 @property (weak) IBOutlet NSScrollView *scrollerStylerParameters;
-
+@property (nonatomic,weak) StyleElementItem *tmpStyleItem;
 @end
 
 @implementation ConfirmComponentWindow
@@ -72,6 +72,9 @@
     self.scrollerStylerParameters.verticalRulerView = lineView;
     
     [self.stylesArgsView setVerticallyResizable:YES];
+    self.stylesArgsView.argsViewdelegate = self;
+    self.stylesArgsView.argsViewIdentifier = @"styler_view";
+
     [self.scrollerStylerParameters setAutohidesScrollers:NO];
     [self.scrollerStylerParameters setHasVerticalScroller:YES];
     
@@ -98,33 +101,18 @@
     
     [comp setDefinition:self.tmpDefinition];
 
-    
-    NSString *path = self.searchPathTextfield.stringValue;
-
-    NSDictionary *componentDefinition = [CompsReader componentWithName:nameComponent inPath:path];
-    NSArray *elements = [componentDefinition objectForKey:@"UI"];
-    [self.styleData updateDataSource:elements];
-    
     MIAStyle *style = nil;
-    
-    NSDictionary *cleanArgsStyleDictionary = [self.stylesArgsView dictionary];
-    /*
-//    if (self.uiCheckBox.state == 1){
-        NSString *path = self.searchPathTextfield.stringValue;
+    NSMutableArray *uiValues = [[NSMutableArray alloc]init];
+    for (StyleElementItem *item in [self.styleData datasource]) {
+        NSMutableDictionary *uielem = [[NSMutableDictionary alloc]init];
+        [uielem setObject:item.key forKey:@"key"];
+        [uielem setObject:item.type forKey:@"type"];
+        [uielem setObject:item.value forKey:@"values"];
+        [uiValues addObject:uielem];
+    }
+    style = [[MIAStyle alloc]initWithComponent:comp uiElements:uiValues];
 
-       NSDictionary *componentDefinition = [CompsReader componentWithName:nameComponent inPath:path];
-        NSMutableArray *uiValues = [[NSMutableArray alloc]init];
-        
-        for (NSDictionary *dict in [componentDefinition objectForKey:@"UI"]) {
-            NSMutableDictionary *uielem = [[NSMutableDictionary alloc]init];
-            [uielem setObject:[dict objectForKey:@"key"] forKey:@"key"];
-            [uielem setObject:[dict objectForKey:@"type"] forKey:@"type"];
-            [uiValues addObject:uielem];
-        }
-        
-        style = [[MIAStyle alloc]initWithComponent:comp uiElements:uiValues];
-//    }
-    */
+    
     [self.delegate confirmComponentWindow:self didConfirmComponent:comp withAssociatedStyle:style];
     
     [self close];
@@ -167,6 +155,7 @@
     {
         self->_namesComponentDataSource = [self filterBy:textfield.stringValue];
     }
+    
     [self.nameBox reloadData];
 
 }
@@ -175,13 +164,23 @@
     self.foundLabel.stringValue = @"found";
     self.foundLabel.textColor = [Utils colorWithHexColorString:@"277455" alpha:1];
     NSArray *elements = [self.tmpDefinition objectForKey:@"UI"];
-    [self.styleData updateDataSource:elements];
+    
+    // decoding from json components
+    NSMutableArray *items = [[NSMutableArray alloc]init];
+    for (NSDictionary *dict in elements) {
+        StyleElementItem *item = [[StyleElementItem alloc]init];
+        item.key = [dict objectForKey:@"key"];
+        item.type = [dict objectForKey:@"type"];
+        [items addObject:item];
+    }
+    [self.styleData updateDataSource:items];
     [self.styleElementsTable reloadData];
 }
 -(void)componentNotFound{
     self.tmpDefinition = nil;
     self.foundLabel.stringValue = @"not found";
     self.foundLabel.textColor = [Utils colorWithHexColorString:@"333333" alpha:1];
+    
     [self.styleData updateDataSource:@[]];
     [self.styleElementsTable reloadData];
 }
@@ -197,24 +196,32 @@
 - (NSInteger)numberOfItemsInComboBox:(NSComboBox*)aComboBox {
     return self->_namesComponentDataSource.count;
 }
-
 - (id)comboBox:(NSComboBox*)aComboBox
 objectValueForItemAtIndex:(NSInteger)index {
     return [[self->_namesComponentDataSource objectAtIndex:index] objectForKey:@"name"];
     
 }
-
 - (NSArray*)filterBy:(NSString*)text {
     NSPredicate* resultPredicate =
     [NSPredicate predicateWithFormat:@"name contains %@", text];
     return [self->_all_components filteredArrayUsingPredicate:resultPredicate];
 }
 #pragma mark - StyleTableDataDource delegate -
--(void)tableDataSource:(StyleElementsTableSource *)tableDataSource didSelectItem:(id)item{
-    
-    NSDictionary *styleDef = [StyleDefinitions styleDictionaryFromUIKey:[item objectForKey:@"type"]];
+-(void)tableDataSource:(StyleElementsTableSource *)tableDataSource didSelectItem:(StyleElementItem *)item{
+    self.tmpStyleItem = item;
+    NSDictionary *styleDef = [StyleDefinitions styleDictionaryFromUIKey:item.key];
     [self.stylesArgsView addParameters:[styleDef allKeys]];
     
 }
-
+#pragma mark - args view protocol  -
+-(void)argsView:(ArgsView *)argsview validDictionary:(NSDictionary *)dictionary{
+    
+    if ([argsview.argsViewIdentifier isEqualToString:@"styler_view"]) {
+        [self.styleData changeValue:dictionary forItemWithKey:self.tmpStyleItem.key];
+    }
+    
+    if ([argsview.identifier isEqualToString:@"arguments_view"]) {
+        
+    }
+}
 @end

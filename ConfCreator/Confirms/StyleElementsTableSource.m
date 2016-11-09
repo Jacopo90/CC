@@ -8,42 +8,50 @@
 
 #import "StyleElementsTableSource.h"
 
-@interface StyleElementItem : NSObject
-@property (nonatomic,strong) NSString *key;
-@property (nonatomic,strong) NSString *type;
-
-@end
 @implementation StyleElementItem
 
-
+-(NSString *)description{
+    return [NSString stringWithFormat:@"key : %@ - type : %@ - value : %@",self.key,self.type,self.value];
+}
 
 @end
 
 @interface StyleElementsTableSource(){
-    NSArray *_datasource;
+    NSMutableArray *_datasource;
 }
 
 @end
 @implementation StyleElementsTableSource
--(void)updateDataSource:(NSArray *)datasource{
-    self->_datasource = datasource;
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self->_datasource = [[NSMutableArray alloc]init];
+    }
+    return self;
 }
+-(void)updateDataSource:(NSArray <StyleElementItem *> *)datasource{
+    [self->_datasource setArray:datasource];
+}
+
 - (NSInteger)numberOfRowsInTableView:(NSTableView*)tableView {
     return self->_datasource.count;
 }
+
 - (id)tableView:(NSTableView*)tableView
 objectValueForTableColumn:(NSTableColumn*)tableColumn
             row:(NSInteger)row {
-    NSDictionary *item = [self->_datasource objectAtIndex:row];
-    return [item objectForKey:@"key"];
+    StyleElementItem *item = [self->_datasource objectAtIndex:row];
+    return item.key;
 }
 - (void)tableViewSelectionDidChange:(NSNotification*)notification {
     if (notification == nil) {
         return;
     }
+    
     NSTableView* tableView = notification.object;
     if ((long)tableView.selectedRow >= 0) {
-        NSDictionary *item = [self->_datasource objectAtIndex:(long)tableView.selectedRow];
+        StyleElementItem *item = [self->_datasource objectAtIndex:(long)tableView.selectedRow];
         
         if ([self.sourceDelegate respondsToSelector:@selector(tableDataSource:didSelectItem:)]) {
             if ((long)tableView.selectedRow >= 0) {
@@ -51,6 +59,16 @@ objectValueForTableColumn:(NSTableColumn*)tableColumn
             }
         }
     }
-    
+}
+-(NSArray <StyleElementItem *> *)datasource{
+    return self->_datasource;
+}
+-(void)changeValue:(id)value forItemWithKey:(NSString *)key{
+    for (StyleElementItem *item in self->_datasource) {
+        if ([item.key isEqualToString:key]) {
+            item.value = value;
+            break;
+        }
+    }
 }
 @end

@@ -9,13 +9,22 @@
 #import <Foundation/Foundation.h>
 
 #import <Cocoa/Cocoa.h>
+
+@interface StyleElementItem : NSObject
+@property (nonatomic,strong) NSString *key;
+@property (nonatomic,strong) NSString *type;
+@property (nonatomic,strong) id value;
+@end
+
 @class StyleElementsTableSource;
 @protocol StyleElementTableDataSourceProtocol<NSObject>
--(void)tableDataSource:(StyleElementsTableSource *)tableDataSource didSelectItem:(id)item;
+-(void)tableDataSource:(StyleElementsTableSource *)tableDataSource didSelectItem:(StyleElementItem *)item;
 
 @end
 @interface StyleElementsTableSource : NSObject  <NSTableViewDelegate,NSTableViewDataSource>
 @property (nonatomic,weak) id <StyleElementTableDataSourceProtocol> sourceDelegate;
--(void)updateDataSource:(NSArray *)datasource;
+-(NSArray <StyleElementItem *> *)datasource;
+-(void)updateDataSource:(NSArray <StyleElementItem *> *)datasource;
+-(void)changeValue:(id)value forItemWithKey:(NSString *)key;
 
 @end
