@@ -11,6 +11,10 @@
 		D16048CA1DD3847B00A1B328 /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = D16048C91DD3847B00A1B328 /* MainView.m */; };
 		D16E457D1DD1DDF4003E921E /* StyleDefinitions.m in Sources */ = {isa = PBXBuildFile; fileRef = D16E457C1DD1DDF4003E921E /* StyleDefinitions.m */; };
 		D1962EDE1DD46CC000411E5F /* XUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EA74931F1DD3E489009A2EF9 /* XUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D1962EE01DD4730E00411E5F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1962EDF1DD4730E00411E5F /* UIKit.framework */; };
+		D1962EE11DD4730E00411E5F /* UIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D1962EDF1DD4730E00411E5F /* UIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D1962EED1DD4A8E400411E5F /* TesterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1962EEC1DD4A8E400411E5F /* TesterViewController.m */; };
+		D1962EF01DD4A8FA00411E5F /* ChameleonAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1962EEF1DD4A8FA00411E5F /* ChameleonAppDelegate.m */; };
 		EA0228CC1DC15EF4009EC56E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0228CB1DC15EF4009EC56E /* AppDelegate.m */; };
 		EA0228CF1DC15EF4009EC56E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0228CE1DC15EF4009EC56E /* main.m */; };
 		EA0228D11DC15EF4009EC56E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA0228D01DC15EF4009EC56E /* Assets.xcassets */; };
@@ -83,6 +87,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				D1962EDE1DD46CC000411E5F /* XUIKit.framework in Embed Frameworks */,
+				D1962EE11DD4730E00411E5F /* UIKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,6 +100,11 @@
 		D16048C91DD3847B00A1B328 /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainView.m; sourceTree = "<group>"; };
 		D16E457B1DD1DDF4003E921E /* StyleDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleDefinitions.h; sourceTree = "<group>"; };
 		D16E457C1DD1DDF4003E921E /* StyleDefinitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleDefinitions.m; sourceTree = "<group>"; };
+		D1962EDF1DD4730E00411E5F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UIKit.framework; sourceTree = "<group>"; };
+		D1962EEB1DD4A8E400411E5F /* TesterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TesterViewController.h; sourceTree = "<group>"; };
+		D1962EEC1DD4A8E400411E5F /* TesterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TesterViewController.m; sourceTree = "<group>"; };
+		D1962EEE1DD4A8FA00411E5F /* ChameleonAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChameleonAppDelegate.h; sourceTree = "<group>"; };
+		D1962EEF1DD4A8FA00411E5F /* ChameleonAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChameleonAppDelegate.m; sourceTree = "<group>"; };
 		EA0228C71DC15EF3009EC56E /* ConfCreator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConfCreator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA0228CA1DC15EF3009EC56E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EA0228CB1DC15EF4009EC56E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -186,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA7493201DD3E489009A2EF9 /* XUIKit.framework in Frameworks */,
+				D1962EE01DD4730E00411E5F /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +220,7 @@
 		D124E06B1DD0DE7600F4BFB2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D1962EDF1DD4730E00411E5F /* UIKit.framework */,
 				EA74931F1DD3E489009A2EF9 /* XUIKit.framework */,
 			);
 			name = Frameworks;
@@ -230,6 +242,17 @@
 				D16E457C1DD1DDF4003E921E /* StyleDefinitions.m */,
 			);
 			path = StyleDef;
+			sourceTree = "<group>";
+		};
+		D1962EEA1DD4A8C600411E5F /* Chameleon */ = {
+			isa = PBXGroup;
+			children = (
+				D1962EEB1DD4A8E400411E5F /* TesterViewController.h */,
+				D1962EEC1DD4A8E400411E5F /* TesterViewController.m */,
+				D1962EEE1DD4A8FA00411E5F /* ChameleonAppDelegate.h */,
+				D1962EEF1DD4A8FA00411E5F /* ChameleonAppDelegate.m */,
+			);
+			path = Chameleon;
 			sourceTree = "<group>";
 		};
 		EA0228BE1DC15EF3009EC56E = {
@@ -267,6 +290,7 @@
 				EAD405F81DCD499300AEA504 /* UIButtons */,
 				EA0228CA1DC15EF3009EC56E /* AppDelegate.h */,
 				EA0228CB1DC15EF4009EC56E /* AppDelegate.m */,
+				D1962EEA1DD4A8C600411E5F /* Chameleon */,
 				EACBB4341DC3F3F400C10644 /* Utils.h */,
 				EACBB4351DC3F3F400C10644 /* Utils.m */,
 				EACBB44D1DC3FE8E00C10644 /* MIAConfiguration.h */,
@@ -593,6 +617,7 @@
 				EA5DFDE31DC613EA0016F562 /* StackView.m in Sources */,
 				EAD406041DCD4AA000AEA504 /* JunctionsLinker.m in Sources */,
 				EACBB44B1DC3FE7800C10644 /* MIAJunction.m in Sources */,
+				D1962EED1DD4A8E400411E5F /* TesterViewController.m in Sources */,
 				EA5DFDE11DC613EA0016F562 /* ComponentsView.m in Sources */,
 				D16E457D1DD1DDF4003E921E /* StyleDefinitions.m in Sources */,
 				EA5DFDED1DC614400016F562 /* ConfirmJunctionWindow.m in Sources */,
@@ -603,6 +628,7 @@
 				EAD406001DCD499300AEA504 /* CancelButton.m in Sources */,
 				EACBB4681DC4055500C10644 /* MIAUIObject.m in Sources */,
 				EA5DFDD91DC601920016F562 /* MIAObject.m in Sources */,
+				D1962EF01DD4A8FA00411E5F /* ChameleonAppDelegate.m in Sources */,
 				EA5DFDE81DC6141B0016F562 /* ConfirmComponentWindow.m in Sources */,
 				EA7E78B91DD28EA200C3D9D2 /* StyleElementsTableSource.m in Sources */,
 				D16048CA1DD3847B00A1B328 /* MainView.m in Sources */,

@@ -25,8 +25,14 @@
 
 #import "CustomButton.h"
 #import "JunctionsLinker.h"
+#import <UIKit/UIKitView.h>
+#import "TesterViewController.h"
+#import "ChameleonAppDelegate.h"
 
-@interface AppDelegate ()<NSTextViewDelegate,ComponentWindowProtocol,ComponentsViewProtocol,JunctionWindowProtocol,JunctionsViewProtocol,JunctionsLinkerProtocol,StylerViewProtocol>
+@interface AppDelegate ()<NSTextViewDelegate,ComponentWindowProtocol,ComponentsViewProtocol,JunctionWindowProtocol,JunctionsViewProtocol,JunctionsLinkerProtocol,StylerViewProtocol>{
+   ChameleonAppDelegate *iosApp;
+    UIKitView *iosView;
+}
 @property (unsafe_unretained) IBOutlet NSTextView *jsonView;
 @property (weak) IBOutlet NSScrollView *scrollerJson;
 @property (weak) IBOutlet ComponentsView *componentsView;
@@ -34,6 +40,7 @@
 @property (weak) IBOutlet StylerView *stylerView;
 @property (weak) IBOutlet NSTextField *validTextfield;
 @property (weak) IBOutlet MenuView *menuView;
+@property (weak) IBOutlet UIKitView *uiview;
 
 @property (weak) IBOutlet NSWindow *window;
 
@@ -57,6 +64,8 @@ static NSDictionary * listMap;
 
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    iosApp = [[ChameleonAppDelegate alloc] init];
+    [iosView launchApplicationWithDelegate:iosApp afterDelay:1];
     [self load];
 }
 -(void)mainStyle{
@@ -92,6 +101,9 @@ static NSDictionary * listMap;
                 NSStringFromClass([MIAComponent class]):self.componentsView,
                 NSStringFromClass([MIAStyle class]):self.stylerView
                 };
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 100, 100)];
+    view.backgroundColor = [UIColor redColor];
+    
     
     self.window.appearance = [NSAppearance
        appearanceNamed:NSAppearanceNameVibrantLight];

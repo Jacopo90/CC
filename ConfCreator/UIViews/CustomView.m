@@ -25,7 +25,6 @@
 }
 - (void)drawRect:(NSRect)dirtyRect {
     [self->_bgColor set];
-    
     NSBezierPath * path = [NSBezierPath bezierPathWithRoundedRect:self.bounds byRoundingCorners:XUIRectCornerTopLeft|XUIRectCornerBottomLeft cornerRadii:CGSizeMake(6, 6)];
 //    NSBezierPath *path = [NSBezierPath bezierPathWithRoundedRect:rect xRadius:10 yRadius:10];
     [path addClip];

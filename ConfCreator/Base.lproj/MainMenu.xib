@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" customObjectInstantitationMethod="direct">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -25,6 +25,7 @@
                 <outlet property="saveButton" destination="TUc-7x-42y" id="kZU-8H-WUu"/>
                 <outlet property="scrollerJson" destination="Wca-EZ-Vds" id="EG1-Mc-5oD"/>
                 <outlet property="stylerView" destination="dOP-Da-A5k" id="UdO-di-Kx3"/>
+                <outlet property="uiview" destination="Ydb-ak-lOd" id="wxO-Xv-znt"/>
                 <outlet property="validTextfield" destination="ZVt-Al-x9A" id="1fx-oQ-SqO"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
@@ -697,6 +698,12 @@
                     <customView canDrawConcurrently="YES" id="Onk-Yj-o4S" customClass="MenuView">
                         <rect key="frame" x="0.0" y="851" width="1352" height="133"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <subviews>
+                            <customView canDrawConcurrently="YES" misplaced="YES" id="Ydb-ak-lOd" customClass="UIKitView">
+                                <rect key="frame" x="1120" y="0.0" width="148" height="113"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </customView>
+                        </subviews>
                     </customView>
                     <scrollView misplaced="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" id="Wca-EZ-Vds">
                         <rect key="frame" x="976" y="39" width="364" height="771"/>
@@ -705,7 +712,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="364" height="771"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <textView drawsBackground="NO" importsGraphics="NO" verticallyResizable="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="uFT-dM-Roc">
+                                <textView drawsBackground="NO" importsGraphics="NO" verticallyResizable="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="uFT-dM-Roc">
                                     <rect key="frame" x="0.0" y="0.0" width="364" height="771"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -713,8 +720,6 @@
                                     <size key="minSize" width="364" height="771"/>
                                     <size key="maxSize" width="700" height="10000000"/>
                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <size key="minSize" width="364" height="771"/>
-                                    <size key="maxSize" width="700" height="10000000"/>
                                 </textView>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -750,7 +755,7 @@
                             <action selector="addJunction:" target="Voe-Tx-rLC" id="3pf-2Q-t6h"/>
                         </connections>
                     </button>
-                    <scrollView misplaced="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" scrollerKnobStyle="dark" id="3gf-fc-wov" customClass="ComponentsView">
+                    <scrollView misplaced="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" scrollerKnobStyle="dark" id="3gf-fc-wov" customClass="ComponentsView">
                         <rect key="frame" x="10" y="10" width="320" height="800"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                         <clipView key="contentView" copiesOnScroll="NO" id="rZ2-IM-6aT">
@@ -762,7 +767,6 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 </view>
                             </subviews>
-                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </clipView>
                         <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="STc-Dm-rfg">
                             <rect key="frame" x="-100" y="-100" width="298" height="15"/>
