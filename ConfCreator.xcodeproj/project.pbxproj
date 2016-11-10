@@ -10,6 +10,7 @@
 		D11B441E1DD2476F00343C58 /* Code-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D11B441D1DD2476F00343C58 /* Code-Bold.otf */; };
 		D16048CA1DD3847B00A1B328 /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = D16048C91DD3847B00A1B328 /* MainView.m */; };
 		D16E457D1DD1DDF4003E921E /* StyleDefinitions.m in Sources */ = {isa = PBXBuildFile; fileRef = D16E457C1DD1DDF4003E921E /* StyleDefinitions.m */; };
+		D1962EDE1DD46CC000411E5F /* XUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EA74931F1DD3E489009A2EF9 /* XUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EA0228CC1DC15EF4009EC56E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0228CB1DC15EF4009EC56E /* AppDelegate.m */; };
 		EA0228CF1DC15EF4009EC56E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0228CE1DC15EF4009EC56E /* main.m */; };
 		EA0228D11DC15EF4009EC56E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA0228D01DC15EF4009EC56E /* Assets.xcassets */; };
@@ -81,6 +82,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				D1962EDE1DD46CC000411E5F /* XUIKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
