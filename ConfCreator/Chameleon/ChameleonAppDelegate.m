@@ -7,7 +7,7 @@
 //
 
 #import "ChameleonAppDelegate.h"
-#import <MIACore/MIACore.h>
+//#import <MIACore/MIACore.h>
 
 @implementation ChameleonAppDelegate
 
