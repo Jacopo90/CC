@@ -21,8 +21,6 @@
 		EA0228CF1DC15EF4009EC56E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0228CE1DC15EF4009EC56E /* main.m */; };
 		EA0228D11DC15EF4009EC56E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA0228D01DC15EF4009EC56E /* Assets.xcassets */; };
 		EA0228D41DC15EF4009EC56E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA0228D21DC15EF4009EC56E /* MainMenu.xib */; };
-		EA0228DF1DC15EF4009EC56E /* ConfCreatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0228DE1DC15EF4009EC56E /* ConfCreatorTests.m */; };
-		EA0228EA1DC15EF4009EC56E /* ConfCreatorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0228E91DC15EF4009EC56E /* ConfCreatorUITests.m */; };
 		EA02291C1DC1749E009EC56E /* NoodleLineNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0229071DC1749E009EC56E /* NoodleLineNumberView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		EA192B6F1DD1432800B54034 /* StylerView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA192B6E1DD1432800B54034 /* StylerView.m */; };
 		EA192B721DD143D900B54034 /* MIAUIStyle.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA192B711DD143D900B54034 /* MIAUIStyle.xib */; };
@@ -63,23 +61,6 @@
 		EAD406041DCD4AA000AEA504 /* JunctionsLinker.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD406031DCD4AA000AEA504 /* JunctionsLinker.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		EA0228DB1DC15EF4009EC56E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EA0228BF1DC15EF3009EC56E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EA0228C61DC15EF3009EC56E;
-			remoteInfo = ConfCreator;
-		};
-		EA0228E61DC15EF4009EC56E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EA0228BF1DC15EF3009EC56E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EA0228C61DC15EF3009EC56E;
-			remoteInfo = ConfCreator;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		D18815041DD5E755006CB064 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -115,10 +96,8 @@
 		EA0228D01DC15EF4009EC56E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA0228D31DC15EF4009EC56E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		EA0228D51DC15EF4009EC56E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EA0228DA1DC15EF4009EC56E /* ConfCreatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConfCreatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA0228DE1DC15EF4009EC56E /* ConfCreatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfCreatorTests.m; sourceTree = "<group>"; };
 		EA0228E01DC15EF4009EC56E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EA0228E51DC15EF4009EC56E /* ConfCreatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConfCreatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA0228E91DC15EF4009EC56E /* ConfCreatorUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfCreatorUITests.m; sourceTree = "<group>"; };
 		EA0228EB1DC15EF4009EC56E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA0229061DC1749E009EC56E /* NoodleLineNumberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoodleLineNumberView.h; sourceTree = "<group>"; };
@@ -204,26 +183,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EA0228D71DC15EF4009EC56E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EA0228E21DC15EF4009EC56E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		D124E06B1DD0DE7600F4BFB2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D11905141DD632970088D957 /* UIKit.framework */,
 				D18814F11DD5E50E006CB064 /* Quartz.framework */,
 				D18814EF1DD5E4FF006CB064 /* Cocoa.framework */,
 				EA74931F1DD3E489009A2EF9 /* XUIKit.framework */,
@@ -264,7 +230,6 @@
 		EA0228BE1DC15EF3009EC56E = {
 			isa = PBXGroup;
 			children = (
-				D11905141DD632970088D957 /* UIKit.framework */,
 				EA0228C91DC15EF3009EC56E /* ConfCreator */,
 				EA0228DD1DC15EF4009EC56E /* ConfCreatorTests */,
 				EA0228E81DC15EF4009EC56E /* ConfCreatorUITests */,
@@ -277,8 +242,6 @@
 			isa = PBXGroup;
 			children = (
 				EA0228C71DC15EF3009EC56E /* ConfCreator.app */,
-				EA0228DA1DC15EF4009EC56E /* ConfCreatorTests.xctest */,
-				EA0228E51DC15EF4009EC56E /* ConfCreatorUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -488,42 +451,6 @@
 			productReference = EA0228C71DC15EF3009EC56E /* ConfCreator.app */;
 			productType = "com.apple.product-type.application";
 		};
-		EA0228D91DC15EF4009EC56E /* ConfCreatorTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EA0228F11DC15EF4009EC56E /* Build configuration list for PBXNativeTarget "ConfCreatorTests" */;
-			buildPhases = (
-				EA0228D61DC15EF4009EC56E /* Sources */,
-				EA0228D71DC15EF4009EC56E /* Frameworks */,
-				EA0228D81DC15EF4009EC56E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EA0228DC1DC15EF4009EC56E /* PBXTargetDependency */,
-			);
-			name = ConfCreatorTests;
-			productName = ConfCreatorTests;
-			productReference = EA0228DA1DC15EF4009EC56E /* ConfCreatorTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		EA0228E41DC15EF4009EC56E /* ConfCreatorUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EA0228F41DC15EF4009EC56E /* Build configuration list for PBXNativeTarget "ConfCreatorUITests" */;
-			buildPhases = (
-				EA0228E11DC15EF4009EC56E /* Sources */,
-				EA0228E21DC15EF4009EC56E /* Frameworks */,
-				EA0228E31DC15EF4009EC56E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EA0228E71DC15EF4009EC56E /* PBXTargetDependency */,
-			);
-			name = ConfCreatorUITests;
-			productName = ConfCreatorUITests;
-			productReference = EA0228E51DC15EF4009EC56E /* ConfCreatorUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -535,14 +462,6 @@
 				TargetAttributes = {
 					EA0228C61DC15EF3009EC56E = {
 						CreatedOnToolsVersion = 7.3.1;
-					};
-					EA0228D91DC15EF4009EC56E = {
-						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = EA0228C61DC15EF3009EC56E;
-					};
-					EA0228E41DC15EF4009EC56E = {
-						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = EA0228C61DC15EF3009EC56E;
 					};
 				};
 			};
@@ -581,8 +500,6 @@
 			projectRoot = "";
 			targets = (
 				EA0228C61DC15EF3009EC56E /* ConfCreator */,
-				EA0228D91DC15EF4009EC56E /* ConfCreatorTests */,
-				EA0228E41DC15EF4009EC56E /* ConfCreatorUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -603,20 +520,6 @@
 				EA4B298A1DC8CE4600A08E02 /* fontawesome-webfont.ttf in Resources */,
 				EA0228D41DC15EF4009EC56E /* MainMenu.xib in Resources */,
 				EA2C0E331DC521410082EE70 /* MIAUIComponent.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EA0228D81DC15EF4009EC56E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EA0228E31DC15EF4009EC56E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -667,36 +570,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EA0228D61DC15EF4009EC56E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EA0228DF1DC15EF4009EC56E /* ConfCreatorTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EA0228E11DC15EF4009EC56E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EA0228EA1DC15EF4009EC56E /* ConfCreatorUITests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		EA0228DC1DC15EF4009EC56E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EA0228C61DC15EF3009EC56E /* ConfCreator */;
-			targetProxy = EA0228DB1DC15EF4009EC56E /* PBXContainerItemProxy */;
-		};
-		EA0228E71DC15EF4009EC56E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EA0228C61DC15EF3009EC56E /* ConfCreator */;
-			targetProxy = EA0228E61DC15EF4009EC56E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EA0228D21DC15EF4009EC56E /* MainMenu.xib */ = {
@@ -836,56 +710,6 @@
 			};
 			name = Release;
 		};
-		EA0228F21DC15EF4009EC56E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = ConfCreatorTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = private.ConfCreatorTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConfCreator.app/Contents/MacOS/ConfCreator";
-			};
-			name = Debug;
-		};
-		EA0228F31DC15EF4009EC56E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = ConfCreatorTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = private.ConfCreatorTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConfCreator.app/Contents/MacOS/ConfCreator";
-			};
-			name = Release;
-		};
-		EA0228F51DC15EF4009EC56E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = ConfCreatorUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = private.ConfCreatorUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = ConfCreator;
-			};
-			name = Debug;
-		};
-		EA0228F61DC15EF4009EC56E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = ConfCreatorUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = private.ConfCreatorUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = ConfCreator;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -903,24 +727,6 @@
 			buildConfigurations = (
 				EA0228EF1DC15EF4009EC56E /* Debug */,
 				EA0228F01DC15EF4009EC56E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EA0228F11DC15EF4009EC56E /* Build configuration list for PBXNativeTarget "ConfCreatorTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EA0228F21DC15EF4009EC56E /* Debug */,
-				EA0228F31DC15EF4009EC56E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EA0228F41DC15EF4009EC56E /* Build configuration list for PBXNativeTarget "ConfCreatorUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EA0228F51DC15EF4009EC56E /* Debug */,
-				EA0228F61DC15EF4009EC56E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
