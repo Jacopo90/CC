@@ -11,6 +11,14 @@
 
 @implementation MainView
 
+- (instancetype)initWithFrame:(NSRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        
+    }
+    return self;
+}
 - (void)drawRect:(NSRect)dirtyRect {
     [[Utils colorWithHexColorString:@"2c7593" alpha:1] set];
     NSRectFill(dirtyRect);

@@ -7,6 +7,7 @@
 //
 
 #import "ChameleonAppDelegate.h"
+#import <MIACore/MIACore.h>
 
 @implementation ChameleonAppDelegate
 
@@ -17,17 +18,11 @@
     window.backgroundColor = [UIColor whiteColor];
     window.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     
-    TesterViewController * controller = [[TesterViewController alloc] initWithNibName: nil bundle: nil];
-    controller.title = @"Initial Title";
     
-    navController = [[UINavigationController alloc] initWithRootViewController: controller];
-    navController.view.frame = window.bounds;
-    navController.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    navController.view.autoresizesSubviews = YES;
     
-    [window addSubview: navController.view];
-    
+
     [window makeKeyAndVisible];
+    
 }
 
 @end

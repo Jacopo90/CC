@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TesterViewController.h"
 
 @interface ChameleonAppDelegate : NSObject<UIApplicationDelegate> {
     UIWindow *window;
     UINavigationController *navController;
+    UIImageView *appleView;
+
 }
 @end

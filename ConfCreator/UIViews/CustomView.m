@@ -15,6 +15,8 @@
 @end
 
 @implementation CustomView
+
+
 -(BOOL)wantsDefaultClipping{
     
     return NO;

@@ -16,6 +16,7 @@
             <connections>
                 <outlet property="addComponentButton" destination="p3V-yU-2O5" id="HLZ-sF-QgK"/>
                 <outlet property="addJunctionButton" destination="zwF-c0-ZIG" id="Ke6-Ie-ybF"/>
+                <outlet property="chameleonNSView" destination="Ydb-ak-lOd" id="8Yw-WM-Aer"/>
                 <outlet property="componentsView" destination="3gf-fc-wov" id="zKj-Wn-0dG"/>
                 <outlet property="jsonView" destination="uFT-dM-Roc" id="igR-R6-nAs"/>
                 <outlet property="junctionsView" destination="sKT-gm-gUI" id="md0-uD-aSh"/>
@@ -25,7 +26,6 @@
                 <outlet property="saveButton" destination="TUc-7x-42y" id="kZU-8H-WUu"/>
                 <outlet property="scrollerJson" destination="Wca-EZ-Vds" id="EG1-Mc-5oD"/>
                 <outlet property="stylerView" destination="dOP-Da-A5k" id="UdO-di-Kx3"/>
-                <outlet property="uiview" destination="Ydb-ak-lOd" id="wxO-Xv-znt"/>
                 <outlet property="validTextfield" destination="ZVt-Al-x9A" id="1fx-oQ-SqO"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
@@ -695,15 +695,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="1352" height="963"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <customView canDrawConcurrently="YES" id="Onk-Yj-o4S" customClass="MenuView">
-                        <rect key="frame" x="0.0" y="851" width="1352" height="133"/>
+                    <customView canDrawConcurrently="YES" misplaced="YES" id="Onk-Yj-o4S" customClass="MenuView">
+                        <rect key="frame" x="0.0" y="851" width="1067" height="133"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <subviews>
-                            <customView canDrawConcurrently="YES" misplaced="YES" id="Ydb-ak-lOd" customClass="UIKitView">
-                                <rect key="frame" x="1120" y="0.0" width="148" height="113"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            </customView>
-                        </subviews>
                     </customView>
                     <scrollView misplaced="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" id="Wca-EZ-Vds">
                         <rect key="frame" x="976" y="39" width="364" height="771"/>
@@ -902,6 +896,10 @@
                             <color key="backgroundColor" white="0.90172018715829561" alpha="1" colorSpace="calibratedWhite"/>
                         </textFieldCell>
                     </textField>
+                    <customView misplaced="YES" id="Ydb-ak-lOd" customClass="UIKitView">
+                        <rect key="frame" x="1128" y="850" width="148" height="113"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    </customView>
                 </subviews>
             </view>
             <point key="canvasLocation" x="-111" y="734.5"/>

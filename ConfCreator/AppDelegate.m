@@ -25,13 +25,10 @@
 
 #import "CustomButton.h"
 #import "JunctionsLinker.h"
-#import <UIKit/UIKitView.h>
 #import "TesterViewController.h"
 #import "ChameleonAppDelegate.h"
 
 @interface AppDelegate ()<NSTextViewDelegate,ComponentWindowProtocol,ComponentsViewProtocol,JunctionWindowProtocol,JunctionsViewProtocol,JunctionsLinkerProtocol,StylerViewProtocol>{
-   ChameleonAppDelegate *iosApp;
-    UIKitView *iosView;
 }
 @property (unsafe_unretained) IBOutlet NSTextView *jsonView;
 @property (weak) IBOutlet NSScrollView *scrollerJson;
@@ -40,9 +37,8 @@
 @property (weak) IBOutlet StylerView *stylerView;
 @property (weak) IBOutlet NSTextField *validTextfield;
 @property (weak) IBOutlet MenuView *menuView;
-@property (weak) IBOutlet UIKitView *uiview;
+@property (strong) ChameleonAppDelegate *iosApp;
 
-@property (weak) IBOutlet NSWindow *window;
 
 @property (strong) ConfirmComponentWindow *confirmComponentWin;
 @property (strong) ConfirmJunctionWindow *confirmJunctionWin;
@@ -62,10 +58,12 @@
 static NSDictionary * listMap;
 @implementation AppDelegate
 
+@synthesize window, chameleonNSView;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    iosApp = [[ChameleonAppDelegate alloc] init];
-    [iosView launchApplicationWithDelegate:iosApp afterDelay:1];
+    chameleonApp = [[ChameleonAppDelegate alloc] init];
+    [chameleonNSView launchApplicationWithDelegate:chameleonApp afterDelay:1];
+
     [self load];
 }
 -(void)mainStyle{

@@ -7,9 +7,15 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <UIKit/UIKitView.h>
+
+@class ChameleonAppDelegate;
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
-
-
+{
+    ChameleonAppDelegate *chameleonApp;
+}
+@property (assign) IBOutlet NSWindow *window;
+@property (assign) IBOutlet UIKitView *chameleonNSView;
 @end
 
