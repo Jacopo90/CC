@@ -7,7 +7,7 @@
 //
 
 #import "TesterViewController.h"
-
+#import <MIACore/MIACore.h>
 @interface TesterViewController ()
 
 @end

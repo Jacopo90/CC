@@ -65,22 +65,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "UIKit/Classes/UIKitView.m"
-            timestampString = "500560977.276667"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "-initWithFrame:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "ConfCreator/MainView/MainView.m"
             timestampString = "500560549.874156"
             startingColumnNumber = "9223372036854775807"
@@ -97,14 +81,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "UIKit/Classes/UIKitView.m"
-            timestampString = "500560977.276667"
+            filePath = "Build/Products/Debug-iphonesimulator/MIACore.framework/Headers/MIAShareActivitiesTypes.h"
+            timestampString = "500566333.338819"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "-initWithCoder:"
-            landmarkType = "7">
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "typedef void(^shareActivityComposerReadyBlock)(SLComposeViewController *controller);"
+            landmarkType = "16">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

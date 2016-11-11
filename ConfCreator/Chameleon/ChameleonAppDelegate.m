@@ -16,7 +16,7 @@
 {
     window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].applicationFrame];
     window.backgroundColor = [UIColor whiteColor];
-    window.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+//    window.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     
     
     
