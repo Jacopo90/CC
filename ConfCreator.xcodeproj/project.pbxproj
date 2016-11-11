@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D11905151DD632970088D957 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D11905141DD632970088D957 /* UIKit.framework */; };
+		D11905161DD632970088D957 /* UIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D11905141DD632970088D957 /* UIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D11B441E1DD2476F00343C58 /* Code-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D11B441D1DD2476F00343C58 /* Code-Bold.otf */; };
 		D16048CA1DD3847B00A1B328 /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = D16048C91DD3847B00A1B328 /* MainView.m */; };
 		D16E457D1DD1DDF4003E921E /* StyleDefinitions.m in Sources */ = {isa = PBXBuildFile; fileRef = D16E457C1DD1DDF4003E921E /* StyleDefinitions.m */; };
 		D18814F01DD5E4FF006CB064 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D18814EF1DD5E4FF006CB064 /* Cocoa.framework */; };
 		D18814F21DD5E50E006CB064 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D18814F11DD5E50E006CB064 /* Quartz.framework */; };
 		D18814F41DD5E55D006CB064 /* apple.png in Resources */ = {isa = PBXBuildFile; fileRef = D18814F31DD5E55D006CB064 /* apple.png */; };
-		D188150A1DD5E837006CB064 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D18815091DD5E837006CB064 /* UIKit.framework */; };
-		D188150B1DD5E837006CB064 /* UIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D18815091DD5E837006CB064 /* UIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D1962EED1DD4A8E400411E5F /* TesterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1962EEC1DD4A8E400411E5F /* TesterViewController.m */; };
 		D1962EF01DD4A8FA00411E5F /* ChameleonAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1962EEF1DD4A8FA00411E5F /* ChameleonAppDelegate.m */; };
 		EA0228CC1DC15EF4009EC56E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0228CB1DC15EF4009EC56E /* AppDelegate.m */; };
@@ -64,13 +64,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D188155E1DD60A1D006CB064 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D188155A1DD60A1D006CB064 /* UIKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
-			remoteInfo = UIKit;
-		};
 		EA0228DB1DC15EF4009EC56E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EA0228BF1DC15EF3009EC56E /* Project object */;
@@ -94,7 +87,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D188150B1DD5E837006CB064 /* UIKit.framework in Embed Frameworks */,
+				D11905161DD632970088D957 /* UIKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,6 +95,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D11905141DD632970088D957 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UIKit.framework; sourceTree = "<group>"; };
 		D11B441D1DD2476F00343C58 /* Code-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Code-Bold.otf"; sourceTree = "<group>"; };
 		D16048C81DD3847B00A1B328 /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
 		D16048C91DD3847B00A1B328 /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainView.m; sourceTree = "<group>"; };
@@ -110,8 +104,6 @@
 		D18814EF1DD5E4FF006CB064 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		D18814F11DD5E50E006CB064 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 		D18814F31DD5E55D006CB064 /* apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apple.png; sourceTree = "<group>"; };
-		D18815091DD5E837006CB064 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Build/Products/Debug/UIKit.framework; sourceTree = "<group>"; };
-		D188155A1DD60A1D006CB064 /* UIKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UIKit.xcodeproj; path = UIKit/UIKit.xcodeproj; sourceTree = "<group>"; };
 		D1962EEB1DD4A8E400411E5F /* TesterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TesterViewController.h; sourceTree = "<group>"; };
 		D1962EEC1DD4A8E400411E5F /* TesterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TesterViewController.m; sourceTree = "<group>"; };
 		D1962EEE1DD4A8FA00411E5F /* ChameleonAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChameleonAppDelegate.h; sourceTree = "<group>"; };
@@ -207,7 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D18814F21DD5E50E006CB064 /* Quartz.framework in Frameworks */,
-				D188150A1DD5E837006CB064 /* UIKit.framework in Frameworks */,
+				D11905151DD632970088D957 /* UIKit.framework in Frameworks */,
 				D18814F01DD5E4FF006CB064 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,7 +224,6 @@
 		D124E06B1DD0DE7600F4BFB2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D18815091DD5E837006CB064 /* UIKit.framework */,
 				D18814F11DD5E50E006CB064 /* Quartz.framework */,
 				D18814EF1DD5E4FF006CB064 /* Cocoa.framework */,
 				EA74931F1DD3E489009A2EF9 /* XUIKit.framework */,
@@ -258,14 +249,6 @@
 			path = StyleDef;
 			sourceTree = "<group>";
 		};
-		D188155B1DD60A1D006CB064 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D188155F1DD60A1D006CB064 /* UIKit.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		D1962EEA1DD4A8C600411E5F /* Chameleon */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,7 +264,7 @@
 		EA0228BE1DC15EF3009EC56E = {
 			isa = PBXGroup;
 			children = (
-				D188155A1DD60A1D006CB064 /* UIKit.xcodeproj */,
+				D11905141DD632970088D957 /* UIKit.framework */,
 				EA0228C91DC15EF3009EC56E /* ConfCreator */,
 				EA0228DD1DC15EF4009EC56E /* ConfCreatorTests */,
 				EA0228E81DC15EF4009EC56E /* ConfCreatorUITests */,
@@ -595,12 +578,6 @@
 			mainGroup = EA0228BE1DC15EF3009EC56E;
 			productRefGroup = EA0228C81DC15EF3009EC56E /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = D188155B1DD60A1D006CB064 /* Products */;
-					ProjectRef = D188155A1DD60A1D006CB064 /* UIKit.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				EA0228C61DC15EF3009EC56E /* ConfCreator */,
@@ -609,16 +586,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		D188155F1DD60A1D006CB064 /* UIKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = UIKit.framework;
-			remoteRef = D188155E1DD60A1D006CB064 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		EA0228C51DC15EF3009EC56E /* Resources */ = {
