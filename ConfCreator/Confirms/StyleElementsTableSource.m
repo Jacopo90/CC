@@ -111,6 +111,9 @@ objectValueForTableColumn:(NSTableColumn*)tableColumn
         }
         [uiValues addObject:uielem];
     }
+    if (uiValues.count == 0) {
+        return nil;
+    }
     return uiValues;
 }
 

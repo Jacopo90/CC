@@ -23,6 +23,8 @@
 @property (weak) IBOutlet NSComboBox *receiverBox;
 @property (strong) SignalDataSource *signalDataSource;
 @property (strong) ReceptorDataSource *receptorDataSource;
+@property (weak) IBOutlet NSTextField *signalDescriptor;
+@property (weak) IBOutlet NSTextField *receptorDescriptor;
 
 @end
 
@@ -45,7 +47,8 @@
     
     self.signalBox.dataSource = self.signalDataSource;
     self.receptorBox.dataSource = self.receptorDataSource;
-
+    self.signalBox.delegate = self;
+    self.receptorBox.delegate = self;
 }
 
 - (IBAction)confirmJunction:(id)sender {
@@ -109,8 +112,40 @@
             [self.receptorDataSource setReceptors:nil];
         }
     }
+ 
     [box reloadData];
 
+}
+-(void)comboBoxSelectionDidChange:(NSNotification *)notification{
+    NSComboBox* box = (NSComboBox*)[notification object];
+
+    
+    if ([box.identifier isEqualToString:@"receptor"]) {
+        MIAComponent *s_receiver = [self->_components objectAtIndex:[self.receiverBox indexOfSelectedItem]];
+        if ([s_receiver definition] != nil) {
+            NSArray *receptors = [[s_receiver definition] objectForKey:@"receptors"];
+            if ([box indexOfSelectedItem] >= 0) {
+                NSString *description = [[receptors objectAtIndex:[box indexOfSelectedItem]] objectForKey:@"description"];
+                self.receptorDescriptor.stringValue = description;
+            }
+            
+        }else{
+            self.receptorDescriptor.stringValue = @"";
+        }
+    }
+    if ([box.identifier isEqualToString:@"signal"]) {
+        MIAComponent *s_sender = [self->_components objectAtIndex:[self.senderBox indexOfSelectedItem]];
+        if ([s_sender definition] != nil) {
+            NSArray *signals = [[s_sender definition] objectForKey:@"signals"];
+            if ([box indexOfSelectedItem] >= 0) {
+            NSString *description = [[signals objectAtIndex:[box indexOfSelectedItem]] objectForKey:@"description"];
+                self.signalDescriptor.stringValue = description;
+            }
+            
+        }else{
+            self.signalDescriptor.stringValue = @"";
+        }
+    }
 }
 - (NSInteger)numberOfItemsInComboBox:(NSComboBox*)aComboBox {
     return self->_components.count;

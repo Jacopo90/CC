@@ -109,8 +109,12 @@
     
     [comp updateArgs:[self.argsData datasource]];
     [comp setDefinition:self.tmpComponentDefinition];
-
-    MIAStyle *style = [[MIAStyle alloc]initWithComponent:comp uiElements:[self.styleData datasource]];
+    
+    NSArray *values = [self.styleData datasource];
+    MIAStyle *style = nil;
+    if (values != nil) {
+        style = [[MIAStyle alloc]initWithComponent:comp uiElements:values];
+    }
     
     [self.delegate confirmComponentWindow:self didConfirmComponent:comp withAssociatedStyle:style];
     

@@ -34,6 +34,7 @@
 }
 
 -(void)addParameters:(NSArray *)inputParameters{
+    [self->_params removeAllObjects];
     for (id value in inputParameters) {
         [self addParameter:value];
     }

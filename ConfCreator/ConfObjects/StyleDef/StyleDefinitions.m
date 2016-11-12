@@ -111,7 +111,8 @@ static NSDictionary *stylesConfigurations;
     [allStyle addEntriesFromDictionary:labelStyle];
     [allStyle addEntriesFromDictionary:imageStyle];
 
-    stylesConfigurations = @{@"label":labelStyle,
+    stylesConfigurations = @{@"view":viewStyle,
+                             @"label":labelStyle,
                              @"image":imageStyle,
                              @"default":allStyle
                              };
