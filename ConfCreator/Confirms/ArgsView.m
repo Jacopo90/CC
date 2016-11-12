@@ -59,9 +59,9 @@
                                                withString:@"/"];
     self.string = string;
 }
--(void)clean{
+-(void)cleanView{
     [self->_params removeAllObjects];
-    self.string = nil;
+    [self printJson:@{}];
 }
 
 

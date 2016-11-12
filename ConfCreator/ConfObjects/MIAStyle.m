@@ -17,17 +17,15 @@
 
 @end
 @implementation MIAStyleUIElement
-- (instancetype)initWithKey:(NSString *)key type:(NSString *)type values:(NSDictionary *)values
+- (instancetype)initWithKey:(NSString *)key values:(NSDictionary *)value
 {
     self = [super init];
     if (self) {
         self.key = key;
-        if (type) {
-            self->_definition = [StyleDefinitions styleDictionaryFromUIKey:type];
-        }
         self.properties = [[NSMutableDictionary alloc]init];
-        for (NSString *key in values) {
-            [self setProperty:[values objectForKey:key] forKey:key];
+        
+        for (NSString *key in value) {
+            [self setProperty:[value objectForKey:key] forKey:key];
         }
     }
     return self;
@@ -59,12 +57,11 @@
         self->styleElements = [[NSMutableArray alloc]init];
         for (NSDictionary *element in elements) {
             NSString *key = [element objectForKey:@"key"];
-            NSString *type = [element objectForKey:@"type"];
-            NSDictionary *values = [element objectForKey:@"values"];
-            if (key == nil || values == nil || values.count == 0) {
+            NSDictionary *value = [element objectForKey:@"value"]; // this is the all dictionary
+            if (key == nil || value == nil || value.count == 0) {
                 continue;
             }
-            MIAStyleUIElement *styleElement = [[MIAStyleUIElement alloc]initWithKey:key type:type values:values];
+            MIAStyleUIElement *styleElement = [[MIAStyleUIElement alloc]initWithKey:key values:value];
             [self->styleElements addObject:styleElement];
         }
     }
@@ -88,9 +85,8 @@
    
     [self->styleElements removeAllObjects];
     NSDictionary *rules = [newJson objectForKey:@"rules"];
-
     for (NSString *key in rules) {
-        MIAStyleUIElement *styleElement = [[MIAStyleUIElement alloc]initWithKey:key type:@"view" values:[rules objectForKey:key]];
+        MIAStyleUIElement *styleElement = [[MIAStyleUIElement alloc]initWithKey:key values:[rules objectForKey:key]];
         [self->styleElements addObject:styleElement];
     }
     compBlock([self dataDict]);

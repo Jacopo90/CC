@@ -46,6 +46,7 @@
 		EA7E78BC1DD29B7000C3D9D2 /* ArgsView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7E78BB1DD29B7000C3D9D2 /* ArgsView.m */; };
 		EA8479211DD68876003F0D05 /* XUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8479201DD68876003F0D05 /* XUIKit.framework */; };
 		EA8479221DD68876003F0D05 /* XUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EA8479201DD68876003F0D05 /* XUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA8479251DD68931003F0D05 /* ArgsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8479241DD68931003F0D05 /* ArgsDataSource.m */; };
 		EACBB4361DC3F3F400C10644 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EACBB4351DC3F3F400C10644 /* Utils.m */; };
 		EACBB44A1DC3FE7800C10644 /* MIAComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = EACBB4451DC3FE7800C10644 /* MIAComponent.m */; };
 		EACBB44B1DC3FE7800C10644 /* MIAJunction.m in Sources */ = {isa = PBXBuildFile; fileRef = EACBB4471DC3FE7800C10644 /* MIAJunction.m */; };
@@ -143,6 +144,8 @@
 		EA7E78BA1DD29B7000C3D9D2 /* ArgsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArgsView.h; sourceTree = "<group>"; };
 		EA7E78BB1DD29B7000C3D9D2 /* ArgsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArgsView.m; sourceTree = "<group>"; };
 		EA8479201DD68876003F0D05 /* XUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XUIKit.framework; sourceTree = "<group>"; };
+		EA8479231DD68931003F0D05 /* ArgsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArgsDataSource.h; sourceTree = "<group>"; };
+		EA8479241DD68931003F0D05 /* ArgsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArgsDataSource.m; sourceTree = "<group>"; };
 		EACBB4341DC3F3F400C10644 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		EACBB4351DC3F3F400C10644 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		EACBB4441DC3FE7800C10644 /* MIAComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIAComponent.h; sourceTree = "<group>"; };
@@ -356,6 +359,8 @@
 				EA5DFDE71DC6141B0016F562 /* ConfirmComponentWindow.xib */,
 				EA7E78B71DD28EA200C3D9D2 /* StyleElementsTableSource.h */,
 				EA7E78B81DD28EA200C3D9D2 /* StyleElementsTableSource.m */,
+				EA8479231DD68931003F0D05 /* ArgsDataSource.h */,
+				EA8479241DD68931003F0D05 /* ArgsDataSource.m */,
 				EA7E78BA1DD29B7000C3D9D2 /* ArgsView.h */,
 				EA7E78BB1DD29B7000C3D9D2 /* ArgsView.m */,
 				EA5DFDEA1DC614400016F562 /* ConfirmJunctionWindow.h */,
@@ -563,6 +568,7 @@
 				EAD405F41DCD47CE00AEA504 /* NoodleLineNumberMarker.m in Sources */,
 				EAD406001DCD499300AEA504 /* CancelButton.m in Sources */,
 				EACBB4681DC4055500C10644 /* MIAUIObject.m in Sources */,
+				EA8479251DD68931003F0D05 /* ArgsDataSource.m in Sources */,
 				EA5DFDD91DC601920016F562 /* MIAObject.m in Sources */,
 				D1962EF01DD4A8FA00411E5F /* ChameleonAppDelegate.m in Sources */,
 				EA5DFDE81DC6141B0016F562 /* ConfirmComponentWindow.m in Sources */,

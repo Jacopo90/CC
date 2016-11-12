@@ -7,7 +7,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="ConfirmComponentWindow">
             <connections>
-                <outlet property="argsTextview" destination="jK0-Vg-3AG" id="X3n-4h-31Z"/>
+                <outlet property="argsView" destination="jK0-Vg-3AG" id="7cP-k9-rss"/>
                 <outlet property="foundLabel" destination="yNP-On-KAx" id="WGA-sO-X5b"/>
                 <outlet property="nameBox" destination="Klq-ev-lET" id="aVF-rE-kFb"/>
                 <outlet property="scrollerStylerParameters" destination="Dhb-mY-JbY" id="Las-Lo-v7l"/>
@@ -64,7 +64,7 @@
                             <rect key="frame" x="1" y="1" width="301" height="197"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <textView importsGraphics="NO" verticallyResizable="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="jK0-Vg-3AG">
+                                <textView importsGraphics="NO" verticallyResizable="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="jK0-Vg-3AG" customClass="ArgsView">
                                     <rect key="frame" x="0.0" y="0.0" width="271" height="197"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -181,7 +181,7 @@
                             </subviews>
                         </clipView>
                         <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="0.5" horizontal="YES" id="Cdn-P1-85f">
-                            <rect key="frame" x="-100" y="-100" width="157" height="15"/>
+                            <rect key="frame" x="1" y="229" width="93" height="15"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="2Nu-bp-elL">

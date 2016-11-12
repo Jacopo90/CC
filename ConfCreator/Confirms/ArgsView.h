@@ -19,4 +19,7 @@
 
 -(NSDictionary *)dictionary;
 -(void)addParameters:(NSArray *)inputParameters;
+-(void)cleanView;
+-(NSDictionary *)validate;
+
 @end
