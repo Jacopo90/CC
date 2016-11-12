@@ -22,7 +22,7 @@
                 <outlet property="junctionsView" destination="sKT-gm-gUI" id="md0-uD-aSh"/>
                 <outlet property="loadJsonButton" destination="Ehs-Zo-Yxh" id="uYM-El-0QK"/>
                 <outlet property="menuView" destination="Onk-Yj-o4S" id="KUd-JV-tLe"/>
-                <outlet property="printAllButton" destination="0CU-Aa-dmP" id="E5F-dN-bLA"/>
+                <outlet property="printAllButton" destination="0CU-Aa-dmP" id="REw-nS-8bm"/>
                 <outlet property="saveButton" destination="TUc-7x-42y" id="kZU-8H-WUu"/>
                 <outlet property="scrollerJson" destination="Wca-EZ-Vds" id="EG1-Mc-5oD"/>
                 <outlet property="stylerView" destination="dOP-Da-A5k" id="UdO-di-Kx3"/>
@@ -689,7 +689,7 @@
         <window title="ConfCreator" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="0.0" y="0.0" width="1352" height="963"/>
+            <rect key="contentRect" x="294" y="66" width="1352" height="963"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <view key="contentView" misplaced="YES" id="EiT-Mj-1SZ" customClass="MainView">
                 <rect key="frame" x="0.0" y="0.0" width="1352" height="963"/>
@@ -737,7 +737,7 @@
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
-                            <action selector="printAll:" target="Voe-Tx-rLC" id="jwi-GM-lQ2"/>
+                            <action selector="printAll:" target="Voe-Tx-rLC" id="4hZ-OE-BLo"/>
                         </connections>
                     </button>
                     <button misplaced="YES" id="zwF-c0-ZIG" customClass="CustomButton">
@@ -802,7 +802,7 @@
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
-                            <action selector="printAll:" target="Voe-Tx-rLC" id="OLa-dl-nT6"/>
+                            <action selector="saveConfiguration:" target="Voe-Tx-rLC" id="Djo-0K-ElP"/>
                         </connections>
                     </button>
                     <button misplaced="YES" id="Ehs-Zo-Yxh" customClass="CustomButton">
@@ -813,7 +813,7 @@
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
-                            <action selector="printAll:" target="Voe-Tx-rLC" id="af0-w9-sHI"/>
+                            <action selector="loadConfiguration:" target="Voe-Tx-rLC" id="No2-6S-EwZ"/>
                         </connections>
                     </button>
                     <scrollView misplaced="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" scrollerKnobStyle="dark" id="sKT-gm-gUI" customClass="JunctionsView">

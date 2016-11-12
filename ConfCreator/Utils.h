@@ -15,7 +15,6 @@
 + (NSColor*)colorWithHexColorString:(NSString*)inColorString alpha:(CGFloat)alpha;
 
 + (NSString*)loadStringFromFilePath:(NSString*)filePath;
-+ (void)openFileInWindow:(NSWindow*)window completionHandler:(void (^)(NSString* path))completion;
 
 // styles
 + (NSColor *)randomColor;

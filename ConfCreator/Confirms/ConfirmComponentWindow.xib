@@ -68,10 +68,10 @@
                                     <rect key="frame" x="0.0" y="0.0" width="271" height="197"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="271" height="197"/>
+                                    <size key="minSize" width="286" height="197"/>
                                     <size key="maxSize" width="463" height="10000000"/>
                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <size key="minSize" width="271" height="197"/>
+                                    <size key="minSize" width="286" height="197"/>
                                     <size key="maxSize" width="463" height="10000000"/>
                                 </textView>
                             </subviews>
@@ -153,7 +153,7 @@
                         <rect key="frame" x="5" y="100" width="95" height="245"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <clipView key="contentView" copiesOnScroll="NO" id="l9T-K2-OaN">
-                            <rect key="frame" x="1" y="1" width="93" height="243"/>
+                            <rect key="frame" x="1.5" y="1" width="93" height="243"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" id="9nZ-og-MVo">

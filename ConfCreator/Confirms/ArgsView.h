@@ -10,6 +10,7 @@
 @class ArgsView;
 @protocol ArgsViewProtocol <NSObject>
 - (void)argsView:(ArgsView *)argsview validDictionary:(NSDictionary *)dictionary;
+- (void)argsView:(ArgsView *)argsview errorDictionary:(NSError *)error;
 
 @end
 

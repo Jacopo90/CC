@@ -25,6 +25,9 @@
 		EA192B6F1DD1432800B54034 /* StylerView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA192B6E1DD1432800B54034 /* StylerView.m */; };
 		EA192B721DD143D900B54034 /* MIAUIStyle.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA192B711DD143D900B54034 /* MIAUIStyle.xib */; };
 		EA2C0E331DC521410082EE70 /* MIAUIComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2C0E321DC521410082EE70 /* MIAUIComponent.xib */; };
+		EA30CAE51DD77CEC001F397C /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA30CAE41DD77CEC001F397C /* FileManager.m */; };
+		EA30CAEF1DD780FC001F397C /* LoadJsonWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = EA30CAED1DD780FC001F397C /* LoadJsonWindow.m */; };
+		EA30CAF01DD780FC001F397C /* LoadJsonWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA30CAEE1DD780FC001F397C /* LoadJsonWindow.xib */; };
 		EA4B298A1DC8CE4600A08E02 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA4B29891DC8CE4600A08E02 /* fontawesome-webfont.ttf */; };
 		EA4B298C1DC8CED900A08E02 /* Surabanglus.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA4B298B1DC8CED900A08E02 /* Surabanglus.ttf */; };
 		EA4B29921DC8D75600A08E02 /* SignalDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4B29911DC8D75600A08E02 /* SignalDataSource.m */; };
@@ -110,6 +113,11 @@
 		EA192B6E1DD1432800B54034 /* StylerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StylerView.m; sourceTree = "<group>"; };
 		EA192B711DD143D900B54034 /* MIAUIStyle.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MIAUIStyle.xib; sourceTree = "<group>"; };
 		EA2C0E321DC521410082EE70 /* MIAUIComponent.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MIAUIComponent.xib; sourceTree = "<group>"; };
+		EA30CAE31DD77CEC001F397C /* FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
+		EA30CAE41DD77CEC001F397C /* FileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
+		EA30CAEC1DD780FC001F397C /* LoadJsonWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadJsonWindow.h; sourceTree = "<group>"; };
+		EA30CAED1DD780FC001F397C /* LoadJsonWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadJsonWindow.m; sourceTree = "<group>"; };
+		EA30CAEE1DD780FC001F397C /* LoadJsonWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadJsonWindow.xib; sourceTree = "<group>"; };
 		EA4B29891DC8CE4600A08E02 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
 		EA4B298B1DC8CED900A08E02 /* Surabanglus.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Surabanglus.ttf; sourceTree = "<group>"; };
 		EA4B29901DC8D75600A08E02 /* SignalDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignalDataSource.h; sourceTree = "<group>"; };
@@ -266,6 +274,8 @@
 				EACBB4431DC3FE7800C10644 /* ConfObjects */,
 				EAD405F81DCD499300AEA504 /* UIButtons */,
 				D1962EEA1DD4A8C600411E5F /* Chameleon */,
+				EA30CAE21DD77CD3001F397C /* FileManager */,
+				EA30CAEB1DD780FC001F397C /* LoadJsonWindow */,
 				EA0228CA1DC15EF3009EC56E /* AppDelegate.h */,
 				EA0228CB1DC15EF4009EC56E /* AppDelegate.m */,
 				EACBB4341DC3F3F400C10644 /* Utils.h */,
@@ -322,6 +332,25 @@
 				EA0229071DC1749E009EC56E /* NoodleLineNumberView.m */,
 			);
 			path = Noodles;
+			sourceTree = "<group>";
+		};
+		EA30CAE21DD77CD3001F397C /* FileManager */ = {
+			isa = PBXGroup;
+			children = (
+				EA30CAE31DD77CEC001F397C /* FileManager.h */,
+				EA30CAE41DD77CEC001F397C /* FileManager.m */,
+			);
+			path = FileManager;
+			sourceTree = "<group>";
+		};
+		EA30CAEB1DD780FC001F397C /* LoadJsonWindow */ = {
+			isa = PBXGroup;
+			children = (
+				EA30CAEC1DD780FC001F397C /* LoadJsonWindow.h */,
+				EA30CAED1DD780FC001F397C /* LoadJsonWindow.m */,
+				EA30CAEE1DD780FC001F397C /* LoadJsonWindow.xib */,
+			);
+			path = LoadJsonWindow;
 			sourceTree = "<group>";
 		};
 		EA4B29861DC8CA2800A08E02 /* Resources */ = {
@@ -527,6 +556,7 @@
 				EA0228D11DC15EF4009EC56E /* Assets.xcassets in Resources */,
 				EA5DFDF01DC6275A0016F562 /* MIAUIJunction.xib in Resources */,
 				EA4B298A1DC8CE4600A08E02 /* fontawesome-webfont.ttf in Resources */,
+				EA30CAF01DD780FC001F397C /* LoadJsonWindow.xib in Resources */,
 				EA0228D41DC15EF4009EC56E /* MainMenu.xib in Resources */,
 				EA2C0E331DC521410082EE70 /* MIAUIComponent.xib in Resources */,
 			);
@@ -560,6 +590,7 @@
 				EACBB44B1DC3FE7800C10644 /* MIAJunction.m in Sources */,
 				D1962EED1DD4A8E400411E5F /* TesterViewController.m in Sources */,
 				EA5DFDE11DC613EA0016F562 /* ComponentsView.m in Sources */,
+				EA30CAEF1DD780FC001F397C /* LoadJsonWindow.m in Sources */,
 				D16E457D1DD1DDF4003E921E /* StyleDefinitions.m in Sources */,
 				EA5DFDED1DC614400016F562 /* ConfirmJunctionWindow.m in Sources */,
 				EA7E78B61DD2608600C3D9D2 /* MenuView.m in Sources */,
@@ -577,6 +608,7 @@
 				EA4B29951DC8D91000A08E02 /* ReceptorDataSource.m in Sources */,
 				EAD405F71DCD492A00AEA504 /* CompsReader.m in Sources */,
 				EACBB4361DC3F3F400C10644 /* Utils.m in Sources */,
+				EA30CAE51DD77CEC001F397C /* FileManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

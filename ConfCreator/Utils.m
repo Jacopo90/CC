@@ -71,30 +71,4 @@
     float brightness = arc4random() % 100/100.0f;  //  0.5 to 1.0, away from black
     return [NSColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1];
 }
-+ (void)openFileInWindow:(NSWindow*)window
-          completionHandler:(void (^)(NSString* path))completion {
-    NSOpenPanel* openPanel = [NSOpenPanel openPanel];
-    
-    openPanel.title = @"Choose a file";
-    openPanel.showsResizeIndicator = YES;
-    openPanel.showsHiddenFiles = NO;
-    openPanel.canChooseDirectories = NO;
-    openPanel.canCreateDirectories = YES;
-    openPanel.allowsMultipleSelection = NO;
-    openPanel.allowedFileTypes = @[ @"json" ];
-    
-    [openPanel
-     beginSheetModalForWindow:window
-     completionHandler:^(NSInteger result) {
-         
-         if (result == NSModalResponseOK) {
-             
-             NSURL* selection = openPanel.URLs[0];
-             NSString* path =
-             [selection.path stringByResolvingSymlinksInPath];
-             completion(path);
-         }
-         
-     }];
-}
 @end

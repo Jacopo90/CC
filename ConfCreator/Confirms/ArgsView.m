@@ -72,7 +72,7 @@
     
     for (NSString *key in jsonDict) {
         id value = [jsonDict objectForKey:key];
-        if ( value == nil || [value length] == 0) {
+        if ( value == nil ) {
             continue;
         }
         [filledDictionary setObject:[jsonDict objectForKey:key] forKey:key];
@@ -94,7 +94,9 @@
 
     NSDictionary *json = [self dictionary];
     if (json == nil) {
-        // to do change label validation
+        if ([self.argsViewdelegate respondsToSelector:@selector(argsView:errorDictionary:)]) {
+            [self.argsViewdelegate argsView:self errorDictionary:[NSError errorWithDomain:@"json is nil or empty" code:0 userInfo:nil]];
+        }
         return;
     }
     

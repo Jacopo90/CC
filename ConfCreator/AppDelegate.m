@@ -15,11 +15,13 @@
 #import "MIAConfiguration.h"
 #import "Utils.h"
 #import "NoodleLineNumberView.h"
+
 #import "ConfirmComponentWindow.h"
 #import "ConfirmJunctionWindow.h"
+#import "LoadJsonWindow.h"
+
 #import "MIAObjectsDecoder.h"
 #import "MIAConfigurationPrinter.h"
-
 
 #import "MenuView.h"
 
@@ -27,8 +29,16 @@
 #import "JunctionsLinker.h"
 #import "TesterViewController.h"
 #import "ChameleonAppDelegate.h"
+#import "FileManager.h"
 
-@interface AppDelegate ()<NSTextViewDelegate,ComponentWindowProtocol,ComponentsViewProtocol,JunctionWindowProtocol,JunctionsViewProtocol,JunctionsLinkerProtocol,StylerViewProtocol>{
+@interface AppDelegate ()<NSTextViewDelegate,
+                         ComponentWindowProtocol,
+                         ComponentsViewProtocol,
+                         JunctionWindowProtocol,
+                         JunctionsViewProtocol,
+                         JunctionsLinkerProtocol,
+                         StylerViewProtocol,
+                         LoadJsonWindowProtocol>{
 }
 @property (unsafe_unretained) IBOutlet NSTextView *jsonView;
 @property (weak) IBOutlet NSScrollView *scrollerJson;
@@ -42,6 +52,7 @@
 
 @property (strong) ConfirmComponentWindow *confirmComponentWin;
 @property (strong) ConfirmJunctionWindow *confirmJunctionWin;
+@property (strong) LoadJsonWindow *loadJsonWindow;
 
 @property (strong) MIAConfiguration *mainConfiguration;
 @property (strong) JunctionsLinker *junctionsLinker;
@@ -143,11 +154,13 @@ static NSDictionary * listMap;
         [self.tmp_addings removeAllObjects];
         [self.junctionsView removeAll];
         [self.componentsView removeAll];
+        [self.stylerView removeAll];
     }];
 }
+
 - (IBAction)openFile:(id)sender {
     
-    [Utils openFileInWindow:self.window completionHandler:^(NSString *path) {
+    [FileManager openFileInWindow:self.window completionHandler:^(NSString *path) {
         [self clear:nil];
 
         NSString *jsonString = [Utils loadStringFromFilePath:path];
@@ -158,39 +171,61 @@ static NSDictionary * listMap;
             NSLog(@"error : %@",error);
             return ;
         }
-        
-        NSArray <MIAComponent *> *components = [MIAObjectsDecoder componentsFromJson:json];
-        for (MIAComponent*comp in components) {
-            [self.mainConfiguration addComponent:comp];
-            [self.componentsView addComponent:comp];
-        }
-        NSArray <MIAJunction *> *junctions = [MIAObjectsDecoder junctionsFromJson:json withComponents:[self.mainConfiguration components]];
-       
-        for (MIAJunction *junc in junctions) {
-            [self.mainConfiguration addJunction:junc];
-            [self.junctionsView addJunction:junc];
-        }
-        [self.junctionsLinker buildChains];
-        [self.junctionsView applyStyleToJunctionChains:(NSArray *)[self.junctionsLinker chains]];
-        
-        
-        NSArray <MIAStyle *> *styles = [MIAObjectsDecoder stylesFromJson:json withComponents:components];
-        for (MIAStyle *style in styles) {
-            [self.mainConfiguration addStyle:style];
-            [self.stylerView addStyle:style];
-        }
-        
-        // this is for the addings ... remove!!
-        for (id key in json) {
-            if ([key isEqualToString:@"components"] || [key isEqualToString:@"junctions"] || [key isEqualToString:@"styles"]) {
-                continue;
-            }
-            [self.tmp_addings setObject:[json objectForKey:key] forKey:key];
-        }
+        [self loadJson:json];
     }];
-    
 }
-
+-(void)loadJson:(NSDictionary *)json{
+    
+    NSArray <MIAComponent *> *components = [MIAObjectsDecoder componentsFromJson:json];
+    for (MIAComponent*comp in components) {
+        [self.mainConfiguration addComponent:comp];
+        [self.componentsView addComponent:comp];
+    }
+    NSArray <MIAJunction *> *junctions = [MIAObjectsDecoder junctionsFromJson:json withComponents:[self.mainConfiguration components]];
+    
+    for (MIAJunction *junc in junctions) {
+        [self.mainConfiguration addJunction:junc];
+        [self.junctionsView addJunction:junc];
+    }
+    [self.junctionsLinker buildChains];
+    [self.junctionsView applyStyleToJunctionChains:(NSArray *)[self.junctionsLinker chains]];
+    
+    
+    NSArray <MIAStyle *> *styles = [MIAObjectsDecoder stylesFromJson:json withComponents:components];
+    for (MIAStyle *style in styles) {
+        [self.mainConfiguration addStyle:style];
+        [self.stylerView addStyle:style];
+    }
+    
+    // this is for the addings ... remove!!
+    for (id key in json) {
+        if ([key isEqualToString:@"components"] || [key isEqualToString:@"junctions"] || [key isEqualToString:@"styles"]) {
+            continue;
+        }
+        [self.tmp_addings setObject:[json objectForKey:key] forKey:key];
+    }
+}
+#pragma mark - menu buttons actions -
+- (IBAction)loadConfiguration:(id)sender{
+    self.loadJsonWindow =
+    [[LoadJsonWindow alloc] initWithWindowNibName:@"LoadJsonWindow"];
+    self.loadJsonWindow.delegate = self;
+    [self.loadJsonWindow showWindow:self];
+}
+- (IBAction)printAll:(id)sender {
+    
+    NSDictionary *json = [MIAConfigurationPrinter printConfiguration:self.mainConfiguration adds:self.tmp_addings];
+    [self printJson:json];
+}
+- (IBAction)saveConfiguration:(id)sender{
+    NSDictionary *json = [MIAConfigurationPrinter printConfiguration:self.mainConfiguration adds:self.tmp_addings];
+    [FileManager exportDocument:@"new_conf" toType:@"json" inWindow:self.window completionHandler:^(NSString *path) {
+        if (path == nil) {
+            return;
+        }
+        [FileManager save:json inPath:path];
+    }];
+}
 - (IBAction)addComponent:(id)sender {
     self.confirmComponentWin =
     [[ConfirmComponentWindow alloc] initWithWindowNibName:@"ConfirmComponentWindow"];
@@ -202,6 +237,19 @@ static NSDictionary * listMap;
     [[ConfirmJunctionWindow alloc] initWithWindowNibName:@"ConfirmJunctionWindow" components:[self.mainConfiguration components]];
     self.confirmJunctionWin.delegate = self;
     [self.confirmJunctionWin showWindow:self];
+}
+#pragma mark - json load protocol -
+-(void)loadJsonWindow:(LoadJsonWindow *)loadJsonWindow confirmJson:(NSDictionary *)jsonDict{
+    [self.mainConfiguration removeAll:^(BOOL success) {
+        [self.tmp_addings removeAllObjects];
+        [self.junctionsView removeAll];
+        [self.componentsView removeAll];
+        [self.stylerView removeAll];
+        
+        if (jsonDict != nil) {
+            [self loadJson:jsonDict];
+        }
+    }];
 }
 #pragma mark - junction linker protocol
 -(NSArray<MIAJunction *> *)junctionsLinker:(JunctionsLinker *)linker askJunctions:(BOOL)ask{
@@ -395,11 +443,7 @@ static NSDictionary * listMap;
                                                withString:@"/"];
     self.jsonView.string = string;
 }
-- (IBAction)printAll:(id)sender {
-    
-   NSDictionary *json = [MIAConfigurationPrinter printConfiguration:self.mainConfiguration adds:self.tmp_addings];
-    [self printJson:json];
-}
+
 
 
 @end
