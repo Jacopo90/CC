@@ -75,6 +75,12 @@
         if ( value == nil ) {
             continue;
         }
+        
+        if ([value isKindOfClass:[NSString class]]) {
+            if ([value length] == 0) {
+                continue;
+            }
+        }
         [filledDictionary setObject:[jsonDict objectForKey:key] forKey:key];
     }
     if(filledDictionary == nil || filledDictionary.count == 0){
