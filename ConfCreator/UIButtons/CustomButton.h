@@ -11,4 +11,8 @@
 @interface CustomButton : NSButton
 -(void)changeMainColor:(NSColor *)color;
 -(void)changeTextColor:(NSColor *)color;
+-(void)changeFont:(NSFont *)font;
+-(void)changeText:(NSString *)text;
+-(void)changeOffsetY:(CGFloat)offsetY;
+
 @end

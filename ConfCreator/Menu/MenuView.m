@@ -7,15 +7,19 @@
 //
 
 #import "MenuView.h"
+#import "Utils.h"
 
 @implementation MenuView
 
 - (void)drawRect:(NSRect)dirtyRect {
-    [[NSColor whiteColor] set];
-        NSRectFill(dirtyRect);
-    [super drawRect:dirtyRect];
+    [[Utils colorWithHexColorString:@"4C6073" alpha:1] set];
+  
+    NSRectFill(dirtyRect);
     
+    [super drawRect:dirtyRect];
+
     // Drawing code here.
+  
 }
 
 @end

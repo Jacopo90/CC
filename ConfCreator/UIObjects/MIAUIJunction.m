@@ -41,11 +41,11 @@
 @synthesize delegate;
 
 -(void)selectStyle{
-    [[Utils colorWithHexColorString:@"C9AE82" alpha:1] set];
+    [[Utils colorWithHexColorString:@"2e7db1" alpha:1] set];
 
 }
 -(void)defaultStyle{
-    [[Utils colorWithHexColorString:@"5da5c3" alpha:1] set];
+    [[Utils colorWithHexColorString:@"3894d1" alpha:1] set];
     self.senderTextField.textColor = [Utils colorWithHexColorString:@"283D58"alpha:1];
     self.receiverTextField.textColor = [Utils colorWithHexColorString:@"283D58" alpha:1];
     self.signalTextField.textColor = [Utils colorWithHexColorString:@"efefef" alpha:1];

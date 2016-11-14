@@ -20,7 +20,7 @@
     return self;
 }
 - (void)drawRect:(NSRect)dirtyRect {
-    [[Utils colorWithHexColorString:@"2c7593" alpha:1] set];
+    [[Utils colorWithHexColorString:@"35495d" alpha:1] set];
     NSRectFill(dirtyRect);
     [super drawRect:dirtyRect];
     

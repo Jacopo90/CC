@@ -24,12 +24,13 @@
 @synthesize delegate;
 
 -(void)selectStyle{
-    [[NSColor colorWithRed:0 green:40.0/255.0f blue:40.0f/255.0f alpha:1] set];
+    [[Utils colorWithHexColorString:@"6B7F8C" alpha:1] set];
+//    [[NSColor colorWithRed:0 green:40.0/255.0f blue:40.0f/255.0f alpha:1] set];
     self.nameTextfield.textColor = [Utils colorWithHexColorString:@"ffffff" alpha:1];
 
 }
 -(void)defaultStyle{
-    [[Utils colorWithHexColorString:@"d0d784" alpha:1] set];
+    [[Utils colorWithHexColorString:@"bdc3c7" alpha:1] set];
     self.nameTextfield.textColor = [Utils colorWithHexColorString:@"ffffff" alpha:1];
     self.uidTextfield.textColor = [Utils colorWithHexColorString:@"ffffff" alpha:1];
 

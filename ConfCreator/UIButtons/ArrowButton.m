@@ -41,8 +41,8 @@
     [self addSubview:text];
     text.editable = NO;
     text.backgroundColor = [NSColor clearColor];
-    text.textColor = [Utils colorWithHexColorString:@"ffffff" alpha:0.5];
-    text.font = [NSFont fontWithName:@"FontAwesome" size:15];
+    text.textColor = [Utils colorWithHexColorString:@"ffffff" alpha:0.8];
+    text.font = [NSFont fontWithName:@"Linearicons-Free" size:18];
     [text setAcceptsTouchEvents:NO];
     text.alignment = NSTextAlignmentCenter;
     text.drawsBackground = NO;
@@ -58,9 +58,9 @@
 }
 -(void)upArrow:(BOOL)upArrow{
     if (upArrow) {
-        self.text.stringValue = @"\uf062";
+        self.text.stringValue = @"\ue873";
     }else{
-        self.text.stringValue = @"\uf063";
+        self.text.stringValue = @"\ue874";
     }
 }
 @end

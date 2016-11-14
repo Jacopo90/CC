@@ -57,9 +57,9 @@
     [super drawRect:dirtyRect];
     
     NSRect rect = [self bounds];
-    NSBezierPath *path = [NSBezierPath bezierPathWithRoundedRect:rect xRadius:10 yRadius:10];
+    NSBezierPath *path = [NSBezierPath bezierPathWithRoundedRect:rect xRadius:20 yRadius:20];
     [path addClip];    
-    
+ 
     [self defaultStyle];
     [self customStyle];
     NSRectFill(dirtyRect);

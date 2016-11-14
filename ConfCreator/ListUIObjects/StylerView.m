@@ -20,8 +20,8 @@
 }
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
-    [[Utils colorWithHexColorString:@"ffffff" alpha:1] set];
-    NSRectFill(dirtyRect);
+//    [[Utils colorWithHexColorString:@"ffffff" alpha:1] set];
+//    NSRectFill(dirtyRect);
     // Drawing code here.
 }
 -(void)addStyle:(MIAStyle *)style{

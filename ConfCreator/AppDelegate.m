@@ -79,22 +79,36 @@ static NSDictionary * listMap;
 }
 -(void)mainStyle{
     
-    [self.addComponentButton changeMainColor:[Utils colorWithHexColorString:@"d0d784" alpha:1]];
-    [self.addComponentButton changeTextColor:[Utils colorWithHexColorString:@"d0d784" alpha:1]];
-    
-    [self.addJunctionButton changeMainColor:[Utils colorWithHexColorString:@"5da5c3" alpha:1]];
-    [self.addJunctionButton changeTextColor:[Utils colorWithHexColorString:@"5da5c3" alpha:1]];
+    [self.addComponentButton changeMainColor:[Utils colorWithHexColorString:@"bdc3c7" alpha:1]];
+    [self.addComponentButton changeTextColor:[Utils colorWithHexColorString:@"bdc3c7" alpha:1]];
+    [self.addComponentButton changeFont:[NSFont fontWithName:@"Roboto-Medium" size:27]];
+    [self.addComponentButton changeOffsetY:-8];
+
+
+    [self.addJunctionButton changeMainColor:[Utils colorWithHexColorString:@"3894d1" alpha:1]];
+    [self.addJunctionButton changeTextColor:[Utils colorWithHexColorString:@"3894d1" alpha:1]];
+    [self.addJunctionButton changeFont:[NSFont fontWithName:@"Roboto-Medium" size:27]];
+    [self.addJunctionButton changeOffsetY:-8];
+
 
     [self.printAllButton changeMainColor:[Utils colorWithHexColorString:@"888888" alpha:1]];
     [self.printAllButton changeTextColor:[Utils colorWithHexColorString:@"888888" alpha:1]];
-    
+    [self.printAllButton changeFont:[NSFont fontWithName:@"Linearicons-Free" size:25]];
+    [self.printAllButton changeText:@"\ue872"];
+    [self.printAllButton changeOffsetY:-5];
+
     
     [self.saveButton changeMainColor:[Utils colorWithHexColorString:@"888888" alpha:1]];
     [self.saveButton changeTextColor:[Utils colorWithHexColorString:@"888888" alpha:1]];
-    
+    [self.saveButton changeFont:[NSFont fontWithName:@"Linearicons-Free" size:25]];
+    [self.saveButton changeText:@"\ue81e"];
+    [self.saveButton changeOffsetY:-5];
     
     [self.loadJsonButton changeMainColor:[Utils colorWithHexColorString:@"888888" alpha:1]];
     [self.loadJsonButton changeTextColor:[Utils colorWithHexColorString:@"888888" alpha:1]];
+    [self.loadJsonButton changeFont:[NSFont fontWithName:@"Linearicons-Free" size:25]];
+    [self.loadJsonButton changeText:@"\ue867"];
+    [self.loadJsonButton changeOffsetY:-5];
 
 
     [self.addJunctionButton setNeedsDisplay:YES];

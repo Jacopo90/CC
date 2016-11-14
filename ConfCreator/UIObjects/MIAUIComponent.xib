@@ -1,34 +1,35 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="MIAUIComponent"/>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customView misplaced="YES" id="c22-O7-iKe" customClass="MIAUIComponent">
-            <rect key="frame" x="0.0" y="0.0" width="256" height="80"/>
+        <customView id="c22-O7-iKe" customClass="MIAUIComponent">
+            <rect key="frame" x="0.0" y="0.0" width="256" height="85"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="awK-8e-iR7">
-                    <rect key="frame" x="73" y="12" width="131" height="18"/>
+                    <rect key="frame" x="69" y="12" width="137" height="25"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="_name_component_" id="83x-c8-roF">
-                        <font key="font" metaFont="system" size="14"/>
+                        <font key="font" size="17" name="Roboto-Condensed"/>
                         <color key="textColor" name="windowFrameColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6tF-Xz-bQf" customClass="CancelButton">
-                    <rect key="frame" x="176" y="42" width="29" height="30"/>
+                    <rect key="frame" x="177" y="49" width="29" height="30"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="25" id="00A-ke-11P"/>
                         <constraint firstAttribute="height" constant="25" id="zGi-vK-h0t"/>
                     </constraints>
-                    <buttonCell key="cell" type="bevel" title="X" bezelStyle="regularSquare" image="BC1995C3-8C5B-47D4-A0B0-0B0FDFA9EB13" imagePosition="overlaps" alignment="center" borderStyle="border" inset="2" id="Ba5-hD-bfP">
+                    <buttonCell key="cell" type="bevel" title="X" bezelStyle="regularSquare" image="77EF4A0E-0268-4EB6-B8C5-72C963CD0E43" imagePosition="overlaps" alignment="center" borderStyle="border" inset="2" id="Ba5-hD-bfP">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="systemMedium" size="13"/>
                     </buttonCell>
@@ -37,12 +38,12 @@
                     </connections>
                 </button>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="daa-X9-eqh">
-                    <rect key="frame" x="6" y="40" width="30" height="30"/>
+                    <rect key="frame" x="6" y="47" width="29" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="acp-4Q-74A"/>
                     </constraints>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="uid" id="6Eq-a8-49o">
-                        <font key="font" size="20" name="HelveticaNeue-LightItalic"/>
+                        <font key="font" metaFont="system" size="18"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         <allowedInputSourceLocales>
@@ -59,7 +60,7 @@
                     </textFieldCell>
                 </textField>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KAQ-pQ-IOf" customClass="ArrowButton">
-                    <rect key="frame" x="217" y="39" width="39" height="39"/>
+                    <rect key="frame" x="214" y="43" width="42" height="42"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="KAQ-pQ-IOf" secondAttribute="height" multiplier="1:1" id="Vfo-Xh-Gs1"/>
                     </constraints>
@@ -72,7 +73,7 @@
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kec-pD-LP2" customClass="ArrowButton">
-                    <rect key="frame" x="217" y="0.0" width="39" height="39"/>
+                    <rect key="frame" x="214" y="0.0" width="42" height="42"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="kec-pD-LP2" secondAttribute="height" multiplier="1:1" id="vpr-CR-q45"/>
                     </constraints>
@@ -103,11 +104,11 @@
                 <constraint firstItem="kec-pD-LP2" firstAttribute="height" secondItem="KAQ-pQ-IOf" secondAttribute="height" id="M3g-RL-fyx"/>
                 <constraint firstAttribute="bottom" secondItem="awK-8e-iR7" secondAttribute="bottom" constant="12" id="Op3-oA-kI8"/>
                 <constraint firstItem="awK-8e-iR7" firstAttribute="top" secondItem="daa-X9-eqh" secondAttribute="bottom" constant="10" id="UCh-Nk-EVP"/>
-                <constraint firstItem="kec-pD-LP2" firstAttribute="leading" secondItem="awK-8e-iR7" secondAttribute="trailing" constant="15" id="WrW-LG-ZO7"/>
+                <constraint firstItem="kec-pD-LP2" firstAttribute="leading" secondItem="awK-8e-iR7" secondAttribute="trailing" constant="10" id="WrW-LG-ZO7"/>
                 <constraint firstAttribute="trailing" secondItem="KAQ-pQ-IOf" secondAttribute="trailing" id="Ydy-bN-FFd"/>
                 <constraint firstItem="daa-X9-eqh" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="8" id="aju-kk-wOw"/>
                 <constraint firstAttribute="bottom" secondItem="kec-pD-LP2" secondAttribute="bottom" id="c8c-lk-7eo"/>
-                <constraint firstItem="KAQ-pQ-IOf" firstAttribute="leading" secondItem="6tF-Xz-bQf" secondAttribute="trailing" constant="14" id="coV-e5-ytr"/>
+                <constraint firstItem="KAQ-pQ-IOf" firstAttribute="leading" secondItem="6tF-Xz-bQf" secondAttribute="trailing" constant="10" id="coV-e5-ytr"/>
                 <constraint firstItem="daa-X9-eqh" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="8" id="dnF-f0-G3N"/>
                 <constraint firstAttribute="bottom" secondItem="mRb-dT-7bH" secondAttribute="bottom" constant="12" id="feK-NW-rzu"/>
                 <constraint firstAttribute="trailing" secondItem="kec-pD-LP2" secondAttribute="trailing" id="ftw-gM-bYR"/>
@@ -124,7 +125,7 @@
         </customView>
     </objects>
     <resources>
-        <image name="BC1995C3-8C5B-47D4-A0B0-0B0FDFA9EB13" width="1" height="1">
+        <image name="77EF4A0E-0268-4EB6-B8C5-72C963CD0E43" width="1" height="1">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

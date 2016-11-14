@@ -41,7 +41,7 @@
     [self addSubview:text];
     text.editable = NO;
     text.backgroundColor = [NSColor clearColor];
-    text.textColor = [Utils colorWithHexColorString:@"DE5252" alpha:1];
+    text.textColor = [Utils colorWithHexColorString:@"eda031" alpha:1];
     text.font = [NSFont fontWithName:@"FontAwesome" size:14];
     [text setAcceptsTouchEvents:NO];
     text.alignment = NSTextAlignmentCenter;

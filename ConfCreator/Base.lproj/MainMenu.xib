@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" customObjectInstantitationMethod="direct">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+        <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -16,8 +17,7 @@
             <connections>
                 <outlet property="addComponentButton" destination="p3V-yU-2O5" id="HLZ-sF-QgK"/>
                 <outlet property="addJunctionButton" destination="zwF-c0-ZIG" id="Ke6-Ie-ybF"/>
-                <outlet property="chameleonNSView" destination="Ydb-ak-lOd" id="8Yw-WM-Aer"/>
-                <outlet property="componentsView" destination="3gf-fc-wov" id="zKj-Wn-0dG"/>
+                <outlet property="componentsView" destination="eSF-RA-ObY" id="vRn-A4-jZ8"/>
                 <outlet property="jsonView" destination="uFT-dM-Roc" id="igR-R6-nAs"/>
                 <outlet property="junctionsView" destination="sKT-gm-gUI" id="md0-uD-aSh"/>
                 <outlet property="loadJsonButton" destination="Ehs-Zo-Yxh" id="uYM-El-0QK"/>
@@ -696,8 +696,43 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <customView canDrawConcurrently="YES" misplaced="YES" id="Onk-Yj-o4S" customClass="MenuView">
-                        <rect key="frame" x="0.0" y="851" width="1067" height="133"/>
+                        <rect key="frame" x="0.0" y="851" width="1352" height="133"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <subviews>
+                            <button misplaced="YES" id="0CU-Aa-dmP" customClass="CustomButton">
+                                <rect key="frame" x="1121" y="20" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="square" title="print" bezelStyle="shadowlessSquare" imagePosition="left" alignment="center" borderStyle="border" inset="2" id="LCe-xC-lKY">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="printAll:" target="Voe-Tx-rLC" id="4hZ-OE-BLo"/>
+                                </connections>
+                            </button>
+                            <button misplaced="YES" id="TUc-7x-42y" customClass="CustomButton">
+                                <rect key="frame" x="1201" y="20" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="square" title="save" bezelStyle="shadowlessSquare" imagePosition="left" alignment="center" state="on" borderStyle="border" inset="2" id="VA8-dH-f19">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="saveConfiguration:" target="Voe-Tx-rLC" id="Djo-0K-ElP"/>
+                                </connections>
+                            </button>
+                            <button misplaced="YES" id="Ehs-Zo-Yxh" customClass="CustomButton">
+                                <rect key="frame" x="1281" y="20" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="square" title="json" bezelStyle="shadowlessSquare" imagePosition="left" alignment="center" state="on" borderStyle="border" inset="2" id="VAG-PI-jww">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="loadConfiguration:" target="Voe-Tx-rLC" id="No2-6S-EwZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                     </customView>
                     <scrollView misplaced="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" id="Wca-EZ-Vds">
                         <rect key="frame" x="976" y="39" width="364" height="771"/>
@@ -706,7 +741,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="364" height="771"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <textView drawsBackground="NO" importsGraphics="NO" verticallyResizable="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="uFT-dM-Roc">
+                                <textView drawsBackground="NO" importsGraphics="NO" verticallyResizable="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="uFT-dM-Roc">
                                     <rect key="frame" x="0.0" y="0.0" width="364" height="771"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -714,8 +749,6 @@
                                     <size key="minSize" width="364" height="771"/>
                                     <size key="maxSize" width="700" height="10000000"/>
                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <size key="minSize" width="364" height="771"/>
-                                    <size key="maxSize" width="700" height="10000000"/>
                                 </textView>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -729,17 +762,6 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
-                    <button misplaced="YES" id="0CU-Aa-dmP" customClass="CustomButton">
-                        <rect key="frame" x="180" y="873" width="60" height="60"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="square" title="print" bezelStyle="shadowlessSquare" imagePosition="left" alignment="center" borderStyle="border" inset="2" id="LCe-xC-lKY">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="printAll:" target="Voe-Tx-rLC" id="4hZ-OE-BLo"/>
-                        </connections>
-                    </button>
                     <button misplaced="YES" id="zwF-c0-ZIG" customClass="CustomButton">
                         <rect key="frame" x="100" y="873" width="60" height="60"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -751,34 +773,11 @@
                             <action selector="addJunction:" target="Voe-Tx-rLC" id="3pf-2Q-t6h"/>
                         </connections>
                     </button>
-                    <scrollView misplaced="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" scrollerKnobStyle="dark" id="3gf-fc-wov" customClass="ComponentsView">
-                        <rect key="frame" x="10" y="10" width="320" height="800"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
-                        <clipView key="contentView" copiesOnScroll="NO" id="rZ2-IM-6aT">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="800"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            <subviews>
-                                <view id="Ktb-oI-fZW">
-                                    <rect key="frame" x="0.0" y="285" width="308" height="515"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                </view>
-                            </subviews>
-                            <color key="backgroundColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
-                        </clipView>
-                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="STc-Dm-rfg">
-                            <rect key="frame" x="-100" y="-100" width="298" height="15"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                        </scroller>
-                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="cE7-bh-O2g">
-                            <rect key="frame" x="-100" y="-100" width="15" height="431"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                        </scroller>
-                    </scrollView>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="JRD-qU-kJ8">
                         <rect key="frame" x="6" y="811" width="324" height="36"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="components" id="N7X-f1-eaD">
-                            <font key="font" size="18" name="Menlo-Italic"/>
+                            <font key="font" size="15" name="Roboto-LightItalic"/>
                             <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" white="0.89815721367344714" alpha="1" colorSpace="calibratedWhite"/>
                         </textFieldCell>
@@ -794,32 +793,10 @@
                             <action selector="addComponent:" target="Voe-Tx-rLC" id="xQe-aS-Unm"/>
                         </connections>
                     </button>
-                    <button misplaced="YES" id="TUc-7x-42y" customClass="CustomButton">
-                        <rect key="frame" x="260" y="873" width="60" height="60"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="square" title="save" bezelStyle="shadowlessSquare" imagePosition="left" alignment="center" state="on" borderStyle="border" inset="2" id="VA8-dH-f19">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="saveConfiguration:" target="Voe-Tx-rLC" id="Djo-0K-ElP"/>
-                        </connections>
-                    </button>
-                    <button misplaced="YES" id="Ehs-Zo-Yxh" customClass="CustomButton">
-                        <rect key="frame" x="340" y="873" width="60" height="60"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="square" title="json" bezelStyle="shadowlessSquare" imagePosition="left" alignment="center" state="on" borderStyle="border" inset="2" id="VAG-PI-jww">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="loadConfiguration:" target="Voe-Tx-rLC" id="No2-6S-EwZ"/>
-                        </connections>
-                    </button>
                     <scrollView misplaced="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" scrollerKnobStyle="dark" id="sKT-gm-gUI" customClass="JunctionsView">
                         <rect key="frame" x="648" y="10" width="320" height="800"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                        <clipView key="contentView" copiesOnScroll="NO" id="2mN-3K-jSa">
+                        <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="2mN-3K-jSa">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="800"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
@@ -840,19 +817,10 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="9cb-JP-awM">
-                        <rect key="frame" x="1235" y="816" width="87" height="27"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="json" id="o2y-wC-ZT7">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
                     <scrollView misplaced="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" scrollerKnobStyle="dark" id="dOP-Da-A5k" customClass="StylerView">
                         <rect key="frame" x="328" y="10" width="320" height="800"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
-                        <clipView key="contentView" copiesOnScroll="NO" id="oRs-0O-X3Z">
+                        <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="oRs-0O-X3Z">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="800"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
@@ -885,7 +853,7 @@
                         <rect key="frame" x="646" y="811" width="324" height="36"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="junctions" id="ZDc-g2-eB1">
-                            <font key="font" size="18" name="Menlo-Italic"/>
+                            <font key="font" size="15" name="Roboto-LightItalic"/>
                             <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" white="0.90473865306738654" alpha="1" colorSpace="calibratedWhite"/>
                         </textFieldCell>
@@ -894,15 +862,43 @@
                         <rect key="frame" x="328" y="811" width="320" height="36"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="styles" id="e8G-H8-17h">
-                            <font key="font" size="18" name="Menlo-Italic"/>
+                            <font key="font" size="15" name="Roboto-LightItalic"/>
                             <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" white="0.90172018715829561" alpha="1" colorSpace="calibratedWhite"/>
                         </textFieldCell>
                     </textField>
-                    <customView misplaced="YES" id="Ydb-ak-lOd" customClass="UIKitView">
-                        <rect key="frame" x="1128" y="850" width="148" height="113"/>
+                    <scrollView misplaced="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" scrollerKnobStyle="dark" id="eSF-RA-ObY" customClass="ComponentsView">
+                        <rect key="frame" x="8" y="10" width="320" height="800"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
+                        <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="z4t-dh-uzN">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="800"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <view id="CSv-aO-lRg">
+                                    <rect key="frame" x="0.0" y="285" width="308" height="515"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
+                        </clipView>
+                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="6Yy-M5-zLi">
+                            <rect key="frame" x="-100" y="-100" width="298" height="15"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="ay0-q4-4HA">
+                            <rect key="frame" x="-100" y="-100" width="15" height="431"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                    </scrollView>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="9cb-JP-awM">
+                        <rect key="frame" x="1255" y="816" width="87" height="27"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    </customView>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="json" id="o2y-wC-ZT7">
+                            <font key="font" metaFont="systemMedium" size="15"/>
+                            <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
                 </subviews>
             </view>
             <point key="canvasLocation" x="-112" y="745.5"/>
