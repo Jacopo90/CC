@@ -56,13 +56,13 @@
     MIAComponent *s_receiver = [self->_components objectAtIndex:[self.receiverBox indexOfSelectedItem]];
     NSString *signal = nil;
     if ([self.signalBox indexOfSelectedItem] >= 0) {
-       signal = [self.signalDataSource objectAtIndex:[self.signalBox indexOfSelectedItem]];
+        signal = [self.signalDataSource objectAtIndex:[self.signalBox indexOfSelectedItem]];
     }else{
         signal = self.signalBox.stringValue;
     }
     NSString *receptor = nil;
     if ([self.receptorBox indexOfSelectedItem] >= 0) {
-     receptor  = [self.receptorDataSource objectAtIndex:[self.receptorBox indexOfSelectedItem]];
+        receptor  = [self.receptorDataSource objectAtIndex:[self.receptorBox indexOfSelectedItem]];
     }else{
         receptor = self.receptorBox.stringValue;
     }

@@ -942,31 +942,31 @@
       "signals": [
         {
           "name": "bang.loadbang",
-          "description": ""
+          "description": "emesso quando viene caricato il componente"
         },
         {
           "name": "bang.willappear_bang_once",
-          "description": ""
+          "description": "emesso per la prima volta quando il componente sta per apparire"
         },
         {
           "name": "bang.willappear_bang",
-          "description": ""
+          "description": "emesso quando il componente sta per apparire"
         },
         {
           "name": "bang.didappear_bang",
-          "description": ""
+          "description": "emesso quando il componente è apparso"
         },
         {
           "name": "bang.did_become_active",
-          "description": ""
+          "description": "emesso quando viene riaperta l'applicazione"
         },
         {
           "name": "bang.willdisapper_bang",
-          "description": ""
+          "description": "emesso quando il componente sta per scomparire"
         },
         {
           "name": "bang.diddisapper_bang",
-          "description": ""
+          "description": "emesso quando il componente è scomparso"
         }
       ],
       "receptors": [],
@@ -1671,15 +1671,104 @@
       "name": "data_source",
       "signals": [
         {
-          "name": ""
+          "name": "data_source.item",
+            "description":""
+        },
+           {
+          "name": "data_source.added_parameters",
+                      "description":""
+        },
+           {
+          "name": "data_source.data",
+                      "description":""
+        },
+           {
+          "name": "data_source.reload_data",
+                      "description":""
+        },
+           {
+          "name": "data_source.reloaded",
+                      "description":""
+        },
+           {
+          "name": "data_source.loaded_first_time",
+                      "description":""
+        },
+           {
+          "name": "data_source.start_loading",
+                      "description":""
+        },
+           {
+          "name": "data_source.error",
+                      "description":""
+        },
+           {
+          "name": "data_source.did_load_next",
+                      "description":""
+        },
+          {
+          "name": "data_source.did_reload",
+                     "description":""
         }
+       
       ],
       "receptors": [
-        {
-          "name": ""
+           {
+          "name": "data_source.add_parameters",
+                      "description":""
+        },
+           {
+          "name": "data_source.select_data_from_button",
+                      "description":""
+        },
+           {
+          "name": "data_source.reload",
+                      "description":""
+        },
+           {
+          "name": "data_source.ask_item_at",
+                      "description":""
+        },
+           {
+          "name": "data_source.item_at",
+                      "description":""
+        },
+           {
+          "name": "data_source.selected_data_at_index",
+                      "description":""
+        },
+           {
+          "name": "data_source.reset",
+                      "description":""
         }
       ],
-      "args": []
+      "args": [
+          {
+          "name": "auto_load",
+          "type": "boolean",
+          "default": "",
+          "values": []
+        },
+          {
+          "name": "api",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        },
+          {
+          "name": "static_data",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        },
+          {
+          "name": "caching",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        }
+          
+      ]
     },
     {
       "name": "controller_categories",
@@ -1713,15 +1802,124 @@
       "name": "list_view",
       "signals": [
         {
-          "name": ""
+          "name": "edited_item_data"
+        },
+           {
+          "name": "item_data"
+        },
+           {
+          "name": "footer_touch_up"
+        },
+           {
+          "name": "header_touch_up"
+        },
+           {
+          "name": "list_view.editing_at_index"
+        },
+           {
+          "name": "list_view.deselect_cell_at_index"
+        },
+           {
+          "name": "list_view.select_cell_at_index"
+        },
+           {
+          "name": "list_view.press_button_in_cell"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "remove_items"
+        },
+          {
+          "name": "selected_items"
+        },
+          {
+          "name": "select_item"
+        },
+          {
+          "name": "set_data",
+              "description": "setta la lista di dati"
         }
       ],
-      "args": []
+      "args": [
+          
+           {
+          "name": "navbar_component_id",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+            {
+          "name": "navbar_edit_button_toggle_id",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+             {
+          "name": "navbar_component_id",
+          "type": "boolean",
+          "default": "",
+          "values": []
+        },  {
+          "name": "comparison_key",
+          "type": "string",
+          "default": "",
+          "values": []
+        },  {
+          "name": "type",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+          {
+          "name": "inter_line_spacing",
+          "type": "number",
+          "default": "",
+          "values": []
+        },
+          {
+          "name": "layout_params",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        },
+          {
+          "name": "bounce_vertical",
+          "type": "boolean",
+          "default": "",
+          "values": []
+        },
+          {
+          "name": "cell_size",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        },
+          {
+          "name": "rows",
+          "type": "number",
+          "default": "",
+          "values": []
+        },
+          {
+          "name": "columns",
+          "type": "number",
+          "default": "",
+          "values": []
+        },
+          {
+          "name": "bindings",
+          "type": "array",
+          "default": "",
+          "values": []
+        },
+           {
+          "name": "styles",
+          "type": "array",
+          "default": "",
+          "values": []
+        }
+      ]
     },
     {
       "name": "list_pull_refresh",
@@ -1796,16 +1994,29 @@
     {
       "name": "loading_view",
       "signals": [
-        {
-          "name": ""
-        }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "ui.loading_view.show"
+        },
+          {
+          "name": "ui.loading_view.dismiss"
         }
       ],
-      "args": []
+      "args": [
+            {
+          "name": "loading_id",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+             {
+          "name": "component_id",
+          "type": "string",
+          "default": "",
+          "values": []
+        }
+      ]
     },
     {
       "name": "list_no_data",
@@ -1844,16 +2055,44 @@
       ],
       "name": "std_navbar_styler",
       "signals": [
-        {
-          "name": ""
-        }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "nav_bar:change_info"
         }
       ],
-      "args": []
+      "args": [
+            {
+          "name": "right_buttons",
+          "type": "array",
+          "default": "",
+          "values": []
+        },
+              {
+          "name": "localize_title",
+          "type": "boolean",
+          "default": "",
+          "values": []
+        },
+              {
+          "name": "title",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+                {
+          "name": "title_image",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+            {
+          "name": "back_button_title",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+      ]
     },
     {
       "name": "category_segue",
