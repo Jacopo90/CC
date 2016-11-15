@@ -37,7 +37,13 @@
 }
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
-    
+    self.wantsLayer = YES;
+    self.layer.masksToBounds    = NO;
+    self.layer.shadowColor      = [NSColor blackColor].CGColor;
+    self.layer.shadowOpacity    = 0.4;
+    self.layer.shadowOffset     = CGSizeMake(0, 0);
+    self.layer.shadowRadius     = 5.0;
+    self.layer.shouldRasterize  = YES;
     // Drawing code here.
 }
 -(void)addView:(MIAUIObject *)view{

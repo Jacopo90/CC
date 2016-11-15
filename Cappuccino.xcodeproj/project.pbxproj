@@ -48,6 +48,7 @@
 		EA30CAE51DD77CEC001F397C /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA30CAE41DD77CEC001F397C /* FileManager.m */; };
 		EA30CAEF1DD780FC001F397C /* LoadJsonWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = EA30CAED1DD780FC001F397C /* LoadJsonWindow.m */; };
 		EA30CAF01DD780FC001F397C /* LoadJsonWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA30CAEE1DD780FC001F397C /* LoadJsonWindow.xib */; };
+		EA3CFCE21DDBCD8F00EBB8A1 /* Jennifer Lynne.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA3CFCE11DDBCD8F00EBB8A1 /* Jennifer Lynne.ttf */; };
 		EA4B298A1DC8CE4600A08E02 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA4B29891DC8CE4600A08E02 /* fontawesome-webfont.ttf */; };
 		EA4B298C1DC8CED900A08E02 /* Surabanglus.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA4B298B1DC8CED900A08E02 /* Surabanglus.ttf */; };
 		EA4B29921DC8D75600A08E02 /* SignalDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4B29911DC8D75600A08E02 /* SignalDataSource.m */; };
@@ -159,6 +160,7 @@
 		EA30CAEC1DD780FC001F397C /* LoadJsonWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadJsonWindow.h; sourceTree = "<group>"; };
 		EA30CAED1DD780FC001F397C /* LoadJsonWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadJsonWindow.m; sourceTree = "<group>"; };
 		EA30CAEE1DD780FC001F397C /* LoadJsonWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadJsonWindow.xib; sourceTree = "<group>"; };
+		EA3CFCE11DDBCD8F00EBB8A1 /* Jennifer Lynne.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jennifer Lynne.ttf"; sourceTree = "<group>"; };
 		EA4B29891DC8CE4600A08E02 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
 		EA4B298B1DC8CED900A08E02 /* Surabanglus.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Surabanglus.ttf; sourceTree = "<group>"; };
 		EA4B29901DC8D75600A08E02 /* SignalDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignalDataSource.h; sourceTree = "<group>"; };
@@ -428,6 +430,7 @@
 				D127FAF31DD9EABE00DF0647 /* Linearicons-Free.ttf */,
 				D11B441D1DD2476F00343C58 /* Code-Bold.otf */,
 				EA4B298B1DC8CED900A08E02 /* Surabanglus.ttf */,
+				EA3CFCE11DDBCD8F00EBB8A1 /* Jennifer Lynne.ttf */,
 				EA4B29891DC8CE4600A08E02 /* fontawesome-webfont.ttf */,
 			);
 			path = Resources;
@@ -622,6 +625,7 @@
 				EA5DFDE91DC6141B0016F562 /* ConfirmComponentWindow.xib in Resources */,
 				D127FB111DD9ED3A00DF0647 /* Roboto-MediumItalic.ttf in Resources */,
 				D127FB0F1DD9ED3A00DF0647 /* Roboto-LightItalic.ttf in Resources */,
+				EA3CFCE21DDBCD8F00EBB8A1 /* Jennifer Lynne.ttf in Resources */,
 				EA4B298C1DC8CED900A08E02 /* Surabanglus.ttf in Resources */,
 				D127FB141DD9ED3A00DF0647 /* Roboto-ThinItalic.ttf in Resources */,
 				D127FB0E1DD9ED3A00DF0647 /* Roboto-Light.ttf in Resources */,

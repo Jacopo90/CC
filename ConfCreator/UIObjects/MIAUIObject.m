@@ -35,7 +35,8 @@
     }
     customView->_uuid = uuid;
     customView.frame = frame;
-    customView.layer.masksToBounds = YES;
+
+
     return customView;
 }
 

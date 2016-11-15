@@ -731,8 +731,17 @@
                                     <action selector="loadConfiguration:" target="Voe-Tx-rLC" id="No2-6S-EwZ"/>
                                 </connections>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="ZId-N1-OdT">
+                                <rect key="frame" x="492" y="84" width="368" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Quando la configurazione è un gioco da ragazzi" id="ujY-8w-j3G">
+                                    <font key="font" size="31" name="JenniferLynne"/>
+                                    <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="rVg-xA-QWh">
-                                <rect key="frame" x="652" y="80" width="48" height="48"/>
+                                <rect key="frame" x="652" y="36" width="48" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="AppIcon" id="QiU-VC-siK"/>
                             </imageView>
