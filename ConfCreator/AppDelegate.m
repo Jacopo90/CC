@@ -145,7 +145,7 @@ static NSDictionary * listMap;
     self.scrollerJson.verticalRulerView = lineView;
     self.scrollerJson.hasHorizontalRuler = NO;
     self.jsonView.delegate = self;
-    self.jsonView.font = [NSFont fontWithName:@"Menlo-Regular" size:13];
+    self.jsonView.font = [NSFont fontWithName:@"Menlo-Regular" size:12];
     self.jsonView.automaticQuoteSubstitutionEnabled = NO;
 
     self.componentsView.delegate = self;
@@ -159,6 +159,12 @@ static NSDictionary * listMap;
     
     
     self.junctionsLinker = [[JunctionsLinker alloc]initWithDelegate:self];
+    
+    
+    self.window.titleVisibility = YES;
+    self.window.styleMask |= NSFullSizeContentViewWindowMask;
+    
+
 }
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application
@@ -452,6 +458,7 @@ static NSDictionary * listMap;
 }
 
 -(void)printJson:(NSDictionary *)json{
+    self.jsonView.string = @"";
     NSString* string = [Utils dictToJsonString:json];
     string = [string stringByReplacingOccurrencesOfString:@"\\/"
                                                withString:@"/"];

@@ -126,7 +126,9 @@
             NSArray *receptors = [[s_receiver definition] objectForKey:@"receptors"];
             if ([box indexOfSelectedItem] >= 0) {
                 NSString *description = [[receptors objectAtIndex:[box indexOfSelectedItem]] objectForKey:@"description"];
-                self.receptorDescriptor.stringValue = description;
+                if (description != nil) {
+                    self.receptorDescriptor.stringValue = description;
+                }
             }
             
         }else{
@@ -139,7 +141,9 @@
             NSArray *signals = [[s_sender definition] objectForKey:@"signals"];
             if ([box indexOfSelectedItem] >= 0) {
             NSString *description = [[signals objectAtIndex:[box indexOfSelectedItem]] objectForKey:@"description"];
-                self.signalDescriptor.stringValue = description;
+                if (description != nil) {
+                    self.signalDescriptor.stringValue = description;
+                }
             }
             
         }else{

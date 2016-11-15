@@ -23,10 +23,14 @@
     if (self) {
         self.key = key;
         self.properties = [[NSMutableDictionary alloc]init];
-        
-        for (NSString *key in value) {
-            [self setProperty:[value objectForKey:key] forKey:key];
+        if ([value isKindOfClass:[NSDictionary class]]) {
+            for (NSString *key in value) {
+                [self setProperty:[value objectForKey:key] forKey:key];
+            }
+            
         }
+        
+        
     }
     return self;
 }
@@ -58,6 +62,9 @@
         for (NSDictionary *element in elements) {
             NSString *key = [element objectForKey:@"key"];
             NSDictionary *value = [element objectForKey:@"value"]; // this is the all dictionary
+            if (![value isKindOfClass:[NSDictionary class]]) {
+                continue;
+            }
             if (key == nil || value == nil || value.count == 0) {
                 continue;
             }

@@ -20,6 +20,14 @@
 }
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
+    NSImage *image = [NSImage imageNamed:@"placeholder_list.png"];
+    
+    [image setFlipped:YES];
+    [image drawInRect:dirtyRect
+             fromRect:self.bounds
+            operation:NSCompositeSourceOver
+             fraction:1];
+
 //    [[Utils colorWithHexColorString:@"ffffff" alpha:1] set];
 //    NSRectFill(dirtyRect);
     // Drawing code here.

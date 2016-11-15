@@ -1,9 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" customObjectInstantitationMethod="direct">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
-        <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -686,17 +685,17 @@
             </items>
             <point key="canvasLocation" x="-255" y="85"/>
         </menu>
-        <window title="ConfCreator" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+        <window title="Cappuccino" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g" customClass="CustomWindow">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" unifiedTitleAndToolbar="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="294" y="66" width="1352" height="963"/>
+            <rect key="contentRect" x="294" y="66" width="1352" height="986"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <view key="contentView" misplaced="YES" id="EiT-Mj-1SZ" customClass="MainView">
-                <rect key="frame" x="0.0" y="0.0" width="1352" height="963"/>
+                <rect key="frame" x="0.0" y="0.0" width="1352" height="986"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <customView canDrawConcurrently="YES" misplaced="YES" id="Onk-Yj-o4S" customClass="MenuView">
-                        <rect key="frame" x="0.0" y="851" width="1352" height="133"/>
+                        <rect key="frame" x="0.0" y="851" width="1352" height="135"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <subviews>
                             <button misplaced="YES" id="0CU-Aa-dmP" customClass="CustomButton">
@@ -732,6 +731,11 @@
                                     <action selector="loadConfiguration:" target="Voe-Tx-rLC" id="No2-6S-EwZ"/>
                                 </connections>
                             </button>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="rVg-xA-QWh">
+                                <rect key="frame" x="652" y="80" width="48" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="AppIcon" id="QiU-VC-siK"/>
+                            </imageView>
                         </subviews>
                     </customView>
                     <scrollView misplaced="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" id="Wca-EZ-Vds">
@@ -741,7 +745,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="364" height="771"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <textView drawsBackground="NO" importsGraphics="NO" verticallyResizable="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="uFT-dM-Roc">
+                                <textView drawsBackground="NO" importsGraphics="NO" verticallyResizable="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="uFT-dM-Roc">
                                     <rect key="frame" x="0.0" y="0.0" width="364" height="771"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -749,6 +753,8 @@
                                     <size key="minSize" width="364" height="771"/>
                                     <size key="maxSize" width="700" height="10000000"/>
                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <size key="minSize" width="364" height="771"/>
+                                    <size key="maxSize" width="700" height="10000000"/>
                                 </textView>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -774,7 +780,7 @@
                         </connections>
                     </button>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="JRD-qU-kJ8">
-                        <rect key="frame" x="6" y="811" width="324" height="36"/>
+                        <rect key="frame" x="6" y="805" width="324" height="36"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="components" id="N7X-f1-eaD">
                             <font key="font" size="15" name="Roboto-LightItalic"/>
@@ -805,7 +811,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 </view>
                             </subviews>
-                            <color key="backgroundColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" white="0.90172018720000002" alpha="1" colorSpace="calibratedWhite"/>
                         </clipView>
                         <edgeInsets key="contentInsets" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
                         <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="byw-Ug-rMt">
@@ -829,7 +835,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 </view>
                             </subviews>
-                            <color key="backgroundColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                         </clipView>
                         <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="o9y-iT-xIk">
                             <rect key="frame" x="-100" y="-100" width="298" height="15"/>
@@ -850,7 +856,7 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="png-5s-r0q">
-                        <rect key="frame" x="646" y="811" width="324" height="36"/>
+                        <rect key="frame" x="646" y="805" width="324" height="36"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="junctions" id="ZDc-g2-eB1">
                             <font key="font" size="15" name="Roboto-LightItalic"/>
@@ -859,7 +865,7 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="iBE-CH-80c">
-                        <rect key="frame" x="328" y="811" width="320" height="36"/>
+                        <rect key="frame" x="328" y="805" width="320" height="36"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="styles" id="e8G-H8-17h">
                             <font key="font" size="15" name="Roboto-LightItalic"/>
@@ -879,7 +885,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 </view>
                             </subviews>
-                            <color key="backgroundColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" white="0.90473865310000001" alpha="1" colorSpace="calibratedWhite"/>
                         </clipView>
                         <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="6Yy-M5-zLi">
                             <rect key="frame" x="-100" y="-100" width="298" height="15"/>
@@ -901,7 +907,13 @@
                     </textField>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-112" y="745.5"/>
+            <connections>
+                <outlet property="menuView" destination="Onk-Yj-o4S" id="sdq-57-X4c"/>
+            </connections>
+            <point key="canvasLocation" x="-112" y="734"/>
         </window>
     </objects>
+    <resources>
+        <image name="AppIcon" width="128" height="128"/>
+    </resources>
 </document>

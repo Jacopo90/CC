@@ -16,14 +16,18 @@
 @end
 
 @implementation ArgsView
+-(BOOL)wantsDefaultClipping{
+    return YES;
+}
 - (instancetype)initWithCoder:(NSCoder *)coder
 {
     self = [super initWithCoder:coder];
     if (self) {
         self.delegate = self;
         self->_params = [[NSMutableArray alloc]init];
-        self.font = [NSFont fontWithName:@"Menlo-Regular" size:13];
+        self.font = [NSFont fontWithName:@"Menlo-Regular" size:12];
         self.automaticQuoteSubstitutionEnabled = NO;
+        
     }
     return self;
 }
@@ -48,17 +52,20 @@
 -(void)print{
     NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
     for (id param in self->_params) {
-        
-        
         [dict setObject:@"" forKey:param];
     }
+    
     [self printJson:(NSDictionary *)dict];
+    
+    [self callDelegates];
+
 }
 -(void)printJson:(NSDictionary *)json{
     NSString* string = [Utils dictToJsonString:json];
     string = [string stringByReplacingOccurrencesOfString:@"\\/"
                                                withString:@"/"];
     self.string = string;
+    
 }
 -(void)cleanView{
     [self->_params removeAllObjects];
@@ -98,7 +105,10 @@
 }
 -(void)textViewDidChangeSelection:(NSNotification *)notification{
 
-    NSDictionary *json = [self dictionary];
+    [self callDelegates];
+}
+-(void)callDelegates{
+    NSDictionary *json = [self validate];
     if (json == nil) {
         if ([self.argsViewdelegate respondsToSelector:@selector(argsView:errorDictionary:)]) {
             [self.argsViewdelegate argsView:self errorDictionary:[NSError errorWithDomain:@"json is nil or empty" code:0 userInfo:nil]];
@@ -107,7 +117,7 @@
     }
     
     if ([self.argsViewdelegate respondsToSelector:@selector(argsView:validDictionary:)]) {
-        [self.argsViewdelegate argsView:self validDictionary:json];
+        [self.argsViewdelegate argsView:self validDictionary:[self dictionary]];
     }
 }
 

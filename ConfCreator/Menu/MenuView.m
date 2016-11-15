@@ -10,7 +10,9 @@
 #import "Utils.h"
 
 @implementation MenuView
-
+-(BOOL)mouseDownCanMoveWindow{
+    return YES;
+}
 - (void)drawRect:(NSRect)dirtyRect {
     [[Utils colorWithHexColorString:@"4C6073" alpha:1] set];
   

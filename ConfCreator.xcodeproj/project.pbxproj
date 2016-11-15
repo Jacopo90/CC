@@ -39,8 +39,11 @@
 		EA0228D11DC15EF4009EC56E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA0228D01DC15EF4009EC56E /* Assets.xcassets */; };
 		EA0228D41DC15EF4009EC56E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA0228D21DC15EF4009EC56E /* MainMenu.xib */; };
 		EA02291C1DC1749E009EC56E /* NoodleLineNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0229071DC1749E009EC56E /* NoodleLineNumberView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EA0DA9E31DDA870C00803AE9 /* j_placeholder_list.png in Resources */ = {isa = PBXBuildFile; fileRef = EA0DA9E21DDA870C00803AE9 /* j_placeholder_list.png */; };
 		EA192B6F1DD1432800B54034 /* StylerView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA192B6E1DD1432800B54034 /* StylerView.m */; };
 		EA192B721DD143D900B54034 /* MIAUIStyle.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA192B711DD143D900B54034 /* MIAUIStyle.xib */; };
+		EA1D84C51DDA7D0F0071DB4B /* CustomWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1D84C41DDA7D0F0071DB4B /* CustomWindow.m */; };
+		EA1D84CA1DDA83CE0071DB4B /* placeholder_list.png in Resources */ = {isa = PBXBuildFile; fileRef = EA1D84C91DDA83CE0071DB4B /* placeholder_list.png */; };
 		EA2C0E331DC521410082EE70 /* MIAUIComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2C0E321DC521410082EE70 /* MIAUIComponent.xib */; };
 		EA30CAE51DD77CEC001F397C /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA30CAE41DD77CEC001F397C /* FileManager.m */; };
 		EA30CAEF1DD780FC001F397C /* LoadJsonWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = EA30CAED1DD780FC001F397C /* LoadJsonWindow.m */; };
@@ -143,9 +146,13 @@
 		EA0228EB1DC15EF4009EC56E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA0229061DC1749E009EC56E /* NoodleLineNumberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoodleLineNumberView.h; sourceTree = "<group>"; };
 		EA0229071DC1749E009EC56E /* NoodleLineNumberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoodleLineNumberView.m; sourceTree = "<group>"; };
+		EA0DA9E21DDA870C00803AE9 /* j_placeholder_list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = j_placeholder_list.png; sourceTree = "<group>"; };
 		EA192B6D1DD1432800B54034 /* StylerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StylerView.h; sourceTree = "<group>"; };
 		EA192B6E1DD1432800B54034 /* StylerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StylerView.m; sourceTree = "<group>"; };
 		EA192B711DD143D900B54034 /* MIAUIStyle.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MIAUIStyle.xib; sourceTree = "<group>"; };
+		EA1D84C31DDA7D0F0071DB4B /* CustomWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomWindow.h; sourceTree = "<group>"; };
+		EA1D84C41DDA7D0F0071DB4B /* CustomWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomWindow.m; sourceTree = "<group>"; };
+		EA1D84C91DDA83CE0071DB4B /* placeholder_list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder_list.png; sourceTree = "<group>"; };
 		EA2C0E321DC521410082EE70 /* MIAUIComponent.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MIAUIComponent.xib; sourceTree = "<group>"; };
 		EA30CAE31DD77CEC001F397C /* FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
 		EA30CAE41DD77CEC001F397C /* FileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
@@ -298,6 +305,8 @@
 		EA0228C91DC15EF3009EC56E /* ConfCreator */ = {
 			isa = PBXGroup;
 			children = (
+				EA1D84C31DDA7D0F0071DB4B /* CustomWindow.h */,
+				EA1D84C41DDA7D0F0071DB4B /* CustomWindow.m */,
 				EA7492DF1DD3DD04009A2EF9 /* UIViews */,
 				EA0228FD1DC1749E009EC56E /* Noodles */,
 				D16048C71DD3847B00A1B328 /* MainView */,
@@ -368,6 +377,15 @@
 			path = Noodles;
 			sourceTree = "<group>";
 		};
+		EA1D84C61DDA81590071DB4B /* images */ = {
+			isa = PBXGroup;
+			children = (
+				EA0DA9E21DDA870C00803AE9 /* j_placeholder_list.png */,
+				EA1D84C91DDA83CE0071DB4B /* placeholder_list.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		EA30CAE21DD77CD3001F397C /* FileManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -390,6 +408,7 @@
 		EA4B29861DC8CA2800A08E02 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EA1D84C61DDA81590071DB4B /* images */,
 				D127FAF51DD9ED3A00DF0647 /* Roboto-Black.ttf */,
 				D127FAF61DD9ED3A00DF0647 /* Roboto-BlackItalic.ttf */,
 				D127FAF71DD9ED3A00DF0647 /* Roboto-Bold.ttf */,
@@ -627,6 +646,8 @@
 				EA0228D41DC15EF4009EC56E /* MainMenu.xib in Resources */,
 				D127FB071DD9ED3A00DF0647 /* Roboto-Bold.ttf in Resources */,
 				EA2C0E331DC521410082EE70 /* MIAUIComponent.xib in Resources */,
+				EA0DA9E31DDA870C00803AE9 /* j_placeholder_list.png in Resources */,
+				EA1D84CA1DDA83CE0071DB4B /* placeholder_list.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,6 +674,7 @@
 				EACBB44F1DC3FE8E00C10644 /* MIAConfiguration.m in Sources */,
 				EACBB4641DC404BA00C10644 /* MIAUIJunction.m in Sources */,
 				EA192B6F1DD1432800B54034 /* StylerView.m in Sources */,
+				EA1D84C51DDA7D0F0071DB4B /* CustomWindow.m in Sources */,
 				EA5DFDE31DC613EA0016F562 /* StackView.m in Sources */,
 				EAD406041DCD4AA000AEA504 /* JunctionsLinker.m in Sources */,
 				EACBB44B1DC3FE7800C10644 /* MIAJunction.m in Sources */,

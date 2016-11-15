@@ -34,10 +34,11 @@
 @property (nonatomic, strong) ArgsDataSource *argsData;
 
 @property (weak) IBOutlet NSTableView *styleElementsTable;
-@property (unsafe_unretained) IBOutlet ArgsView *stylesArgsView;
-@property (unsafe_unretained) IBOutlet ArgsView *argsView;
+@property (assign) IBOutlet ArgsView *stylesArgsView;
+@property (assign) IBOutlet ArgsView *argsViewTextview;
 @property (nonatomic,strong) NSDictionary *tmpUIElementDefinition;
 @property (weak) IBOutlet NSScrollView *scrollerStylerParameters;
+@property (weak) IBOutlet NSScrollView *scrollerArgsParameters;
 
 
 @end
@@ -47,6 +48,21 @@
 - (void)windowDidLoad {
     [super windowDidLoad];
  
+    
+    [self.scrollerArgsParameters setAutohidesScrollers:NO];
+    [self.scrollerArgsParameters setHasVerticalScroller:YES];
+    self.scrollerArgsParameters.hasVerticalRuler = YES;
+    self.scrollerArgsParameters.rulersVisible = YES;
+    NoodleLineNumberView *linev = [[NoodleLineNumberView alloc] initWithScrollView:self.scrollerArgsParameters];
+    linev.backgroundColor = [Utils colorWithHexColorString:@"ffffff" alpha:1];
+    linev.textColor = [Utils colorWithHexColorString:@"666666" alpha:1];
+    linev.alternateTextColor  = [Utils colorWithHexColorString:@"ffffff" alpha:1];
+    self.scrollerArgsParameters.verticalRulerView = linev;
+    [self.scrollerArgsParameters setAutohidesScrollers:NO];
+    [self.scrollerArgsParameters setHasVerticalScroller:YES];
+    [self.scrollerArgsParameters setScrollerStyle:NSScrollerStyleOverlay];
+    
+    
     self.nameTextfield.delegate = self;
     NSArray * paths = NSSearchPathForDirectoriesInDomains (NSDesktopDirectory, NSUserDomainMask, YES);
     NSString * desktopPath = [paths objectAtIndex:0];
@@ -67,19 +83,19 @@
     
     self.styleElementsTable.dataSource = self.styleData;
     self.styleElementsTable.delegate = self.styleData;
-    
-    [self.scrollerStylerParameters setAutohidesScrollers:NO];
-    [self.scrollerStylerParameters setHasVerticalScroller:YES];
-    self.scrollerStylerParameters.hasVerticalRuler = YES;
-    self.scrollerStylerParameters.rulersVisible = YES;
-    NoodleLineNumberView *lineView = [[NoodleLineNumberView alloc] initWithScrollView:self.scrollerStylerParameters];
-    lineView.backgroundColor = [Utils colorWithHexColorString:@"ffffff" alpha:1];
-    lineView.textColor = [Utils colorWithHexColorString:@"666666" alpha:1];
-    lineView.alternateTextColor  = [Utils colorWithHexColorString:@"ffffff" alpha:1];
-    self.scrollerStylerParameters.verticalRulerView = lineView;
-    [self.scrollerStylerParameters setAutohidesScrollers:NO];
-    [self.scrollerStylerParameters setHasVerticalScroller:YES];
-    
+//    
+//    [self.scrollerStylerParameters setAutohidesScrollers:NO];
+//    [self.scrollerStylerParameters setHasVerticalScroller:YES];
+//    self.scrollerStylerParameters.hasVerticalRuler = YES;
+//    self.scrollerStylerParameters.rulersVisible = YES;
+//    NoodleLineNumberView *lineView = [[NoodleLineNumberView alloc] initWithScrollView:self.scrollerStylerParameters];
+//    lineView.backgroundColor = [Utils colorWithHexColorString:@"ffffff" alpha:1];
+//    lineView.textColor = [Utils colorWithHexColorString:@"666666" alpha:1];
+//    lineView.alternateTextColor  = [Utils colorWithHexColorString:@"ffffff" alpha:1];
+//    self.scrollerStylerParameters.verticalRulerView = lineView;
+//    [self.scrollerStylerParameters setAutohidesScrollers:NO];
+//    [self.scrollerStylerParameters setHasVerticalScroller:YES];
+//    
     
     
     [self.stylesArgsView setVerticallyResizable:YES];
@@ -87,14 +103,15 @@
     self.stylesArgsView.argsViewIdentifier = @"styler_view";
     
     
-    self.argsView.argsViewdelegate = self;
-    self.argsView.argsViewIdentifier = @"arguments_view";
+    self.argsViewTextview.argsViewdelegate = self;
+    self.argsViewTextview.argsViewIdentifier = @"arguments_view";
     
+ 
 
 }
 - (IBAction)confirmComponent:(id)sender {
     
-    if ([self.argsView validate] == nil || [self.stylesArgsView validate] == nil) {
+    if ([self.argsViewTextview validate] == nil || [self.stylesArgsView validate] == nil) {
         return;
     }
     
@@ -130,7 +147,7 @@
     NSString *path = self.searchPathTextfield.stringValue;
     NSDictionary *valueDic = [self->_namesComponentDataSource objectAtIndex:box.indexOfSelectedItem];
     NSDictionary *def = [CompsReader componentWithName:[valueDic objectForKey:@"name"] inPath:path];
-    [self.argsView cleanView];
+    [self.argsViewTextview cleanView];
     [self.stylesArgsView cleanView];
     
     if (def) {
@@ -146,7 +163,7 @@
     NSString *path = self.searchPathTextfield.stringValue;
     NSDictionary *def = [CompsReader componentWithName:textfield.stringValue inPath:path];
     
-    [self.argsView cleanView];
+    [self.argsViewTextview cleanView];
     [self.stylesArgsView cleanView];
     
     if (def) {
@@ -198,8 +215,7 @@
                                 values:[dict objectForKey:@"values"]];
     }
     
-    [self.argsView addParameters:[self.argsData keys]];
-
+    [self.argsViewTextview addParameters:[self.argsData keys]];
 }
 -(void)componentNotFound{
     self.tmpComponentDefinition = nil;
@@ -211,7 +227,7 @@
     [self.stylesArgsView cleanView];
     
     [self.argsData clean];
-    [self.argsView cleanView];
+    [self.argsViewTextview cleanView];
     
 }
 
@@ -251,9 +267,15 @@ objectValueForItemAtIndex:(NSInteger)index {
     }
     
     if ([argsview.argsViewIdentifier isEqualToString:@"arguments_view"]) {
+        self.validLabel.stringValue = @"valid";
         for (NSString *key in dictionary) {
             [self.argsData changeValue:[dictionary objectForKey:key] forItemWithKey:key];
         }
+    }
+}
+-(void)argsView:(ArgsView *)argsview errorDictionary:(NSError *)error{
+    if ([argsview.argsViewIdentifier isEqualToString:@"arguments_view"]) {
+        self.validLabel.stringValue = @"error";
     }
 }
 @end

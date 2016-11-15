@@ -95,7 +95,7 @@
                     </comboBox>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wOB-vQ-Xic">
                         <rect key="frame" x="20" y="204" width="390" height="58"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" borderStyle="bezel" title="_description_" drawsBackground="YES" id="IuU-5k-HIO">
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" borderStyle="bezel" title="_description_" drawsBackground="YES" id="IuU-5k-HIO">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
