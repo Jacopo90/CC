@@ -133,7 +133,7 @@
 		D1962EEC1DD4A8E400411E5F /* TesterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TesterViewController.m; sourceTree = "<group>"; };
 		D1962EEE1DD4A8FA00411E5F /* ChameleonAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChameleonAppDelegate.h; sourceTree = "<group>"; };
 		D1962EEF1DD4A8FA00411E5F /* ChameleonAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChameleonAppDelegate.m; sourceTree = "<group>"; };
-		EA0228C71DC15EF3009EC56E /* ConfCreator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConfCreator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA0228C71DC15EF3009EC56E /* Cappuccino.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cappuccino.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA0228CA1DC15EF3009EC56E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EA0228CB1DC15EF4009EC56E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EA0228CE1DC15EF4009EC56E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -297,7 +297,7 @@
 		EA0228C81DC15EF3009EC56E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EA0228C71DC15EF3009EC56E /* ConfCreator.app */,
+				EA0228C71DC15EF3009EC56E /* Cappuccino.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -541,9 +541,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EA0228C61DC15EF3009EC56E /* ConfCreator */ = {
+		EA0228C61DC15EF3009EC56E /* Cappuccino */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EA0228EE1DC15EF4009EC56E /* Build configuration list for PBXNativeTarget "ConfCreator" */;
+			buildConfigurationList = EA0228EE1DC15EF4009EC56E /* Build configuration list for PBXNativeTarget "Cappuccino" */;
 			buildPhases = (
 				EA0228C31DC15EF3009EC56E /* Sources */,
 				EA0228C41DC15EF3009EC56E /* Frameworks */,
@@ -554,9 +554,9 @@
 			);
 			dependencies = (
 			);
-			name = ConfCreator;
+			name = Cappuccino;
 			productName = ConfCreator;
-			productReference = EA0228C71DC15EF3009EC56E /* ConfCreator.app */;
+			productReference = EA0228C71DC15EF3009EC56E /* Cappuccino.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -573,7 +573,7 @@
 					};
 				};
 			};
-			buildConfigurationList = EA0228C21DC15EF3009EC56E /* Build configuration list for PBXProject "ConfCreator" */;
+			buildConfigurationList = EA0228C21DC15EF3009EC56E /* Build configuration list for PBXProject "Cappuccino" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -607,7 +607,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EA0228C61DC15EF3009EC56E /* ConfCreator */,
+				EA0228C61DC15EF3009EC56E /* Cappuccino */,
 			);
 		};
 /* End PBXProject section */
@@ -817,7 +817,7 @@
 				INFOPLIST_FILE = ConfCreator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = private.ConfCreator;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Cappuccino;
 			};
 			name = Debug;
 		};
@@ -838,14 +838,14 @@
 				INFOPLIST_FILE = ConfCreator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = private.ConfCreator;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Cappuccino;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EA0228C21DC15EF3009EC56E /* Build configuration list for PBXProject "ConfCreator" */ = {
+		EA0228C21DC15EF3009EC56E /* Build configuration list for PBXProject "Cappuccino" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA0228EC1DC15EF4009EC56E /* Debug */,
@@ -854,7 +854,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EA0228EE1DC15EF4009EC56E /* Build configuration list for PBXNativeTarget "ConfCreator" */ = {
+		EA0228EE1DC15EF4009EC56E /* Build configuration list for PBXNativeTarget "Cappuccino" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA0228EF1DC15EF4009EC56E /* Debug */,
