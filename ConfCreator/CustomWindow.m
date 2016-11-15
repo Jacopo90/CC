@@ -112,12 +112,6 @@
  the user to drag (so we have to implement dragging ourselves)
  */
 - (void)mouseDragged:(NSEvent *)theEvent {
-    if (CGRectContainsPoint(self.menuView.frame, self.initialLocation))    {
-        self.canMove = YES;
-    }else{
-        self.canMove = NO;
-    }
-
     if (!self.canMove) {
         return;
     }

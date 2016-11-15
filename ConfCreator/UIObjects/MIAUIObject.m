@@ -15,11 +15,9 @@
 @end
 
 @implementation MIAUIObject
--(BOOL)wantsDefaultClipping{
 
-    return YES;
-}
 -(void)mouseDown:(NSEvent *)theEvent{
+    [self.window mouseDown:theEvent];
     [self.delegate uiObject:self tapped:YES];
 }
 - (IBAction)remove:(id)sender {
