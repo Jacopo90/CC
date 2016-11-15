@@ -2504,15 +2504,48 @@
       "name": "mia.mux",
       "signals": [
         {
-          "name": ""
+          "name": "value",
+         "description":""
+
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "set_key",
+          "description":"setta la chiave del dizionario"
+        },
+         {
+          "name": "set_value",
+          "description":"setta il valore del paramtetro se anche già la chiave è impostata"
+        },
+         {
+          "name": "emit",
+          "description":"emette il dizionario completo se esiste"
+        }, {
+          "name": "set_value_emit",
+          "description":"setta il valore del parametro assumendo che una chiave sia già stata impostata ed emette il dizionario"
         }
       ],
-      "args": []
+      "args": [
+        {
+          "name": "key",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+         {
+          "name": "value",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+         {
+          "name": "autoclean",
+          "type": "boolean",
+          "default": "",
+          "values": []
+        },
+        ]
     },
     {
       "name": "faves_list",

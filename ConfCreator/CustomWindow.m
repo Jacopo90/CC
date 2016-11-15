@@ -96,13 +96,13 @@
  the initial location.
  */
 - (void)mouseDown:(NSEvent *)theEvent {
-    
-    if (CGRectContainsPoint(self.menuView.frame, [theEvent locationInWindow]))    {
+    self.initialLocation = [theEvent locationInWindow];
+
+    if (CGRectContainsPoint(self.menuView.frame, self.initialLocation))    {
         self.canMove = YES;
     }else{
         self.canMove = NO;
     }
-    self.initialLocation = [theEvent locationInWindow];
 
     // Get the mouse location in window coordinates.
 }
@@ -112,6 +112,12 @@
  the user to drag (so we have to implement dragging ourselves)
  */
 - (void)mouseDragged:(NSEvent *)theEvent {
+    if (CGRectContainsPoint(self.menuView.frame, self.initialLocation))    {
+        self.canMove = YES;
+    }else{
+        self.canMove = NO;
+    }
+
     if (!self.canMove) {
         return;
     }
