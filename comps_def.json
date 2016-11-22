@@ -2837,125 +2837,299 @@
     {
       "name": "listview_item_configurator",
       "signals": [
-        {
-          "name": ""
-        }
+        
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+       
       ],
-      "args": []
+      "args": [
+        {
+          "name": "field",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "options",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "join_fields",
+          "type": "array",
+          "default": "",
+          "values": []
+        }
+        ]
     },
     {
       "name": "search",
       "signals": [
         {
-          "name": ""
+          "name": "search.storage_did_change"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "search.begin_with_event"
         }
       ],
-      "args": []
+      "args": [{
+          "name": "datasource_uid",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "datasource_filter_param_name",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "forced_filters",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "default_filters",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "storage",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "form_director",
       "signals": [
-        {
-          "name": ""
-        }
+        
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+        
       ],
-      "args": []
+      "args": [{
+          "name": "form_uid",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "serialization_policy",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "confirmbutton_uid",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "navigation_bar_id",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "validation",
+          "type": "boolean",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "navigation_bar_button_id",
+          "type": "string",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "simple_image",
       "signals": [
-        {
-          "name": ""
-        }
+       
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+        
       ],
       "args": []
     },
     {
       "name": "simple_label",
       "signals": [
-        {
-          "name": ""
-        }
+       
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+        
       ],
-      "args": []
+      "args": [{
+          "name": "text",
+          "type": "string",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "favourites",
       "signals": [
-        {
-          "name": ""
+         {
+          "name": "fav.container_did_load"
+        },
+         {
+          "name": "fav.data_saved"
+        },
+         {
+          "name": "fav.faves"
+        },
+         {
+          "name": "fav.dictionaries"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "fav.perform_action"
+        },
+         {
+          "name": "update_list"
+        },
+         {
+          "name": "fav.emit_faves_dictionaries"
+        },
+         {
+          "name": "fav.delete_item_at_index"
         }
       ],
-      "args": []
+      "args": [{
+          "name": "list_component_id",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "data_source_id",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "save_action_tag",
+          "type": "integer",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "behaviour",
+          "type": "string",
+          "default": "",
+          "values": ["passive","show_faves"]
+        },
+        {
+          "name": "storage_path",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+         {
+          "name": "fave_saved_message",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "fave_removed_message",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "segue_to_instance_id",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "detail_segue_id",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "uniqueness_field",
+          "type": "string",
+          "default": "",
+          "values": []
+        }
+        ]
     },
     {
       "name": "fgallery_segue",
       "signals": [
-        {
-          "name": ""
-        }
+        
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+        
       ],
-      "args": []
+      "args": [{
+          "name": "image_key",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "caption_key",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "base_url",
+          "type": "boolean",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "layout_manager",
       "signals": [
-        {
-          "name": ""
-        }
+        
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+        
       ],
-      "args": []
+      "args": [{
+          "name": "layout_extends",
+          "type": "string",
+          "default": "",
+          "values": ["top","left","bottom","right","all","none","auto_adjust_insets","extend_layout_with_opaque_bars"]
+        },
+        {
+          "name": "hide_when_swipe",
+          "type": "boolean",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "nav_bar_hidden",
+          "type": "boolean",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "web_action_component",
       "signals": [
-        {
-          "name": ""
-        }
+       
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "web_action_component.handle_request"
         }
       ],
       "args": []
@@ -2963,28 +3137,43 @@
     {
       "name": "tracker",
       "signals": [
-        {
-          "name": ""
-        }
+        
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "tracker.send_event"
+        },
+        {
+          "name": "tracker.send_screen"
         }
       ],
-      "args": []
+      "args": [{
+          "name": "active_services",
+          "type": "array",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "screen_name",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "activate_screen_tracking",
+          "type": "boolean",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "nav_listener",
       "signals": [
         {
-          "name": ""
+          "name": "nav_listener:dismiss_modal"
         }
       ],
       "receptors": [
-        {
-          "name": ""
-        }
       ],
       "args": []
     },
@@ -3032,103 +3221,289 @@
           "type": "boolean",
           "default": "",
           "values": []
-        },
+        }
         ]
     },
     {
       "name": "faves_list",
       "signals": [
         {
-          "name": ""
+          "name": "faves_list.titles"
+        },
+        {
+          "name": "faves_list.instances"
+        },
+        {
+          "name": "faves_list.item"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "faves_list.set_index"
+        },
+         {
+          "name": "faves_list.emit"
+        },
+         {
+          "name": "faves_list.emit_titles"
+        },
+         {
+          "name": "faves_list.emit_instances"
+        },
+         {
+          "name": "faves_list.item_at"
         }
       ],
-      "args": []
+      "args": [{
+          "name": "fav_list",
+          "type": "boolean",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "date_picker",
       "signals": [
         {
-          "name": ""
+          "name": "date_picker.date"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "date_picker.completed"
         }
       ],
-      "args": []
+      "args": [{
+          "name": "glyph",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "date_format",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "output_date_format",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "autoload",
+          "type": "boolean",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "indicator_style",
+          "type": "integer",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "button_title",
+          "type": "string",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "mia.context",
       "signals": [
         {
-          "name": ""
+          "name": "context"
+        },
+        {
+          "name": "value"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "emit"
+        },
+         {
+          "name": "add_item_context"
+        },
+         {
+          "name": "set_context_key"
+        },
+         {
+          "name": "object_from_key"
         }
       ],
-      "args": []
+      "args": [{
+          "name": "context_key",
+          "type": "string",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "mia.context_adapter",
       "signals": [
         {
-          "name": ""
+          "name": "emit"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "adapt"
         }
       ],
-      "args": []
+      "args": [{
+          "name": "key",
+          "type": "string",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "mia.http_request",
       "signals": [
         {
-          "name": ""
+          "name": "request"
+        },
+        {
+          "name": "raw"
+        },{
+          "name": "progress"
+        },{
+          "name": "response"
+        },{
+          "name": "error"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "set_endpoint"
+        },
+        {
+          "name": "set_headers"
+        },{
+          "name": "set_query_params"
+        },{
+          "name": "set_arr_query_params"
+        },{
+          "name": "set_body_params"
+        },{
+          "name": "perform"
+        },{
+          "name": "emit_request"
         }
       ],
-      "args": []
+      "args": [{
+          "name": "mq_params_full",
+          "type": "boolean",
+          "default": "",
+          "values": []
+        },{
+          "name": "content-type",
+          "type": "string",
+          "default": "",
+          "values": ["form-data"]
+        },
+        {
+          "name": "append_query_params",
+          "type": "boolean",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "array_data",
+          "type": "boolean",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "array_data",
+          "type": "boolean",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "end_point",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "method",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "query_params",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "arr_query_params",
+          "type": "array",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "serialization",
+          "type": "integer",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "headers",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "body_params",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "mia.info_view",
       "signals": [
-        {
-          "name": ""
-        }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "info_view.apply_data"
         }
       ],
-      "args": []
+      "args": [{
+          "name": "bindings",
+          "type": "array",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "mia.number_validator",
       "signals": [
         {
-          "name": ""
+          "name": "number_validator.is_number"
+        },
+         {
+          "name": "number_validator.not_number"
+        },
+         {
+          "name": "number_validator.number"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "number_validator.validate"
+        },
+         {
+          "name": "number_validator.set_value"
+        },
+         {
+          "name": "number_validator.to_number"
         }
       ],
       "args": []
@@ -3136,27 +3511,33 @@
     {
       "name": "mia.image_view",
       "signals": [
-        {
-          "name": ""
-        }
+        
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "image_view.set_image"
+        },
+        {
+          "name": "image_view.set_data_image"
         }
       ],
-      "args": []
+      "args": [{
+          "name": "setting_image",
+          "type": "string",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "code_reader",
       "signals": [
         {
-          "name": ""
+          "name": "codeReader.result"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "codeReader.show"
         }
       ],
       "args": []
@@ -3165,110 +3546,402 @@
       "name": "http_status",
       "signals": [
         {
-          "name": ""
+          "name": "continue"
+        },
+        {
+          "name": "switch_protocols"
+        },
+        {
+          "name": "processing"
+        },{
+          "name": "success_ok"
+        },
+        {
+          "name": "success_created"
+        },
+        {
+          "name": "success_accepted"
+        },
+        {
+          "name": "success_non_authoritative"
+        },
+        {
+          "name": "success_no_content"
+        },
+        {
+          "name": "success_reset_content"
+        },{
+          "name": "success_partial_content"
+        },
+        {
+          "name": "success_multi_status"
+        },
+        {
+          "name": "success_already_reported"
+        },
+        {
+          "name": "multiple_choise"
+        },
+        {
+          "name": "moved_permanently"
+        },
+        {
+          "name": "found"
+        },
+        {
+          "name": "see_other"
+        },
+        {
+          "name": "not_modified"
+        },
+        {
+          "name": "use_proxy"
+        },
+        {
+          "name": "switch_proxy"
+        },
+        {
+          "name": "temporary_redirect"
+        },
+        {
+          "name": "permanent_redirect"
+        },
+        {
+          "name": "bad_request"
+        },
+        {
+          "name": "unathorized"
+        },
+        {
+          "name": "payment_required"
+        },
+        {
+          "name": "forbidden"
+        },
+        {
+          "name": "not_found"
+        },{
+          "name": "internal_server_error"
+        },
+        {
+          "name": "not_implemented"
+        },
+        {
+          "name": "bad_gateway"
+        },
+        {
+          "name": "unknown_error"
+        },
+         {
+          "name": "not_success"
+        },
+         {
+          "name": "no_code"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "payload"
         }
       ],
-      "args": []
+      "args": [{
+          "name": "code_key",
+          "type": "string",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "mia.string_validator",
       "signals": [
         {
-          "name": ""
+          "name": "string_validator.is_string"
+        },
+        {
+          "name": "string_validator.not_string"
+        },
+        {
+          "name": "string_validator.not_null"
+        },
+        {
+          "name": "string_validator.is_null"
+        },
+        {
+          "name": "string_validator.are_equals"
+        },
+        {
+          "name": "string_validator.not_equals"
+        },{
+          "name": "string_validator.convertedString"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "string_validator.compareString"
+        },
+        {
+          "name": "string_validator.toString"
+        },
+        {
+          "name": "string_validator.validate"
+        },
+        {
+          "name": "string_validator.set_value"
+        },
+        {
+          "name": "string_validator.check"
+        },{
+          "name": "string_validator.set_and_check"
         }
       ],
-      "args": []
+      "args": [{
+          "name": "comparison_string",
+          "type": "string",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "mia.squid",
       "signals": [
         {
-          "name": ""
+          "name": "value_dict"
+        },
+          {
+          "name": "value_string"
+        },
+          {
+          "name": "value_array"
+        },
+          {
+          "name": "error"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "mutate_data"
+        },
+          {
+          "name": "set_context"
         }
       ],
-      "args": []
+      "args": [{
+          "name": "context",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "mia.string_conversion",
       "signals": [
         {
-          "name": ""
+          "name": "value"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "convert"
         }
       ],
-      "args": []
+      "args": [{
+          "name": "conversion_type",
+          "type": "string",
+          "default": "",
+          "values": ["MD5","default","capitalized"]
+        }]
     },
     {
       "name": "mia.signup_adapter",
       "signals": [
         {
-          "name": ""
+          "name": "mia_serialization"
+        },
+        {
+          "name": "validated"
+        },
+        {
+          "name": "data"
+        },
+        {
+          "name": "error"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "validate_serialization"
+        },
+          {
+          "name": "fb_serialization"
+        },
+          {
+          "name": "adapt"
         }
       ],
-      "args": []
+      "args": [{
+          "name": "pwd_key",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "pwd_confirm_key",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "form_sex_option_key",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "sex_key",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "birthday_key",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "phone_key",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "name_key",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "surname_key",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "email_key",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "appid_key",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "male_key",
+          "type": "string",
+          "default": "",
+          "values": []
+        },{
+          "name": "female_key",
+          "type": "string",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "mia.social",
       "signals": [
+         {
+          "name": "userdata"
+        },
         {
-          "name": ""
+          "name": "will_login"
+        },
+        {
+          "name": "will_log_out"
+        }, {
+          "name": "did_login"
+        },
+        {
+          "name": "did_logout"
+        },
+        {
+          "name": "status"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "login"
+        },
+        {
+          "name": "logout"
+        },
+        {
+          "name": "ask_userdata"
         }
       ],
-      "args": []
+      "args": [{
+          "name": "social",
+          "type": "string",
+          "default": "",
+          "values": ["facebook","twitter","google","admobile"]
+        }]
     },
     {
       "name": "mia.login_adapter",
       "signals": [
         {
-          "name": ""
+          "name": "validated"
+        },
+         {
+          "name": "error"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "serialize"
         }
       ],
-      "args": []
+      "args": [{
+          "name": "return_user",
+          "type": "boolean",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "input_keys",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "output_keys",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "mia.is_null",
       "signals": [
         {
-          "name": ""
+          "name": "not_null"
+        },
+        {
+          "name": "is_null"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "validate"
+        },
+         {
+          "name": "set_value"
+        },
+         {
+          "name": "set_validate"
         }
       ],
       "args": []
@@ -3277,124 +3950,275 @@
       "name": "mia.struct",
       "signals": [
         {
-          "name": ""
+          "name": "array"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "add_to_array"
+        },
+         {
+          "name": "set_array"
+        },
+         {
+          "name": "add_emit_array"
+        },
+         {
+          "name": "clean"
         }
       ],
-      "args": []
+      "args": [{
+          "name": "array",
+          "type": "array",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "mia.dyn_label",
       "signals": [
         {
-          "name": ""
+          "name": "dlabel.update_style"
         }
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+        
       ],
-      "args": []
+      "args": [{
+          "name": "dyn_conf",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "mia.desc_view",
       "signals": [
         {
-          "name": ""
+          "name": "descview.didtapview"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "descview.setimage"
+        },
+        {
+          "name": "descview.settitle"
+        },
+        {
+          "name": "descview.setsubtitle"
         }
       ],
-      "args": []
+      "args": [{
+          "name": "binder_descriptor",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "binder_image_key",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "binder_title_key",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "binder_subtitle_key",
+          "type": "string",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "mia.text_button",
       "signals": [
-        {
-          "name": ""
+         {
+          "name": "button_press"
+        },
+         {
+          "name": "textfield_didEndEditing"
+        },
+         {
+          "name": "textfield_value"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "textfield_emitText"
+        },
+         {
+          "name": "textfield_setText"
         }
       ],
-      "args": []
+      "args": [ {
+          "name": "placeholder",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+         {
+          "name": "button_title",
+          "type": "string",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "mia.header_contest",
       "signals": [
-        {
-          "name": ""
-        }
+        
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+       
       ],
-      "args": []
+      "args": [{
+          "name": "styles",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "bindings",
+          "type": "array",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "hide_button",
+          "type": "boolean",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "mia.sender_data_tmpl1",
       "signals": [
-        {
-          "name": ""
-        }
+       
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+       
       ],
-      "args": []
+      "args": [{
+          "name": "form_component_id",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "confirm_button_id",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+         {
+          "name": "form_serialization_policy",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "end_point",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "method",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "handler",
+          "type": "string",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "mia.three_buttons",
       "signals": [
         {
-          "name": ""
+          "name": "threebuttons_first_pressed"
+        },
+         {
+          "name": "threebuttons_second_pressed"
+        }, {
+          "name": "threebuttons_third_pressed"
         }
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+       
       ],
-      "args": []
+      "args": [{
+          "name": "button1_title",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "button2_title",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "button3_title",
+          "type": "string",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "mia.code_creator",
       "signals": [
         {
-          "name": ""
+          "name": "image"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "set_text"
+        },
+        {
+          "name": "set_type"
+        },
+        {
+          "name": "create"
         }
       ],
-      "args": []
+      "args": [{
+          "name": "text",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "image_size",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "type",
+          "type": "string",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "mia.events_plist",
       "signals": [
-        {
-          "name": ""
-        }
+       
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "events_plist.set_settings"
         }
       ],
       "args": []
@@ -3403,54 +4227,79 @@
       "name": "mia.code_scanner",
       "signals": [
         {
-          "name": ""
+          "name": "error"
+        },
+          {
+          "name": "error_message"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "perform"
         }
       ],
-      "args": []
+      "args": [{
+          "name": "log_message",
+          "type": "string",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "mia.offline_cache",
       "signals": [
         {
-          "name": ""
+          "name": "emit_content"
+        },
+        {
+          "name": "emit_url"
+        },
+        {
+          "name": "error"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "request_url"
+        },
+        {
+          "name": "request_data"
         }
       ],
-      "args": []
+      "args": [{
+          "name": "offline_cache_channel",
+          "type": "string",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "mia.activity",
       "signals": [
-        {
-          "name": ""
-        }
+        
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "show_activity"
         }
       ],
-      "args": []
+      "args": [{
+          "name": "content_type",
+          "type": "string",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "mia.action_creator",
       "signals": [
         {
-          "name": ""
+          "name": "error_message"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "perform_from_json"
         }
       ],
       "args": []
@@ -3458,13 +4307,14 @@
     {
       "name": "mia.doc_interaction",
       "signals": [
-        {
-          "name": ""
-        }
+       
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "show_from_url_string"
+        },
+        {
+          "name": "show_from_url"
         }
       ],
       "args": []
@@ -3472,184 +4322,323 @@
     {
       "name": "banner_ad",
       "signals": [
-        {
-          "name": ""
-        }
+       
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+       
       ],
-      "args": []
+      "args": [{
+          "name": "banner_sticks",
+          "type": "string",
+          "default": "",
+          "values": ["top","bottom"]
+        },{
+          "name": "banner_unit_id",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "interstitial_unit_id",
+          "type": "string",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "mia.image_loader",
       "signals": [
         {
-          "name": ""
+          "name": "image"
+        },
+         {
+          "name": "error"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "set_image_name"
+        },
+        {
+          "name": "set_complete_image_url"
+        },
+        {
+          "name": "load"
         }
       ],
-      "args": []
+      "args": [{
+          "name": "type",
+          "type": "integer",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "crop",
+          "type": "boolean",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "retina",
+          "type": "boolean",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "image_size",
+          "type": "string",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "product_cart",
       "signals": [
-        {
-          "name": ""
-        }
+        
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+        
       ],
-      "args": []
+      "args": [ {
+          "name": "bindings",
+          "type": "array",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "styles",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "room_booking_try_book",
       "signals": [
-        {
-          "name": ""
-        }
+       
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+       
       ],
       "args": []
     },
     {
       "name": "nav_cart",
       "signals": [
-        {
-          "name": ""
-        }
+        
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+       
       ],
       "args": []
     },
     {
       "name": "mia.log",
       "signals": [
-        {
-          "name": ""
-        }
+        
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "log"
         }
       ],
-      "args": []
+      "args": [{
+          "name": "value",
+          "type": "id",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "mia.lc_history",
       "signals": [
         {
-          "name": ""
+          "name": "cards"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "get_cards"
         }
       ],
-      "args": []
+      "args": [{
+          "name": "history_path",
+          "type": "string",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "mia.lc_card",
       "signals": [
-        {
-          "name": ""
-        }
+        
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+        
       ],
-      "args": []
+      "args": [{
+          "name": "lc_args",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "mia.toolbar",
       "signals": [
-        {
-          "name": ""
-        }
+        
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+       
       ],
-      "args": []
+      "args": [{
+          "name": "buttons",
+          "type": "array",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "mia.animate_toolbar",
       "signals": [
-        {
-          "name": ""
-        }
+        
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+       
       ],
-      "args": []
+      "args": [{
+          "name": "webview_component_id",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "toolbar_component_id",
+          "type": "string",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "mia.url_scheme",
       "signals": [
-        {
-          "name": ""
-        }
+       
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "url_scheme.load_with_params"
         }
       ],
-      "args": []
+      "args": [{
+          "name": "app_scheme",
+          "type": "string",
+          "default": "",
+          "values": ["apple_map","google_map"]
+        }]
     },
     {
       "name": "mia.string_manager",
       "signals": [
         {
-          "name": ""
+          "name": "s_value"
+        },
+         {
+          "name": "s_length"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "r_get_value"
+        },
+        {
+          "name": "r_get_length"
+        },
+        {
+          "name": "r_set_value"
+        },
+        {
+          "name": "r_append_string"
         }
       ],
-      "args": []
+      "args": [{
+          "name": "enable_squid",
+          "type": "boolean",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "string",
+          "type": "string",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "mia.dictionary_manager",
       "signals": [
         {
-          "name": ""
+          "name": "s_dictionary"
+        }, {
+          "name": "s_all_keys"
+        },
+         {
+          "name": "s_all_objects"
+        },
+         {
+          "name": "s_count"
+        }, {
+          "name": "s_object"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "r_get_objects"
+        },
+        {
+          "name": "r_get_keys"
+        },
+        {
+          "name": "r_get_dictionary"
+        },
+        {
+          "name": "r_get_count"
+        },
+        {
+          "name": "r_get_object"
+        },
+        {
+          "name": "r_set_dictionary"
+        },
+        {
+          "name": "r_set_object"
+        },
+        {
+          "name": "r_add_objects"
+        },
+        {
+          "name": "r_remove_all_objects"
+        },{
+          "name": "r_remove_object"
         }
       ],
-      "args": []
+      "args": [{
+          "name": "enable_squid",
+          "type": "boolean",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "dictionary",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "key",
+          "type": "string",
+          "default": "",
+          "values": []
+        }]
     }
   ]
 }
