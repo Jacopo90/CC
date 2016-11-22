@@ -5,21 +5,21 @@
       "signals": [
         {
           "name": "value.value",
-          "description": ""
+          "description": "emette il valore"
         }
       ],
       "receptors": [
         {
           "name": "value.set",
-          "description": ""
+          "description": "setta il valore"
         },
         {
           "name": "value.emit",
-          "description": ""
+          "description": "chiede di emettere il valore, scatena il segnale value.value"
         },
         {
           "name": "value.clear",
-          "description": ""
+          "description": "rimuove il valore impostato"
         }
       ],
       "args": [
@@ -36,7 +36,7 @@
       "signals": [
         {
           "name": "error",
-          "description": ""
+          "description": "emesso quando l'operazione ritorna errore"
         },
         {
           "name": "ok",
@@ -1615,15 +1615,39 @@
       "name": "mia.map_annotations_manager",
       "signals": [
         {
-          "name": ""
+          "name": "map_manager:emit_data",
+          "description":""
         }
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+       
       ],
-      "args": []
+      "args": [
+        {
+          "name": "clear_previous_annotations",
+          "type": "boolean",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "data_source_component_id",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+         {
+          "name": "map_view_component_id",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "data_uniqueness_field",
+          "type": "string",
+          "default": "",
+          "values": []
+        }
+        ]
     },
     {
       "name": "mia.split_view",
@@ -1637,35 +1661,124 @@
           "name": ""
         }
       ],
-      "args": []
+      "args": [
+         {
+          "name": "background_container",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        },
+         {
+          "name": "foreground_container",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "drawer_start_position",
+          "type": "string",
+          "default": "",
+          "values": ["top","bottom","center"]
+        }
+        ]
     },
     {
       "name": "mia.no_data_director",
       "signals": [
-        {
-          "name": ""
-        }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "r_dismiss"
+        },
+         {
+          "name": "r_show"
         }
       ],
-      "args": []
+      "args": [
+        {
+          "name": "icon_font_size",
+          "type": "float",
+          "default": "",
+          "values": []
+        },
+         {
+          "name": "data_source_uid",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+         {
+          "name": "no_data_glyph",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "bg_image",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "no_data_message",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "style",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        },
+         {
+          "name": "component_id",
+          "type": "string",
+          "default": "",
+          "values": []
+        }
+        ]
     },
     {
       "name": "mia.form_data_sender",
       "signals": [
-        {
-          "name": ""
-        }
+       
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+       
       ],
-      "args": []
+      "args": [
+        {
+          "name": "serialization_policy",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+         {
+          "name": "form_uid",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+         {
+          "name": "navigation_bar_id",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+         {
+          "name": "dismiss_segue_uid",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "validation",
+          "type": "boolean",
+          "default": "",
+          "values": []
+        }
+        ]
     },
     {
       "name": "data_source",
@@ -1774,29 +1887,120 @@
       "name": "controller_categories",
       "signals": [
         {
-          "name": ""
+          "name":"map_view.did_focus_user",
+          "description":""
+        },
+         {
+          "name":"map_view.did_focus_pin",
+          "description":""
+        },
+         {
+          "name":"map_view.did_deselect_annotation",
+          "description":""
+        },
+         {
+          "name":"map_view.did_select_annotation",
+          "description":""
+        },
+         {
+          "name":"map_view.tap_accessory_view",
+          "description":""
+        },
+         {
+          "name":"map_view.payload_to_location",
+          "description":""
         }
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+       {
+         "name":"map_view.focus",
+         "description":""
+       },
+       {
+         "name":"map_view.focus_pin",
+         "description":""
+       },
+       {
+         "name":"map_view.focus_user_location",
+         "description":""
+       },
+       {
+         "name":"map_view.add_annotation_data",
+         "description":""
+       }
       ],
       "args": []
     },
     {
       "name": "map_view",
       "signals": [
-        {
-          "name": ""
-        }
+        
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+       
       ],
-      "args": []
+      "args": [
+           {
+          "name": "data_source_id",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+          {
+          "name": "location_binding",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+         {
+          "name": "annotation_binding",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+         {
+          "name": "pin_image",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+         {
+          "name": "segue_to_instance_id",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "detail_segue_id",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+         {
+          "name": "show_user_location",
+          "type": "boolean",
+          "default": "",
+          "values": []
+        },
+         {
+          "name": "nav_bar_icon_focus_pin",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "nav_bar_icon_focus_user",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "nav_bar_button_id",
+          "type": "string",
+          "default": "",
+          "values": []
+        }
+        ]
     },
     {
       "name": "list_view",
@@ -1924,72 +2128,98 @@
     {
       "name": "list_pull_refresh",
       "signals": [
-        {
-          "name": ""
-        }
+       
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+        
       ],
-      "args": []
+      "args": [
+          {
+          "name": "styles",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        }
+        ]
     },
     {
       "name": "list_continuous_load",
       "signals": [
-        {
-          "name": ""
-        }
+        
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+        
       ],
-      "args": []
+      "args": [
+         {
+          "name": "remove_cells",
+          "type": "boolean",
+          "default": "",
+          "values": []
+        }
+        ]
+      
     },
     {
       "name": "detail_segue",
       "signals": [
-        {
-          "name": ""
-        }
+        
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "segue.perform_with_data"
         }
       ],
-      "args": []
+      "args": [
+        {
+          "name": "controller_class",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "build_args",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "controller_instance",
+          "type": "string",
+          "default": "",
+          "values": []
+        }
+        ]
     },
     {
       "name": "data_source_arg",
       "signals": [
-        {
-          "name": ""
-        }
+        
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+        
       ],
       "args": []
     },
     {
       "name": "dismiss_segue",
       "signals": [
-        {
-          "name": ""
-        }
+       
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "dismiss_segue.dismiss_with_data",
+          "description":"dismette il controller corrente passandogli i dati, is canceled = NO"
+        },
+        {
+          "name": "dismiss_segue.dismiss",
+          "description":"dismette il controller corrente senza passaggio di dati, is canceled = YES"
+
         }
       ],
-      "args": []
+      "args": [
+        
+        ]
     },
     {
       "name": "loading_view",
@@ -1997,10 +2227,12 @@
       ],
       "receptors": [
         {
-          "name": "ui.loading_view.show"
+          "name": "ui.loading_view.show",
+          "description":"mostra la loading view"
         },
           {
-          "name": "ui.loading_view.dismiss"
+          "name": "ui.loading_view.dismiss",
+          "description":"dismette la loading view"
         }
       ],
       "args": [
@@ -2021,30 +2253,35 @@
     {
       "name": "list_no_data",
       "signals": [
-        {
-          "name": ""
-        }
+        
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+       
       ],
-      "args": []
+      "args": [
+            {
+          "name": "message",
+          "type": "string",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "error_view",
       "signals": [
-        {
-          "name": ""
-        }
+        
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+        
       ],
-      "args": []
+      "args": [
+         {
+          "name": "message",
+          "type": "string",
+          "default": "",
+          "values": []
+        }
+        ]
     },
     {
       "UI":[
@@ -2091,36 +2328,82 @@
           "type": "string",
           "default": "",
           "values": []
-        },
+        }
       ]
     },
     {
       "name": "category_segue",
       "signals": [
-        {
-          "name": ""
-        }
+        
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+        
       ],
-      "args": []
+      "args": [ {
+          "name": "next_cat_node_ctrl_class",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "next_cat_node_build_args",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "category_target_ctrl_class",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "category_target_build_args",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        }
+        ]
     },
     {
       "name": "list_header",
       "signals": [
-        {
-          "name": ""
-        }
+       
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+        
       ],
-      "args": []
+      "args": [{
+          "name": "nib",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "class",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "bindings",
+          "type": "array",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "data",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "height",
+          "type": "float",
+          "default": "",
+          "values": []
+        }
+        ]
     },
     {
       "name": "profile_view",
