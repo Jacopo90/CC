@@ -2408,84 +2408,86 @@
     {
       "name": "profile_view",
       "signals": [
-        {
-          "name": ""
-        }
+       
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+       
       ],
-      "args": []
+      "args": [
+         {
+          "name": "hide_user_image",
+          "type": "boolean",
+          "default": "",
+          "values": []
+        },
+         {
+          "name": "login_instance_id",
+          "type": "string",
+          "default": "",
+          "values": []
+        }
+        ]
     },
     {
       "name": "segue_router",
       "signals": [
-        {
-          "name": ""
-        }
+        
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+       
       ],
-      "args": []
+      "args": [
+        {
+          "name": "routes",
+          "type": "array",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "load_instances",
+          "type": "boolean",
+          "default": "",
+          "values": []
+        }
+        ]
     },
     {
       "name": "loyalty_data_component",
       "signals": [
-        {
-          "name": ""
-        }
+       
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+        
       ],
       "args": []
     },
     {
       "name": "detail_product",
       "signals": [
-        {
-          "name": ""
-        }
+        
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+        
       ],
       "args": []
     },
     {
       "name": "disclaimer",
       "signals": [
-        {
-          "name": ""
-        }
+       
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+      
       ],
       "args": []
     },
     {
       "name": "confirm_button",
       "signals": [
-        {
-          "name": ""
-        }
+       
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+       
       ],
       "args": []
     },
@@ -2493,27 +2495,69 @@
       "name": "web_view",
       "signals": [
         {
-          "name": ""
+          "name": "web_view.did_start_load"
+        },{
+          "name": "web_view.did_end_load"
+        },
+        {
+          "name": "web_view.did_fail"
+        },
+        {
+          "name": "web_view.load_request"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "web_view.load_page"
+        },
+        {
+          "name": "web_action_component.load_url"
+        },
+        {
+          "name": "web_action_component.load_request"
+        },
+        {
+          "name": "web_view.load_url"
+        },
+        {
+          "name": "web_view.back"
+        },
+        {
+          "name": "web_view.forward"
         }
       ],
-      "args": []
+      "args": [{
+          "name": "detector_type",
+          "type": "integer",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "kb_user_action",
+          "type": "boolean",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "enable_zoom",
+          "type": "boolean",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "override_load",
+          "type": "boolean",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "code_view",
       "signals": [
-        {
-          "name": ""
-        }
+        
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+        
       ],
       "args": []
     },
@@ -2521,55 +2565,134 @@
       "name": "form_component",
       "signals": [
         {
-          "name": ""
+          "name": "form.data"
+        }, {
+          "name": "form.container_did_load"
+        },
+         {
+          "name": "validation_err_message"
+        },
+         {
+          "name": "serialized_data"
+        },
+         {
+          "name": "field_interaction"
+        }, {
+          "name": "value"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "form.perform_data_send"
+        },
+        {
+          "name": "serialize"
+        },
+        {
+          "name": "deserialize"
+        },
+        {
+          "name": "field_value"
+        },{
+          "name": "set_field_value"
+        },
+        {
+          "name": "select_field"
+        },{
+          "name": "fields_values"
         }
       ],
-      "args": []
+      "args": [{
+          "name": "table_conf",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "inline_model_conf",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "model_json_conf",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "model_from_datasource",
+          "type": "number",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "model_provider_class",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+         {
+          "name": "datasource_model_id",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "allows_responder_chain",
+          "type": "boolean",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "controller_pager_component",
       "signals": [
         {
-          "name": ""
+          "name": "page_controller.emit_data"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "r_add_args_to_controller"
         }
       ],
-      "args": []
+      "args": [{
+          "name": "controller_sequence",
+          "type": "array",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "titles_fills_space",
+          "type": "boolean",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "pagination_style",
+          "type": "string",
+          "default": "",
+          "values": ["tabstrip","default"]
+        }]
     },
     {
       "name": "segmented_pager_navigator",
       "signals": [
-        {
-          "name": ""
-        }
+        
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+       
       ],
       "args": []
     },
     {
       "name": "summary_view",
       "signals": [
-        {
-          "name": ""
-        }
+       
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+        
       ],
       "args": []
     },
@@ -2577,57 +2700,139 @@
       "name": "category_cursor",
       "signals": [
         {
-          "name": ""
+          "name": "category_cursor.category_selected"
+        },
+        {
+          "name": "category_cursor.last_category_selected"
         }
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+       
       ],
-      "args": []
+      "args": [{
+          "name": "next_node_components",
+          "type": "array",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "target_container",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "component_container_builder",
       "signals": [
-        {
-          "name": ""
-        }
+       
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+       
       ],
-      "args": []
+      "args": [{
+          "name": "base_components",
+          "type": "array",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "base_styles",
+          "type": "array",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "base_layout",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "base_junctions",
+          "type": "array",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "base_params",
+          "type": "array",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "segue_to_instance",
       "signals": [
         {
-          "name": ""
+          "name": "segue.performed"
         }
       ],
       "receptors": [
         {
-          "name": ""
+          "name": "segue.perform_with_data"
+        },
+        {
+          "name": "segue.perform"
+        },
+        {
+          "name": "segue.perform_with_event"
+        },
+        {
+          "name": "segue.set_instance_id"
         }
       ],
-      "args": []
+      "args": [{
+          "name": "ctrl_instance_id",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "transition",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "navbar_component_id",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "navbar_button_id",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "data_source_id",
+          "type": "string",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "view_model",
       "signals": [
-        {
-          "name": ""
-        }
+        
       ],
       "receptors": [
-        {
-          "name": ""
-        }
+        
       ],
-      "args": []
+      "args": [{
+          "name": "view_model_id",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "options",
+          "type": "dictionary",
+          "default": "",
+          "values": []
+        }]
     },
     {
       "name": "listview_item_configurator",
