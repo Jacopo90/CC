@@ -31,6 +31,9 @@
 #import "ChameleonAppDelegate.h"
 #import "FileManager.h"
 
+#import "Alert.h"
+
+
 @interface AppDelegate ()<NSTextViewDelegate,
                          ComponentWindowProtocol,
                          ComponentsViewProtocol,
@@ -38,7 +41,8 @@
                          JunctionsViewProtocol,
                          JunctionsLinkerProtocol,
                          StylerViewProtocol,
-                         LoadJsonWindowProtocol>{
+                         LoadJsonWindowProtocol,
+                         NSWindowDelegate>{
 }
 @property (unsafe_unretained) IBOutlet NSTextView *jsonView;
 @property (weak) IBOutlet NSScrollView *scrollerJson;
@@ -164,35 +168,56 @@ static NSDictionary * listMap;
     self.window.titleVisibility = YES;
     self.window.styleMask |= NSFullSizeContentViewWindowMask;
     
-
+    self.window.delegate = self;
 }
+
+
+
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application
 }
 - (IBAction)clear:(id)sender {
-    [self.mainConfiguration removeAll:^(BOOL success) {
-        [self.tmp_addings removeAllObjects];
-        [self.junctionsView removeAll];
-        [self.componentsView removeAll];
-        [self.stylerView removeAll];
-    }];
+    if ([self.mainConfiguration isEmpty] == YES) {
+        return ;
+    }
+    [Alert showAlertWithTitle:@"Vuoi cancellare la tua configurazione?" message:@"l'operazione è irreversibile" confirmBlock:^{
+        [self clear:sender completionBlock:nil];
+    } cancelBlock:^{
+        NSLog(@"you are doing the right job man");
+    } inWindow:self.window style:NSCriticalAlertStyle];
 }
 
 - (IBAction)openFile:(id)sender {
     
-    [FileManager openFileInWindow:self.window completionHandler:^(NSString *path) {
-        [self clear:nil];
+    void (^openFile)(void) = ^void{
+        [FileManager openFileInWindow:self.window completionHandler:^(NSString *path) {
+            [self clear:nil completionBlock:^{
+                NSString *jsonString = [Utils loadStringFromFilePath:path];
+                
+                NSError *error;
+                NSDictionary *json = [Utils dictionaryFromString:jsonString error:&error];
+                if (error) {
+                    NSLog(@"error : %@",error);
+                    return ;
+                }
+                [self loadJson:json];
+            }];
+        }];
+    };
+    if ([self.mainConfiguration isEmpty]) {
+        openFile();
+        return;
+    }
 
-        NSString *jsonString = [Utils loadStringFromFilePath:path];
-        
-        NSError *error;
-        NSDictionary *json = [Utils dictionaryFromString:jsonString error:&error];
-        if (error) {
-            NSLog(@"error : %@",error);
-            return ;
-        }
-        [self loadJson:json];
-    }];
+    [Alert showAlertWithTitle:@"Vuoi salvare la tua configurazione?" message:@"" confirmBlock:^{
+        [self saveConfiguration:nil completionBlock:^(BOOL success) {
+            openFile();
+        }];
+    } cancelBlock:^{
+        openFile();
+    } inWindow:self.window style:NSWarningAlertStyle];
+  
+  
 }
 -(void)loadJson:(NSDictionary *)json{
     
@@ -225,7 +250,54 @@ static NSDictionary * listMap;
         [self.tmp_addings setObject:[json objectForKey:key] forKey:key];
     }
 }
+- (void)clear:(id)sender completionBlock:(void(^)(void))completion{
+
+    [self.mainConfiguration removeAll:^(BOOL success) {
+        [self.tmp_addings removeAllObjects];
+        [self.junctionsView removeAll];
+        [self.componentsView removeAll];
+        [self.stylerView removeAll];
+        if (completion != nil) {
+            completion();
+        }
+    }];
+}
+- (void)saveConfiguration:(id)sender completionBlock:(void(^)(BOOL success))completion{
+    NSDictionary *json = [MIAConfigurationPrinter printConfiguration:self.mainConfiguration adds:self.tmp_addings];
+    [FileManager exportDocument:@"new_conf" toType:@"json" inWindow:self.window completionHandler:^(NSString *path) {
+        if (path == nil) {
+            return;
+        }
+        [FileManager save:json inPath:path completion:^(BOOL success) {
+            completion(success);
+        }];
+    }];
+}
+-(void)closeConfiguration{
+    [Alert showAlertWithTitle:@"Attenzione: vuoi cancellare la tua configurazione?" message:@"l'operazione è irreversibile" confirmBlock:^{
+        [self clear:nil completionBlock:^{
+            [self.window close];
+        }];
+    } cancelBlock:^{
+        NSLog(@"you are doing the right job man ! ");
+    } inWindow:self.window style:NSCriticalAlertStyle];
+}
 #pragma mark - menu buttons actions -
+-(IBAction)close:(id)sender{
+    if ([self.mainConfiguration isEmpty] == YES) {
+        [self.window close];
+        return;
+    }
+    [self closeConfiguration];
+}
+-(BOOL)windowShouldClose:(id)sender{
+    
+    if ([self.mainConfiguration isEmpty] == YES) {
+        return YES;
+    }
+    [self closeConfiguration];
+    return NO;
+}
 - (IBAction)loadConfiguration:(id)sender{
     self.loadJsonWindow =
     [[LoadJsonWindow alloc] initWithWindowNibName:@"LoadJsonWindow"];
@@ -237,13 +309,14 @@ static NSDictionary * listMap;
     NSDictionary *json = [MIAConfigurationPrinter printConfiguration:self.mainConfiguration adds:self.tmp_addings];
     [self printJson:json];
 }
-- (IBAction)saveConfiguration:(id)sender{
-    NSDictionary *json = [MIAConfigurationPrinter printConfiguration:self.mainConfiguration adds:self.tmp_addings];
-    [FileManager exportDocument:@"new_conf" toType:@"json" inWindow:self.window completionHandler:^(NSString *path) {
-        if (path == nil) {
-            return;
-        }
-        [FileManager save:json inPath:path];
+
+-(IBAction)saveConfiguration:(id)sender{
+    [self saveConfiguration:sender completionBlock:^(BOOL success) {
+        [Alert showAlertWithTitle:@"Configurazione salvata!" message:@"" confirmBlock:^{
+            
+        } cancelBlock:^{
+            
+        } inWindow:self.window style:NSInformationalAlertStyle];
     }];
 }
 - (IBAction)addComponent:(id)sender {
@@ -260,16 +333,27 @@ static NSDictionary * listMap;
 }
 #pragma mark - json load protocol -
 -(void)loadJsonWindow:(LoadJsonWindow *)loadJsonWindow confirmJson:(NSDictionary *)jsonDict{
-    [self.mainConfiguration removeAll:^(BOOL success) {
-        [self.tmp_addings removeAllObjects];
-        [self.junctionsView removeAll];
-        [self.componentsView removeAll];
-        [self.stylerView removeAll];
-        
-        if (jsonDict != nil) {
+    if (jsonDict == nil) {
+        return;
+    }
+    
+    if ([self.mainConfiguration isEmpty]) {
+        [self loadJson:jsonDict];
+        return;
+    }
+    
+    [Alert showAlertWithTitle:@"Vuoi salvare la tua configurazione?" message:@"" confirmBlock:^{
+        [self saveConfiguration:nil completionBlock:^(BOOL success) {
+            [self clear:nil completionBlock:^{
+                [self loadJson:jsonDict];
+            }];
+        }];
+    } cancelBlock:^{
+        [self clear:nil completionBlock:^{
             [self loadJson:jsonDict];
-        }
-    }];
+        }];
+    } inWindow:self.window style:NSWarningAlertStyle];
+    
 }
 #pragma mark - junction linker protocol
 -(NSArray<MIAJunction *> *)junctionsLinker:(JunctionsLinker *)linker askJunctions:(BOOL)ask{
@@ -464,7 +548,5 @@ static NSDictionary * listMap;
                                                withString:@"/"];
     self.jsonView.string = string;
 }
-
-
 
 @end

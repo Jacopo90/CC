@@ -24,6 +24,7 @@
 - (BOOL)removeStyle:(MIAStyle *)style;
 - (void)removeAll:(void(^)(BOOL success))completion;
 
+- (BOOL)isEmpty;
 
 - (id)objectFromID:(NSString *)uid;
 - (NSArray <MIAComponent *> *)components;

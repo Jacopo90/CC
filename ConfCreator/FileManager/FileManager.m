@@ -10,12 +10,13 @@
 #import "Utils.h"
 
 @implementation FileManager
-+(void)save:(NSDictionary *)jsonDict inPath:(NSString *)path{
++ (void)save:(NSDictionary *)jsonDict inPath:(NSString *)path completion:(void(^)(BOOL success))completion{
     NSData* json1 =
     [NSJSONSerialization dataWithJSONObject:jsonDict
                                     options:NSJSONWritingPrettyPrinted
                                       error:nil];
-    [json1 writeToFile:path atomically:YES];
+    BOOL success = [json1 writeToFile:path atomically:YES];
+    completion(success);
 }
 + (void)openFileInWindow:(NSWindow*)window completionHandler:(void (^)(NSString* path))completion {
     NSOpenPanel* openPanel = [NSOpenPanel openPanel];

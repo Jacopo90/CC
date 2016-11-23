@@ -88,12 +88,12 @@
     [self->components removeAllObjects];
     [self->junctions removeAllObjects];
     [self->styles removeAllObjects];
-    
-    if (self->components.count == 0 && self->junctions.count == 0 && self->styles.count == 0) {
-        completion(YES);
-    }
+    completion(self->components.count == 0 && self->junctions.count == 0 && self->styles.count == 0);
 }
 #pragma mark - getting -
+-(BOOL)isEmpty{
+    return self->components.count == 0 && self->styles.count == 0 && self.junctions.count == 0;
+}
 -(id)objectFromID:(NSString *)uid{
     
     for (MIAComponent *component in self->components) {

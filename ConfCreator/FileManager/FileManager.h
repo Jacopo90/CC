@@ -10,7 +10,7 @@
 #import <Cocoa/Cocoa.h>
 
 @interface FileManager : NSObject
-+ (void)save:(NSDictionary *)jsonDict inPath:(NSString *)path;
++ (void)save:(NSDictionary *)jsonDict inPath:(NSString *)path completion:(void(^)(BOOL success))completion;
 + (void)openFileInWindow:(NSWindow*)window completionHandler:(void (^)(NSString* path))completion;
 + (void)exportDocument:(NSString*)name
                 toType:(NSString*)typeUTI

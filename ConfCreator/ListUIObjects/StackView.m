@@ -38,7 +38,7 @@
     return self;
 }
 -(void)dealloc{
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:NSWindowDidResizeNotification object:self.window];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:NSWindowDidEndLiveResizeNotification object:self.window];
 }
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
