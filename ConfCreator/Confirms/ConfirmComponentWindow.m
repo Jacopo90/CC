@@ -161,11 +161,15 @@
 -(void)controlTextDidChange:(NSNotification *)obj{
     NSTextField *textfield= (NSTextField *)obj.object;
     
-    if ([textfield.stringValue isEqualToString:@"deborah"]) {
+    if ([textfield.stringValue isEqualToString:@"deborah giaconella"]) {
         [Alert showAlertWithTitle:@"E' solo una lumaca" message:@"molto lenta e permalosa" confirmBlock:^{
             [Alert showAlertWithTitle:@"" message:@"..e stronza aggiungerei" confirmBlock:^{
-                [Alert showAlertWithTitle:@"" message:@"ma simpatica" confirmBlock:^{
-                    
+                [Alert showAlertWithTitle:@"" message:@".. ma molto carina e simpatica" confirmBlock:^{
+                    [Alert showAlertWithTitle:@"" message:@"non aggiungerla come componente!!" confirmBlock:^{
+                        
+                    } cancelBlock:^{
+                        
+                    } inWindow:self.window style:NSWarningAlertStyle];
                 } cancelBlock:^{
                     
                 } inWindow:self.window style:NSWarningAlertStyle];
