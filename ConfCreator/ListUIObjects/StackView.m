@@ -32,8 +32,13 @@
         FlippedView *flippedView = [[FlippedView alloc] initWithFrame:self.bounds];
         offsetY = 10;
         [self setDocumentView:flippedView];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(windowDidResize:) name:NSWindowDidEndLiveResizeNotification object:self.window];
+
     }
     return self;
+}
+-(void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:NSWindowDidResizeNotification object:self.window];
 }
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
@@ -134,4 +139,9 @@
 -(void)uiObject:(MIAUIObject *)uiobject up:(BOOL)up{}
 -(void)uiObject:(MIAUIObject *)uiobject tapped:(BOOL)tapped{}
 -(void)uiObject:(MIAUIObject *)uiobject remove:(BOOL)remove{}
+#pragma mark  - window delegate -
+-(void)windowDidResize:(id)object{
+    [self updateScroller];
+}
+
 @end
