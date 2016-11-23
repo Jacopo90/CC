@@ -14,12 +14,10 @@
     return YES;
 }
 - (void)drawRect:(NSRect)dirtyRect {
-    [[Utils colorWithHexColorString:@"4C6073" alpha:1] set];
-  
+//    [[Utils colorWithHexColorString:@"4C7768" alpha:1] set];
+      [[Utils colorWithHexColorString:@"4C6073" alpha:1] set];
     NSRectFill(dirtyRect);
-    
     [super drawRect:dirtyRect];
-
     // Drawing code here.
   
 }

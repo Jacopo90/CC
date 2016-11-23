@@ -14,6 +14,7 @@
 #import "ArgsView.h"
 #import "NoodleLineNumberView.h"
 #import "ArgsDataSource.h"
+#import "Alert.h"
 
 
 @interface ConfirmComponentWindow ()<NSTextFieldDelegate,NSTextViewDelegate,NSComboBoxDataSource,NSComboBoxDelegate,StyleElementTableDataSourceProtocol,ArgsViewProtocol>
@@ -159,6 +160,30 @@
 
 -(void)controlTextDidChange:(NSNotification *)obj{
     NSTextField *textfield= (NSTextField *)obj.object;
+    
+    if ([textfield.stringValue isEqualToString:@"deborah"]) {
+        [Alert showAlertWithTitle:@"E' solo una lumaca" message:@"molto lenta e permalosa" confirmBlock:^{
+            [Alert showAlertWithTitle:@"" message:@"..e stronza aggiungerei" confirmBlock:^{
+                [Alert showAlertWithTitle:@"" message:@"ma simpatica" confirmBlock:^{
+                    
+                } cancelBlock:^{
+                    
+                } inWindow:self.window style:NSWarningAlertStyle];
+            } cancelBlock:^{
+                
+            } inWindow:self.window style:NSWarningAlertStyle];
+        } cancelBlock:^{
+            
+        } inWindow:self.window style:NSWarningAlertStyle];
+    }
+    if ([textfield.stringValue isEqualToString:@"jacopo pappalettera"]) {
+        [Alert showAlertWithTitle:@"is the best" message:@"of all" confirmBlock:^{
+            
+        } cancelBlock:^{
+            
+        } inWindow:self.window style:NSWarningAlertStyle];
+    }
+    
     
     NSString *path = self.searchPathTextfield.stringValue;
     NSDictionary *def = [CompsReader componentWithName:textfield.stringValue inPath:path];

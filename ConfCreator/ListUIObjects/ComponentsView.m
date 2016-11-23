@@ -28,6 +28,7 @@
     NSImage *image = [NSImage imageNamed:@"placeholder_list.png"];
     
     [image setFlipped:YES];
+//    [image drawInRect:dirtyRect fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0 respectFlipped:YES hints:nil];
     [image drawInRect:dirtyRect
              fromRect:self.bounds
             operation:NSCompositeSourceOver

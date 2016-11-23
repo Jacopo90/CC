@@ -27,8 +27,8 @@
 
 #import "CustomButton.h"
 #import "JunctionsLinker.h"
-#import "TesterViewController.h"
-#import "ChameleonAppDelegate.h"
+//#import "TesterViewController.h"
+//#import "ChameleonAppDelegate.h"
 #import "FileManager.h"
 
 #import "Alert.h"
@@ -76,8 +76,8 @@ static NSDictionary * listMap;
 @synthesize window, chameleonNSView;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    chameleonApp = [[ChameleonAppDelegate alloc] init];
-    [chameleonNSView launchApplicationWithDelegate:chameleonApp afterDelay:1];
+//    chameleonApp = [[ChameleonAppDelegate alloc] init];
+//    [chameleonNSView launchApplicationWithDelegate:chameleonApp afterDelay:1];
 
     [self load];
 }
@@ -128,8 +128,7 @@ static NSDictionary * listMap;
                 NSStringFromClass([MIAComponent class]):self.componentsView,
                 NSStringFromClass([MIAStyle class]):self.stylerView
                 };
-    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 100, 100)];
-    view.backgroundColor = [UIColor redColor];
+
     
     
     self.window.appearance = [NSAppearance
@@ -169,6 +168,7 @@ static NSDictionary * listMap;
     self.window.styleMask |= NSFullSizeContentViewWindowMask;
     
     self.window.delegate = self;
+    NSLog(@"\"Quando la configurazione è un gioco da ragazzi\" cit. Deborah Giaconella");
 }
 
 
