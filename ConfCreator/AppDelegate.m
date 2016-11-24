@@ -168,7 +168,11 @@ static NSDictionary * listMap;
     self.window.styleMask |= NSFullSizeContentViewWindowMask;
     
     self.window.delegate = self;
+    NSLog(@"###########################################################################");
+    NSLog(@"  ");
     NSLog(@"\"Quando la configurazione è un gioco da ragazzi\" cit. Deborah Giaconella");
+    NSLog(@"  ");
+    NSLog(@"###########################################################################");
 }
 
 
