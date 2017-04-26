@@ -100,7 +100,7 @@
             NSMutableDictionary *uielem = [[NSMutableDictionary alloc]init];
             [uielem setObject:key forKey:@"key"];
             [uielem setObject:@"view" forKey:@"type"];
-            [uielem setObject:[rules objectForKey:key] forKey:@"values"];
+            [uielem setObject:[rules objectForKey:key] forKey:@"value"];
             [uiValues addObject:uielem];
         }
         for (MIAComponent *comp in components) {

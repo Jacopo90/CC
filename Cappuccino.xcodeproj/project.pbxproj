@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D5835141EB0A97500F7CD95 /* comps_def.json in Resources */ = {isa = PBXBuildFile; fileRef = 3D5835131EB0A97500F7CD95 /* comps_def.json */; };
 		D11905151DD632970088D957 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D11905141DD632970088D957 /* UIKit.framework */; };
 		D11905161DD632970088D957 /* UIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D11905141DD632970088D957 /* UIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D11B441E1DD2476F00343C58 /* Code-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D11B441D1DD2476F00343C58 /* Code-Bold.otf */; };
@@ -105,6 +106,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3D5835131EB0A97500F7CD95 /* comps_def.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = comps_def.json; sourceTree = "<group>"; };
 		D11905141DD632970088D957 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UIKit.framework; sourceTree = "<group>"; };
 		D11B441D1DD2476F00343C58 /* Code-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Code-Bold.otf"; sourceTree = "<group>"; };
 		D127FAF31DD9EABE00DF0647 /* Linearicons-Free.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Linearicons-Free.ttf"; sourceTree = "<group>"; };
@@ -432,6 +434,7 @@
 		EA4B29861DC8CA2800A08E02 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3D5835131EB0A97500F7CD95 /* comps_def.json */,
 				EA1D84C61DDA81590071DB4B /* images */,
 				D127FAF51DD9ED3A00DF0647 /* Roboto-Black.ttf */,
 				D127FAF61DD9ED3A00DF0647 /* Roboto-BlackItalic.ttf */,
@@ -642,6 +645,7 @@
 				EA4B298C1DC8CED900A08E02 /* Surabanglus.ttf in Resources */,
 				D127FB141DD9ED3A00DF0647 /* Roboto-ThinItalic.ttf in Resources */,
 				D127FB0E1DD9ED3A00DF0647 /* Roboto-Light.ttf in Resources */,
+				3D5835141EB0A97500F7CD95 /* comps_def.json in Resources */,
 				D127FB121DD9ED3A00DF0647 /* Roboto-Regular.ttf in Resources */,
 				D127FB101DD9ED3A00DF0647 /* Roboto-Medium.ttf in Resources */,
 				D18814F41DD5E55D006CB064 /* apple.png in Resources */,

@@ -65,9 +65,9 @@
     
     
     self.nameTextfield.delegate = self;
-    NSArray * paths = NSSearchPathForDirectoriesInDomains (NSDesktopDirectory, NSUserDomainMask, YES);
-    NSString * desktopPath = [paths objectAtIndex:0];
-    self.searchPathTextfield.stringValue =[NSString stringWithFormat:@"%@/comps_def.json",desktopPath];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"comps_def" ofType:@"json"];
+
+    self.searchPathTextfield.stringValue =filePath;
     self.foundLabel.stringValue = @"not found";
     self.foundLabel.textColor = [Utils colorWithHexColorString:@"333333" alpha:1];
     self.nameBox.dataSource = self;
