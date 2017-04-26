@@ -1569,59 +1569,57 @@
       "signals": [
         {
           "name": "list_sorter.send",
-          "description":""
+          "description": ""
         }
       ],
       "receptors": [
         {
           "name": "list_sorter.show",
-          "description":""
+          "description": ""
         }
       ],
       "args": [
-         {
+        {
           "name": "navbar_component_id",
           "type": "string",
           "default": "",
           "values": []
         },
-         {
+        {
           "name": "navbar_button_id",
           "type": "string",
           "default": "",
           "values": []
         },
-         {
+        {
           "name": "datasource_component_id",
           "type": "string",
           "default": "",
           "values": []
         },
-         {
+        {
           "name": "sorting_options",
           "type": "array",
           "default": "",
           "values": []
         },
-         {
+        {
           "name": "default_sort_index",
           "type": "number",
           "default": "",
           "values": []
         }
-        ]
+      ]
     },
     {
       "name": "mia.map_annotations_manager",
       "signals": [
         {
           "name": "map_manager:emit_data",
-          "description":""
+          "description": ""
         }
       ],
-      "receptors": [
-       
-      ],
+      "receptors": [],
       "args": [
         {
           "name": "clear_previous_annotations",
@@ -1635,7 +1633,7 @@
           "default": "",
           "values": []
         },
-         {
+        {
           "name": "map_view_component_id",
           "type": "string",
           "default": "",
@@ -1647,7 +1645,7 @@
           "default": "",
           "values": []
         }
-        ]
+      ]
     },
     {
       "name": "mia.split_view",
@@ -1662,13 +1660,13 @@
         }
       ],
       "args": [
-         {
+        {
           "name": "background_container",
           "type": "dictionary",
           "default": "",
           "values": []
         },
-         {
+        {
           "name": "foreground_container",
           "type": "dictionary",
           "default": "",
@@ -1678,19 +1676,22 @@
           "name": "drawer_start_position",
           "type": "string",
           "default": "",
-          "values": ["top","bottom","center"]
+          "values": [
+            "top",
+            "bottom",
+            "center"
+          ]
         }
-        ]
+      ]
     },
     {
       "name": "mia.no_data_director",
-      "signals": [
-      ],
+      "signals": [],
       "receptors": [
         {
           "name": "r_dismiss"
         },
-         {
+        {
           "name": "r_show"
         }
       ],
@@ -1701,13 +1702,13 @@
           "default": "",
           "values": []
         },
-         {
+        {
           "name": "data_source_uid",
           "type": "string",
           "default": "",
           "values": []
         },
-         {
+        {
           "name": "no_data_glyph",
           "type": "string",
           "default": "",
@@ -1731,22 +1732,18 @@
           "default": "",
           "values": []
         },
-         {
+        {
           "name": "component_id",
           "type": "string",
           "default": "",
           "values": []
         }
-        ]
+      ]
     },
     {
       "name": "mia.form_data_sender",
-      "signals": [
-       
-      ],
-      "receptors": [
-       
-      ],
+      "signals": [],
+      "receptors": [],
       "args": [
         {
           "name": "serialization_policy",
@@ -1754,19 +1751,19 @@
           "default": "",
           "values": []
         },
-         {
+        {
           "name": "form_uid",
           "type": "string",
           "default": "",
           "values": []
         },
-         {
+        {
           "name": "navigation_bar_id",
           "type": "string",
           "default": "",
           "values": []
         },
-         {
+        {
           "name": "dismiss_segue_uid",
           "type": "string",
           "default": "",
@@ -1778,193 +1775,187 @@
           "default": "",
           "values": []
         }
-        ]
+      ]
     },
     {
       "name": "data_source",
       "signals": [
         {
           "name": "data_source.item",
-            "description":""
+          "description": ""
         },
-           {
+        {
           "name": "data_source.added_parameters",
-                      "description":""
+          "description": ""
         },
-           {
+        {
           "name": "data_source.data",
-                      "description":""
+          "description": ""
         },
-           {
+        {
           "name": "data_source.reload_data",
-                      "description":""
+          "description": ""
         },
-           {
+        {
           "name": "data_source.reloaded",
-                      "description":""
+          "description": ""
         },
-           {
+        {
           "name": "data_source.loaded_first_time",
-                      "description":""
+          "description": ""
         },
-           {
+        {
           "name": "data_source.start_loading",
-                      "description":""
+          "description": ""
         },
-           {
+        {
           "name": "data_source.error",
-                      "description":""
+          "description": ""
         },
-           {
+        {
           "name": "data_source.did_load_next",
-                      "description":""
+          "description": ""
         },
-          {
+        {
           "name": "data_source.did_reload",
-                     "description":""
+          "description": ""
         }
-       
       ],
       "receptors": [
-           {
+        {
           "name": "data_source.add_parameters",
-                      "description":""
+          "description": ""
         },
-           {
+        {
           "name": "data_source.select_data_from_button",
-                      "description":""
+          "description": ""
         },
-           {
+        {
           "name": "data_source.reload",
-                      "description":""
+          "description": ""
         },
-           {
+        {
           "name": "data_source.ask_item_at",
-                      "description":""
+          "description": ""
         },
-           {
+        {
           "name": "data_source.item_at",
-                      "description":""
+          "description": ""
         },
-           {
+        {
           "name": "data_source.selected_data_at_index",
-                      "description":""
+          "description": ""
         },
-           {
+        {
           "name": "data_source.reset",
-                      "description":""
+          "description": ""
         }
       ],
       "args": [
-          {
+        {
           "name": "auto_load",
           "type": "boolean",
           "default": "",
           "values": []
         },
-          {
+        {
           "name": "api",
           "type": "dictionary",
           "default": "",
           "values": []
         },
-          {
+        {
           "name": "static_data",
           "type": "dictionary",
           "default": "",
           "values": []
         },
-          {
+        {
           "name": "caching",
           "type": "dictionary",
           "default": "",
           "values": []
         }
-          
       ]
     },
     {
       "name": "controller_categories",
       "signals": [
         {
-          "name":"map_view.did_focus_user",
-          "description":""
+          "name": "map_view.did_focus_user",
+          "description": ""
         },
-         {
-          "name":"map_view.did_focus_pin",
-          "description":""
+        {
+          "name": "map_view.did_focus_pin",
+          "description": ""
         },
-         {
-          "name":"map_view.did_deselect_annotation",
-          "description":""
+        {
+          "name": "map_view.did_deselect_annotation",
+          "description": ""
         },
-         {
-          "name":"map_view.did_select_annotation",
-          "description":""
+        {
+          "name": "map_view.did_select_annotation",
+          "description": ""
         },
-         {
-          "name":"map_view.tap_accessory_view",
-          "description":""
+        {
+          "name": "map_view.tap_accessory_view",
+          "description": ""
         },
-         {
-          "name":"map_view.payload_to_location",
-          "description":""
+        {
+          "name": "map_view.payload_to_location",
+          "description": ""
         }
       ],
       "receptors": [
-       {
-         "name":"map_view.focus",
-         "description":""
-       },
-       {
-         "name":"map_view.focus_pin",
-         "description":""
-       },
-       {
-         "name":"map_view.focus_user_location",
-         "description":""
-       },
-       {
-         "name":"map_view.add_annotation_data",
-         "description":""
-       }
+        {
+          "name": "map_view.focus",
+          "description": ""
+        },
+        {
+          "name": "map_view.focus_pin",
+          "description": ""
+        },
+        {
+          "name": "map_view.focus_user_location",
+          "description": ""
+        },
+        {
+          "name": "map_view.add_annotation_data",
+          "description": ""
+        }
       ],
       "args": []
     },
     {
       "name": "map_view",
-      "signals": [
-        
-      ],
-      "receptors": [
-       
-      ],
+      "signals": [],
+      "receptors": [],
       "args": [
-           {
+        {
           "name": "data_source_id",
           "type": "string",
           "default": "",
           "values": []
         },
-          {
+        {
           "name": "location_binding",
           "type": "string",
           "default": "",
           "values": []
         },
-         {
+        {
           "name": "annotation_binding",
           "type": "string",
           "default": "",
           "values": []
         },
-         {
+        {
           "name": "pin_image",
           "type": "string",
           "default": "",
           "values": []
         },
-         {
+        {
           "name": "segue_to_instance_id",
           "type": "string",
           "default": "",
@@ -1976,13 +1967,13 @@
           "default": "",
           "values": []
         },
-         {
+        {
           "name": "show_user_location",
           "type": "boolean",
           "default": "",
           "values": []
         },
-         {
+        {
           "name": "nav_bar_icon_focus_pin",
           "type": "string",
           "default": "",
@@ -2000,7 +1991,7 @@
           "default": "",
           "values": []
         }
-        ]
+      ]
     },
     {
       "name": "list_view",
@@ -2008,25 +1999,25 @@
         {
           "name": "edited_item_data"
         },
-           {
+        {
           "name": "item_data"
         },
-           {
+        {
           "name": "footer_touch_up"
         },
-           {
+        {
           "name": "header_touch_up"
         },
-           {
+        {
           "name": "list_view.editing_at_index"
         },
-           {
+        {
           "name": "list_view.deselect_cell_at_index"
         },
-           {
+        {
           "name": "list_view.select_cell_at_index"
         },
-           {
+        {
           "name": "list_view.press_button_in_cell"
         }
       ],
@@ -2034,90 +2025,91 @@
         {
           "name": "remove_items"
         },
-          {
+        {
           "name": "selected_items"
         },
-          {
+        {
           "name": "select_item"
         },
-          {
+        {
           "name": "set_data",
-              "description": "setta la lista di dati"
+          "description": "setta la lista di dati"
         }
       ],
       "args": [
-          
-           {
+        {
           "name": "navbar_component_id",
           "type": "string",
           "default": "",
           "values": []
         },
-            {
+        {
           "name": "navbar_edit_button_toggle_id",
           "type": "string",
           "default": "",
           "values": []
         },
-             {
+        {
           "name": "navbar_component_id",
           "type": "boolean",
           "default": "",
           "values": []
-        },  {
+        },
+        {
           "name": "comparison_key",
           "type": "string",
           "default": "",
           "values": []
-        },  {
+        },
+        {
           "name": "type",
           "type": "string",
           "default": "",
           "values": []
         },
-          {
+        {
           "name": "inter_line_spacing",
           "type": "number",
           "default": "",
           "values": []
         },
-          {
+        {
           "name": "layout_params",
           "type": "dictionary",
           "default": "",
           "values": []
         },
-          {
+        {
           "name": "bounce_vertical",
           "type": "boolean",
           "default": "",
           "values": []
         },
-          {
+        {
           "name": "cell_size",
           "type": "dictionary",
           "default": "",
           "values": []
         },
-          {
+        {
           "name": "rows",
           "type": "number",
           "default": "",
           "values": []
         },
-          {
+        {
           "name": "columns",
           "type": "number",
           "default": "",
           "values": []
         },
-          {
+        {
           "name": "bindings",
           "type": "array",
           "default": "",
           "values": []
         },
-           {
+        {
           "name": "styles",
           "type": "array",
           "default": "",
@@ -2127,44 +2119,33 @@
     },
     {
       "name": "list_pull_refresh",
-      "signals": [
-       
-      ],
-      "receptors": [
-        
-      ],
+      "signals": [],
+      "receptors": [],
       "args": [
-          {
+        {
           "name": "styles",
           "type": "dictionary",
           "default": "",
           "values": []
         }
-        ]
+      ]
     },
     {
       "name": "list_continuous_load",
-      "signals": [
-        
-      ],
-      "receptors": [
-        
-      ],
+      "signals": [],
+      "receptors": [],
       "args": [
-         {
+        {
           "name": "remove_cells",
           "type": "boolean",
           "default": "",
           "values": []
         }
-        ]
-      
+      ]
     },
     {
       "name": "detail_segue",
-      "signals": [
-        
-      ],
+      "signals": [],
       "receptors": [
         {
           "name": "segue.perform_with_data"
@@ -2189,60 +2170,50 @@
           "default": "",
           "values": []
         }
-        ]
+      ]
     },
     {
       "name": "data_source_arg",
-      "signals": [
-        
-      ],
-      "receptors": [
-        
-      ],
+      "signals": [],
+      "receptors": [],
       "args": []
     },
     {
       "name": "dismiss_segue",
-      "signals": [
-       
-      ],
+      "signals": [],
       "receptors": [
         {
           "name": "dismiss_segue.dismiss_with_data",
-          "description":"dismette il controller corrente passandogli i dati, is canceled = NO"
+          "description": "dismette il controller corrente passandogli i dati, is canceled = NO"
         },
         {
           "name": "dismiss_segue.dismiss",
-          "description":"dismette il controller corrente senza passaggio di dati, is canceled = YES"
-
+          "description": "dismette il controller corrente senza passaggio di dati, is canceled = YES"
         }
       ],
-      "args": [
-        
-        ]
+      "args": []
     },
     {
       "name": "loading_view",
-      "signals": [
-      ],
+      "signals": [],
       "receptors": [
         {
           "name": "ui.loading_view.show",
-          "description":"mostra la loading view"
+          "description": "mostra la loading view"
         },
-          {
+        {
           "name": "ui.loading_view.dismiss",
-          "description":"dismette la loading view"
+          "description": "dismette la loading view"
         }
       ],
       "args": [
-            {
+        {
           "name": "loading_id",
           "type": "string",
           "default": "",
           "values": []
         },
-             {
+        {
           "name": "component_id",
           "type": "string",
           "default": "",
@@ -2252,78 +2223,70 @@
     },
     {
       "name": "list_no_data",
-      "signals": [
-        
-      ],
-      "receptors": [
-       
-      ],
+      "signals": [],
+      "receptors": [],
       "args": [
-            {
+        {
           "name": "message",
           "type": "string",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "error_view",
-      "signals": [
-        
-      ],
-      "receptors": [
-        
-      ],
+      "signals": [],
+      "receptors": [],
       "args": [
-         {
+        {
           "name": "message",
           "type": "string",
           "default": "",
           "values": []
         }
-        ]
+      ]
     },
     {
-      "UI":[
+      "UI": [
         {
-          "key":"navbar",
-          "type":"view"
+          "key": "navbar",
+          "type": "view"
         }
       ],
       "name": "std_navbar_styler",
-      "signals": [
-      ],
+      "signals": [],
       "receptors": [
         {
           "name": "nav_bar:change_info"
         }
       ],
       "args": [
-            {
+        {
           "name": "right_buttons",
           "type": "array",
           "default": "",
           "values": []
         },
-              {
+        {
           "name": "localize_title",
           "type": "boolean",
           "default": "",
           "values": []
         },
-              {
+        {
           "name": "title",
           "type": "string",
           "default": "",
           "values": []
         },
-                {
+        {
           "name": "title_image",
           "type": "string",
           "default": "",
           "values": []
         },
-            {
+        {
           "name": "back_button_title",
           "type": "string",
           "default": "",
@@ -2333,13 +2296,10 @@
     },
     {
       "name": "category_segue",
-      "signals": [
-        
-      ],
-      "receptors": [
-        
-      ],
-      "args": [ {
+      "signals": [],
+      "receptors": [],
+      "args": [
+        {
           "name": "next_cat_node_ctrl_class",
           "type": "string",
           "default": "",
@@ -2363,17 +2323,14 @@
           "default": "",
           "values": []
         }
-        ]
+      ]
     },
     {
       "name": "list_header",
-      "signals": [
-       
-      ],
-      "receptors": [
-        
-      ],
-      "args": [{
+      "signals": [],
+      "receptors": [],
+      "args": [
+        {
           "name": "nib",
           "type": "string",
           "default": "",
@@ -2403,39 +2360,31 @@
           "default": "",
           "values": []
         }
-        ]
+      ]
     },
     {
       "name": "profile_view",
-      "signals": [
-       
-      ],
-      "receptors": [
-       
-      ],
+      "signals": [],
+      "receptors": [],
       "args": [
-         {
+        {
           "name": "hide_user_image",
           "type": "boolean",
           "default": "",
           "values": []
         },
-         {
+        {
           "name": "login_instance_id",
           "type": "string",
           "default": "",
           "values": []
         }
-        ]
+      ]
     },
     {
       "name": "segue_router",
-      "signals": [
-        
-      ],
-      "receptors": [
-       
-      ],
+      "signals": [],
+      "receptors": [],
       "args": [
         {
           "name": "routes",
@@ -2449,46 +2398,30 @@
           "default": "",
           "values": []
         }
-        ]
+      ]
     },
     {
       "name": "loyalty_data_component",
-      "signals": [
-       
-      ],
-      "receptors": [
-        
-      ],
+      "signals": [],
+      "receptors": [],
       "args": []
     },
     {
       "name": "detail_product",
-      "signals": [
-        
-      ],
-      "receptors": [
-        
-      ],
+      "signals": [],
+      "receptors": [],
       "args": []
     },
     {
       "name": "disclaimer",
-      "signals": [
-       
-      ],
-      "receptors": [
-      
-      ],
+      "signals": [],
+      "receptors": [],
       "args": []
     },
     {
       "name": "confirm_button",
-      "signals": [
-       
-      ],
-      "receptors": [
-       
-      ],
+      "signals": [],
+      "receptors": [],
       "args": []
     },
     {
@@ -2496,7 +2429,8 @@
       "signals": [
         {
           "name": "web_view.did_start_load"
-        },{
+        },
+        {
           "name": "web_view.did_end_load"
         },
         {
@@ -2526,7 +2460,8 @@
           "name": "web_view.forward"
         }
       ],
-      "args": [{
+      "args": [
+        {
           "name": "detector_type",
           "type": "integer",
           "default": "",
@@ -2549,16 +2484,13 @@
           "type": "boolean",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "code_view",
-      "signals": [
-        
-      ],
-      "receptors": [
-        
-      ],
+      "signals": [],
+      "receptors": [],
       "args": []
     },
     {
@@ -2566,18 +2498,20 @@
       "signals": [
         {
           "name": "form.data"
-        }, {
+        },
+        {
           "name": "form.container_did_load"
         },
-         {
+        {
           "name": "validation_err_message"
         },
-         {
+        {
           "name": "serialized_data"
         },
-         {
+        {
           "name": "field_interaction"
-        }, {
+        },
+        {
           "name": "value"
         }
       ],
@@ -2593,16 +2527,19 @@
         },
         {
           "name": "field_value"
-        },{
+        },
+        {
           "name": "set_field_value"
         },
         {
           "name": "select_field"
-        },{
+        },
+        {
           "name": "fields_values"
         }
       ],
-      "args": [{
+      "args": [
+        {
           "name": "table_conf",
           "type": "dictionary",
           "default": "",
@@ -2632,7 +2569,7 @@
           "default": "",
           "values": []
         },
-         {
+        {
           "name": "datasource_model_id",
           "type": "string",
           "default": "",
@@ -2643,7 +2580,8 @@
           "type": "boolean",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "controller_pager_component",
@@ -2657,7 +2595,8 @@
           "name": "r_add_args_to_controller"
         }
       ],
-      "args": [{
+      "args": [
+        {
           "name": "controller_sequence",
           "type": "array",
           "default": "",
@@ -2673,27 +2612,23 @@
           "name": "pagination_style",
           "type": "string",
           "default": "",
-          "values": ["tabstrip","default"]
-        }]
+          "values": [
+            "tabstrip",
+            "default"
+          ]
+        }
+      ]
     },
     {
       "name": "segmented_pager_navigator",
-      "signals": [
-        
-      ],
-      "receptors": [
-       
-      ],
+      "signals": [],
+      "receptors": [],
       "args": []
     },
     {
       "name": "summary_view",
-      "signals": [
-       
-      ],
-      "receptors": [
-        
-      ],
+      "signals": [],
+      "receptors": [],
       "args": []
     },
     {
@@ -2706,10 +2641,9 @@
           "name": "category_cursor.last_category_selected"
         }
       ],
-      "receptors": [
-       
-      ],
-      "args": [{
+      "receptors": [],
+      "args": [
+        {
           "name": "next_node_components",
           "type": "array",
           "default": "",
@@ -2720,17 +2654,15 @@
           "type": "dictionary",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "component_container_builder",
-      "signals": [
-       
-      ],
-      "receptors": [
-       
-      ],
-      "args": [{
+      "signals": [],
+      "receptors": [],
+      "args": [
+        {
           "name": "base_components",
           "type": "array",
           "default": "",
@@ -2759,7 +2691,8 @@
           "type": "array",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "segue_to_instance",
@@ -2782,7 +2715,8 @@
           "name": "segue.set_instance_id"
         }
       ],
-      "args": [{
+      "args": [
+        {
           "name": "ctrl_instance_id",
           "type": "string",
           "default": "",
@@ -2811,17 +2745,15 @@
           "type": "string",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "view_model",
-      "signals": [
-        
-      ],
-      "receptors": [
-        
-      ],
-      "args": [{
+      "signals": [],
+      "receptors": [],
+      "args": [
+        {
           "name": "view_model_id",
           "type": "string",
           "default": "",
@@ -2832,16 +2764,13 @@
           "type": "dictionary",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "listview_item_configurator",
-      "signals": [
-        
-      ],
-      "receptors": [
-       
-      ],
+      "signals": [],
+      "receptors": [],
       "args": [
         {
           "name": "field",
@@ -2861,7 +2790,7 @@
           "default": "",
           "values": []
         }
-        ]
+      ]
     },
     {
       "name": "search",
@@ -2875,7 +2804,8 @@
           "name": "search.begin_with_event"
         }
       ],
-      "args": [{
+      "args": [
+        {
           "name": "datasource_uid",
           "type": "string",
           "default": "",
@@ -2904,17 +2834,15 @@
           "type": "dictionary",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "form_director",
-      "signals": [
-        
-      ],
-      "receptors": [
-        
-      ],
-      "args": [{
+      "signals": [],
+      "receptors": [],
+      "args": [
+        {
           "name": "form_uid",
           "type": "string",
           "default": "",
@@ -2949,46 +2877,41 @@
           "type": "string",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "simple_image",
-      "signals": [
-       
-      ],
-      "receptors": [
-        
-      ],
+      "signals": [],
+      "receptors": [],
       "args": []
     },
     {
       "name": "simple_label",
-      "signals": [
-       
-      ],
-      "receptors": [
-        
-      ],
-      "args": [{
+      "signals": [],
+      "receptors": [],
+      "args": [
+        {
           "name": "text",
           "type": "string",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "favourites",
       "signals": [
-         {
+        {
           "name": "fav.container_did_load"
         },
-         {
+        {
           "name": "fav.data_saved"
         },
-         {
+        {
           "name": "fav.faves"
         },
-         {
+        {
           "name": "fav.dictionaries"
         }
       ],
@@ -2996,17 +2919,18 @@
         {
           "name": "fav.perform_action"
         },
-         {
+        {
           "name": "update_list"
         },
-         {
+        {
           "name": "fav.emit_faves_dictionaries"
         },
-         {
+        {
           "name": "fav.delete_item_at_index"
         }
       ],
-      "args": [{
+      "args": [
+        {
           "name": "list_component_id",
           "type": "string",
           "default": "",
@@ -3028,7 +2952,10 @@
           "name": "behaviour",
           "type": "string",
           "default": "",
-          "values": ["passive","show_faves"]
+          "values": [
+            "passive",
+            "show_faves"
+          ]
         },
         {
           "name": "storage_path",
@@ -3036,7 +2963,7 @@
           "default": "",
           "values": []
         },
-         {
+        {
           "name": "fave_saved_message",
           "type": "string",
           "default": "",
@@ -3066,17 +2993,14 @@
           "default": "",
           "values": []
         }
-        ]
+      ]
     },
     {
       "name": "fgallery_segue",
-      "signals": [
-        
-      ],
-      "receptors": [
-        
-      ],
-      "args": [{
+      "signals": [],
+      "receptors": [],
+      "args": [
+        {
           "name": "image_key",
           "type": "string",
           "default": "",
@@ -3093,21 +3017,28 @@
           "type": "boolean",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "layout_manager",
-      "signals": [
-        
-      ],
-      "receptors": [
-        
-      ],
-      "args": [{
+      "signals": [],
+      "receptors": [],
+      "args": [
+        {
           "name": "layout_extends",
           "type": "string",
           "default": "",
-          "values": ["top","left","bottom","right","all","none","auto_adjust_insets","extend_layout_with_opaque_bars"]
+          "values": [
+            "top",
+            "left",
+            "bottom",
+            "right",
+            "all",
+            "none",
+            "auto_adjust_insets",
+            "extend_layout_with_opaque_bars"
+          ]
         },
         {
           "name": "hide_when_swipe",
@@ -3120,13 +3051,12 @@
           "type": "boolean",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "web_action_component",
-      "signals": [
-       
-      ],
+      "signals": [],
       "receptors": [
         {
           "name": "web_action_component.handle_request"
@@ -3136,9 +3066,7 @@
     },
     {
       "name": "tracker",
-      "signals": [
-        
-      ],
+      "signals": [],
       "receptors": [
         {
           "name": "tracker.send_event"
@@ -3147,7 +3075,8 @@
           "name": "tracker.send_screen"
         }
       ],
-      "args": [{
+      "args": [
+        {
           "name": "active_services",
           "type": "array",
           "default": "",
@@ -3164,7 +3093,8 @@
           "type": "boolean",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "nav_listener",
@@ -3173,8 +3103,7 @@
           "name": "nav_listener:dismiss_modal"
         }
       ],
-      "receptors": [
-      ],
+      "receptors": [],
       "args": []
     },
     {
@@ -3182,25 +3111,25 @@
       "signals": [
         {
           "name": "value",
-         "description":""
-
+          "description": ""
         }
       ],
       "receptors": [
         {
           "name": "set_key",
-          "description":"setta la chiave del dizionario"
+          "description": "setta la chiave del dizionario"
         },
-         {
+        {
           "name": "set_value",
-          "description":"setta il valore del paramtetro se anche già la chiave è impostata"
+          "description": "setta il valore del paramtetro se anche già la chiave è impostata"
         },
-         {
+        {
           "name": "emit",
-          "description":"emette il dizionario completo se esiste"
-        }, {
+          "description": "emette il dizionario completo se esiste"
+        },
+        {
           "name": "set_value_emit",
-          "description":"setta il valore del parametro assumendo che una chiave sia già stata impostata ed emette il dizionario"
+          "description": "setta il valore del parametro assumendo che una chiave sia già stata impostata ed emette il dizionario"
         }
       ],
       "args": [
@@ -3210,19 +3139,19 @@
           "default": "",
           "values": []
         },
-         {
+        {
           "name": "value",
           "type": "string",
           "default": "",
           "values": []
         },
-         {
+        {
           "name": "autoclean",
           "type": "boolean",
           "default": "",
           "values": []
         }
-        ]
+      ]
     },
     {
       "name": "faves_list",
@@ -3241,25 +3170,27 @@
         {
           "name": "faves_list.set_index"
         },
-         {
+        {
           "name": "faves_list.emit"
         },
-         {
+        {
           "name": "faves_list.emit_titles"
         },
-         {
+        {
           "name": "faves_list.emit_instances"
         },
-         {
+        {
           "name": "faves_list.item_at"
         }
       ],
-      "args": [{
+      "args": [
+        {
           "name": "fav_list",
           "type": "boolean",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "date_picker",
@@ -3273,7 +3204,8 @@
           "name": "date_picker.completed"
         }
       ],
-      "args": [{
+      "args": [
+        {
           "name": "glyph",
           "type": "string",
           "default": "",
@@ -3308,7 +3240,8 @@
           "type": "string",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "mia.context",
@@ -3324,22 +3257,24 @@
         {
           "name": "emit"
         },
-         {
+        {
           "name": "add_item_context"
         },
-         {
+        {
           "name": "set_context_key"
         },
-         {
+        {
           "name": "object_from_key"
         }
       ],
-      "args": [{
+      "args": [
+        {
           "name": "context_key",
           "type": "string",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "mia.context_adapter",
@@ -3353,12 +3288,14 @@
           "name": "adapt"
         }
       ],
-      "args": [{
+      "args": [
+        {
           "name": "key",
           "type": "string",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "mia.http_request",
@@ -3368,11 +3305,14 @@
         },
         {
           "name": "raw"
-        },{
+        },
+        {
           "name": "progress"
-        },{
+        },
+        {
           "name": "response"
-        },{
+        },
+        {
           "name": "error"
         }
       ],
@@ -3382,28 +3322,37 @@
         },
         {
           "name": "set_headers"
-        },{
+        },
+        {
           "name": "set_query_params"
-        },{
+        },
+        {
           "name": "set_arr_query_params"
-        },{
+        },
+        {
           "name": "set_body_params"
-        },{
+        },
+        {
           "name": "perform"
-        },{
+        },
+        {
           "name": "emit_request"
         }
       ],
-      "args": [{
+      "args": [
+        {
           "name": "mq_params_full",
           "type": "boolean",
           "default": "",
           "values": []
-        },{
+        },
+        {
           "name": "content-type",
           "type": "string",
           "default": "",
-          "values": ["form-data"]
+          "values": [
+            "form-data"
+          ]
         },
         {
           "name": "append_query_params",
@@ -3464,23 +3413,25 @@
           "type": "dictionary",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "mia.info_view",
-      "signals": [
-      ],
+      "signals": [],
       "receptors": [
         {
           "name": "info_view.apply_data"
         }
       ],
-      "args": [{
+      "args": [
+        {
           "name": "bindings",
           "type": "array",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "mia.number_validator",
@@ -3488,10 +3439,10 @@
         {
           "name": "number_validator.is_number"
         },
-         {
+        {
           "name": "number_validator.not_number"
         },
-         {
+        {
           "name": "number_validator.number"
         }
       ],
@@ -3499,10 +3450,10 @@
         {
           "name": "number_validator.validate"
         },
-         {
+        {
           "name": "number_validator.set_value"
         },
-         {
+        {
           "name": "number_validator.to_number"
         }
       ],
@@ -3510,9 +3461,7 @@
     },
     {
       "name": "mia.image_view",
-      "signals": [
-        
-      ],
+      "signals": [],
       "receptors": [
         {
           "name": "image_view.set_image"
@@ -3521,12 +3470,14 @@
           "name": "image_view.set_data_image"
         }
       ],
-      "args": [{
+      "args": [
+        {
           "name": "setting_image",
           "type": "string",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "code_reader",
@@ -3553,7 +3504,8 @@
         },
         {
           "name": "processing"
-        },{
+        },
+        {
           "name": "success_ok"
         },
         {
@@ -3570,7 +3522,8 @@
         },
         {
           "name": "success_reset_content"
-        },{
+        },
+        {
           "name": "success_partial_content"
         },
         {
@@ -3620,7 +3573,8 @@
         },
         {
           "name": "not_found"
-        },{
+        },
+        {
           "name": "internal_server_error"
         },
         {
@@ -3632,10 +3586,10 @@
         {
           "name": "unknown_error"
         },
-         {
+        {
           "name": "not_success"
         },
-         {
+        {
           "name": "no_code"
         }
       ],
@@ -3644,12 +3598,14 @@
           "name": "payload"
         }
       ],
-      "args": [{
+      "args": [
+        {
           "name": "code_key",
           "type": "string",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "mia.string_validator",
@@ -3671,7 +3627,8 @@
         },
         {
           "name": "string_validator.not_equals"
-        },{
+        },
+        {
           "name": "string_validator.convertedString"
         }
       ],
@@ -3690,16 +3647,19 @@
         },
         {
           "name": "string_validator.check"
-        },{
+        },
+        {
           "name": "string_validator.set_and_check"
         }
       ],
-      "args": [{
+      "args": [
+        {
           "name": "comparison_string",
           "type": "string",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "mia.squid",
@@ -3707,13 +3667,13 @@
         {
           "name": "value_dict"
         },
-          {
+        {
           "name": "value_string"
         },
-          {
+        {
           "name": "value_array"
         },
-          {
+        {
           "name": "error"
         }
       ],
@@ -3721,16 +3681,18 @@
         {
           "name": "mutate_data"
         },
-          {
+        {
           "name": "set_context"
         }
       ],
-      "args": [{
+      "args": [
+        {
           "name": "context",
           "type": "dictionary",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "mia.string_conversion",
@@ -3744,12 +3706,18 @@
           "name": "convert"
         }
       ],
-      "args": [{
+      "args": [
+        {
           "name": "conversion_type",
           "type": "string",
           "default": "",
-          "values": ["MD5","default","capitalized"]
-        }]
+          "values": [
+            "MD5",
+            "default",
+            "capitalized"
+          ]
+        }
+      ]
     },
     {
       "name": "mia.signup_adapter",
@@ -3771,14 +3739,15 @@
         {
           "name": "validate_serialization"
         },
-          {
+        {
           "name": "fb_serialization"
         },
-          {
+        {
           "name": "adapt"
         }
       ],
-      "args": [{
+      "args": [
+        {
           "name": "pwd_key",
           "type": "string",
           "default": "",
@@ -3843,17 +3812,19 @@
           "type": "string",
           "default": "",
           "values": []
-        },{
+        },
+        {
           "name": "female_key",
           "type": "string",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "mia.social",
       "signals": [
-         {
+        {
           "name": "userdata"
         },
         {
@@ -3861,7 +3832,8 @@
         },
         {
           "name": "will_log_out"
-        }, {
+        },
+        {
           "name": "did_login"
         },
         {
@@ -3882,12 +3854,19 @@
           "name": "ask_userdata"
         }
       ],
-      "args": [{
+      "args": [
+        {
           "name": "social",
           "type": "string",
           "default": "",
-          "values": ["facebook","twitter","google","admobile"]
-        }]
+          "values": [
+            "facebook",
+            "twitter",
+            "google",
+            "admobile"
+          ]
+        }
+      ]
     },
     {
       "name": "mia.login_adapter",
@@ -3895,7 +3874,7 @@
         {
           "name": "validated"
         },
-         {
+        {
           "name": "error"
         }
       ],
@@ -3904,7 +3883,8 @@
           "name": "serialize"
         }
       ],
-      "args": [{
+      "args": [
+        {
           "name": "return_user",
           "type": "boolean",
           "default": "",
@@ -3921,7 +3901,8 @@
           "type": "dictionary",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "mia.is_null",
@@ -3937,10 +3918,10 @@
         {
           "name": "validate"
         },
-         {
+        {
           "name": "set_value"
         },
-         {
+        {
           "name": "set_validate"
         }
       ],
@@ -3957,22 +3938,24 @@
         {
           "name": "add_to_array"
         },
-         {
+        {
           "name": "set_array"
         },
-         {
+        {
           "name": "add_emit_array"
         },
-         {
+        {
           "name": "clean"
         }
       ],
-      "args": [{
+      "args": [
+        {
           "name": "array",
           "type": "array",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "mia.dyn_label",
@@ -3981,15 +3964,15 @@
           "name": "dlabel.update_style"
         }
       ],
-      "receptors": [
-        
-      ],
-      "args": [{
+      "receptors": [],
+      "args": [
+        {
           "name": "dyn_conf",
           "type": "dictionary",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "mia.desc_view",
@@ -4009,7 +3992,8 @@
           "name": "descview.setsubtitle"
         }
       ],
-      "args": [{
+      "args": [
+        {
           "name": "binder_descriptor",
           "type": "dictionary",
           "default": "",
@@ -4032,18 +4016,19 @@
           "type": "string",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "mia.text_button",
       "signals": [
-         {
+        {
           "name": "button_press"
         },
-         {
+        {
           "name": "textfield_didEndEditing"
         },
-         {
+        {
           "name": "textfield_value"
         }
       ],
@@ -4051,32 +4036,31 @@
         {
           "name": "textfield_emitText"
         },
-         {
+        {
           "name": "textfield_setText"
         }
       ],
-      "args": [ {
+      "args": [
+        {
           "name": "placeholder",
           "type": "string",
           "default": "",
           "values": []
         },
-         {
+        {
           "name": "button_title",
           "type": "string",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "mia.header_contest",
-      "signals": [
-        
-      ],
-      "receptors": [
-       
-      ],
-      "args": [{
+      "signals": [],
+      "receptors": [],
+      "args": [
+        {
           "name": "styles",
           "type": "dictionary",
           "default": "",
@@ -4093,17 +4077,15 @@
           "type": "boolean",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "mia.sender_data_tmpl1",
-      "signals": [
-       
-      ],
-      "receptors": [
-       
-      ],
-      "args": [{
+      "signals": [],
+      "receptors": [],
+      "args": [
+        {
           "name": "form_component_id",
           "type": "string",
           "default": "",
@@ -4115,7 +4097,7 @@
           "default": "",
           "values": []
         },
-         {
+        {
           "name": "form_serialization_policy",
           "type": "string",
           "default": "",
@@ -4138,7 +4120,8 @@
           "type": "string",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "mia.three_buttons",
@@ -4146,16 +4129,16 @@
         {
           "name": "threebuttons_first_pressed"
         },
-         {
+        {
           "name": "threebuttons_second_pressed"
-        }, {
+        },
+        {
           "name": "threebuttons_third_pressed"
         }
       ],
-      "receptors": [
-       
-      ],
-      "args": [{
+      "receptors": [],
+      "args": [
+        {
           "name": "button1_title",
           "type": "string",
           "default": "",
@@ -4172,7 +4155,8 @@
           "type": "string",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "mia.code_creator",
@@ -4192,7 +4176,8 @@
           "name": "create"
         }
       ],
-      "args": [{
+      "args": [
+        {
           "name": "text",
           "type": "string",
           "default": "",
@@ -4209,13 +4194,12 @@
           "type": "string",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "mia.events_plist",
-      "signals": [
-       
-      ],
+      "signals": [],
       "receptors": [
         {
           "name": "events_plist.set_settings"
@@ -4229,7 +4213,7 @@
         {
           "name": "error"
         },
-          {
+        {
           "name": "error_message"
         }
       ],
@@ -4238,12 +4222,14 @@
           "name": "perform"
         }
       ],
-      "args": [{
+      "args": [
+        {
           "name": "log_message",
           "type": "string",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "mia.offline_cache",
@@ -4266,29 +4252,31 @@
           "name": "request_data"
         }
       ],
-      "args": [{
+      "args": [
+        {
           "name": "offline_cache_channel",
           "type": "string",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "mia.activity",
-      "signals": [
-        
-      ],
+      "signals": [],
       "receptors": [
         {
           "name": "show_activity"
         }
       ],
-      "args": [{
+      "args": [
+        {
           "name": "content_type",
           "type": "string",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "mia.action_creator",
@@ -4306,9 +4294,7 @@
     },
     {
       "name": "mia.doc_interaction",
-      "signals": [
-       
-      ],
+      "signals": [],
       "receptors": [
         {
           "name": "show_from_url_string"
@@ -4321,18 +4307,19 @@
     },
     {
       "name": "banner_ad",
-      "signals": [
-       
-      ],
-      "receptors": [
-       
-      ],
-      "args": [{
+      "signals": [],
+      "receptors": [],
+      "args": [
+        {
           "name": "banner_sticks",
           "type": "string",
           "default": "",
-          "values": ["top","bottom"]
-        },{
+          "values": [
+            "top",
+            "bottom"
+          ]
+        },
+        {
           "name": "banner_unit_id",
           "type": "string",
           "default": "",
@@ -4343,7 +4330,8 @@
           "type": "string",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "mia.image_loader",
@@ -4351,7 +4339,7 @@
         {
           "name": "image"
         },
-         {
+        {
           "name": "error"
         }
       ],
@@ -4366,7 +4354,8 @@
           "name": "load"
         }
       ],
-      "args": [{
+      "args": [
+        {
           "name": "type",
           "type": "integer",
           "default": "",
@@ -4389,17 +4378,15 @@
           "type": "string",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "product_cart",
-      "signals": [
-        
-      ],
-      "receptors": [
-        
-      ],
-      "args": [ {
+      "signals": [],
+      "receptors": [],
+      "args": [
+        {
           "name": "bindings",
           "type": "array",
           "default": "",
@@ -4410,44 +4397,37 @@
           "type": "dictionary",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "room_booking_try_book",
-      "signals": [
-       
-      ],
-      "receptors": [
-       
-      ],
+      "signals": [],
+      "receptors": [],
       "args": []
     },
     {
       "name": "nav_cart",
-      "signals": [
-        
-      ],
-      "receptors": [
-       
-      ],
+      "signals": [],
+      "receptors": [],
       "args": []
     },
     {
       "name": "mia.log",
-      "signals": [
-        
-      ],
+      "signals": [],
       "receptors": [
         {
           "name": "log"
         }
       ],
-      "args": [{
+      "args": [
+        {
           "name": "value",
           "type": "id",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "mia.lc_history",
@@ -4461,52 +4441,47 @@
           "name": "get_cards"
         }
       ],
-      "args": [{
+      "args": [
+        {
           "name": "history_path",
           "type": "string",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "mia.lc_card",
-      "signals": [
-        
-      ],
-      "receptors": [
-        
-      ],
-      "args": [{
+      "signals": [],
+      "receptors": [],
+      "args": [
+        {
           "name": "lc_args",
           "type": "dictionary",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "mia.toolbar",
-      "signals": [
-        
-      ],
-      "receptors": [
-       
-      ],
-      "args": [{
+      "signals": [],
+      "receptors": [],
+      "args": [
+        {
           "name": "buttons",
           "type": "array",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "mia.animate_toolbar",
-      "signals": [
-        
-      ],
-      "receptors": [
-       
-      ],
-      "args": [{
+      "signals": [],
+      "receptors": [],
+      "args": [
+        {
           "name": "webview_component_id",
           "type": "string",
           "default": "",
@@ -4517,24 +4492,28 @@
           "type": "string",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "mia.url_scheme",
-      "signals": [
-       
-      ],
+      "signals": [],
       "receptors": [
         {
           "name": "url_scheme.load_with_params"
         }
       ],
-      "args": [{
+      "args": [
+        {
           "name": "app_scheme",
           "type": "string",
           "default": "",
-          "values": ["apple_map","google_map"]
-        }]
+          "values": [
+            "apple_map",
+            "google_map"
+          ]
+        }
+      ]
     },
     {
       "name": "mia.string_manager",
@@ -4542,7 +4521,7 @@
         {
           "name": "s_value"
         },
-         {
+        {
           "name": "s_length"
         }
       ],
@@ -4560,7 +4539,8 @@
           "name": "r_append_string"
         }
       ],
-      "args": [{
+      "args": [
+        {
           "name": "enable_squid",
           "type": "boolean",
           "default": "",
@@ -4571,22 +4551,25 @@
           "type": "string",
           "default": "",
           "values": []
-        }]
+        }
+      ]
     },
     {
       "name": "mia.dictionary_manager",
       "signals": [
         {
           "name": "s_dictionary"
-        }, {
+        },
+        {
           "name": "s_all_keys"
         },
-         {
+        {
           "name": "s_all_objects"
         },
-         {
+        {
           "name": "s_count"
-        }, {
+        },
+        {
           "name": "s_object"
         }
       ],
@@ -4617,11 +4600,13 @@
         },
         {
           "name": "r_remove_all_objects"
-        },{
+        },
+        {
           "name": "r_remove_object"
         }
       ],
-      "args": [{
+      "args": [
+        {
           "name": "enable_squid",
           "type": "boolean",
           "default": "",
@@ -4638,7 +4623,332 @@
           "type": "string",
           "default": "",
           "values": []
-        }]
+        }
+      ]
+    },
+     {
+      "name": "mia.dictionary",
+      "signals": [
+        {
+          "name": "s_out"
+        }
+      ],
+      "receptors": [
+        {
+          "name": "r_emit"
+        }
+      ],
+      "args": [
+        {
+          "name": "keys",
+          "type": "array",
+          "default": "",
+          "values": []
+        }
+      ]
+    },
+     {
+      "name": "mia.button",
+      "signals": [
+        {
+          "name": "s_touched_up"
+        }
+      ],
+      "receptors": [
+        {
+          "name": "r_icon_text"
+        },
+        {
+          "name": "r_title_text"
+        },
+        {
+          "name": "r_disclosure_text"
+        },
+        {
+          "name": "r_data"
+        }
+      ],
+      "args": [
+        {
+          "name": "icon_text",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "title_text",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "disclosure_text",
+          "type": "string",
+          "default": "",
+          "values": []
+        }
+      ]
+    },
+     {
+      "name": "mia.browser_app",
+      "signals": [
+      ],
+      "receptors": [
+        {
+          "name": "r_url_string"
+        },
+        {
+          "name": "r_open"
+        },
+        {
+          "name": "r_open_url_string"
+        }
+      ],
+      "args": [
+      ]
+    },
+      {
+      "name": "mia.mail_app",
+      "signals": [
+      ],
+      "receptors": [
+        {
+          "name": "r_recipient"
+        },
+        {
+          "name": "r_open"
+        },
+        {
+          "name": "r_open_recipient"
+        }
+      ],
+      "args": [
+        
+      ]
+    },
+      {
+      "name": "mia.maps_app",
+      "signals": [
+       
+      ],
+      "receptors": [
+        {
+          "name": "r_location"
+        },
+        {
+          "name": "r_open"
+        },
+        {
+          "name": "r_open_location"
+        }
+      ],
+      "args": [
+      
+      ]
+    },
+       {
+      "name": "mia.image_gallery_view",
+      "signals": [
+        {
+          "name": "s_image_index"
+        },
+        {
+          "name": "s_images_list"
+        }
+      ],
+      "receptors": [
+        {
+          "name": "r_images_list"
+        }
+      ],
+      "args": [
+        {
+          "name": "images_list_type",
+          "type": "string",
+          "default": "",
+          "values": []
+        }
+      ]
+    },
+      {
+      "name": "mia.location_builder",
+      "signals": [
+        {
+          "name": "s_location"
+        }
+      ],
+      "receptors": [
+        {
+          "name": "r_latitude"
+        },
+        {
+          "name": "r_longitude"
+        },
+        {
+          "name": "r_emit"
+        }
+      ],
+      "args": [
+        {
+          "name": "latitude",
+          "type": "number",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "longitude",
+          "type": "number",
+          "default": "",
+          "values": []
+        }
+      ]
+    },
+      {
+      "name": "mia.place_location_view",
+      "signals": [
+        {
+          "name": "s_location_tapped"
+        }
+      ],
+      "receptors": [
+        {
+          "name": "r_location"
+        },
+        {
+          "name": "r_pin_image"
+        }
+      ],
+      "args": [
+        {
+          "name": "map_type",
+          "type": "string",
+          "default": "",
+          "values": []
+        }
+      ]
+    },
+       {
+      "name": "mia.expandable_label",
+      "signals": [
+        
+      ],
+      "receptors": [
+        {
+          "name": "r_title_text"
+        },
+        {
+          "name": "r_body_text"
+        },
+        {
+          "name": "r_expand_text"
+        },
+        {
+          "name": "r_compress_text"
+        }
+      ],
+      "args": [
+        {
+          "name": "compact_height",
+          "type": "number",
+          "default": "",
+          "values": []
+        },
+         {
+          "name": "title_text",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+         {
+          "name": "expand_text",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+         {
+          "name": "compress_text",
+          "type": "string",
+          "default": "",
+          "values": []
+        }
+      ]
+    },
+     {
+      "name": "mia.separator_view",
+      "signals": [
+       
+       
+      ],
+      "receptors": [
+        
+      ],
+      "args": [
+        {
+          "name": "width",
+          "type": "number",
+          "default": "",
+          "values": []
+        },
+         {
+          "name": "line_cap",
+          "type": "number",
+          "default": "",
+          "values": []
+        }
+      ]
+    },
+       {
+      "name": "mia.model",
+      "signals": [
+        {
+          "name": "s_out"
+        },
+        {
+          "name": "s_out"
+        }
+      ],
+      "receptors": [
+        {
+          "name": "r_set"
+        },
+        {
+          "name": "r_set_emit"
+        },
+        {
+          "name":"r_emit"
+        }
+      ],
+      "args": [
+        {
+          "name": "ports",
+          "type": "array",
+          "default": "",
+          "values": []
+        }
+      ]
+    },
+      {
+      "name": "mia.action_bar",
+      "signals": [
+        
+      ],
+      "receptors": [
+       
+      ],
+      "args": [
+        {
+          "name": "icon_position",
+          "type": "string",
+          "default": "",
+          "values": []
+        },
+        {
+          "name": "on_missing_item_data",
+          "type": "string",
+          "default": "",
+          "values": []
+        }
+      ]
     }
   ]
 }
